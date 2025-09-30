@@ -1,0 +1,107 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//mamasan-web//Domain+Site Migration 2025//JP
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+
+BEGIN:VEVENT
+UID:vercel-setup-20250930@mamasanmoney-bu.com
+DTSTAMP:20250929T000000Z
+SUMMARY:Vercel プロジェクト作成・ドメイン追加（apex/www）
+DTSTART;VALUE=DATE:20250930
+DTEND;VALUE=DATE:20251001
+DESCRIPTION:Vercel に Project を作成し、mamasanmoney-bu.com と www を追加。Primary を apex に、www→apex リダイレクトを有効化。環境変数に SANITY_* を登録。vercel.json の 301 を Preview で確認。
+END:VEVENT
+
+BEGIN:VEVENT
+UID:vercel-301-verify-20251001@mamasanmoney-bu.com
+DTSTAMP:20250929T000000Z
+SUMMARY:301 ルール最終確認（Preview）
+DTSTART;VALUE=DATE:20251001
+DTEND;VALUE=DATE:20251002
+DESCRIPTION:旧 URL → 新 URL の代表パターンが 301/308 で遷移するか確認。例:/2024/05/slug→/slug、/category/:slug→/topics/:slug。
+END:VEVENT
+
+BEGIN:VEVENT
+UID:ttl-shorten-20251008@mamasanmoney-bu.com
+DTSTAMP:20250929T000000Z
+SUMMARY:TTL を 300 に短縮（ConoHa DNS の @/www）
+DTSTART;VALUE=DATE:20251008
+DTEND;VALUE=DATE:20251009
+DESCRIPTION:ConoHa DNS で @ と www の TTL を 3600→300。メール系（MX/DKIM/TXT）は変更しない。
+END:VEVENT
+
+BEGIN:VEVENT
+UID:dns-cutover-20251009@mamasanmoney-bu.com
+DTSTAMP:20250929T000000Z
+SUMMARY:DNS 切替（@→76.76.21.21、www→cname.vercel-dns.com）
+DTSTART;VALUE=DATE:20251009
+DTEND;VALUE=DATE:20251010
+DESCRIPTION:ConoHa DNS: @ の A を 76.76.21.21、www の CNAME を cname.vercel-dns.com に設定。dig と実機で動作確認。ads.txt 配置、メール送受信テスト。
+END:VEVENT
+
+BEGIN:VEVENT
+UID:dns-fallback-20251010@mamasanmoney-bu.com
+DTSTAMP:20250929T000000Z
+SUMMARY:予備日／ロールバック枠（問題があれば元に戻す）
+DTSTART;VALUE=DATE:20251010
+DTEND;VALUE=DATE:20251011
+DESCRIPTION:問題があれば @/www を元の IP（118.27.99.89 等）へ戻す。問題なければそのまま運用継続。
+END:VEVENT
+
+BEGIN:VEVENT
+UID:domain-renew-20251011@mamasanmoney-bu.com
+DTSTAMP:20250929T000000Z
+SUMMARY:ドメイン無料更新日（情報）
+DTSTART;VALUE=DATE:20251011
+DTEND;VALUE=DATE:20251012
+DESCRIPTION:ConoHa WING の無料独自ドメイン更新日。運用に影響なし（参照のみ）。
+END:VEVENT
+
+BEGIN:VEVENT
+UID:ttl-restore-20251012@mamasanmoney-bu.com
+DTSTAMP:20250929T000000Z
+SUMMARY:TTL を 3600 に戻す／Search Console サイトマップ送信
+DTSTART;VALUE=DATE:20251012
+DTEND;VALUE=DATE:20251013
+DESCRIPTION:安定が確認できたら TTL を 300→3600 に戻す。Search Console で新サイトマップ送信、インデックス状況確認。
+END:VEVENT
+
+BEGIN:VEVENT
+UID:wing-expire-20251101@mamasanmoney-bu.com
+DTSTAMP:20250929T000000Z
+SUMMARY:WING 契約満了（参照）
+DTSTART;VALUE=DATE:20251101
+DTEND;VALUE=DATE:20251102
+DESCRIPTION:この日から 15 日は復旧猶予期間。移管はまだ不可。
+END:VEVENT
+
+BEGIN:VEVENT
+UID:transfer-open-20251116@mamasanmoney-bu.com
+DTSTAMP:20250929T000000Z
+SUMMARY:ドメイン移管解禁（AuthCode 取得→Xserver 申請）
+DTSTART;VALUE=DATE:20251116
+DTEND;VALUE=DATE:20251117
+DESCRIPTION:ConoHa でドメインロック OFF・AuthCode 表示。Xserver ドメインで移管申請→承認メールで承認。完了後はレジストラロック ON／WHOIS 保護 ON。
+END:VEVENT
+
+BEGIN:VEVENT
+UID:transfer-check-20251120@mamasanmoney-bu.com
+DTSTAMP:20250929T000000Z
+SUMMARY:移管ステータス確認（未完ならフォロー）
+DTSTART;VALUE=DATE:20251120
+DTEND;VALUE=DATE:20251121
+DESCRIPTION:Xserver 側の進捗を確認。停滞時は差出側/受入側へ問い合わせ。
+END:VEVENT
+
+BEGIN:VEVENT
+UID:transfer-done-ops-20251125@mamasanmoney-bu.com
+DTSTAMP:20250929T000000Z
+SUMMARY:移管完了後の最終処理（ロックON/WHOIS保護ON）
+DTSTART;VALUE=DATE:20251125
+DTEND;VALUE=DATE:20251126
+DESCRIPTION:移管完了を確認し、レジストラロック ON／WHOIS 保護 ON。必要に応じて DNSSEC を再設定。
+END:VEVENT
+
+END:VCALENDAR
+

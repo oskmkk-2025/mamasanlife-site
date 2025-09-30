@@ -1,0 +1,21 @@
+{
+  "name": "wxr-to-sanity",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Convert WordPress WXR (XML) export to Sanity NDJSON for dataset import.",
+  "bin": {
+    "wxr-to-sanity": "bin/wxr-to-sanity.js"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "start": "node bin/wxr-to-sanity.js",
+    "convert": "node bin/wxr-to-sanity.js --input ../..//GeminiProjects/sanity-blog/WordPress.2025-08-19.xml",
+    "upsert:staging": "node bin/sanity-upsert.js --dataset staging --input out/sanity.ndjson --studio /Users/makiko/GeminiProjects/sanity-blog",
+    "upsert:production": "node bin/sanity-upsert.js --dataset production --input out/sanity.ndjson --studio /Users/makiko/GeminiProjects/sanity-blog"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.3.5",
+    "@sanity/client": "^6.18.2",
+    "p-limit": "^4.0.0"
+  }
+}

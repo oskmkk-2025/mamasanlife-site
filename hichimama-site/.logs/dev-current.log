@@ -1,0 +1,149 @@
+
+> hichimama-site@0.1.0 dev
+> next dev -p 3000
+
+  ▲ Next.js 14.2.32
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1989ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.7s (1010 modules)
+ GET / 200 in 3084ms
+ ○ Compiling /blog ...
+ ✓ Compiled /blog in 1915ms (1021 modules)
+ GET /blog 200 in 2595ms
+ GET /blog 200 in 504ms
+ ✓ Compiled in 476ms (1007 modules)
+ ✓ Compiled in 192ms (1007 modules)
+ ✓ Compiled /_not-found in 281ms (996 modules)
+ GET /_next/static/css/app/layout.css?v=1757771218198 404 in 382ms
+ GET /_next/static/chunks/webpack.js?v=1757771218198 404 in 381ms
+ GET /_next/static/chunks/app/layout.js 404 in 379ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 381ms
+ GET /_next/static/chunks/main-app.js?v=1757771218198 404 in 381ms
+ GET /blog 200 in 555ms
+ GET /_next/static/chunks/app/blog/page.js 404 in 20ms
+ ✓ Compiled / in 302ms (736 modules)
+ GET /_next/static/css/app/layout.css?v=1757771226130 404 in 17ms
+ GET /_next/static/css/app/layout.css?v=1757771226033 404 in 16ms
+ GET /_next/static/chunks/main-app.js?v=1757771226033 404 in 27ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 28ms
+ GET /_next/static/chunks/app/layout.js 404 in 28ms
+ GET /_next/static/chunks/app/page.js 404 in 16ms
+ GET / 200 in 575ms
+ GET /_next/static/css/app/layout.css?v=1757771325392 404 in 24ms
+ GET /_next/static/chunks/main-app.js?v=1757771325392 404 in 34ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 33ms
+ GET /_next/static/chunks/app/layout.js 404 in 22ms
+ GET /_next/static/chunks/app/page.js 404 in 20ms
+ GET / 200 in 191ms
+ GET /_next/static/css/app/layout.css?v=1757771328043 404 in 24ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 30ms
+ GET /_next/static/chunks/app/layout.js 404 in 31ms
+ GET /_next/static/chunks/main-app.js?v=1757771328043 404 in 31ms
+ GET /_next/static/chunks/app/blog/page.js 404 in 15ms
+ GET /blog 200 in 211ms
+ ○ Compiling /blog/category/[category] ...
+ ✓ Compiled /blog/category/[category] in 554ms (1014 modules)
+ ⨯ Error: Cannot find module './vendor-chunks/@sanity.js'
+Require stack:
+- /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/webpack-runtime.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/app/blog/category/[category]/page.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/load-components.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/utils.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1410:15)
+    at /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1051:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1056:22)
+    at Module._load (node:internal/modules/cjs/loader:1219:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1493:12)
+    at mod.require (/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/makiko/GPT-codexProjects/hichimama-site/.next/server/webpack-runtime.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/.next/server/app/blog/category/[category]/page.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/load-components.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/utils.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/blog/category/household-management'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 841ms (1241 modules)
+ GET /blog/category/household-management 500 in 1815ms
+ ⨯ Error: Cannot find module './vendor-chunks/@sanity.js'
+Require stack:
+- /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/webpack-runtime.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/app/blog/category/[category]/page.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/load-components.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/utils.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1410:15)
+    at /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1051:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1056:22)
+    at Module._load (node:internal/modules/cjs/loader:1219:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1493:12)
+    at mod.require (/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16) {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/makiko/GPT-codexProjects/hichimama-site/.next/server/webpack-runtime.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/.next/server/app/blog/category/[category]/page.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/load-components.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/utils.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/dev/static-paths-worker.js',
+    '/Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/compiled/jest-worker/processChild.js'
+  ],
+  page: '/blog/category/entertainment'
+}
+ GET /blog/category/entertainment 500 in 255ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/Users/makiko/GPT-codexProjects/hichimama-site/.next/server/vendor-chunks/groq.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/groq' in /Users/makiko/GPT-codexProjects/hichimama-site/.next/server for build dependencies doesn't lead to expected result '/Users/makiko/GPT-codexProjects/hichimama-site/.next/server/vendor-chunks/groq.js', but to 'Error: Can't resolve './vendor-chunks/groq' in '/Users/makiko/GPT-codexProjects/hichimama-site/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/groq (expected /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/vendor-chunks/groq.js)
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/webpack-runtime.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/webpack-runtime.js
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/pages/_app.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/pages/_app.js
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require.js
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/load-components.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/utils.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/tslib' in /Users/makiko/GPT-codexProjects/hichimama-site/.next/server for build dependencies doesn't lead to expected result '/Users/makiko/GPT-codexProjects/hichimama-site/.next/server/vendor-chunks/tslib.js', but to 'Error: Can't resolve './vendor-chunks/tslib' in '/Users/makiko/GPT-codexProjects/hichimama-site/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/tslib (expected /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/vendor-chunks/tslib.js)
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/webpack-runtime.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/webpack-runtime.js
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/pages/_app.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/.next/server/pages/_app.js
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/require.js
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/load-components.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/utils.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /Users/makiko/GPT-codexProjects/hichimama-site/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+[?25h
