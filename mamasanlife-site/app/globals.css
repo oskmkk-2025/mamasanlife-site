@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { font-size: 17px; }
+body {
+  color: #2b2b2b;
+  background: #FEFBF6; /* cream base */
+}
+
+.container-responsive { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+.prose-content h1 { @apply text-3xl sm:text-4xl font-bold mt-8 mb-4; }
+.prose-content h2 { @apply text-2xl sm:text-3xl font-semibold mt-8 mb-3; }
+.prose-content h3 { @apply text-xl sm:text-2xl font-semibold mt-6 mb-2; }
+.prose-content p  { @apply leading-7 my-4; }
+.prose-content ul { @apply list-disc pl-6 my-4; }
+.prose-content ol { @apply list-decimal pl-6 my-4; }
+.prose-content blockquote { @apply border-l-4 pl-4 italic my-4; border-color: #B67352; }
+.prose-content img { @apply rounded-md my-6; }
+
+/* Breadcrumbs */
+.breadcrumbs { @apply text-sm text-gray-600; }
+
+/* AdSense fallback */
+.ads-fallback { @apply text-center text-xs text-gray-500 border rounded-md py-3 bg-gray-50; }
+
+/* Natural theme helpers */
+.btn-brand { @apply inline-flex items-center gap-2 px-4 py-2 rounded-md text-white; background: #8CB9BD; }
+.btn-brand:hover { filter: brightness(1.05); }
+.chip-accent { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium; background: #FEA405; color: #fff; }
+.card { @apply bg-white/90 border rounded-xl shadow-sm; }
+.card:hover { @apply shadow; }

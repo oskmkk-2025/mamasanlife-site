@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ひーちmama | プレビュー</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Header (static snapshot) -->
+    <header class="border-b fixed top-0 left-0 right-0 z-50" style="background-color:#F1B700">
+      <div class="container-responsive flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-4 font-semibold" style="color:#3F2C23">
+          <span class="brand-text" style="color:#3F2C23">
+            <span class="text-base md:text-lg">ひーちmama</span>
+          </span>
+          <div aria-label="Shortcake" class="select-none" title="cake">
+            <svg width="75" height="56" viewBox="0 0 96 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="creamG" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#FFFFFF"/>
+                  <stop offset="100%" stop-color="#F6F3EE"/>
+                </linearGradient>
+                <linearGradient id="spongeG" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#F5D8A8"/>
+                  <stop offset="100%" stop-color="#E3BE83"/>
+                </linearGradient>
+                <radialGradient id="berryG" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#FF6B6B"/>
+                  <stop offset="100%" stop-color="#E54B4B"/>
+                </radialGradient>
+                <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-color="#000" flood-opacity="0.25" />
+                </filter>
+              </defs>
+              <ellipse cx="48" cy="62" rx="26" ry="4" fill="#E8E1D6" />
+              <g filter="url(#softShadow)">
+                <rect x="26" y="36" width="44" height="18" rx="4" fill="url(#spongeG)" stroke="#D9B26A" />
+              </g>
+              <path d="M24 36 C40 28, 56 28, 72 36 L72 40 L24 40 Z" fill="url(#creamG)" />
+              <g class="cream-drip" fill="url(#creamG)">
+                <path d="M34 36 C34 44 38 44 38 40" />
+                <path d="M48 36 C48 46 52 46 52 40" />
+                <path d="M62 36 C62 43 66 43 66 40" />
+              </g>
+              <g filter="url(#softShadow)">
+                <path d="M48 25 c5 0 9 4 9 8 0 6-6 11-9 13-3-2-9-7-9-13 0-4 4-8 9-8z" fill="url(#berryG)" />
+                <circle cx="45.5" cy="31" r="0.9" fill="#FFE8A3"/>
+                <circle cx="50.5" cy="30" r="0.9" fill="#FFE8A3"/>
+                <circle cx="48" cy="34" r="0.9" fill="#FFE8A3"/>
+              </g>
+            </svg>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-base md:text-lg font-medium" style="color:#3F2C23">
+          <a class="hover:opacity-80" href="#">Home</a>
+          <a class="hover:opacity-80" href="#">Blog</a>
+          <a class="hover:opacity-80" href="#">Profile</a>
+          <a class="hover:opacity-80" href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1 pt-24 md:pt-20">
+      <!-- Hero -->
+      <section class="bg-gradient-to-b from-brand-50 to-brand-100 border-b border-brand-300">
+        <div class="container-responsive py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center justify-items-center text-center">
+          <div class="max-w-xl relative">
+            <div class="official-badge"><span class="bubble">Official</span></div>
+            <h1 class="animate-fade-up text-4xl sm:text-6xl font-extrabold tracking-tight gradient-text">ひーちmama</h1>
+            <p class="mt-4 text-gray-700 text-base sm:text-lg">Save money and live a free life!</p>
+            <div class="mt-7 flex items-center justify-center">
+              <a class="btn-choco" href="#"><span>ブログを読む</span>
+                <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L13.586 10H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                <span class="drips"></span>
+              </a>
+            </div>
+            <div class="mt-16 flex items-center justify-center">
+              <a class="btn-cake" href="#"><span>Xでシェアする</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3l-7.5 8.6L21 21h-5l-4-5-4.6 5H4.2l8.1-9.1L3 3h5.2l3.7 4.6L17.5 3z"/></svg>
+                <span class="cream-bottom"></span>
+              </a>
+            </div>
+          </div>
+          <div class="justify-self-center flex flex-col items-center">
+            <div class="relative w-40 h-40 sm:w-56 sm:h-56 rounded-full overflow-hidden ring-4 ring-brand-300/60 shadow-sm">
+              <img alt="ひーちママ" src="../public/IMG_69AD0D2F343E-1%202.jpeg" class="object-cover w-full h-full" />
+            </div>
+            <div class="mt-2 text-sm font-semibold text-gray-800 text-center">ひーち</div>
+            <div class="mt-3 w-full max-w-sm mx-auto text-center text-gray-800">
+              <div class="font-semibold mb-1">プロフィール情報</div>
+              <p class="text-sm leading-7">事務職15年アラフォーママ。…（ダミー文）</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW Posts -->
+      <section class="container-responsive py-24 text-center">
+        <h2 data-reveal class="text-2xl font-semibold mb-6 flex items-center justify-center gap-3">
+          NEW Posts
+          <img src="../public/new.png" width="64" height="64" alt="new" class="postbox-mail hidden sm:inline" />
+          <img src="../public/new.png" width="44" height="44" alt="new" class="postbox-mail sm:hidden" />
+        </h2>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+          <!-- Card 1 -->
+          <article data-reveal class="relative border border-brand-300 rounded-lg overflow-hidden bg-white/70">
+            <div class="ribbon red"><span class="blink">NEW</span></div>
+            <a href="#" class="block">
+              <div class="relative w-full aspect-[16/9] bg-brand-300/50">
+                <img src="../public/CEAAE45A-5307-40B5-8041-01657D7E914A.PNG" alt="thumb" class="object-cover w-full h-full" />
+              </div>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold line-clamp-2 text-gray-900">節約術まとめ（ダミー）</h3>
+                <p class="mt-2 text-sm text-gray-600 line-clamp-2">おトク情報の紹介…（ダミー）</p>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs text-gray-500">
+                  <span class="text-brand-700">2025/09/12</span>
+                  <span class="category-badge">家計管理</span>
+                  <span class="tag-badge">#節約</span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- Card 2 -->
+          <article data-reveal class="relative border border-brand-300 rounded-lg overflow-hidden bg-white/70">
+            <div class="ribbon red"><span class="blink">NEW</span></div>
+            <a href="#" class="block">
+              <div class="relative w-full aspect-[16/9] bg-brand-300/50"></div>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold line-clamp-2 text-gray-900">学びメモ（ダミー）</h3>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs text-gray-500">
+                  <span class="text-brand-700">2025/09/10</span>
+                  <span class="category-badge">ヘルス・学び</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Ranking -->
+      <section class="container-responsive py-20 text-center">
+        <h2 data-reveal class="text-2xl font-semibold mb-6 flex items-center justify-center gap-3">今週のranking <img src="../public/crown.png" width="56" height="56" class="crown-bounce" alt="crown"/></h2>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+          <article data-reveal class="relative border border-brand-300 rounded-lg overflow-hidden bg-white/70">
+            <div class="ribbon gold"><span>No.1</span></div>
+            <div class="relative w-full aspect-[16/9] bg-brand-300/50"></div>
+            <div class="p-4"><h3 class="text-lg font-semibold text-gray-900">人気記事タイトル（ダミー）</h3></div>
+          </article>
+          <article data-reveal class="relative border border-brand-300 rounded-lg overflow-hidden bg-white/70">
+            <div class="ribbon gold"><span>No.2</span></div>
+            <div class="relative w-full aspect-[16/9] bg-brand-300/50"></div>
+            <div class="p-4"><h3 class="text-lg font-semibold text-gray-900">人気記事タイトル（ダミー）</h3></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Category -->
+      <section class="container-responsive py-24 text-center">
+        <h3 class="text-xl font-semibold mb-6">Category</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 justify-items-center">
+          <a class="inline-flex flex-col items-center gap-2" href="#">
+            <img src="../public/strawberry.png" width="110" height="110" alt="strawberry" />
+            <span class="text-sm">家計管理</span>
+          </a>
+          <a class="inline-flex flex-col items-center gap-2" href="#">
+            <img src="../public/strawberry.png" width="110" height="110" alt="strawberry" />
+            <span class="text-sm">エンタメ</span>
+          </a>
+          <a class="inline-flex flex-col items-center gap-2" href="#">
+            <img src="../public/strawberry.png" width="110" height="110" alt="strawberry" />
+            <span class="text-sm">ヘルス・学び</span>
+          </a>
+          <a class="inline-flex flex-col items-center gap-2" href="#">
+            <img src="../public/strawberry.png" width="110" height="110" alt="strawberry" />
+            <span class="text-sm">書籍紹介</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t py-8 text-center text-sm text-gray-600">© 2025 ひーちmama</footer>
+  </body>
+  </html>
