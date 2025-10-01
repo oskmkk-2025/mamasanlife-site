@@ -115,7 +115,7 @@ export function SeoAssistant(props: StringInputProps) {
             <Text size={1}>出典リンク: {report.refs}（推奨1以上）</Text>
           </Stack>
           {report.imagesMissingAlt.length>0 && (
-            <Text tone="critical" size={1}>画像alt未入力: {report.imagesMissingAlt.length}件</Text>
+            <Text size={1} style={{color:'var(--card-danger-fg-color, #d32f2f)'}}>画像alt未入力: {report.imagesMissingAlt.length}件</Text>
           )}
         </Box>
         <Flex gap={2} wrap="wrap">
