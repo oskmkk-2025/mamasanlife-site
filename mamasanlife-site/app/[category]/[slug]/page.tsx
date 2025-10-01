@@ -12,10 +12,12 @@ import Script from 'next/script'
 export const revalidate = 300
 export const dynamic = 'force-dynamic'
 
-type Props = { params: { category: string; slug: string } }
-
-export async function generateMetadata({ params }: Props) {
-  const post = await sanityClient.fetch(postByCategorySlugQuery, { slug: params.slug, category: params.category })
+// Next.js 15: generateMetadata の params は Promise になるケースがあるため型を合わせる
+export async function generateMetadata(
+  { params }: { params: Promise<{ category: string; slug: string }> }
+) {
+  const { category, slug } = await params
+  const post = await sanityClient.fetch(postByCategorySlugQuery, { slug, category })
   if (!post) return { title: '記事が見つかりません' }
   const url = `${process.env.NEXT_PUBLIC_SITE_URL || ''}/${post.category}/${post.slug}`
   const og = post.imageUrl || `${process.env.NEXT_PUBLIC_SITE_URL || ''}/og/${post.category}/${post.slug}`
@@ -27,8 +29,11 @@ export async function generateMetadata({ params }: Props) {
   }
 }
 
-export default async function PostPage({ params }: Props) {
-  const post = await sanityClient.fetch(postByCategorySlugQuery, { slug: params.slug, category: params.category })
+export default async function PostPage(
+  { params }: { params: Promise<{ category: string; slug: string }> }
+) {
+  const { category, slug } = await params
+  const post = await sanityClient.fetch(postByCategorySlugQuery, { slug, category })
   if (!post) notFound()
   const related = await sanityClient.fetch(relatedByTagsQuery, { slug: post.slug, tags: post.tags?.map((t: any) => t.slug) || [] })
   const headings = extractHeadingsFromPortableText(post.body || [])

@@ -12,10 +12,13 @@ export async function generateStaticParams() {
   return CATS.map(c => ({ category: c.slug }))
 }
 
-export async function generateMetadata({ params }: { params: { category: string } }) {
-  const cat = CATS.find(c => c.slug === params.category)
+export async function generateMetadata(
+  { params }: { params: Promise<{ category: string }> }
+) {
+  const { category } = await params
+  const cat = CATS.find(c => c.slug === category)
   const title = cat ? `${cat.title}の記事` : 'カテゴリー'
-  const url = `${process.env.NEXT_PUBLIC_SITE_URL || ''}/${params.category}`
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL || ''}/${category}`
   return { title, alternates: { canonical: url }, openGraph: { url, title } }
 }
 
