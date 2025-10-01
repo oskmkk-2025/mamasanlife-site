@@ -40,6 +40,12 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "studio",
+    "sanity",
+    "schemas",
+    "../hichimama-site",
+    "../mamasan-web",
+    "../tools"
   ]
 }
