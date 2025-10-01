@@ -22,11 +22,17 @@ export async function generateMetadata(
   return { title, alternates: { canonical: url }, openGraph: { url, title } }
 }
 
-export default async function CategoryPage({ params, searchParams }: { params: { category: string }, searchParams: Record<string, string | string[] | undefined> }) {
-  const { category } = params
+export default async function CategoryPage(
+  { params, searchParams }: {
+    params: Promise<{ category: string }>,
+    searchParams: Promise<Record<string, string | string[] | undefined>>
+  }
+) {
+  const { category } = await params
+  const sp = await searchParams
   const cat = CATS.find(c => c.slug === category)
   if (!cat) return null
-  const page = Number(searchParams.page ?? 1)
+  const page = Number(sp?.page ?? 1)
   const PAGE_SIZE = 12
   const offset = (page - 1) * PAGE_SIZE
   const end = offset + PAGE_SIZE
