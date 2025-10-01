@@ -25,3 +25,4 @@ Next.js (App Router) + Sanity v3 で構築する生活情報ポータル。
 - `SANITY_READ_TOKEN=...`（public取得のみなら不要）
 
 build trigger
+update: 2025-10-01 15:53
