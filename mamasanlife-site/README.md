@@ -23,4 +23,4 @@ Next.js (App Router) + Sanity v3 で構築する生活情報ポータル。
 - `SANITY_DATASET=production`
 - `SANITY_API_VERSION=2024-03-14`
 - `SANITY_READ_TOKEN=...`（public取得のみなら不要）
-
+build trigger
