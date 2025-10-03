@@ -79,6 +79,7 @@ export default defineType({
     defineField({ name: 'updatedAt', title: '更新日時', type: 'datetime' }),
     defineField({ name: 'oldUrl', title: '旧URL', type: 'url' }),
     defineField({ name: 'redirectTo', title: '新URL(リダイレクト先)', type: 'url' }),
+    defineField({ name: 'views', title: '閲覧数', type: 'number', readOnly: true, initialValue: 0 }),
 
     // E-E-A-T
     defineField({
