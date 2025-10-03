@@ -77,3 +77,11 @@ export const relatedByTagsQuery = groq`
 `
 
 export const allPostSlugsQuery = groq`*[_type == "post" && defined(slug.current)]{ "slug": slug.current, category }`
+
+export const searchPostsQuery = groq`
+  *[_type == "post" && defined(slug.current) && (
+    title match $q || excerpt match $q || pt::text(body) match $q
+  )]
+  | order(publishedAt desc)[0...$limit]
+  ${postFields}
+`
