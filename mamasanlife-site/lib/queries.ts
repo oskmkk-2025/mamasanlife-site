@@ -85,3 +85,23 @@ export const searchPostsQuery = groq`
   | order(publishedAt desc)[0...$limit]
   ${postFields}
 `
+
+// 動的に order/since を差し込む用途向けに、ベースのみをエクスポート
+export const SEARCH_POSTS_BASE = `*[_type == "post" && defined(slug.current) && (title match $q || excerpt match $q || pt::text(body) match $q) ${''}]`
+
+export function buildSearchQuery({withSince, orderPopular}:{withSince:boolean; orderPopular:boolean}){
+  const since = withSince ? ' && defined(publishedAt) && publishedAt >= $since' : ''
+  const order = orderPopular ? 'coalesce(views,0) desc, publishedAt desc' : 'publishedAt desc'
+  return `*[_type == "post" && defined(slug.current) && (title match $q || excerpt match $q || pt::text(body) match $q)${since}] | order(${order})[0...$limit] ${postFields}`
+}
+
+export function buildCategoryQuery({withSince, orderPopular}:{withSince:boolean; orderPopular:boolean}){
+  const since = withSince ? ' && defined(publishedAt) && publishedAt >= $since' : ''
+  const order = orderPopular ? 'coalesce(views,0) desc, publishedAt desc' : 'publishedAt desc'
+  return `*[_type == "post" && defined(slug.current) && category == $category${since}] | order(${order})[$offset...$end] ${postFields}`
+}
+
+export function buildCategoryCountQuery({withSince}:{withSince:boolean}){
+  const since = withSince ? ' && defined(publishedAt) && publishedAt >= $since' : ''
+  return `count(*[_type == "post" && defined(slug.current) && category == $category${since}])`
+}
