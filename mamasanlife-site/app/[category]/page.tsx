@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { sanityClient } from '@/lib/sanity.client'
-import { categories as CATS, listByCategoryQuery, countByCategoryQuery } from '@/lib/queries'
+import { categories as CATS, buildCategoryQuery, buildCategoryCountQuery } from '@/lib/queries'
 import { PostList } from '@/components/PostList'
 import { SectionHeader } from '@/components/SectionHeader'
 import { Sidebar } from '@/components/Sidebar'
@@ -30,15 +30,24 @@ export default async function CategoryPage(
 ) {
   const { category } = await params
   const sp = await searchParams
+  const sort = (sp?.sort as string) || 'new'
+  const days = (sp?.days as string) || 'all'
+  const withSince = days === '30'
+  const orderPopular = sort === 'popular'
+  const since = withSince ? new Date(Date.now() - 30*24*60*60*1000).toISOString() : undefined
   const cat = CATS.find(c => c.slug === category)
   if (!cat) return null
   const page = Number(sp?.page ?? 1)
   const PAGE_SIZE = 12
   const offset = (page - 1) * PAGE_SIZE
   const end = offset + PAGE_SIZE
+  const listQuery = buildCategoryQuery({withSince, orderPopular})
+  const countQuery = buildCategoryCountQuery({withSince})
+  const paramsQ:any = { category, offset, end }
+  if (since) paramsQ.since = since
   const [posts, total] = await Promise.all([
-    sanityClient.fetch(listByCategoryQuery, { category, offset, end }),
-    sanityClient.fetch(countByCategoryQuery, { category })
+    sanityClient.fetch(listQuery, paramsQ),
+    sanityClient.fetch(countQuery, since ? { category, since } : { category })
   ])
   const totalPages = Math.ceil((total || 0) / PAGE_SIZE)
   const qs = (p: number) => new URLSearchParams({ page: String(p) }).toString()
@@ -48,11 +57,21 @@ export default async function CategoryPage(
       <header className="card p-6" style={{ background:'#fff' }}>
         <h1 className="text-3xl font-bold" style={{ color:'#B67352' }}>{cat.title}</h1>
         <p className="text-gray-700 mt-2">最新の記事やおすすめをお届けします。</p>
-        <div className="mt-4"><a href={`/${category}?page=1`} className="btn-brand">新着を見る</a></div>
+        <form action={`/${category}`} method="get" className="mt-4 flex items-center gap-2">
+          <select name="sort" defaultValue={sort} className="border rounded-md px-2 py-2">
+            <option value="new">新着順</option>
+            <option value="popular">人気順</option>
+          </select>
+          <select name="days" defaultValue={days} className="border rounded-md px-2 py-2">
+            <option value="all">全期間</option>
+            <option value="30">直近30日</option>
+          </select>
+          <button className="btn-brand">絞り込み</button>
+        </form>
       </header>
       <div className="grid md:grid-cols-[1fr_320px] gap-8">
         <div>
-          <SectionHeader title="新着記事" />
+          <SectionHeader title={sort==='popular' ? '人気記事' : '新着記事'} />
           <PostList posts={posts.map((p: any) => ({ slug: p.slug, category: p.category, title: p.title, excerpt: p.excerpt, date: p.publishedAt, imageUrl: p.imageUrl }))} />
           <div className="flex items-center justify-center gap-2 mt-8">
           {page > 1 && (
