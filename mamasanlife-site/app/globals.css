@@ -190,3 +190,8 @@ a:hover:not(.btn-brand) {
   .appreach { grid-template-columns: 96px 1fr; }
   .appreach__icon { width: 96px; height: 96px; border-radius: 12px; }
 }
+/* Reset inside htmlEmbed to prevent prose rules from breaking layout */
+.prose-content .embed-html { margin: 12px 0; line-height: 1.6; }
+.prose-content .embed-html a { text-decoration: none !important; background: none !important; color: inherit; }
+.prose-content .embed-html img { margin: 0 !important; border-radius: 0 !important; display: inline-block; vertical-align: middle; }
+.prose-content .embed-html p { margin: 0; }
