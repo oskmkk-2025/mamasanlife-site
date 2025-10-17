@@ -221,12 +221,4 @@ a:hover:not(.btn-brand) {
 .prose-content .embed-html img { margin: 0 !important; border-radius: 0 !important; display: inline-block; vertical-align: middle; }
 .prose-content .embed-html p { margin: 0; }
 
-/* Dev preview viewport (PC/SP quick toggle) */
-.dev-viewport-wrap { width: 100%; margin: 0 auto; }
-body.dev-preview-sp { background: repeating-linear-gradient(45deg, rgba(0,0,0,.02), rgba(0,0,0,.02) 10px, rgba(0,0,0,.05) 10px, rgba(0,0,0,.05) 20px); }
-body.dev-preview-sp .dev-viewport-wrap { width: 390px; max-width: 100%; margin: 12px auto; box-shadow: 0 0 0 1px rgba(0,0,0,.08), 0 8px 24px rgba(0,0,0,.08); background: var(--c-bg); }
-body.dev-preview-pc .dev-viewport-wrap { width: 100%; max-width: 1280px; margin: 0 auto; }
-.dev-toggle { position: fixed; right: 16px; bottom: 16px; z-index: 60; background: #fff; border: 1px solid rgba(0,0,0,.08); box-shadow: 0 6px 20px rgba(0,0,0,.12); border-radius: 999px; display: flex; overflow: hidden; }
-.dev-toggle .btn { font: inherit; padding: 8px 12px; border: 0; background: transparent; cursor: pointer; color: #444; }
-.dev-toggle .btn:hover { background: #f6f7f9; }
-.dev-toggle .btn.is-active { background: var(--c-primary); color: #fff; }
+/* (dev preview styles removed) */
