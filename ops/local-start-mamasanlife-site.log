@@ -354,3 +354,32 @@ EvalError: Code generation from strings disallowed for this context
   syscall: 'open',
   path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
 }
+EvalError: Code generation from strings disallowed for this context
+    at <unknown> (.next/server/middleware.js:29)
+    at (middleware)/./node_modules/next/dist/build/webpack/loaders/next-middleware-loader.js?absolutePagePath=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site%2Fmiddleware.ts&page=%2Fmiddleware&rootDir=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site&matchers=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/middleware.js:29:1)
+    at __webpack_require__ (.next/server/edge-runtime-webpack.js:37:33)
+    at __webpack_exec__ (.next/server/middleware.js:1109:48)
+    at <unknown> (.next/server/middleware.js:1110:37)
+    at webpackJsonpCallback (.next/server/edge-runtime-webpack.js:1128:39)
+    at <unknown> (.next/server/middleware.js:9:61)
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async L (.next/server/app/[category]/page.js:1:9895) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
