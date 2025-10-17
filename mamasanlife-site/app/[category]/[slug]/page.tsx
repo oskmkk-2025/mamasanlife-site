@@ -169,7 +169,13 @@ export default async function PostPage(
   const headingsAll = extractHeadingsFromPortableText(bodyRest)
   const headings = headingsAll.filter(h => h.level <= 2)
   // Detect Appreach embed; if exists, do not render hero big image (置換意図)
-  const hasAppreachEmbed = bodyBlocks.some((b:any)=> b?._type==='htmlEmbed' && typeof (b as any).html==='string' && (b as any).html.includes('class="appreach"'))
+  // Appreach が本文の「冒頭（ファーストビュー付近）」にある場合のみヒーロー画像を抑制
+  const introScanForAppreach = Math.min(6, bodyBlocks.length)
+  let hasAppreachInIntro = false
+  for (let i=0; i<introScanForAppreach; i++){
+    const b:any = bodyBlocks[i]
+    if (b?._type==='htmlEmbed' && typeof b?.html==='string' && b.html.includes('class="appreach"')){ hasAppreachInIntro = true; break }
+  }
   // Compute hero image (prefer heroImage, fallback to first image block)
   let heroSrc = post.imageUrl as string | undefined
   let heroAlt = (post as any).imageAlt || post.title
@@ -180,7 +186,7 @@ export default async function PostPage(
       heroAlt = firstImg?.alt || heroAlt
     }
   }
-  if (hasAppreachEmbed) {
+  if (hasAppreachInIntro) {
     heroSrc = undefined
   }
 
