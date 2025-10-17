@@ -32,7 +32,12 @@ body {
 
 /* Display headings (stylish but readable) */
 .title-display { font-family: var(--font-display), 'Noto Sans JP', system-ui, sans-serif; font-weight: 700; letter-spacing: .001em; color: var(--c-emphasis); font-size: clamp(2rem, 5.2vw + 0.2rem, 3rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.heading-accent { font-family: var(--font-display), 'Noto Sans JP', system-ui, sans-serif; font-weight: 700; letter-spacing: .001em; color: var(--c-emphasis); }
+.heading-accent { font-family: var(--font-display), 'Noto Sans JP', system-ui, sans-serif; font-weight: 700; letter-spacing: .001em; color: var(--c-emphasis); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hero-title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Any heading explicitly styled with text-emphasis should be 1-line */
+h1.text-emphasis, h2.text-emphasis, h3.text-emphasis, h4.text-emphasis, h5.text-emphasis, h6.text-emphasis {
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 .card-title { font-family: var(--font-display), 'Noto Sans JP', system-ui, sans-serif; font-weight: 700; letter-spacing: 0; }
 
 /* Form inputs default text color (fix mobile header inheriting white) */
