@@ -1,13 +1,20 @@
 import Image from 'next/image'
+import { ImgWithPlaceholder } from '@/components/ImgWithPlaceholder'
 import { notFound } from 'next/navigation'
 import { sanityClient } from '@/lib/sanity.client'
-import { postByCategorySlugQuery, relatedByTagsQuery } from '@/lib/queries'
+import { postByCategorySlugQuery, postBySlugAnyCategoryQuery, relatedByTagsQuery } from '@/lib/queries'
 import { PortableText } from '@portabletext/react'
 import { TableOfContents } from '@/components/TableOfContents'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { AdSlot } from '@/components/AdSlot'
 import { AffiliateBlocks } from '@/components/AffiliateBlocks'
 import Script from 'next/script'
+import { sanityOptimized, sanityImageRefToUrl } from '@/lib/image-util'
+import { SpeechBlockView } from '@/components/SpeechBlockView'
+import { FloatingToc } from '@/components/FloatingToc'
+import { redirect } from 'next/navigation'
+// import { TocMobileBar } from '@/components/TocMobileBar'
+const ViewTracker = (await import('@/components/ViewTracker')).ViewTracker
 
 export const revalidate = 300
 export const dynamic = 'force-dynamic'
@@ -20,7 +27,7 @@ export async function generateMetadata(
   const post = await sanityClient.fetch(postByCategorySlugQuery, { slug, category })
   if (!post) return { title: '記事が見つかりません' }
   const url = `${process.env.NEXT_PUBLIC_SITE_URL || ''}/${post.category}/${post.slug}`
-  const og = post.imageUrl || `${process.env.NEXT_PUBLIC_SITE_URL || ''}/og/${post.category}/${post.slug}`
+  const og = post.imageUrl || `${process.env.NEXT_PUBLIC_SITE_URL || ''}/og-default`
   return {
     title: post.title,
     description: post.excerpt || undefined,
@@ -33,10 +40,149 @@ export default async function PostPage(
   { params }: { params: Promise<{ category: string; slug: string }> }
 ) {
   const { category, slug } = await params
-  const post = await sanityClient.fetch(postByCategorySlugQuery, { slug, category })
+  const primary = await sanityClient.fetch(postByCategorySlugQuery, { slug, category })
+  const alt = await sanityClient.fetch(postBySlugAnyCategoryQuery, { slug }).catch(()=>null)
+  if (!primary && alt?.slug && alt?.category) {
+    redirect(`/${alt.category}/${alt.slug}`)
+  }
+  const primaryCount = Array.isArray(primary?.body) ? primary.body.length : 0
+  const altCount = Array.isArray(alt?.body) ? alt.body.length : 0
+  if (primary && alt && altCount > primaryCount) {
+    redirect(`/${alt.category}/${alt.slug}`)
+  }
+  const post = primary || alt
   if (!post) notFound()
-  const related = await sanityClient.fetch(relatedByTagsQuery, { slug: post.slug, tags: post.tags?.map((t: any) => t.slug) || [] })
-  const headings = extractHeadingsFromPortableText(post.body || [])
+  const related = await sanityClient.fetch(relatedByTagsQuery, { slug: post.slug, tags: Array.isArray(post.tags) ? post.tags : [] })
+  const hasBody = Array.isArray(post.body) && post.body.length > 0
+  const bodyBlocks: any[] = hasBody ? (post.body as any[]) : []
+  // Hoist top-of-article banners into one row: scan first 10 blocks and extract all image-link banners
+  const maxScan = Math.min(10, bodyBlocks.length)
+  const introItems: any[] = []
+  const toRemove = new Set<number>()
+  for (let i=0; i<maxScan; i++){
+    const b = bodyBlocks[i]
+    if (!b) continue
+    if (b._type === 'linkImageBlock') { introItems.push(b); toRemove.add(i); continue }
+    if (b._type === 'linkImageRow' && Array.isArray(b.items)) { introItems.push(...b.items); toRemove.add(i); continue }
+    // htmlEmbed 内に含まれるブログ村/with2の画像リンクも先頭バナーとして吸い上げ
+    if (b._type === 'htmlEmbed' && typeof (b as any).html === 'string'){
+      const html = String((b as any).html || '')
+      if (html.includes('blogmura') || html.includes('with2.net')){
+        try{
+          const items: any[] = []
+          const rx = /<a[^>]+href=["']([^"']+)["'][^>]*>\s*<img[^>]+src=["']([^"']+)["'][^>]*alt=["']?([^"'>]*)/gis
+          const matches = Array.from(html.matchAll(rx))
+          for (const m of matches){
+            const href = m[1]
+            const src = m[2]
+            const alt = m[3] || ''
+            const provider = src.includes('blogmura') || href.includes('blogmura') ? 'blogmura' : (src.includes('with2.net') || href.includes('with2.net') ? 'with2' : 'other')
+            if (provider === 'blogmura' || provider === 'with2'){
+              items.push({ _type:'linkImageBlock', href, src, alt, provider })
+            }
+          }
+          if (items.length){ introItems.push(...items); toRemove.add(i); continue }
+        }catch{}
+      }
+    }
+  }
+  // 重複（同一src/href・同一provider）を除去して順序は保持
+  if (introItems.length){
+    const seen = new Set<string>()
+    const uniq: any[] = []
+    for (const it of introItems){
+      const src = String((it as any)?.src||'').replace(/[#?].*$/,'')
+      const href = String((it as any)?.href||'').replace(/[#?].*$/,'')
+      const provider = String((it as any)?.provider||'other')
+      const key = `${provider}|${src||href}`
+      if (seen.has(key)) continue
+      seen.add(key)
+      uniq.push(it)
+    }
+    // 可能なら blogmura → with2 の順に並べる（他は後ろ）
+    introItems.length = 0
+    const order = (p:string)=> p==='blogmura'? 0 : p==='with2'? 1 : 2
+    uniq.sort((a:any,b:any)=> order(String(a?.provider||'other')) - order(String(b?.provider||'other')))
+    introItems.push(...uniq)
+  }
+  const bodyAfterIntro: any[] = introItems.length>=2 ? bodyBlocks.filter((_,i)=> !toRemove.has(i)) : bodyBlocks
+  // Extract trailing banner(s) to place just above AdSlot to avoid overlap
+  const footerItems: any[] = []
+  let tail = bodyAfterIntro.length - 1
+  while (tail >= 0){
+    const b = bodyAfterIntro[tail]
+    if (!b) { tail--; continue }
+    if (b._type === 'linkImageBlock') { footerItems.unshift(b); tail--; continue }
+    if (b._type === 'linkImageRow' && Array.isArray(b.items)) { footerItems.unshift(...b.items); tail--; continue }
+    if (b._type === 'block'){
+      const t = (b.children||[]).map((c:any)=>c.text||'').join('').trim()
+      if (!t){ tail--; continue }
+    }
+    break
+  }
+  const bodyRestInitial: any[] = footerItems.length ? bodyAfterIntro.slice(0, tail+1) : bodyAfterIntro
+  // Additionally, move any blogmura/with2 banners (画像リンク以外のボタン型を含む) を本文からフッターへ退避
+  const bodyRest: any[] = []
+  for (const b of bodyRestInitial){
+    if (b?._type === 'linkImageBlock'){
+      const src = String((b as any)?.src||'')
+      const prov = (b as any)?.provider || (src.includes('blogmura')? 'blogmura' : (src.includes('with2.net')? 'with2' : 'other'))
+      if (prov==='blogmura' || prov==='with2') { footerItems.push(b); continue }
+    }
+    // ボタン型（テキスト＋CSS）のリンクを含む段落を検出し、ボタンとして退避
+    if (b?._type === 'block' && Array.isArray((b as any).markDefs)){
+      const md = (b as any).markDefs
+      const children = (b as any).children || []
+      const linkMarks = new Map<string,string>()
+      for (const m of md){
+        if (m?._type==='link' && typeof m?.href==='string'){
+          const href = String(m.href)
+          if (href.includes('blogmura') || href.includes('with2.net')) linkMarks.set(m._key, href)
+        }
+      }
+      if (linkMarks.size){
+        // ボタンとして抽出
+        for (const c of children){
+          if (!Array.isArray(c?.marks)) continue
+          for (const mk of c.marks){
+            const href = linkMarks.get(mk)
+            if (href){ footerItems.push({ _type:'linkImageBlock', href, src:'', alt:'', provider: href.includes('with2.net')? 'with2':'blogmura' }) }
+          }
+        }
+        // 本文から当該段落を除去
+        continue
+      }
+    }
+    if (b?._type === 'linkImageRow' && Array.isArray((b as any).items)){
+      const keepItems:any[]=[]
+      for (const it of (b as any).items){
+        const src = String(it?.src||'')
+        const prov = it?.provider || (src.includes('blogmura')? 'blogmura' : (src.includes('with2.net')? 'with2' : 'other'))
+        if (prov==='blogmura' || prov==='with2') footerItems.push(it)
+        else keepItems.push(it)
+      }
+      if (keepItems.length){ bodyRest.push({ ...(b as any), items: keepItems }) }
+      continue
+    }
+    bodyRest.push(b)
+  }
+  const headingsAll = extractHeadingsFromPortableText(bodyRest)
+  const headings = headingsAll.filter(h => h.level <= 2)
+  // Detect Appreach embed; if exists, do not render hero big image (置換意図)
+  const hasAppreachEmbed = bodyBlocks.some((b:any)=> b?._type==='htmlEmbed' && typeof (b as any).html==='string' && (b as any).html.includes('class="appreach"'))
+  // Compute hero image (prefer heroImage, fallback to first image block)
+  let heroSrc = post.imageUrl as string | undefined
+  let heroAlt = (post as any).imageAlt || post.title
+  if (!heroSrc && hasBody) {
+    const firstImg = (post.body as any[]).find(b => b?._type==='image' && b?.asset?._ref)
+    if (firstImg) {
+      heroSrc = sanityImageRefToUrl(firstImg.asset._ref, { q: 80, fit:'clip' })
+      heroAlt = firstImg?.alt || heroAlt
+    }
+  }
+  if (hasAppreachEmbed) {
+    heroSrc = undefined
+  }
 
   const crumbs = [
     { label: 'Home', href: '/' },
@@ -46,8 +192,11 @@ export default async function PostPage(
 
   return (
     <div>
+      <ViewTracker slug={post.slug} />
       <Breadcrumbs items={crumbs} />
       <article className="container-responsive py-8 max-w-3xl">
+        {/* Compact floating TOC (mobile, H2まで) */}
+        <FloatingToc headings={headingsAll.filter(h=>h.level<=2)} />
         <Script id="post-jsonld" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify({
             '@context': 'https://schema.org',
@@ -67,40 +216,104 @@ export default async function PostPage(
           })}
         </Script>
         <header className="mb-6">
-          <h1 className="text-3xl font-bold text-gray-900">{post.title}</h1>
+          <h1 className="text-3xl font-bold title-display truncate">{post.title}</h1>
           <div className="mt-2 text-sm text-gray-500 flex flex-wrap gap-3">
             {post.publishedAt && <time dateTime={post.publishedAt}>公開: {new Date(post.publishedAt).toLocaleDateString('ja-JP')}</time>}
             {post.updatedAt && <time dateTime={post.updatedAt}>更新: {new Date(post.updatedAt).toLocaleDateString('ja-JP')}</time>}
           </div>
-          {post.imageUrl && (
-            <div className="relative w-full aspect-[16/9] bg-gray-100 rounded-md overflow-hidden mt-4">
-              <Image src={post.imageUrl} alt={post.title} fill className="object-cover" />
-            </div>
+          {introItems.length > 1 && (
+            (()=>{
+              const hasApp = introItems.some((it:any)=> String(it?.src||'').includes('appreach') || String(it?.src||'').includes('nabettu.github.io'))
+              const rowClass = hasApp ? 'banner-row-40' : 'banner-row-31'
+              return (
+                <div className={`my-3 flex items-center ${hasApp? 'justify-center' : 'justify-end'} gap-2 flex-nowrap link-row ${rowClass}`}>
+                  {introItems.map((it:any, idx:number)=> (
+                    <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
+                      <img src={String(it?.src||'')} alt={it?.alt||''} />
+                    </a>
+                  ))}
+                </div>
+              )
+            })()
+          )}
+          {heroSrc && (
+            <figure className="mt-4 mb-2">
+              <img src={heroSrc} alt={heroAlt} className="w-full h-auto rounded-md" />
+              {heroAlt && <figcaption className="text-xs text-gray-500 mt-2 text-center">{heroAlt}</figcaption>}
+            </figure>
           )}
         </header>
 
         <AdSlot slot="ARTICLE_TOP_SLOT" className="my-6" />
 
         <div className="grid md:grid-cols-[1fr_320px] gap-10">
-          <div className="prose-content">
-            <PortableText value={post.body} components={ptComponents as any} />
-            <AffiliateBlocks items={post.affiliateBlocks as any} />
-            <AdSlot slot="ARTICLE_BOTTOM_SLOT" className="my-6" />
+          <div
+            className="prose-content text-[17px] md:text-[18px] leading-[1.9] tracking-[.005em]
+                       [word-break:break-word] [overflow-wrap:anywhere]
+                       [&>p]:my-4 [&>ul]:pl-6 [&>ul]:list-disc [&>ol]:pl-6 [&>ol]:list-decimal [&>li]:my-1
+                       [&>blockquote]:border-l-4 [&>blockquote]:pl-4 [&>blockquote]:italic
+                       [&>h2]:mt-10 [&>h2]:mb-4 [&>h2]:text-[1.5rem] md:[&>h2]:text-[1.875rem]
+                       [&>h3]:mt-8 [&>h3]:mb-3 [&>h3]:text-[1.25rem] md:[&>h3]:text-[1.5rem]
+                       [&_h2]:scroll-mt-24 [&_h3]:scroll-mt-24 [&_h4]:scroll-mt-24
+                       [&_a]:underline [&_a]:underline-offset-2 [&_a]:text-[var(--c-emphasis)] hover:[&_a]:text-[var(--c-primary)]"
+          >
+            {bodyRest.length ? (
+              <>
+                <PortableText value={bodyRest} components={ptComponents as any} />
+                <AffiliateBlocks items={post.affiliateBlocks as any} />
+              </>
+            ) : (
+              <div className="text-gray-700">
+                <p>本文の整備を進めています。短い間お待ちください。</p>
+                {post.excerpt && <p className="mt-3">{post.excerpt}</p>}
+              </div>
+            )}
+            {/* Footer banner row to avoid AdSense overlap */}
+            {footerItems.length > 0 && (
+              (()=>{
+                const allAppF = footerItems.every((it:any)=> String(it?.src||'').includes('appreach') || String(it?.src||'').includes('nabettu.github.io'))
+                const rowClassF = allAppF ? 'banner-row-40' : 'banner-row-31'
+                return (
+                  <div className={`my-4 flex items-start ${allAppF? 'justify-center' : 'justify-end'} gap-2 flex-nowrap link-row clear-both ${rowClassF}`}>
+                    {footerItems.map((it:any, idx:number)=> (
+                      <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
+                        <img src={String(it?.src||'')} alt={it?.alt||''} />
+                      </a>
+                    ))}
+                  </div>
+                )
+              })()
+            )}
+            <AdSlot slot="ARTICLE_BOTTOM_SLOT" className="my-6 clear-both" />
           </div>
-          <aside className="md:sticky md:top-20 h-max space-y-6">
-            <TableOfContents headings={headings} />
+          <aside className="hidden md:block md:sticky md:top-20 h-max space-y-6">
+            {hasBody && <TableOfContents headings={headings} />}
             <AdSlot slot="SIDEBAR_SLOT" />
           </aside>
         </div>
 
         {related?.length > 0 && (
           <section className="mt-12">
-            <h2 className="text-xl font-semibold mb-4">関連記事</h2>
-            <ul className="list-disc pl-6 text-gray-700 space-y-1">
-              {related.map((r: any) => (
-                <li key={r._id}><a href={`/${r.category}/${r.slug}`}>{r.title}</a></li>
-              ))}
-            </ul>
+            <h2 className="text-xl font-semibold mb-4 text-emphasis">関連記事</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {related.map((r: any) => {
+                const href = r.category ? `/${r.category}/${r.slug}` : `/${r.slug}`
+                return (
+                <a key={r._id} href={href} className="card hover:shadow overflow-hidden">
+                  <div className="relative w-full aspect-[16/9] bg-gray-100">
+                    {r.imageUrl ? (
+                      <ImgWithPlaceholder src={sanityOptimized(r.imageUrl, { q: 70, fit:'crop' })} alt={r.title} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover"/>
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">No Image</div>
+                    )}
+                  </div>
+                  <div className="p-4">
+                    <div className="text-xs text-white inline-flex rounded-full px-3 py-1" style={{ background:'#8CB9BD' }}>{r.categoryTitle || r.category}</div>
+                    <div className="mt-2 font-medium line-clamp-2">{r.title}</div>
+                  </div>
+                </a>)
+              })}
+            </div>
           </section>
         )}
       </article>
@@ -124,12 +337,127 @@ function extractHeadingsFromPortableText(blocks: any[]) {
 }
 
 const ptComponents = {
-  types: {},
-  marks: {},
+  types: {
+    image: ({ value }: any) => {
+      const src = sanityImageRefToUrl(value?.asset?._ref, { q: 80, fit:'clip' })
+      if (!src) return null
+      const m = String(value?.asset?._ref||'').match(/-(\d+)x(\d+)-/)
+      const w = m ? parseInt(m[1],10) : undefined
+      const h = m ? parseInt(m[2],10) : undefined
+      return (
+        <figure className="my-6">
+          {w && h ? (
+            <ImgWithPlaceholder src={src} alt={value?.alt || ''} width={w} height={h} sizes="100vw" style={{ width:'100%', height:'auto' }} className="mx-auto" />
+          ) : (
+            <ImgWithPlaceholder src={src} alt={value?.alt || ''} fill sizes="100vw" className="object-contain bg-white" />
+          )}
+          {value?.alt && <figcaption className="text-xs text-gray-500 mt-2 text-center">{value.alt}</figcaption>}
+        </figure>
+      )
+    },
+    speechBlock: ({ value }: any) => <SpeechBlockView value={value} />,
+    tableBlock: ({ value }: any) => {
+      const rows: string[][] = (value?.rows || []).map((r:any)=> Array.isArray(r?.cells)? r.cells : [])
+      if (!rows?.length) return null
+      const hasHeader = !!value?.hasHeader
+      const head = hasHeader ? rows[0] : null
+      const body = hasHeader ? rows.slice(1) : rows
+      const formatCell = (c:string) => {
+        const s = String(c||'')
+        const isMoney = /[¥￥]|^\s*\d{1,3}(,\d{3})*(\.\d+)?\s*$/.test(s)
+        return isMoney ? <span className="whitespace-nowrap">{s}</span> : s
+      }
+      return (
+        <div className="my-6 overflow-auto table-sticky">
+          <table className="min-w-full border-collapse text-[14px]">
+            {hasHeader && (
+              <thead>
+                <tr>{head!.map((c,i)=>(<th key={i} className="border px-3 py-2 bg-[var(--c-bg)] text-gray-700 text-left">{formatCell(c)}</th>))}</tr>
+              </thead>
+            )}
+            <tbody>
+              {body.map((r,ri)=>(
+                <tr key={ri} className={ri%2? 'bg-white' : 'bg-gray-50'}>
+                  {r.map((c,ci)=>(<td key={ci} className="border px-3 py-2 align-top">{formatCell(c)}</td>))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )
+    },
+    linkImageBlock: ({ value }: any) => {
+      if (!value?.src) return null
+      const src = String(value.src)
+      const provider = value?.provider || (src.includes('blogmura') ? 'blogmura' : src.includes('with2.net') ? 'with2' : (src.includes('appreach')||src.includes('nabettu.github.io')) ? 'appreach' : 'other')
+      const size = provider==='appreach' ? { w:135, h:40 } : (provider==='blogmura'||provider==='with2') ? { w:110, h:31 } : null
+      return (
+        <span className="banner-inline float-right ml-2">
+          <a href={String(value?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="inline-block no-underline hover:opacity-95 align-middle">
+            {size ? (
+              <img src={src} alt={value?.alt||''} width={size.w} height={size.h} style={{ width:size.w, height:size.h, display:'block' }} />
+            ) : (
+              <img src={src} alt={value?.alt||''} className="inline-block max-w-full h-auto" style={{ display:'block' }} />
+            )}
+          </a>
+        </span>
+      )
+    },
+    linkImageRow: ({ value }: any) => {
+      const items = (value?.items||[]).filter((it:any)=>it?.src)
+      if (!items.length) return null
+      const allAppreach = items.every((it:any)=> {
+        const src = String(it?.src||'')
+        return (it?.provider==='appreach') || src.includes('appreach') || src.includes('nabettu.github.io')
+      })
+      const hasAppreach = items.some((it:any)=> {
+        const src = String(it?.src||'')
+        return (it?.provider==='appreach') || src.includes('appreach') || src.includes('nabettu.github.io')
+      })
+      const maxH = hasAppreach ? 40 : 31
+      const rowClass = allAppreach ? 'banner-row-40' : 'banner-row-31'
+      return (
+        <div className={`my-3 flex items-center ${allAppreach? 'justify-center' : 'justify-end'} gap-2 flex-nowrap link-row ${rowClass}`}>
+          {items.map((it:any, idx:number)=>{
+            const src = String(it.src)
+            const provider = it?.provider || (src.includes('appreach')||src.includes('nabettu.github.io') ? 'appreach' : 'other')
+            const size = provider==='appreach' ? { w:135, h:40 } : null
+            return (
+              <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
+                <img src={src} alt={it?.alt||''} />
+              </a>
+            )
+          })}
+        </div>
+      )
+    }
+    ,
+    htmlEmbed: ({ value }: any) => (
+      <div className="embed-html" dangerouslySetInnerHTML={{ __html: String(value?.html||'') }} />
+    )
+  },
+  marks: {
+    strong: ({children}: any) => <strong className="font-semibold">{children}</strong>,
+    em: ({children}: any) => <em className="italic">{children}</em>,
+    highlight: ({children}: any) => <span className="marker-pen">{children}</span>,
+    link: ({children, value}: any) => (
+      <a href={value?.href} target={value?.blank? '_blank' : undefined} rel={value?.blank? 'noopener noreferrer' : undefined} className="underline underline-offset-2 text-[var(--c-emphasis)] hover:text-[var(--c-primary)]">{children}</a>
+    )
+  },
   block: {
-    h2: ({ children }: any) => <h2 id={slugify(String(children))}>{children}</h2>,
-    h3: ({ children }: any) => <h3 id={slugify(String(children))}>{children}</h3>,
-    h4: ({ children }: any) => <h4 id={slugify(String(children))}>{children}</h4>,
-    normal: ({ children }: any) => <p>{children}</p>
+    h2: ({ children }: any) => (
+      <h2 id={slugify(String(children))} className="mt-10 mb-4 text-[1.5rem] md:text-[1.875rem] leading-snug scroll-mt-24 pl-6 relative">
+        <span className="h2-paw" aria-hidden />
+        <span className="marker-pen" style={{ marginLeft: '0.6em' }}>{children}</span>
+      </h2>
+    ),
+    h3: ({ children }: any) => <h3 id={slugify(String(children))} className="mt-8 mb-3 text-[1.25rem] md:text-[1.5rem] leading-snug scroll-mt-24">{children}</h3>,
+    h4: ({ children }: any) => <h4 id={slugify(String(children))} className="mt-6 mb-2 text-[1.125rem] md:text-[1.25rem] leading-snug scroll-mt-24">{children}</h4>,
+    normal: ({ children }: any) => <p className="my-4 leading-[1.9] tracking-[.005em]">{children}</p>
+  }
+  ,
+  list: {
+    bullet: ({children}: any) => <ul className="list-disc pl-6 my-4">{children}</ul>,
+    number: ({children}: any) => <ol className="list-decimal pl-6 my-4">{children}</ol>
   }
 }
