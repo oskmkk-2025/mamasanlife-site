@@ -22,7 +22,9 @@ export default function DesignPreviewUI(){
   const pcRef = useRef<HTMLIFrameElement|null>(null)
   const [autoScroll, setAutoScroll] = useState(false)
   const [autoFitHeight, setAutoFitHeight] = useState(true)
-  const [autoFitScale, setAutoFitScale] = useState(true)
+  const [autoFitScale, setAutoFitScale] = useState(false)
+  const [viewMode, setViewMode] = useState<'single'|'dual'>('single')
+  const [device, setDevice] = useState<'sp'|'pc'>('sp')
   const scrollTimer = useRef<any>(null)
   const containerRef = useRef<HTMLDivElement|null>(null)
   const controlsRef = useRef<HTMLDivElement|null>(null)
@@ -164,6 +166,16 @@ export default function DesignPreviewUI(){
         <label className="text-sm">Path
           <input value={path} onChange={e=>setPath(e.target.value)} className="border ml-2 px-2 py-1 rounded w-[380px] max-w-[80vw]" placeholder="/category/slug" />
         </label>
+        <div className="text-sm">Mode:
+          <button onClick={()=>setViewMode('single')} className={`ml-2 px-2 py-1 rounded border ${viewMode==='single'? 'bg-[var(--c-primary)] text-white':'bg-white'}`}>Single</button>
+          <button onClick={()=>setViewMode('dual')} className={`ml-1 px-2 py-1 rounded border ${viewMode==='dual'? 'bg-[var(--c-primary)] text-white':'bg-white'}`}>Dual</button>
+        </div>
+        {viewMode==='single' && (
+          <div className="text-sm">Device:
+            <button onClick={()=>setDevice('sp')} className={`ml-2 px-2 py-1 rounded border ${device==='sp'? 'bg-[var(--c-primary)] text-white':'bg-white'}`}>SP</button>
+            <button onClick={()=>setDevice('pc')} className={`ml-1 px-2 py-1 rounded border ${device==='pc'? 'bg-[var(--c-primary)] text-white':'bg-white'}`}>PC</button>
+          </div>
+        )}
         <div className="text-sm">SP:
           {SP_PRESETS.map(p=> (
             <button key={p.label} onClick={()=>setSpW(p.width)} className={`ml-2 px-2 py-1 rounded border ${spW===p.width? 'bg-[var(--c-primary)] text-white':'bg-white'}`}>{p.label}</button>
@@ -179,20 +191,44 @@ export default function DesignPreviewUI(){
         <button onClick={startRecording} className="px-3 py-1 rounded border text-sm">画面録画（WebM）</button>
         <button onClick={()=>setAutoFitScale(v=>!v)} className="px-3 py-1 rounded border text-sm">{autoFitScale? 'Fit to View: ON':'Fit to View: OFF'}</button>
       </div>
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
-        <div>
-          <div className="text-sm text-gray-600 mb-2">SP {spW}px {autoFitScale && scaleSp<1 ? `(scaled x${scaleSp.toFixed(2)})` : ''}</div>
-          <div className="mx-auto border rounded-md bg-white shadow-md overflow-hidden" style={{ width: Math.round(spW * (autoFitScale? scaleSp:1)), height: Math.round((autoFitHeight? spH:800) * (autoFitScale? scaleSp:1)) }}>
-            <iframe ref={spRef} src={urlSp} title="sp" style={{ width: spW, height: autoFitHeight? spH : 800, border: '0', display:'block', transform: `scale(${autoFitScale? scaleSp:1})`, transformOrigin: 'top left' }} />
+      {viewMode==='single' ? (
+        <div className="grid grid-cols-1 gap-6 items-start">
+          {device==='sp' ? (
+            <div>
+              <div className="text-sm text-gray-600 mb-2">SP {spW}px</div>
+              <div className="mx-auto border rounded-md bg-white shadow-md overflow-auto" style={{ maxWidth: '100%' }}>
+                <div style={{ width: spW }}>
+                  <iframe ref={spRef} src={urlSp} title="sp" style={{ width: spW, height: autoFitHeight? spH : 800, border: '0', display:'block' }} />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <div className="text-sm text-gray-600 mb-2">PC {pcW}px</div>
+              <div className="mx-auto border rounded-md bg-white shadow-md overflow-auto" style={{ maxWidth: '100%' }}>
+                <div style={{ width: pcW }}>
+                  <iframe ref={pcRef} src={urlPc} title="pc" style={{ width: pcW, height: autoFitHeight? pcH : 800, border: '0', display:'block' }} />
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
+          <div>
+            <div className="text-sm text-gray-600 mb-2">SP {spW}px {autoFitScale && scaleSp<1 ? `(scaled x${scaleSp.toFixed(2)})` : ''}</div>
+            <div className="mx-auto border rounded-md bg-white shadow-md overflow-hidden" style={{ width: Math.round(spW * (autoFitScale? scaleSp:1)), height: Math.round((autoFitHeight? spH:800) * (autoFitScale? scaleSp:1)) }}>
+              <iframe ref={spRef} src={urlSp} title="sp" style={{ width: spW, height: autoFitHeight? spH : 800, border: '0', display:'block', transform: `scale(${autoFitScale? scaleSp:1})`, transformOrigin: 'top left' }} />
+            </div>
+          </div>
+          <div>
+            <div className="text-sm text-gray-600 mb-2">PC {pcW}px {autoFitScale && scalePc<1 ? `(scaled x${scalePc.toFixed(2)})` : ''}</div>
+            <div className="mx-auto border rounded-md bg-white shadow-md overflow-hidden" style={{ width: Math.round(pcW * (autoFitScale? scalePc:1)), height: Math.round((autoFitHeight? pcH:800) * (autoFitScale? scalePc:1)) }}>
+              <iframe ref={pcRef} src={urlPc} title="pc" style={{ width: pcW, height: autoFitHeight? pcH : 800, border: '0', display:'block', transform: `scale(${autoFitScale? scalePc:1})`, transformOrigin: 'top left' }} />
+            </div>
           </div>
         </div>
-        <div>
-          <div className="text-sm text-gray-600 mb-2">PC {pcW}px {autoFitScale && scalePc<1 ? `(scaled x${scalePc.toFixed(2)})` : ''}</div>
-          <div className="mx-auto border rounded-md bg-white shadow-md overflow-hidden" style={{ width: Math.round(pcW * (autoFitScale? scalePc:1)), height: Math.round((autoFitHeight? pcH:800) * (autoFitScale? scalePc:1)) }}>
-            <iframe ref={pcRef} src={urlPc} title="pc" style={{ width: pcW, height: autoFitHeight? pcH : 800, border: '0', display:'block', transform: `scale(${autoFitScale? scalePc:1})`, transformOrigin: 'top left' }} />
-          </div>
-        </div>
-      </div>
+      )}
       <p className="text-xs text-gray-500 mt-4">録画はブラウザの画面共有UIから停止してください（ダウンロードが自動開始）。</p>
     </div>
   )
