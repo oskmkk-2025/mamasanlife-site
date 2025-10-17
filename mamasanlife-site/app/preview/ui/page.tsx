@@ -21,6 +21,7 @@ export default function DesignPreviewUI(){
   const spRef = useRef<HTMLIFrameElement|null>(null)
   const pcRef = useRef<HTMLIFrameElement|null>(null)
   const [autoScroll, setAutoScroll] = useState(false)
+  const [autoFitHeight, setAutoFitHeight] = useState(true)
   const scrollTimer = useRef<any>(null)
 
   const urlSp = useMemo(()=> `${path}?_pv=sp-${spW}`, [path, spW])
@@ -54,6 +55,43 @@ export default function DesignPreviewUI(){
     scrollTimer.current = setInterval(tick, 16)
     return ()=>{ if (scrollTimer.current) clearInterval(scrollTimer.current) }
   },[autoScroll])
+
+  // Auto-fit iframe height to its document height (same-origin)
+  useEffect(()=>{
+    if (!autoFitHeight) return
+    const frames = [spRef.current, pcRef.current].filter(Boolean) as HTMLIFrameElement[]
+    const observers: ResizeObserver[] = []
+    const attach = (iframe: HTMLIFrameElement)=>{
+      const fit = ()=>{
+        try{
+          const doc = iframe.contentDocument
+          if (!doc) return
+          const h = Math.max(
+            doc.body?.scrollHeight || 0,
+            doc.documentElement?.scrollHeight || 0
+          )
+          if (h) iframe.style.height = `${h}px`
+        }catch{}
+      }
+      iframe.addEventListener('load', fit)
+      // Observe size changes inside the iframe
+      try{
+        const doc = iframe.contentDocument
+        if (doc){
+          const ro = new ResizeObserver(fit)
+          ro.observe(doc.documentElement)
+          ro.observe(doc.body)
+          observers.push(ro)
+          // initial
+          setTimeout(fit, 50)
+        }
+      }catch{}
+    }
+    frames.forEach(attach)
+    return ()=>{
+      observers.forEach(o=>o.disconnect())
+    }
+  },[autoFitHeight, urlSp, urlPc])
 
   const startRecording = async ()=>{
     try{
@@ -91,19 +129,20 @@ export default function DesignPreviewUI(){
           ))}
         </div>
         <button onClick={()=>setAutoScroll(v=>!v)} className="px-3 py-1 rounded border text-sm">{autoScroll? 'Auto Scroll: ON':'Auto Scroll: OFF'}</button>
+        <button onClick={()=>setAutoFitHeight(v=>!v)} className="px-3 py-1 rounded border text-sm">{autoFitHeight? 'Auto Fit Height: ON':'Auto Fit Height: OFF'}</button>
         <button onClick={startRecording} className="px-3 py-1 rounded border text-sm">画面録画（WebM）</button>
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
         <div>
           <div className="text-sm text-gray-600 mb-2">SP {spW}px</div>
-          <div className="mx-auto border rounded-md overflow-hidden bg-white shadow-md" style={{ width: spW }}>
-            <iframe ref={spRef} src={urlSp} title="sp" style={{ width: spW, height: 800, border: '0' }} />
+          <div className="mx-auto border rounded-md bg-white shadow-md" style={{ width: spW }}>
+            <iframe ref={spRef} src={urlSp} title="sp" style={{ width: spW, height: autoFitHeight? 'auto' as any : 800, border: '0', display:'block' }} />
           </div>
         </div>
         <div>
           <div className="text-sm text-gray-600 mb-2">PC {pcW}px</div>
-          <div className="mx-auto border rounded-md overflow-hidden bg-white shadow-md" style={{ width: pcW }}>
-            <iframe ref={pcRef} src={urlPc} title="pc" style={{ width: pcW, height: 800, border: '0' }} />
+          <div className="mx-auto border rounded-md bg-white shadow-md" style={{ width: pcW }}>
+            <iframe ref={pcRef} src={urlPc} title="pc" style={{ width: pcW, height: autoFitHeight? 'auto' as any : 800, border: '0', display:'block' }} />
           </div>
         </div>
       </div>
@@ -111,4 +150,3 @@ export default function DesignPreviewUI(){
     </div>
   )
 }
-
