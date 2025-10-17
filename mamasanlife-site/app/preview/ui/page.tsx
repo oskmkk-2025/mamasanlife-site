@@ -22,7 +22,13 @@ export default function DesignPreviewUI(){
   const pcRef = useRef<HTMLIFrameElement|null>(null)
   const [autoScroll, setAutoScroll] = useState(false)
   const [autoFitHeight, setAutoFitHeight] = useState(true)
+  const [autoFitScale, setAutoFitScale] = useState(true)
   const scrollTimer = useRef<any>(null)
+  const containerRef = useRef<HTMLDivElement|null>(null)
+  const [scaleSp, setScaleSp] = useState(1)
+  const [scalePc, setScalePc] = useState(1)
+  const [spH, setSpH] = useState<number>(800)
+  const [pcH, setPcH] = useState<number>(800)
 
   const urlSp = useMemo(()=> `${path}?_pv=sp-${spW}`, [path, spW])
   const urlPc = useMemo(()=> `${path}?_pv=pc-${pcW}`, [path, pcW])
@@ -71,6 +77,8 @@ export default function DesignPreviewUI(){
             doc.documentElement?.scrollHeight || 0
           )
           if (h) iframe.style.height = `${h}px`
+          if (iframe === spRef.current && h) setSpH(h)
+          if (iframe === pcRef.current && h) setPcH(h)
         }catch{}
       }
       iframe.addEventListener('load', fit)
@@ -93,6 +101,33 @@ export default function DesignPreviewUI(){
     }
   },[autoFitHeight, urlSp, urlPc])
 
+  // Auto-fit scale so frames never overflow container
+  useEffect(()=>{
+    if (!autoFitScale) { setScaleSp(1); setScalePc(1); return }
+    const measure = ()=>{
+      const box = containerRef.current
+      if (!box) return
+      const W = box.clientWidth
+      // Assume 2 columns when container width is large enough
+      const twoCols = W >= 1100
+      const gap = 24 // Tailwind gap-6 ~ 24px
+      if (twoCols){
+        const colW = (W - gap) / 2
+        setScaleSp(Math.min(1, colW / spW))
+        setScalePc(Math.min(1, colW / pcW))
+      } else {
+        // Single column: fit each to container width
+        setScaleSp(Math.min(1, W / spW))
+        setScalePc(Math.min(1, W / pcW))
+      }
+    }
+    measure()
+    const ro = new ResizeObserver(measure)
+    if (containerRef.current) ro.observe(containerRef.current)
+    window.addEventListener('resize', measure)
+    return ()=>{ window.removeEventListener('resize', measure); ro.disconnect() }
+  },[autoFitScale, spW, pcW])
+
   const startRecording = async ()=>{
     try{
       const stream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: false })
@@ -112,7 +147,7 @@ export default function DesignPreviewUI(){
   }
 
   return (
-    <div className="container-responsive py-6">
+    <div className="container-responsive py-6" ref={containerRef}>
       <h1 className="text-2xl font-semibold mb-4">Design Preview (PC / SP)</h1>
       <div className="flex flex-wrap items-center gap-3 mb-4">
         <label className="text-sm">Path
@@ -131,18 +166,19 @@ export default function DesignPreviewUI(){
         <button onClick={()=>setAutoScroll(v=>!v)} className="px-3 py-1 rounded border text-sm">{autoScroll? 'Auto Scroll: ON':'Auto Scroll: OFF'}</button>
         <button onClick={()=>setAutoFitHeight(v=>!v)} className="px-3 py-1 rounded border text-sm">{autoFitHeight? 'Auto Fit Height: ON':'Auto Fit Height: OFF'}</button>
         <button onClick={startRecording} className="px-3 py-1 rounded border text-sm">画面録画（WebM）</button>
+        <button onClick={()=>setAutoFitScale(v=>!v)} className="px-3 py-1 rounded border text-sm">{autoFitScale? 'Fit to View: ON':'Fit to View: OFF'}</button>
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
         <div>
-          <div className="text-sm text-gray-600 mb-2">SP {spW}px</div>
-          <div className="mx-auto border rounded-md bg-white shadow-md" style={{ width: spW }}>
-            <iframe ref={spRef} src={urlSp} title="sp" style={{ width: spW, height: autoFitHeight? 'auto' as any : 800, border: '0', display:'block' }} />
+          <div className="text-sm text-gray-600 mb-2">SP {spW}px {autoFitScale && scaleSp<1 ? `(scaled x${scaleSp.toFixed(2)})` : ''}</div>
+          <div className="mx-auto border rounded-md bg-white shadow-md overflow-hidden" style={{ width: Math.round(spW * (autoFitScale? scaleSp:1)), height: Math.round((autoFitHeight? spH:800) * (autoFitScale? scaleSp:1)) }}>
+            <iframe ref={spRef} src={urlSp} title="sp" style={{ width: spW, height: autoFitHeight? spH : 800, border: '0', display:'block', transform: `scale(${autoFitScale? scaleSp:1})`, transformOrigin: 'top left' }} />
           </div>
         </div>
         <div>
-          <div className="text-sm text-gray-600 mb-2">PC {pcW}px</div>
-          <div className="mx-auto border rounded-md bg-white shadow-md" style={{ width: pcW }}>
-            <iframe ref={pcRef} src={urlPc} title="pc" style={{ width: pcW, height: autoFitHeight? 'auto' as any : 800, border: '0', display:'block' }} />
+          <div className="text-sm text-gray-600 mb-2">PC {pcW}px {autoFitScale && scalePc<1 ? `(scaled x${scalePc.toFixed(2)})` : ''}</div>
+          <div className="mx-auto border rounded-md bg-white shadow-md overflow-hidden" style={{ width: Math.round(pcW * (autoFitScale? scalePc:1)), height: Math.round((autoFitHeight? pcH:800) * (autoFitScale? scalePc:1)) }}>
+            <iframe ref={pcRef} src={urlPc} title="pc" style={{ width: pcW, height: autoFitHeight? pcH : 800, border: '0', display:'block', transform: `scale(${autoFitScale? scalePc:1})`, transformOrigin: 'top left' }} />
           </div>
         </div>
       </div>
