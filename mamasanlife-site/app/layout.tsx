@@ -6,7 +6,6 @@ import { HeaderBar } from '@/components/HeaderBar'
 import { GlobalNav } from '@/components/GlobalNav'
 import { Footer } from '@/components/Footer'
 import { MigrationNotice } from '@/components/MigrationNotice'
-import { FitHeadings } from '@/components/FitHeadings'
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001'),
@@ -70,7 +69,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" href="/icons/logo-mark-b.svg" type="image/svg+xml" />
         <a href="#main" className="sr-only focus:not-sr-only fixed top-2 left-2 z-50 bg-white text-black border px-3 py-2 rounded">メインコンテンツへスキップ</a>
         <MigrationNotice />
-        <FitHeadings />
         <HeaderBar />
         <GlobalNav />
         <main id="main" className="min-h-[60vh]" role="main">{children}</main>
