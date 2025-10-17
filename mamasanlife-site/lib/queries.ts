@@ -15,18 +15,26 @@ export const postFields = `{
   "slug": slug.current,
   excerpt,
   heroImage,
+  "imageUrl": heroImage.asset->url,
   publishedAt,
   updatedAt,
-  oldUrl,
-  redirectTo,
-  category,
-  "categoryTitle": select(category=="money"=>"お金・家計管理", category=="parenting"=>"子育て・教育", category=="life"=>"暮らし・家事", category=="work"=>"働き方・キャリア", category=="health"=>"心と健康", category=="feature"=>"特集", "その他"),
-  "imageUrl": heroImage.asset->url,
-  tags
+  // category is stored as string enum in our schema
+  "category": category,
+  "categoryTitle": select(
+    category == "money" => "お金・家計管理",
+    category == "parenting" => "子育て・教育",
+    category == "life" => "暮らし・家事",
+    category == "work" => "働き方・キャリア",
+    category == "health" => "心と健康",
+    category == "feature" => "特集",
+    ""
+  ),
+  // tags are strings in our schema
+  "tags": tags
 }`
 
 export const latestByCategoryQuery = groq`
-  *[_type == "post" && defined(slug.current) && category->slug.current == $category]
+  *[_type == "post" && defined(slug.current) && category == $category]
   | order(publishedAt desc)[0...$limit]
   ${postFields}
 `
@@ -42,21 +50,62 @@ export const recentPostsQuery = groq`
 `
 
 export const tagCloudQuery = groq`
-  array::unique(*[_type == "post" && defined(tags)][].tags[])
+  array::unique(*[_type == "post" && defined(tags)][].tags)
 `
 
 export const postByCategorySlugQuery = groq`
-  *[_type == "post" && defined(slug.current) && slug.current == $slug && category == $category][0]{
-    ...,
+  *[_type == "post" && defined(slug.current) && slug.current == $slug && category == $category]
+  | order(coalesce(count(body), 0) desc, coalesce(updatedAt, publishedAt) desc, _updatedAt desc)[0]{
+    _id,
+    title,
     "slug": slug.current,
-    category,
-    "categoryTitle": select(category=="money"=>"お金・家計管理", category=="parenting"=>"子育て・教育", category=="life"=>"暮らし・家事", category=="work"=>"働き方・キャリア", category=="health"=>"心と健康", category=="feature"=>"特集", "その他"),
+    excerpt,
+    heroImage,
+    "imageAlt": heroImage.alt,
     "imageUrl": heroImage.asset->url,
+    publishedAt,
+    updatedAt,
+    "category": category,
+    "categoryTitle": select(
+      category == "money" => "お金・家計管理",
+      category == "parenting" => "子育て・教育",
+      category == "life" => "暮らし・家事",
+      category == "work" => "働き方・キャリア",
+      category == "health" => "心と健康",
+      category == "feature" => "特集",
+      ""
+    ),
     body,
     adsPlacement,
-    tags,
-    eeat,
-    targetKeyword
+    "tags": tags
+  }
+`
+
+export const postBySlugAnyCategoryQuery = groq`
+  *[_type == "post" && defined(slug.current) && slug.current == $slug]
+  | order(coalesce(count(body), 0) desc, coalesce(updatedAt, publishedAt) desc, _updatedAt desc)[0]{
+    _id,
+    title,
+    "slug": slug.current,
+    excerpt,
+    heroImage,
+    "imageAlt": heroImage.alt,
+    "imageUrl": heroImage.asset->url,
+    publishedAt,
+    updatedAt,
+    "category": category,
+    "categoryTitle": select(
+      category == "money" => "お金・家計管理",
+      category == "parenting" => "子育て・教育",
+      category == "life" => "暮らし・家事",
+      category == "work" => "働き方・キャリア",
+      category == "health" => "心と健康",
+      category == "feature" => "特集",
+      ""
+    ),
+    body,
+    adsPlacement,
+    "tags": tags
   }
 `
 
@@ -72,11 +121,15 @@ export const countByCategoryQuery = groq`
 
 export const relatedByTagsQuery = groq`
   *[_type == "post" && defined(slug.current) && slug.current != $slug && count(tags[@ in $tags]) > 0]
-  | order(publishedAt desc)[0...4]
+  | order(publishedAt desc)[0...5]
   ${postFields}
 `
 
-export const allPostSlugsQuery = groq`*[_type == "post" && defined(slug.current)]{ "slug": slug.current, category }`
+export const allPostSlugsQuery = groq`*[_type == "post" 
+  && defined(slug.current)
+  && defined(publishedAt)
+  && publishedAt <= now()
+]{ title, publishedAt, "slug": slug.current, "category": category }`
 
 export const searchPostsQuery = groq`
   *[_type == "post" && defined(slug.current) && (

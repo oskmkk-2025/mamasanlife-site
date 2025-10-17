@@ -1,8 +1,11 @@
 import './globals.css'
 import type { ReactNode } from 'react'
+import { Barlow, Zen_Kaku_Gothic_New, Noto_Sans_JP } from 'next/font/google'
 import Script from 'next/script'
 import { HeaderBar } from '@/components/HeaderBar'
 import { GlobalNav } from '@/components/GlobalNav'
+import { Footer } from '@/components/Footer'
+import { MigrationNotice } from '@/components/MigrationNotice'
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001'),
@@ -16,12 +19,32 @@ export const metadata = {
   robots: process.env.NEXT_PUBLIC_NOINDEX === 'true' ? { index: false, follow: false } : undefined
 }
 
+// 無料代替: タイトル=こぶりな(近似) → Zen Kaku Gothic New、本文=DIN(近似) → Barlow
+const displayJP = Zen_Kaku_Gothic_New({
+  subsets: ['latin'],
+  weight: ['300','700'],
+  variable: '--font-display',
+  display: 'swap'
+})
+const bodyDIN = Barlow({
+  subsets: ['latin'],
+  weight: ['300','400','500','700','800','900'],
+  variable: '--font-body',
+  display: 'swap'
+})
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID
   const adsId = process.env.NEXT_PUBLIC_ADSENSE_ID
   return (
-    <html lang="ja">
+    <html lang="ja" className={`${displayJP.variable} ${bodyDIN.variable}`}>
       <head>
+        {/* Optional: Adobe Fonts (こぶりなゴシック / DIN) */}
+        {process.env.NEXT_PUBLIC_ADOBE_KIT_ID && (
+          <link rel="stylesheet" href={`https://use.typekit.net/${process.env.NEXT_PUBLIC_ADOBE_KIT_ID}.css`} />
+        )}
+        {/* Font Awesome 5 Free for paw icon (fallback to emoji if unavailable) */}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossOrigin="anonymous" />
         {adsId && (
           <Script
             id="adsense"
@@ -43,28 +66,24 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         )}
       </head>
       <body>
+        <link rel="icon" href="/icons/logo-mark-b.svg" type="image/svg+xml" />
+        <a href="#main" className="sr-only focus:not-sr-only fixed top-2 left-2 z-50 bg-white text-black border px-3 py-2 rounded">メインコンテンツへスキップ</a>
+        <MigrationNotice />
         <HeaderBar />
         <GlobalNav />
-        <main className="min-h-[60vh]">{children}</main>
-        <footer className="border-t mt-16" style={{ background:'#fff' }}>
-          <div className="container-responsive py-10 text-sm text-gray-700 grid md:grid-cols-4 gap-6">
-            <div>
-              <div className="font-semibold" style={{ color:'#B67352' }}>About</div>
-              <p className="mt-2">ママの毎日に役立つ生活情報をお届けします。</p>
-            </div>
-            <div>
-              <div className="font-semibold" style={{ color:'#B67352' }}>Links</div>
-              <ul className="mt-2 space-y-1">
-                <li><a href="/about">運営者情報</a></li>
-                <li><a href="/policy">プライバシーポリシー</a></li>
-                <li><a href="/terms">利用規約</a></li>
-                <li><a href="/disclaimer">免責事項</a></li>
-                <li><a href="/contact">お問い合わせ</a></li>
-              </ul>
-            </div>
-            <div className="md:col-span-2 text-right text-gray-600">© {new Date().getFullYear()} Mamasan Life</div>
-          </div>
-        </footer>
+        <main id="main" className="min-h-[60vh]" role="main">{children}</main>
+        <Footer />
+        {/* Organization JSON-LD (brand continuity) */}
+        <script type="application/ld+json" suppressHydrationWarning>{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'Mamasan Life',
+          alternateName: ['mamasan money-bu', 'ママさんマネー部'],
+          url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3002',
+          sameAs: [
+            'https://mamasanmoney-bu.com'
+          ]
+        })}</script>
       </body>
     </html>
   )

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="120" viewBox="0 0 640 120" role="img" aria-label="Mamasan Life wordmark">
+  <rect width="640" height="120" fill="none"/>
+  <g font-family="'Zen Kaku Gothic New', 'Noto Sans JP', system-ui, sans-serif" font-weight="700">
+    <text x="24" y="78" font-size="44" fill="#2b2b2b">Mamasan</text>
+    <text x="260" y="78" font-size="44" fill="#B67352">Life</text>
+  </g>
+  <g>
+    <circle cx="598" cy="26" r="10" fill="#8CB9BD"/>
+    <circle cx="618" cy="26" r="10" fill="#ECB159"/>
+  </g>
+</svg>
+

@@ -35,11 +35,25 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "studio/**",
+    "mamasan-web/**",
+    "mamasanlife-site/**",
+    "hichimama-site/**",
+    "tools/**",
+    "docs/**",
+    "backups/**",
+    "ops/**"
   ]
 }

@@ -11,7 +11,15 @@
     "start": "node bin/wxr-to-sanity.js",
     "convert": "node bin/wxr-to-sanity.js --input ../..//GeminiProjects/sanity-blog/WordPress.2025-08-19.xml",
     "upsert:staging": "node bin/sanity-upsert.js --dataset staging --input out/sanity.ndjson --studio /Users/makiko/GeminiProjects/sanity-blog",
-    "upsert:production": "node bin/sanity-upsert.js --dataset production --input out/sanity.ndjson --studio /Users/makiko/GeminiProjects/sanity-blog"
+    "upsert:production": "node bin/sanity-upsert.js --dataset production --input out/sanity.ndjson --studio /Users/makiko/GeminiProjects/sanity-blog",
+    "enrich:dry": "node bin/enrich-body-and-links.js --dataset staging --project $SANITY_PROJECT_ID --input ../../WordPress.2025-08-19.xml --dry-run",
+    "enrich:run": "node bin/enrich-body-and-links.js --dataset staging --project $SANITY_PROJECT_ID --input ../../WordPress.2025-08-19.xml",
+    "fixkeys:dry": "node bin/fix-missing-keys.js --dataset staging --project $SANITY_PROJECT_ID --dry-run",
+    "fixkeys:run": "node bin/fix-missing-keys.js --dataset staging --project $SANITY_PROJECT_ID",
+    "wxr:refresh": "node bin/pipeline.js --dataset staging --project gqv363gs --input ./WordPress.2025-10-08.xml",
+    "wxr:refresh:dry": "node bin/pipeline.js --dataset staging --project gqv363gs --input ./WordPress.2025-10-08.xml --dry-run",
+    "wxr:images": "node bin/download-wxr-images.js --input ../../WordPress.2025-10-08.xml --out ../../backups/wxr-images",
+    "wxr:linkmap": "node bin/export-link-map.js --input ../../WordPress.2025-10-08.xml --out ../../backups/url-map.csv --base https://mamasanmoney-bu.com"
   },
   "dependencies": {
     "fast-xml-parser": "^4.3.5",

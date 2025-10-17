@@ -4,7 +4,9 @@ import { categories as CATS, buildCategoryQuery, buildCategoryCountQuery } from 
 import { PostList } from '@/components/PostList'
 import { SectionHeader } from '@/components/SectionHeader'
 import { Sidebar } from '@/components/Sidebar'
+import { uniquePostsBySlugCategory, filterBlocked } from '@/lib/post-utils'
 import Script from 'next/script'
+import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const revalidate = 120
 
@@ -45,41 +47,62 @@ export default async function CategoryPage(
   const countQuery = buildCategoryCountQuery({withSince})
   const paramsQ:any = { category, offset, end }
   if (since) paramsQ.since = since
-  const [posts, total] = await Promise.all([
+  const [postsRaw, total] = await Promise.all([
     sanityClient.fetch(listQuery, paramsQ),
     sanityClient.fetch(countQuery, since ? { category, since } : { category })
   ])
+  const posts = uniquePostsBySlugCategory(filterBlocked(postsRaw))
   const totalPages = Math.ceil((total || 0) / PAGE_SIZE)
-  const qs = (p: number) => new URLSearchParams({ page: String(p) }).toString()
+  const qs = (p: number) => new URLSearchParams({ page: String(p), sort, days }).toString()
+  const filterLink = (next: { sort?: string; days?: string }) => {
+    const s = next.sort ?? sort
+    const d = next.days ?? days
+    const params = new URLSearchParams({ sort: s, days: d, page: '1' })
+    return `/${category}?${params.toString()}`
+  }
+  const sinceLabel = withSince ? '直近30日' : '全期間'
+
+  const crumbs = [
+    { label: 'Home', href: '/' },
+    { label: cat.title }
+  ]
 
   return (
     <div className="container-responsive py-10 space-y-8">
+      <Breadcrumbs items={crumbs} />
       <header className="card p-6" style={{ background:'#fff' }}>
-        <h1 className="text-3xl font-bold" style={{ color:'#B67352' }}>{cat.title}</h1>
-        <p className="text-gray-700 mt-2">最新の記事やおすすめをお届けします。</p>
-        <form action={`/${category}`} method="get" className="mt-4 flex items-center gap-2">
-          <select name="sort" defaultValue={sort} className="border rounded-md px-2 py-2">
-            <option value="new">新着順</option>
-            <option value="popular">人気順</option>
-          </select>
-          <select name="days" defaultValue={days} className="border rounded-md px-2 py-2">
-            <option value="all">全期間</option>
-            <option value="30">直近30日</option>
-          </select>
-          <button className="btn-brand">絞り込み</button>
-        </form>
+        <h1 className="text-3xl font-bold title-display">{cat.title}</h1>
+        <p className="text-gray-700 mt-2">{sinceLabel}の{orderPopular ? '人気順' : '新着順'}で表示しています（{total}件）。</p>
+        <div className="mt-4 flex flex-wrap items-center gap-3">
+          <div role="group" aria-label="並び替え" className="flex items-center gap-2">
+            <Link href={filterLink({ sort: 'new' })}
+              aria-current={sort==='new' ? 'true' : undefined}
+              className={`tab ${sort==='new' ? 'tab--active' : ''}`}>新着順</Link>
+            <Link href={filterLink({ sort: 'popular' })}
+              aria-current={sort==='popular' ? 'true' : undefined}
+              className={`tab ${sort==='popular' ? 'tab--active' : ''}`}>人気順</Link>
+          </div>
+          <div role="group" aria-label="期間" className="flex items-center gap-2">
+            <Link href={filterLink({ days: 'all' })}
+              aria-current={days==='all' ? 'true' : undefined}
+              className={`tab ${days==='all' ? 'tab--active' : ''}`}>全期間</Link>
+            <Link href={filterLink({ days: '30' })}
+              aria-current={days==='30' ? 'true' : undefined}
+              className={`tab ${days==='30' ? 'tab--active' : ''}`}>直近30日</Link>
+          </div>
+        </div>
       </header>
       <div className="grid md:grid-cols-[1fr_320px] gap-8">
         <div>
           <SectionHeader title={sort==='popular' ? '人気記事' : '新着記事'} />
-          <PostList posts={posts.map((p: any) => ({ slug: p.slug, category: p.category, title: p.title, excerpt: p.excerpt, date: p.publishedAt, imageUrl: p.imageUrl }))} />
+          <PostList posts={posts.map((p: any) => ({ id:p._id, slug: p.slug, category: p.category, categoryTitle:p.categoryTitle, title: p.title, excerpt: p.excerpt, date: p.publishedAt, imageUrl: p.imageUrl }))} />
           <div className="flex items-center justify-center gap-2 mt-8">
           {page > 1 && (
-            <Link className="border rounded-md px-3 py-2 text-sm" href={`/${category}?${qs(page - 1)}`} aria-label="前のページ" rel="prev">前へ</Link>
+            <Link className="border rounded-md px-3 py-2 text-sm" href={`/${category}?${qs(page - 1)}`} aria-label={`前のページ（ページ${page-1}）`} rel="prev">前へ</Link>
           )}
           <span className="text-xs text-gray-500">{page} / {totalPages || 1}</span>
           {page < totalPages && (
-            <Link className="border rounded-md px-3 py-2 text-sm" href={`/${category}?${qs(page + 1)}`} aria-label="次のページ" rel="next">次へ</Link>
+            <Link className="border rounded-md px-3 py-2 text-sm" href={`/${category}?${qs(page + 1)}`} aria-label={`次のページ（ページ${page+1}）`} rel="next">次へ</Link>
           )}
           </div>
         </div>
@@ -87,6 +110,16 @@ export default async function CategoryPage(
       </div>
       <Script id="cat-ld" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({ '@context': 'https://schema.org', '@type': 'ItemList', name: cat.title, itemListElement: posts.map((p:any, i:number)=>({ '@type':'ListItem', position: i+1, url: `${process.env.NEXT_PUBLIC_SITE_URL || ''}/${p.category}/${p.slug}` })) })}
+      </Script>
+      <Script id="cat-bc-ld" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type':'ListItem', position:1, name:'Home', item: `${process.env.NEXT_PUBLIC_SITE_URL || ''}/` },
+            { '@type':'ListItem', position:2, name: cat.title, item: `${process.env.NEXT_PUBLIC_SITE_URL || ''}/${category}` }
+          ]
+        })}
       </Script>
     </div>
   )

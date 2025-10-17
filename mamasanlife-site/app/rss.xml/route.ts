@@ -1,14 +1,16 @@
 import { NextResponse } from 'next/server'
 import { sanityClient } from '@/lib/sanity.client'
+import { filterBlocked } from '@/lib/post-utils'
 import groq from 'groq'
 
 export const revalidate = 300
 
 export async function GET() {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001'
-  const items = await sanityClient.fetch(groq`*[_type == "post" && defined(slug.current)]|order(publishedAt desc)[0...50]{
-    title, "slug": slug.current, publishedAt, excerpt, "category": category->slug.current
+  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3002'
+  const itemsRaw = await sanityClient.fetch(groq`*[_type == "post" && defined(slug.current)]|order(publishedAt desc)[0...50]{
+    title, "slug": slug.current, publishedAt, excerpt, "category": category
   }`).catch(() => [])
+  const items = filterBlocked(itemsRaw)
 
   const rssItems = items.map((it: any) => `
     <item>
@@ -31,4 +33,3 @@ export async function GET() {
 
   return new NextResponse(xml, { headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' } })
 }
-

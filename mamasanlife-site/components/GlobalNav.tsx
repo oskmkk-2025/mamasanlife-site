@@ -14,19 +14,24 @@ const items = [
 export function GlobalNav() {
   const pathname = usePathname()
   return (
-    <nav className="w-full border-b bg-white" style={{ borderColor:'#8CB9BD' }}>
-      <div className="container-responsive h-12 flex items-center gap-4 overflow-x-auto text-sm text-gray-800">
+    <nav className="w-full border-b bg-white border-primary" aria-label="グローバルナビゲーション">
+      <ul className="container-responsive h-12 flex items-center gap-4 overflow-x-auto text-sm text-gray-800">
         {items.map((it) => {
           const active = pathname?.startsWith(it.href)
           return (
-            <Link key={it.href} href={it.href}
-              className={`whitespace-nowrap py-2 ${active ? 'font-semibold' : ''}`}
-              style={active ? { color:'#B67352', borderBottom:'2px solid #B67352' } : {}}>
-              {it.label}
-            </Link>
+            <li key={it.href}>
+              <Link
+                href={it.href}
+                aria-current={active ? 'page' : undefined}
+                className={`whitespace-nowrap py-2 px-2 rounded-md focus-ring ${active ? 'font-semibold text-emphasis' : ''}`}
+                style={active ? { borderBottom:'2px solid var(--c-emphasis)' } : {}}
+              >
+                {it.label}
+              </Link>
+            </li>
           )
         })}
-      </div>
+      </ul>
     </nav>
   )
 }

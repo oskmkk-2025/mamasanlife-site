@@ -4,19 +4,26 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
+    "dev:local": "next dev -p 3001 -H 127.0.0.1",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "start:prod:local": "next build && next start -p 3001 -H 127.0.0.1"
+    "start:prod:local": "next build && next start -p 3001 -H 127.0.0.1",
+    "import:wxr": "node scripts/import-wxr-to-sanity.js --file ../WordPress.2025-08-19.xml --dataset production",
+    "enrich:wxr": "node scripts/enrich-wxr-body.js ../WordPress.2025-08-19.xml",
+    "enrich:wxr:latest": "node scripts/enrich-wxr-body.js ../WordPress.2025-10-08.xml"
   },
   "dependencies": {
     "@portabletext/react": "^3.0.11",
     "@sanity/client": "^6.15.15",
     "@sanity/ui": "^3.1.0",
     "@sanity/vision": "^4.8.1",
+    "cheerio": "^1.1.2",
+    "fast-xml-parser": "^5.2.5",
     "framer-motion": "^12.23.12",
     "groq": "^3.53.0",
     "next": "^15.5.3",
+    "p-limit": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sanity": "^4.8.1",

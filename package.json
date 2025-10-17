@@ -3,11 +3,15 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
+    "studio:dev": "npm --prefix studio run dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "start:prod:local": "next build && next start -p 3001 -H 127.0.0.1"
+    "start:prod:local": "next build && next start -p 3001 -H 127.0.0.1",
+    "backup:wp": "bash tools/wp-backup/backup.sh",
+    "backup:sanity:staging": "cd studio && npx sanity@latest dataset export staging ../backups/sanity-staging-$(date +%Y%m%d).tar.gz",
+    "backup:sanity:assets": "node tools/sanity-backup/download-assets.js --project gqv363gs --dataset staging --out ./backups/sanity-assets"
   },
   "dependencies": {
     "@portabletext/react": "^3.0.11",

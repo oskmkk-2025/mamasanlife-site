@@ -98,16 +98,24 @@ function stripHtml(html) {
   return text.replace(/\s+/g, ' ').trim();
 }
 
+function genKey(prefix = 'k') {
+  return `${prefix}${Math.random().toString(36).slice(2, 10)}${Date.now().toString(36).slice(-4)}`;
+}
+
 function toPortableTextFromPlain(text) {
   const safe = text || '';
+  const childKey = genKey('s');
+  const blockKey = genKey('b');
   return [
     {
       _type: 'block',
+      _key: blockKey,
       style: 'normal',
       markDefs: [],
       children: [
         {
           _type: 'span',
+          _key: childKey,
           text: safe,
           marks: [],
         },
@@ -219,8 +227,8 @@ function main() {
 
     const heroUrl = extractThumbUrlFromPost(it, attachmentById);
 
-    const catRefs = cats.map((c) => ({ _type: 'reference', _ref: `category-${c.slug}` }));
-    const tagRefs = tags.map((t) => ({ _type: 'reference', _ref: `tag-${t.slug}` }));
+    const catRefs = cats.map((c) => ({ _key: genKey('c'), _type: 'reference', _ref: `category-${c.slug}` }));
+    const tagRefs = tags.map((t) => ({ _key: genKey('t'), _type: 'reference', _ref: `tag-${t.slug}` }));
 
     const doc = {
       _id: slugCurrent ? `post-${slugCurrent}` : (postId ? `wp-${postId}` : undefined),
@@ -274,4 +282,3 @@ function main() {
 }
 
 main();
-

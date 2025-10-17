@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Mamasan Life mark">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B67352"/>
+      <stop offset="100%" stop-color="#8CB9BD"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="#FEFBF6" stroke="#8CB9BD" stroke-width="4"/>
+  <!-- Monogram M -->
+  <path d="M36 86 V44 l12 18 l14-22 l14 22 l12-18 v42" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Leaf (life) -->
+  <path d="M88 40c8 0 14-6 16-12c-8 0-14 6-16 12Z" fill="#ECB159"/>
+</svg>
+

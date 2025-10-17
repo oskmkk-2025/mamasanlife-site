@@ -61,6 +61,11 @@ export default defineType({
       of: [
         { type: 'block' },
         { type: 'image', fields: [{ name:'alt', title:'alt', type:'string' }]},
+        { type: 'speechBlock' },
+        { type: 'tableBlock' },
+        { type: 'linkImageBlock' },
+        { type: 'linkImageRow' },
+        { type: 'htmlEmbed' },
         { type: 'assistantBlock', components: { input: AssistantBlock } }
       ],
       validation: R => R.required().min(3)

@@ -1,0 +1,356 @@
+   ▲ Next.js 15.5.3
+   - Local:        http://127.0.0.1:3001
+   - Network:      http://127.0.0.1:3001
+
+ ✓ Starting...
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/makiko/GPT-codexProjects/package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/makiko/GPT-codexProjects/mamasanlife-site/package-lock.json
+
+ ✓ Ready in 415ms
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: Cannot find module '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/server/middleware-manifest.json'
+Require stack:
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/next.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/server/lib/start-server.js
+- /Users/makiko/GPT-codexProjects/mamasanlife-site/node_modules/next/dist/cli/next-start.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+EvalError: Code generation from strings disallowed for this context
+    at <unknown> (.next/server/middleware.js:29)
+    at (middleware)/./node_modules/next/dist/build/webpack/loaders/next-middleware-loader.js?absolutePagePath=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site%2Fmiddleware.ts&page=%2Fmiddleware&rootDir=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site&matchers=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/middleware.js:29:1)
+    at __webpack_require__ (.next/server/edge-runtime-webpack.js:37:33)
+    at __webpack_exec__ (.next/server/middleware.js:1109:48)
+    at <unknown> (.next/server/middleware.js:1110:37)
+    at webpackJsonpCallback (.next/server/edge-runtime-webpack.js:1128:39)
+    at <unknown> (.next/server/middleware.js:9:61)
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async L (.next/server/app/[category]/page.js:1:9895) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+EvalError: Code generation from strings disallowed for this context
+    at <unknown> (.next/server/middleware.js:29)
+    at (middleware)/./node_modules/next/dist/build/webpack/loaders/next-middleware-loader.js?absolutePagePath=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site%2Fmiddleware.ts&page=%2Fmiddleware&rootDir=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site&matchers=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/middleware.js:29:1)
+    at __webpack_require__ (.next/server/edge-runtime-webpack.js:37:33)
+    at __webpack_exec__ (.next/server/middleware.js:1109:48)
+    at <unknown> (.next/server/middleware.js:1110:37)
+    at webpackJsonpCallback (.next/server/edge-runtime-webpack.js:1128:39)
+    at <unknown> (.next/server/middleware.js:9:61)
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async L (.next/server/app/[category]/page.js:1:9895) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+EvalError: Code generation from strings disallowed for this context
+    at <unknown> (.next/server/middleware.js:29)
+    at (middleware)/./node_modules/next/dist/build/webpack/loaders/next-middleware-loader.js?absolutePagePath=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site%2Fmiddleware.ts&page=%2Fmiddleware&rootDir=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site&matchers=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/middleware.js:29:1)
+    at __webpack_require__ (.next/server/edge-runtime-webpack.js:37:33)
+    at __webpack_exec__ (.next/server/middleware.js:1109:48)
+    at <unknown> (.next/server/middleware.js:1110:37)
+    at webpackJsonpCallback (.next/server/edge-runtime-webpack.js:1128:39)
+    at <unknown> (.next/server/middleware.js:9:61)
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async L (.next/server/app/[category]/page.js:1:9895) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+EvalError: Code generation from strings disallowed for this context
+    at <unknown> (.next/server/middleware.js:29)
+    at (middleware)/./node_modules/next/dist/build/webpack/loaders/next-middleware-loader.js?absolutePagePath=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site%2Fmiddleware.ts&page=%2Fmiddleware&rootDir=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site&matchers=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/middleware.js:29:1)
+    at __webpack_require__ (.next/server/edge-runtime-webpack.js:37:33)
+    at __webpack_exec__ (.next/server/middleware.js:1109:48)
+    at <unknown> (.next/server/middleware.js:1110:37)
+    at webpackJsonpCallback (.next/server/edge-runtime-webpack.js:1128:39)
+    at <unknown> (.next/server/middleware.js:9:61)
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async L (.next/server/app/[category]/page.js:1:9895) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+EvalError: Code generation from strings disallowed for this context
+    at <unknown> (.next/server/middleware.js:29)
+    at (middleware)/./node_modules/next/dist/build/webpack/loaders/next-middleware-loader.js?absolutePagePath=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site%2Fmiddleware.ts&page=%2Fmiddleware&rootDir=%2FUsers%2Fmakiko%2FGPT-codexProjects%2Fmamasanlife-site&matchers=&preferredRegion=&middlewareConfig=e30%3D! (.next/server/middleware.js:29:1)
+    at __webpack_require__ (.next/server/edge-runtime-webpack.js:37:33)
+    at __webpack_exec__ (.next/server/middleware.js:1109:48)
+    at <unknown> (.next/server/middleware.js:1110:37)
+    at webpackJsonpCallback (.next/server/edge-runtime-webpack.js:1128:39)
+    at <unknown> (.next/server/middleware.js:9:61)
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async L (.next/server/app/[category]/page.js:1:9895) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+    at async (.next/server/pages/_error.js:1:6810) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/makiko/GPT-codexProjects/mamasanlife-site/.next/required-server-files.json'
+}

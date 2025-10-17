@@ -3,40 +3,80 @@ import { categories, latestByCategoryQuery, recentPostsQuery } from '@/lib/queri
 import { PostList } from '@/components/PostList'
 import { CategoryTicker } from '@/components/CategoryTicker'
 import { SectionHeader } from '@/components/SectionHeader'
+import { HeroCard } from '@/components/HeroCard'
+import { uniquePostsBySlug, filterBlocked } from '@/lib/post-utils'
+import Script from 'next/script'
 
 export const revalidate = 60
 
 export default async function HomePage() {
-  // 1) カテゴリ別：各2件
-  const perCat = await Promise.all(
-    categories.map(async (c) => ({
-      slug: c.slug,
-      title: c.title,
-      posts: (await sanityClient.fetch(latestByCategoryQuery, { category: c.slug, limit: 2 })).map((p:any)=>({
-        slug:p.slug, category:p.category, title:p.title, excerpt:p.excerpt, date:p.publishedAt, imageUrl:p.imageUrl
+  // 取得失敗時に空配列へフォールバック（Internal Server Error を避ける）
+  let perCat: { slug:string; title:string; posts:any[] }[] = []
+  let latest: any[] = []
+  try {
+    // 1) カテゴリ別：各2件
+    perCat = await Promise.all(
+      categories.map(async (c) => ({
+        slug: c.slug,
+        title: c.title,
+        posts: (await sanityClient.fetch(latestByCategoryQuery, { category: c.slug, limit: 2 })).map((p:any)=>({
+          slug:p.slug, category:p.category, title:p.title, excerpt:p.excerpt, date:p.publishedAt, imageUrl:p.imageUrl
+        }))
       }))
-    }))
-  )
-  // 2) 最新記事（トップは最新のみ）
-  const latest = await sanityClient.fetch(recentPostsQuery, { limit: 12 })
+    )
+    // 2) 最新記事（トップは最新のみ）
+    const latestRaw = await sanityClient.fetch(recentPostsQuery, { limit: 24 })
+    latest = uniquePostsBySlug(filterBlocked(latestRaw)).slice(0,12)
+  } catch (e) {
+    console.error('[HomePage] Sanity fetch failed, rendering with empty data', e)
+    perCat = categories.map(c => ({ slug:c.slug, title:c.title, posts: [] }))
+    latest = []
+  }
+
+  // Hero: 特集カテゴリの先頭 or 最新の先頭
+  const feature = perCat.find(g => g.slug === 'feature')
+  const hero = (feature?.posts?.find((p:any)=>filterBlocked([p]).length) || latest?.[0]) as any
+  const latestRest = uniquePostsBySlug(filterBlocked((latest || []).filter((p:any) => !(p.slug === hero?.slug && p.category === hero?.category))))
 
   return (
     <div>
-      <section className="bg-gradient-to-b from-[#FEFBF6] to-white border-b" style={{ borderColor:'#8CB9BD' }}>
-        <div className="container-responsive py-12 text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">ママの毎日をちょっとラクに、ちょっとハッピーに</h1>
-          <p className="mt-4 text-gray-700">家計・子育て・暮らし・働き方・健康の“いま役立つ”情報をお届けします。</p>
+      <section className="bg-gradient-to-b from-[var(--c-bg)] to-white border-b border-primary">
+        <div className="container-responsive py-12 text-center max-w-4xl mx-auto">
+          <h1 className="hero-title text-4xl sm:text-5xl font-extrabold tracking-tight">Curate your daily life.</h1>
+          <p className="hero-sub mt-3 text-base sm:text-lg">選んで整える、わたしの暮らし。</p>
         </div>
       </section>
 
-      {/* グローバルメニューの下：カテゴリ別（2件）を5秒ごとに自動切替 */}
+      {/* ヒーロー（推し記事） */}
+      {hero && (
+        <section className="container-responsive py-10">
+          <HeroCard post={hero} />
+        </section>
+      )}
+
+      {/* グローバルメニューの下：カテゴリ別（2件）を自動切替 */}
       <CategoryTicker groups={perCat as any} />
 
       {/* 最新記事のみ */}
       <section className="container-responsive py-12">
         <SectionHeader title="最新記事" />
-        <PostList posts={latest.map((p:any)=>({ slug:p.slug, category:p.category, title:p.title, excerpt:p.excerpt, date:p.publishedAt, imageUrl:p.imageUrl }))} />
+        <PostList posts={latestRest.map((p:any)=>({ id:p._id, slug:p.slug, category:p.category, categoryTitle:p.categoryTitle, title:p.title, excerpt:p.excerpt, date:p.publishedAt, imageUrl:p.imageUrl }))} />
       </section>
+
+      {/* 検索の“案内所”をサイトに教える（構造化データ） */}
+      <Script id="site-ld" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Mamasan Life',
+          url: process.env.NEXT_PUBLIC_SITE_URL || 'https://mamasanmoney-bu.com',
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://mamasanmoney-bu.com'}/search?q={query}`,
+            'query-input': 'required name=query'
+          }
+        })}
+      </Script>
     </div>
   )
 }

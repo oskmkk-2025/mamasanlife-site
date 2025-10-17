@@ -1,5 +1,6 @@
 import {NextRequest, NextResponse} from 'next/server'
-import {toRomaji} from 'wanakana'
+// Avoid non-Edge-safe deps in middleware. Minimal noop romanizer.
+function toRomaji(input: string){ return input }
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || process.env.SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || process.env.SANITY_DATASET || 'production'
@@ -66,10 +67,13 @@ export async function middleware(req: NextRequest) {
   let seg = m[1]
   try { seg = decodeURIComponent(seg) } catch {}
 
-  // まず固定ページマップ
+  // まず固定ページマップ（同一先ならリダイレクトしない）
   const romajiKey = slugify(toRomaji(seg))
   const fixed = PAGE_MAP[romajiKey]
   if (fixed) {
+    const current = pathname.replace(/\/+$/,'') || '/'
+    const target = (fixed as string).replace(/\/+$/,'') || '/'
+    if (current === target) return NextResponse.next()
     return NextResponse.redirect(new URL(fixed + (search || ''), req.url), 308)
   }
 
@@ -87,7 +91,11 @@ export async function middleware(req: NextRequest) {
       const hit = data?.result
       if (hit?.slug && hit?.category) {
         const dest = `/${hit.category}/${hit.slug}${search || ''}`
-        return NextResponse.redirect(new URL(dest, req.url), 308)
+        const current = pathname.replace(/\/+$/,'')
+        const target = dest.replace(/\/+$/,'')
+        if (current !== target) {
+          return NextResponse.redirect(new URL(dest, req.url), 308)
+        }
       }
     }
   } catch {}
@@ -99,4 +107,3 @@ export async function middleware(req: NextRequest) {
 export const config = {
   matcher: ['/((?!_next|favicon.ico).*)']
 }
-

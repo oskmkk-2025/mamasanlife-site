@@ -15,17 +15,16 @@ export function SearchForm({ className }: { className?: string }) {
   }
   return (
     <form onSubmit={submit} className={className} role="search" aria-label="サイト内検索">
-      <div className="flex items-center gap-2 bg-white rounded-md px-2 py-1 border" style={{borderColor:'#7fb0b4'}}>
+      <div className="flex items-center gap-2 bg-white rounded-md px-2 py-1 border border-primary">
         <input
           value={q}
           onChange={(e)=>setQ(e.target.value)}
           placeholder="キーワードで検索"
-          className="flex-1 outline-none text-sm"
+          className="flex-1 outline-none text-sm focus-ring rounded-sm text-gray-900 placeholder-gray-500"
           aria-label="検索ワード"
         />
-        <button type="submit" className="text-sm px-3 py-1 rounded-md" style={{background:'#B67352', color:'#fff'}}>検索</button>
+        <button type="submit" className="text-sm px-3 py-1 rounded-md btn-brand">検索</button>
       </div>
     </form>
   )
 }
-

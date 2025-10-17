@@ -106,10 +106,12 @@ async function run() {
     process.exit(1);
   }
 
+  const tokenRaw = args.token || process.env.SANITY_AUTH_TOKEN || process.env.SANITY_WRITE_TOKEN || process.env.SANITY_SESSION_TOKEN || '';
+  const token = typeof tokenRaw === 'string' ? tokenRaw.replace(/[^\x21-\x7E]/g, '') : tokenRaw;
   const client = createClient({
     projectId: args.project,
     dataset: args.dataset,
-    token: args.token || process.env.SANITY_AUTH_TOKEN, // populated by `sanity exec --with-user-token`
+    token, // populated by env or --token
     apiVersion: '2025-09-01',
     useCdn: false,
   });

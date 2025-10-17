@@ -1,13 +1,12 @@
-export const metadata = { title: 'Contact', description: 'お問い合わせ' }
-
-export default function ContactPage() {
-  const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'contact@example.com'
+export default function ContactPage(){
   return (
-    <div className="container-responsive py-10 max-w-3xl">
-      <h1 className="text-2xl font-semibold mb-4">お問い合わせ</h1>
-      <p className="text-gray-700 mb-4">お仕事のご相談は以下のメール宛にご連絡ください。</p>
-      <p className="text-gray-900 font-medium"><a href={`mailto:${email}`} className="underline">{email}</a></p>
-    </div>
+    <main className="container-responsive py-10 max-w-3xl">
+      <h1 className="text-3xl font-bold text-emphasis">お問い合わせ</h1>
+      <p className="mt-4 leading-7">ご意見・ご感想・ご連絡は以下のメール宛にお願いします。</p>
+      <div className="mt-4 p-4 bg-white border rounded-md">
+        <div className="text-sm">メール: <a className="underline" href="mailto:contact@example.com">contact@example.com</a></div>
+      </div>
+    </main>
   )
 }
 
