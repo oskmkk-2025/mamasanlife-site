@@ -85,6 +85,22 @@ input::placeholder { color: #6b7280; }
 }
 .prose-content hr { @apply my-8; border-color: color-mix(in srgb, var(--c-primary) 40%, transparent); opacity: .6; }
 
+/* ── SP（~420px）タイポグラフィ微調整 ───────────────────── */
+@media (max-width: 420px) {
+  .prose-content { font-size: 0.95rem; }
+  .prose-content p { line-height: 1.85; }
+  .prose-content h2 { margin-top: 1.75rem; margin-bottom: .75rem; }
+  .prose-content h3 { margin-top: 1.25rem; margin-bottom: .6rem; }
+  .prose-content figure, .prose-content img { margin: 12px 0 !important; }
+  .prose-content ul, .prose-content ol { margin: .6rem 0; }
+  .prose-content blockquote { margin: .75rem 0; padding-top: .2rem; padding-bottom: .2rem; }
+  /* 吹き出し（SpeechBlockView） */
+  .speech-bubble { font-size: 14.5px !important; padding: 10px 12px !important; line-height: 1.7 !important; }
+  .speech-block .rounded-2xl { border-radius: 14px !important; }
+  .speech-block .speech-name { font-size: 10px; }
+}
+.prose-content hr { @apply my-8; border-color: color-mix(in srgb, var(--c-primary) 40%, transparent); opacity: .6; }
+
 /* Breadcrumbs */
 .breadcrumbs { @apply text-sm text-gray-600; }
 
