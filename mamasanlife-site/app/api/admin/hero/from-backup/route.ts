@@ -9,10 +9,20 @@ function normToken(t?: string){
   return (t||'').replace(/^Bearer\s+/i,'').replace(/\r?\n/g,'').trim().replace(/^"|"$/g,'')
 }
 
-function findLatestWxrFile(cwd: string): string | null {
-  const files = fs.readdirSync(cwd)
-  const wxrs = files.filter(f=> /^WordPress\.\d{4}-\d{2}-\d{2}\.xml$/.test(f)).sort()
-  return wxrs.length ? path.join(cwd, wxrs[wxrs.length-1]) : null
+function listWxrInDir(dir: string): string[] {
+  try{
+    const files = fs.readdirSync(dir)
+    return files.filter(f=> /^WordPress\.\d{4}-\d{2}-\d{2}\.xml$/.test(f)).map(f=> path.join(dir, f))
+  }catch{ return [] }
+}
+
+function findLatestWxrFile(): string | null {
+  const cwd = process.cwd()
+  const candidates = [cwd, path.join(cwd, '..'), path.join(cwd, '../..')]
+  const found = candidates.flatMap(listWxrInDir)
+  if (!found.length) return null
+  found.sort() // lexical sort works for YYYY-MM-DD
+  return found[found.length - 1]
 }
 
 function extractPostBlockBySlug(xml: string, slug: string): { block: string, title?: string } | null {
@@ -76,8 +86,7 @@ export async function POST(req: Request){
     }
     const client = createClient({ projectId, dataset, apiVersion: '2025-09-01', useCdn: false, token })
 
-    const cwd = process.cwd()
-    const wxrPath = findLatestWxrFile(cwd)
+    const wxrPath = findLatestWxrFile()
     if (!wxrPath) return NextResponse.json({ error: 'WXR not found' }, { status: 500 })
     const xml = fs.readFileSync(wxrPath, 'utf8')
     const postBlk = extractPostBlockBySlug(xml, slug)
@@ -87,7 +96,8 @@ export async function POST(req: Request){
     const wpUrl = extractAttachmentUrlById(xml, thumbId)
     if (!wpUrl) return NextResponse.json({ error: 'attachment url not found' }, { status: 404 })
 
-    const manifestPath = path.join(cwd, 'backups', 'wxr-images', 'manifest.csv')
+    const baseDir = path.dirname(wxrPath)
+    const manifestPath = path.join(baseDir, 'backups', 'wxr-images', 'manifest.csv')
     if (!fs.existsSync(manifestPath)) return NextResponse.json({ error: 'manifest not found' }, { status: 500 })
     const manifestCsv = fs.readFileSync(manifestPath, 'utf8')
     const rel = findLocalBackupPath(manifestCsv, wpUrl)
@@ -112,4 +122,3 @@ export async function POST(req: Request){
     return NextResponse.json({ error: e?.message || 'error' }, { status: 500 })
   }
 }
-
