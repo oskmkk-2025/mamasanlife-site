@@ -444,7 +444,7 @@ const ptComponents = {
   },
   block: {
     h2: ({ children }: any) => (
-      <h2 id={slugify(String(children))} className="mt-10 mb-4 text-[1.5rem] md:text-[1.875rem] leading-snug scroll-mt-24 pl-6 relative">
+      <h2 id={slugify(String(children))} className="mt-10 mb-4 text-[1.5rem] md:text-[1.875rem] leading-snug scroll-mt-24 pl-6 pr-6 relative">
         <span className="h2-paw" aria-hidden />
         <span className="marker-pen" style={{ marginLeft: '0.6em' }}>{children}</span>
       </h2>

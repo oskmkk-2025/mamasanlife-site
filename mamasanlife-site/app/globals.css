@@ -68,6 +68,9 @@ input::placeholder { color: #6b7280; }
 .prose-content p  { @apply my-4; line-height: 1.9; }
 .prose-content a { color: var(--c-emphasis); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 0.08em; }
 .prose-content a:hover { color: var(--c-primary); background: transparent !important; }
+.prose-content { overflow-wrap: anywhere; word-break: normal; }
+.prose-content p, .prose-content li { white-space: normal; }
+.prose-content a { overflow-wrap: anywhere; word-break: break-word; }
 .prose-content ul { @apply list-disc pl-6 my-4; }
 .prose-content ol { @apply list-decimal pl-6 my-4; }
 .prose-content ul ul { list-style-type: circle; margin-top:.25rem; margin-bottom:.25rem; }
@@ -204,6 +207,8 @@ a:hover:not(.btn-brand) {
 .marker-pen { background-image: linear-gradient(transparent 70%, color-mix(in srgb, var(--c-accent) 85%, transparent) 0); box-decoration-break: clone; }
 .link-row { line-height: 0; }
 .prose-content .banner-inline { display: inline-block; line-height: 0; }
+/* Headings subtle padding so single-line text doesn't touch edges */
+.prose-content h1, .prose-content h2, .prose-content h3, .prose-content h4, .prose-content h5, .prose-content h6 { padding-inline: 2px; }
 /* Banner rows: unified height + vertical centering */
 .banner-row-31 { height: 31px; display: flex; align-items: flex-start; }
 .banner-row-40 { height: 40px; display: flex; align-items: flex-start; }
