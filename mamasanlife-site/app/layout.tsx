@@ -6,6 +6,7 @@ import { HeaderBar } from '@/components/HeaderBar'
 import { GlobalNav } from '@/components/GlobalNav'
 import { Footer } from '@/components/Footer'
 import { MigrationNotice } from '@/components/MigrationNotice'
+import { PreviewDeviceToggle, DevViewport } from '@/components/PreviewDeviceToggle'
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001'),
@@ -36,6 +37,7 @@ const bodyDIN = Barlow({
 export default function RootLayout({ children }: { children: ReactNode }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID
   const adsId = process.env.NEXT_PUBLIC_ADSENSE_ID
+  const showPreview = process.env.NODE_ENV !== 'production' || process.env.NEXT_PUBLIC_PREVIEW_TOGGLE === 'true'
   return (
     <html lang="ja" className={`${displayJP.variable} ${bodyDIN.variable}`}>
       <head>
@@ -68,11 +70,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <link rel="icon" href="/icons/logo-mark-b.svg" type="image/svg+xml" />
         <a href="#main" className="sr-only focus:not-sr-only fixed top-2 left-2 z-50 bg-white text-black border px-3 py-2 rounded">メインコンテンツへスキップ</a>
-        <MigrationNotice />
-        <HeaderBar />
-        <GlobalNav />
-        <main id="main" className="min-h-[60vh]" role="main">{children}</main>
-        <Footer />
+        <DevViewport>
+          <MigrationNotice />
+          <HeaderBar />
+          <GlobalNav />
+          <main id="main" className="min-h-[60vh]" role="main">{children}</main>
+          <Footer />
+        </DevViewport>
+        {showPreview && <PreviewDeviceToggle />}
         {/* Organization JSON-LD (brand continuity) */}
         <script type="application/ld+json" suppressHydrationWarning>{JSON.stringify({
           '@context': 'https://schema.org',
