@@ -102,7 +102,7 @@ export async function POST(req: Request){
     const manifestCsv = fs.readFileSync(manifestPath, 'utf8')
     const rel = findLocalBackupPath(manifestCsv, wpUrl)
     if (!rel) return NextResponse.json({ error: 'local backup image not found in manifest', wpUrl }, { status: 404 })
-    const filePath = path.join(cwd, 'backups', 'wxr-images', rel)
+    const filePath = path.join(baseDir, 'backups', 'wxr-images', rel)
     if (!fs.existsSync(filePath)) return NextResponse.json({ error: 'local image missing', filePath }, { status: 404 })
     const buf = fs.readFileSync(filePath)
 
