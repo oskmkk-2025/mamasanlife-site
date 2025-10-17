@@ -9,6 +9,9 @@
   --c-emphasis: #B67352;/* 比率1 */
   /* 端の余白（SP〜PCで可変） */
   --edge-gap: clamp(16px, 5vw, 28px);
+  /* 見出し（H2）のアイコンサイズ/間隔 */
+  --h2-paw-size: 1.2em;
+  --h2-paw-gap: .6em;
 }
 
 html { font-size: 18px; }
@@ -208,8 +211,10 @@ a:hover:not(.btn-brand) {
   line-height: 1;
 }
 .prose-content .paw-icon { display: inline-block; margin-right: .5rem; color: var(--c-emphasis); }
-.prose-content .h2-paw { position: absolute; left: .2rem; top: .15em; width: 1.1em; height: 1.1em; pointer-events: none; }
+.prose-content .h2-paw { position: absolute; left: 0; top: .15em; width: var(--h2-paw-size); height: var(--h2-paw-size); pointer-events: none; }
 .prose-content .h2-paw::before { content: "\f1b0"; font-family: "Font Awesome 5 Free"; font-weight: 900; position: absolute; left: 0; top: 0; font-size: 1em; line-height: 1; color: var(--c-emphasis); }
+/* パディングでテキストをアイコン分だけ右にオフセット */
+.prose-content h2 { padding-left: calc(var(--h2-paw-size) + var(--h2-paw-gap)); }
 
 /* Headings: allow wrapping on small screens */
 /* Removed no-wrap to allow natural wrapping */
