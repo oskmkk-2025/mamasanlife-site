@@ -25,6 +25,7 @@ export default function DesignPreviewUI(){
   const [autoFitScale, setAutoFitScale] = useState(true)
   const scrollTimer = useRef<any>(null)
   const containerRef = useRef<HTMLDivElement|null>(null)
+  const controlsRef = useRef<HTMLDivElement|null>(null)
   const [scaleSp, setScaleSp] = useState(1)
   const [scalePc, setScalePc] = useState(1)
   const [spH, setSpH] = useState<number>(800)
@@ -108,17 +109,27 @@ export default function DesignPreviewUI(){
       const box = containerRef.current
       if (!box) return
       const W = box.clientWidth
+      const ctrlH = controlsRef.current?.clientHeight || 0
+      const availH = Math.max(200, window.innerHeight - ctrlH - 140) // 140px: タイトル/余白の安全枠
       // Assume 2 columns when container width is large enough
       const twoCols = W >= 1100
       const gap = 24 // Tailwind gap-6 ~ 24px
       if (twoCols){
         const colW = (W - gap) / 2
-        setScaleSp(Math.min(1, colW / spW))
-        setScalePc(Math.min(1, colW / pcW))
+        const sWsp = colW / spW
+        const sHsp = availH / spH
+        const sWpc = colW / pcW
+        const sHpc = availH / pcH
+        setScaleSp(Math.min(1, sWsp, isFinite(sHsp)? sHsp : 1))
+        setScalePc(Math.min(1, sWpc, isFinite(sHpc)? sHpc : 1))
       } else {
         // Single column: fit each to container width
-        setScaleSp(Math.min(1, W / spW))
-        setScalePc(Math.min(1, W / pcW))
+        const sWsp = W / spW
+        const sHsp = availH / spH
+        const sWpc = W / pcW
+        const sHpc = availH / pcH
+        setScaleSp(Math.min(1, sWsp, isFinite(sHsp)? sHsp : 1))
+        setScalePc(Math.min(1, sWpc, isFinite(sHpc)? sHpc : 1))
       }
     }
     measure()
@@ -149,7 +160,7 @@ export default function DesignPreviewUI(){
   return (
     <div className="container-responsive py-6" ref={containerRef}>
       <h1 className="text-2xl font-semibold mb-4">Design Preview (PC / SP)</h1>
-      <div className="flex flex-wrap items-center gap-3 mb-4">
+      <div className="flex flex-wrap items-center gap-3 mb-4" ref={controlsRef}>
         <label className="text-sm">Path
           <input value={path} onChange={e=>setPath(e.target.value)} className="border ml-2 px-2 py-1 rounded w-[380px] max-w-[80vw]" placeholder="/category/slug" />
         </label>
