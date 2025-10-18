@@ -129,7 +129,11 @@ export const allPostSlugsQuery = groq`*[_type == "post"
   && defined(slug.current)
   && defined(publishedAt)
   && publishedAt <= now()
-]{ title, publishedAt, "slug": slug.current, "category": category }`
+]{ 
+  _id, title, publishedAt, updatedAt, _updatedAt,
+  "slug": slug.current, "category": category,
+  "blocks": coalesce(count(body), 0)
+}`
 
 export const searchPostsQuery = groq`
   *[_type == "post" && defined(slug.current) && (

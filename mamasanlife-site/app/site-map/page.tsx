@@ -23,6 +23,23 @@ export default async function SiteMapPage({ searchParams }: { searchParams: Prom
   }
   posts = postsUniq
 
+  // さらにタイトル単位での重複除去（本文ブロック数の多い方を優先）
+  const byTitle = new Map<string, any[]>()
+  for (const p of posts||[]) {
+    const t = String(p?.title||'').trim()
+    if (!t) continue
+    const arr = byTitle.get(t) || []
+    arr.push(p)
+    byTitle.set(t, arr)
+  }
+  const postsTitleUniq: any[] = []
+  for (const [t, arr] of byTitle) {
+    if (arr.length === 1) { postsTitleUniq.push(arr[0]); continue }
+    const sorted = [...arr].sort((a:any,b:any)=> (b?.blocks||0)-(a?.blocks||0) || new Date(b?.updatedAt||b?._updatedAt||0).getTime() - new Date(a?.updatedAt||a?._updatedAt||0).getTime())
+    postsTitleUniq.push(sorted[0])
+  }
+  posts = postsTitleUniq
+
   // ツリー用: 年→月→記事
   const byYear = new Map<string, any[]>()
   for (const p of posts||[]) {
