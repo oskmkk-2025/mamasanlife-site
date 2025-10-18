@@ -14,7 +14,7 @@ export async function POST(req: Request){
     if (!ADMIN_SECRET || adminHeader !== ADMIN_SECRET){
       return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
     }
-    const { slugs, limit = 50, includeHero = true, includeImages = true } = await req.json().catch(()=>({})) as { slugs?: string[]; limit?: number; includeHero?: boolean; includeImages?: boolean }
+    const { slugs, limit = 50, includeHero = true, includeImages = true, includeUnpublished = true } = await req.json().catch(()=>({})) as { slugs?: string[]; limit?: number; includeHero?: boolean; includeImages?: boolean; includeUnpublished?: boolean }
 
     const projectId = process.env.SANITY_PROJECT_ID || process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
     const dataset = process.env.SANITY_DATASET || process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
@@ -26,9 +26,17 @@ export async function POST(req: Request){
 
     let targets: string[] = Array.isArray(slugs) && slugs.length ? slugs : []
     if (!targets.length){
-      const q = `*[_type=='post' && defined(slug.current) && defined(publishedAt) && publishedAt <= now()] | order(publishedAt desc)[0...$lim]{ "slug": slug.current }`
-      const data = await client.fetch(q, { lim: Math.max(1, Math.min(Number(limit)||50, 500)) }).catch(()=>[])
+      const lim = Math.max(1, Math.min(Number(limit)||50, 500))
+      // 1) try published posts first
+      const qPub = `*[_type=='post' && defined(slug.current) && defined(publishedAt) && publishedAt <= now()] | order(publishedAt desc)[0...$lim]{ "slug": slug.current }`
+      let data = await client.fetch(qPub, { lim }).catch(()=>[])
       targets = (data||[]).map((x:any)=> String(x.slug))
+      // 2) fallback to any posts if allowed and nothing found
+      if (!targets.length && includeUnpublished){
+        const qAny = `*[_type=='post' && defined(slug.current)] | order(_updatedAt desc)[0...$lim]{ "slug": slug.current }`
+        data = await client.fetch(qAny, { lim }).catch(()=>[])
+        targets = (data||[]).map((x:any)=> String(x.slug))
+      }
     }
     if (!targets.length) return NextResponse.json({ ok:true, processed:0 })
 
@@ -55,4 +63,3 @@ export async function POST(req: Request){
     return NextResponse.json({ error: e?.message || 'error' }, { status: 500 })
   }
 }
-
