@@ -38,6 +38,7 @@ export function AdSlot({ slot, layout, format = 'auto', responsive = true, class
       data-ad-format={format}
       data-full-width-responsive={responsive ? 'true' : 'false'}
       data-ad-layout={layout}
+      {...(process.env.NODE_ENV !== 'production' ? { 'data-adtest': 'on' } as any : {})}
     />
   )
 }
