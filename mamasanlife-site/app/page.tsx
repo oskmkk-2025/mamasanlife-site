@@ -36,7 +36,15 @@ export default async function HomePage() {
   // Hero: 特集カテゴリの先頭 or 最新の先頭
   const feature = perCat.find(g => g.slug === 'feature')
   const hero = (feature?.posts?.find((p:any)=>filterBlocked([p]).length) || latest?.[0]) as any
-  const latestRest = uniquePostsBySlug(filterBlocked((latest || []).filter((p:any) => !(p.slug === hero?.slug && p.category === hero?.category))))
+  // 画面内の重複（カテゴリ枠/ヒーロー と 最新一覧の重複）を除外
+  const shownKeys = new Set<string>()
+  if (hero?.slug && hero?.category) shownKeys.add(`${hero.category}/${hero.slug}`)
+  for (const g of perCat){
+    for (const p of (g.posts||[])){
+      if (p?.slug && p?.category) shownKeys.add(`${p.category}/${p.slug}`)
+    }
+  }
+  const latestRest = uniquePostsBySlug(filterBlocked((latest || []).filter((p:any) => !shownKeys.has(`${p.category}/${p.slug}`))))
 
   return (
     <div>
