@@ -243,7 +243,7 @@ export default async function PostPage(
         </header>
 
         {/* PR disclosure (景品表示法ステマ規制対応): 記事本文の直前に表示 */}
-        <div className="my-4 text-[12px] md:text-[13px] text-gray-600 border border-dashed rounded-md px-3 py-2 bg-white/70" role="note" aria-label="広告表記">
+        <div className="my-4 text-[12px] md:text-[13px] text-gray-600 border border-dashed rounded-md px-3 py-2 bg-white/70 text-center" role="note" aria-label="広告表記">
           記事内に広告が含まれています
         </div>
 
