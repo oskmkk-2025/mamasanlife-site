@@ -444,14 +444,18 @@ const ptComponents = {
   },
   block: {
     h2: ({ children }: any) => (
-      <h2 id={slugify(String(children))} className="mt-10 mb-4 text-[1.5rem] md:text-[1.875rem] leading-snug scroll-mt-24 pl-6 relative">
+      <h2 id={slugify(String(children))} className="mt-10 mb-4 text-[1.5rem] md:text-[1.875rem] leading-snug scroll-mt-24 pr-6 relative">
         <span className="h2-paw" aria-hidden />
-        <span className="marker-pen" style={{ marginLeft: '0.6em' }}>{children}</span>
+        <span className="marker-pen">{children}</span>
       </h2>
     ),
     h3: ({ children }: any) => <h3 id={slugify(String(children))} className="mt-8 mb-3 text-[1.25rem] md:text-[1.5rem] leading-snug scroll-mt-24">{children}</h3>,
     h4: ({ children }: any) => <h4 id={slugify(String(children))} className="mt-6 mb-2 text-[1.125rem] md:text-[1.25rem] leading-snug scroll-mt-24">{children}</h4>,
-    normal: ({ children }: any) => <p className="my-4 leading-[1.9] tracking-[.005em]">{children}</p>
+    normal: ({ children }: any) => {
+      const raw = (Array.isArray(children) ? children.join(' ') : String(children||'')).trim()
+      if (raw === '[ad]') return <AdSlot slot="IN_ARTICLE_SLOT" className="my-6 clear-both" />
+      return <p className="my-4 leading-[1.9] tracking-[.005em]">{children}</p>
+    }
   }
   ,
   list: {
