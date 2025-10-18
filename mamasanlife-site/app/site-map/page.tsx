@@ -11,6 +11,17 @@ export default async function SiteMapPage({ searchParams }: { searchParams: Prom
   // タイトルキーワードでの一時的な非表示フィルタ（将来的には Sanity 側の hidden フラグ運用が望ましい）
   const BLOCKED = ['貼付用']
   posts = (posts || []).filter((p:any)=> !BLOCKED.some(k => (p?.title||'').includes(k)))
+  // グローバル重複除去（category/slug 単位）
+  const seenGlobal = new Set<string>()
+  const postsUniq: any[] = []
+  for (const p of posts||[]) {
+    const key = `${p?.category || ''}/${p?.slug}`
+    if (!p?.slug) continue
+    if (seenGlobal.has(key)) continue
+    seenGlobal.add(key)
+    postsUniq.push(p)
+  }
+  posts = postsUniq
 
   // ツリー用: 年→月→記事
   const byYear = new Map<string, any[]>()
