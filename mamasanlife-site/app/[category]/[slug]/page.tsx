@@ -62,41 +62,32 @@ export default async function PostPage(
   for (let i=0; i<maxScan; i++){
     const b = bodyBlocks[i]
     if (!b) continue
-    if (b._type === 'linkImageBlock') { introItems.push(b); toRemove.add(i); continue }
-    if (b._type === 'linkImageRow' && Array.isArray(b.items)) { introItems.push(...b.items); toRemove.add(i); continue }
+    if (b._type === 'linkImageBlock') {
+      const p = (b as any)?.provider || ''
+      const src = String((b as any)?.src || '')
+      if (!(p==='blogmura' || p==='with2' || /blogmura|with2\.net/.test(src))) {
+        introItems.push(b)
+      }
+      toRemove.add(i); continue
+    }
+    if (b._type === 'linkImageRow' && Array.isArray(b.items)) {
+      const allowed = (b.items as any[]).filter(it=>{
+        const p = (it as any)?.provider || ''
+        const src = String((it as any)?.src || '')
+        return !(p==='blogmura' || p==='with2' || /blogmura|with2\.net/.test(src))
+      })
+      if (allowed.length){ introItems.push(...allowed) }
+      toRemove.add(i); continue
+    }
     // image block that looks like a banner (ブログ村/with2) — treat as intro banner
     if (b._type === 'image') {
       const alt = String((b as any)?.alt||'')
-      const isBlogmura = /村|blogmura/i.test(alt)
-      const isWith2 = /with2\.net|人気ブログ/i.test(alt)
-      if (isBlogmura || isWith2) {
-        const ref = (b as any)?.asset?._ref
-        const src = ref ? sanityImageRefToUrl(ref, { q: 80, fit:'clip' }) : ''
-        introItems.push({ _type:'linkImageBlock', href:'#', src, alt, provider: isWith2 ? 'with2' : 'blogmura' })
-        toRemove.add(i)
-        continue
-      }
+      if (/blogmura|with2\.net|人気ブログ|ブログ村/.test(alt)) { toRemove.add(i); continue }
     }
     // htmlEmbed 内に含まれるブログ村/with2の画像リンクも先頭バナーとして吸い上げ
     if (b._type === 'htmlEmbed' && typeof (b as any).html === 'string'){
       const html = String((b as any).html || '')
-      if (html.includes('blogmura') || html.includes('with2.net')){
-        try{
-          const items: any[] = []
-          const rx = /<a[^>]+href=["']([^"']+)["'][^>]*>\s*<img[^>]+src=["']([^"']+)["'][^>]*alt=["']?([^"'>]*)/gis
-          const matches = Array.from(html.matchAll(rx))
-          for (const m of matches){
-            const href = m[1]
-            const src = m[2]
-            const alt = m[3] || ''
-            const provider = src.includes('blogmura') || href.includes('blogmura') ? 'blogmura' : (src.includes('with2.net') || href.includes('with2.net') ? 'with2' : 'other')
-            if (provider === 'blogmura' || provider === 'with2'){
-              items.push({ _type:'linkImageBlock', href, src, alt, provider })
-            }
-          }
-          if (items.length){ introItems.push(...items); toRemove.add(i); continue }
-        }catch{}
-      }
+      if (html.includes('blogmura') || html.includes('with2.net')){ toRemove.add(i); continue }
     }
   }
   // 重複（同一src/href・同一provider）を除去して順序は保持
@@ -134,25 +125,18 @@ export default async function PostPage(
     break
   }
   const bodyRestInitial: any[] = footerItems.length ? bodyAfterIntro.slice(0, tail+1) : bodyAfterIntro
-  // Additionally, move any blogmura/with2 banners (画像リンク以外のボタン型を含む) を本文からフッターへ退避
+  // Remove any blogmura/with2 banners (画像リンク以外のボタン型を含む) を本文から除外
   const bodyRest: any[] = []
   for (const b of bodyRestInitial){
     if (b?._type === 'linkImageBlock'){
       const src = String((b as any)?.src||'')
       const prov = (b as any)?.provider || (src.includes('blogmura')? 'blogmura' : (src.includes('with2.net')? 'with2' : 'other'))
-      if (prov==='blogmura' || prov==='with2') { footerItems.push(b); continue }
+      if (prov==='blogmura' || prov==='with2') { continue }
     }
-    // convert banner-like image blocks to footer items
+    // drop banner-like image blocks entirely
     if (b?._type === 'image'){
       const alt = String((b as any)?.alt||'')
-      const isBlogmura = /村|blogmura/i.test(alt)
-      const isWith2 = /with2\.net|人気ブログ/i.test(alt)
-      if (isBlogmura || isWith2) {
-        const ref = (b as any)?.asset?._ref
-        const src = ref ? sanityImageRefToUrl(ref, { q: 80, fit:'clip' }) : ''
-        footerItems.push({ _type:'linkImageBlock', href:'#', src, alt, provider: isWith2 ? 'with2' : 'blogmura' })
-        continue
-      }
+      if (/blogmura|with2\.net|人気ブログ|ブログ村/.test(alt)) { continue }
     }
     // ボタン型（テキスト＋CSS）のリンクを含む段落を検出し、ボタンとして退避
     if (b?._type === 'block' && Array.isArray((b as any).markDefs)){
@@ -165,29 +149,22 @@ export default async function PostPage(
           if (href.includes('blogmura') || href.includes('with2.net')) linkMarks.set(m._key, href)
         }
       }
-      if (linkMarks.size){
-        // ボタンとして抽出
-        for (const c of children){
-          if (!Array.isArray(c?.marks)) continue
-          for (const mk of c.marks){
-            const href = linkMarks.get(mk)
-            if (href){ footerItems.push({ _type:'linkImageBlock', href, src:'', alt:'', provider: href.includes('with2.net')? 'with2':'blogmura' }) }
-          }
-        }
-        // 本文から当該段落を除去
-        continue
-      }
+      if (linkMarks.size){ continue }
     }
     if (b?._type === 'linkImageRow' && Array.isArray((b as any).items)){
       const keepItems:any[]=[]
       for (const it of (b as any).items){
         const src = String(it?.src||'')
         const prov = it?.provider || (src.includes('blogmura')? 'blogmura' : (src.includes('with2.net')? 'with2' : 'other'))
-        if (prov==='blogmura' || prov==='with2') footerItems.push(it)
+        if (prov==='blogmura' || prov==='with2') { /* drop */ }
         else keepItems.push(it)
       }
       if (keepItems.length){ bodyRest.push({ ...(b as any), items: keepItems }) }
       continue
+    }
+    if (b?._type === 'htmlEmbed' && typeof (b as any).html === 'string'){
+      const html = String((b as any).html || '')
+      if (html.includes('blogmura') || html.includes('with2.net')) { continue }
     }
     bodyRest.push(b)
   }
@@ -325,22 +302,7 @@ export default async function PostPage(
           >
             {bodyClean.length ? (
               <>
-                {/* Intro banner row (moved from header) */}
-                {introItems.length > 0 && (
-                  (()=>{
-                    const hasApp = introItems.some((it:any)=> String(it?.src||'').includes('appreach') || String(it?.src||'').includes('nabettu.github.io'))
-                    const rowClass = hasApp ? 'banner-row-40' : 'banner-row-31'
-                    return (
-                      <div className={`my-2 flex items-center ${hasApp? 'justify-center' : 'justify-end'} gap-2 flex-wrap link-row ${rowClass}`}>
-                        {introItems.map((it:any, idx:number)=> (
-                          <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
-                            <img src={String(it?.src||'')} alt={it?.alt||''} />
-                          </a>
-                        ))}
-                      </div>
-                    )
-                  })()
-                )}
+                {/* (Removed) Intro banner row */}
                 <PortableText value={bodySlim} components={ptComponents as any} />
                 <AffiliateBlocks items={post.affiliateBlocks as any} />
               </>
@@ -350,24 +312,9 @@ export default async function PostPage(
                 {post.excerpt && <p className="mt-3">{post.excerpt}</p>}
               </div>
             )}
-            {/* (Removed) generic footer banner row — keep only follow buttons below */}
+            {/* (Removed) generic footer banner row */}
 
-            {/* Follow buttons (ブログ村 / 人気ブログランキング) */}
-            {(()=>{
-              const links = [
-                { provider:'blogmura', href:'https://blogmura.com/profiles/11159291/?p_cid=11159291&reader=11159291', src:'https://b.blogmura.com/banner-blogmura-reader-pink.svg', alt:'にほんブログ村でフォロー' },
-                { provider:'with2', href:'https://blog.with2.net/link/?id=2097059&follow', src:'https://blog.with2.net/banner/follow/2097059?t=b', alt:'人気ブログランキングでフォロー' }
-              ]
-              return (
-                <div className="my-4 flex items-center justify-center gap-3 flex-wrap link-row follow-row clear-both">
-                  {links.map((it, idx)=> (
-                    <a key={idx} href={it.href} target="_blank" rel="noopener nofollow" aria-label={it.alt} className="no-underline hover:opacity-95">
-                      <img src={it.src} alt={it.alt} />
-                    </a>
-                  ))}
-                </div>
-              )
-            })()}
+            {/* (Removed) follow buttons for blogmura/with2 */}
             <AdSlot slot="ARTICLE_BOTTOM_SLOT" className="my-4 clear-both" />
           </div>
           <aside className="hidden md:block md:sticky md:top-20 h-max space-y-6">
