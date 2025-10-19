@@ -15,7 +15,11 @@ export const postFields = `{
   "slug": slug.current,
   excerpt,
   heroImage,
-  "imageUrl": heroImage.asset->url,
+  // カード用の画像: heroImage が無ければ本文最初の画像をフォールバック
+  "imageUrl": coalesce(
+    heroImage.asset->url,
+    select(count(body[_type=="image"]) > 0 => body[_type=="image"][0].asset->url, "")
+  ),
   publishedAt,
   updatedAt,
   // category is stored as string enum in our schema
