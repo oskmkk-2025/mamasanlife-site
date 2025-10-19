@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import { sanityClient } from '@/lib/sanity.client'
-import { categories as CATS, buildCategoryQuery, buildCategoryCountQuery } from '@/lib/queries'
+import { categories as CATS, buildCategoryQuery, buildCategoryCountQuery, postBySlugAnyCategoryQuery } from '@/lib/queries'
 import { PostList } from '@/components/PostList'
 import { SectionHeader } from '@/components/SectionHeader'
 import { Sidebar } from '@/components/Sidebar'
 import { uniquePostsBySlugCategory, filterBlocked } from '@/lib/post-utils'
+import { sanityImageRefToUrl } from '@/lib/image-util'
 import Script from 'next/script'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
@@ -52,7 +53,33 @@ export default async function CategoryPage(
     sanityClient.fetch(listQuery, paramsQ),
     sanityClient.fetch(countQuery, since ? { category, since } : { category })
   ])
-  const posts = uniquePostsBySlugCategory(filterBlocked(postsRaw))
+  let posts = uniquePostsBySlugCategory(filterBlocked(postsRaw))
+  // 画像フォールバック: 一覧用imageUrlが空のものは本文から1枚目を探索
+  const needImage = posts.filter((p:any)=> !p?.imageUrl)
+  if (needImage.length){
+    const filled: Record<string,string> = {}
+    await Promise.all(needImage.map(async (p:any)=>{
+      const full = await sanityClient.fetch(postBySlugAnyCategoryQuery, { slug: p.slug }).catch(()=>null)
+      if (!full) return
+      let url = full?.imageUrl || ''
+      if (!url && Array.isArray(full?.body)){
+        const body = full.body as any[]
+        // find first image-like
+        const img = body.find(b=> b?._type==='image' && b?.asset?._ref)
+        if (img?.asset?._ref) url = sanityImageRefToUrl(img.asset._ref, { q:80, fit:'clip' })
+        if (!url){
+          const lib = body.find(b=> b?._type==='linkImageBlock' && typeof b?.src==='string' && !/blogmura|with2\.net|appreach|nabettu\.github\.io/.test(String(b.src)))
+          if (lib?.src) url = String(lib.src)
+        }
+        if (!url){
+          const row = body.find(b=> b?._type==='linkImageRow' && Array.isArray(b?.items) && b.items[0]?.src && !/blogmura|with2\.net|appreach|nabettu\.github\.io/.test(String(b.items[0].src)))
+          if (row?.items?.[0]?.src) url = String(row.items[0].src)
+        }
+      }
+      if (url) filled[`${p.category}/${p.slug}`] = url
+    }))
+    posts = posts.map((p:any)=> filled[`${p.category}/${p.slug}`] ? ({ ...p, imageUrl: filled[`${p.category}/${p.slug}`] }) : p)
+  }
   const totalPages = Math.ceil((total || 0) / PAGE_SIZE)
   const qs = (p: number) => new URLSearchParams({ page: String(p), sort, days }).toString()
   const filterLink = (next: { sort?: string; days?: string }) => {
