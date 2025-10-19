@@ -186,6 +186,9 @@ a:hover:not(.btn-brand) {
 /* Appreach 系は40pxに統一 */
 .link-row img[src*="appreach"],
 .link-row img[src*="nabettu.github.io"] { height: 40px !important; width: auto !important; }
+/* Follow row (blogmura/with2 follow buttons) */
+.follow-row img[src*="blogmura"],
+.follow-row img[src*="with2.net"] { height: 46px !important; width: auto !important; }
 /* 行の下に常に余白を確保して広告と重ならないように */
 .link-row { margin-bottom: 8px; }
 .clear-both { clear: both; }

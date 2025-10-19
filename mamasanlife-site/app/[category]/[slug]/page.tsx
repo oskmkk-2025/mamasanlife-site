@@ -64,6 +64,19 @@ export default async function PostPage(
     if (!b) continue
     if (b._type === 'linkImageBlock') { introItems.push(b); toRemove.add(i); continue }
     if (b._type === 'linkImageRow' && Array.isArray(b.items)) { introItems.push(...b.items); toRemove.add(i); continue }
+    // image block that looks like a banner (ブログ村/with2) — treat as intro banner
+    if (b._type === 'image') {
+      const alt = String((b as any)?.alt||'')
+      const isBlogmura = /村|blogmura/i.test(alt)
+      const isWith2 = /with2\.net|人気ブログ/i.test(alt)
+      if (isBlogmura || isWith2) {
+        const ref = (b as any)?.asset?._ref
+        const src = ref ? sanityImageRefToUrl(ref, { q: 80, fit:'clip' }) : ''
+        introItems.push({ _type:'linkImageBlock', href:'#', src, alt, provider: isWith2 ? 'with2' : 'blogmura' })
+        toRemove.add(i)
+        continue
+      }
+    }
     // htmlEmbed 内に含まれるブログ村/with2の画像リンクも先頭バナーとして吸い上げ
     if (b._type === 'htmlEmbed' && typeof (b as any).html === 'string'){
       const html = String((b as any).html || '')
@@ -128,6 +141,18 @@ export default async function PostPage(
       const src = String((b as any)?.src||'')
       const prov = (b as any)?.provider || (src.includes('blogmura')? 'blogmura' : (src.includes('with2.net')? 'with2' : 'other'))
       if (prov==='blogmura' || prov==='with2') { footerItems.push(b); continue }
+    }
+    // convert banner-like image blocks to footer items
+    if (b?._type === 'image'){
+      const alt = String((b as any)?.alt||'')
+      const isBlogmura = /村|blogmura/i.test(alt)
+      const isWith2 = /with2\.net|人気ブログ/i.test(alt)
+      if (isBlogmura || isWith2) {
+        const ref = (b as any)?.asset?._ref
+        const src = ref ? sanityImageRefToUrl(ref, { q: 80, fit:'clip' }) : ''
+        footerItems.push({ _type:'linkImageBlock', href:'#', src, alt, provider: isWith2 ? 'with2' : 'blogmura' })
+        continue
+      }
     }
     // ボタン型（テキスト＋CSS）のリンクを含む段落を検出し、ボタンとして退避
     if (b?._type === 'block' && Array.isArray((b as any).markDefs)){
@@ -325,22 +350,24 @@ export default async function PostPage(
                 {post.excerpt && <p className="mt-3">{post.excerpt}</p>}
               </div>
             )}
-            {/* Footer banner row to avoid AdSense overlap */}
-            {footerItems.length > 0 && (
-              (()=>{
-                const allAppF = footerItems.every((it:any)=> String(it?.src||'').includes('appreach') || String(it?.src||'').includes('nabettu.github.io'))
-                const rowClassF = allAppF ? 'banner-row-40' : 'banner-row-31'
-                return (
-                  <div className={`my-4 flex items-start ${allAppF? 'justify-center' : 'justify-end'} gap-2 flex-wrap link-row clear-both ${rowClassF}`}>
-                    {footerItems.map((it:any, idx:number)=> (
-                      <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
-                        <img src={String(it?.src||'')} alt={it?.alt||''} />
-                      </a>
-                    ))}
-                  </div>
-                )
-              })()
-            )}
+            {/* (Removed) generic footer banner row — keep only follow buttons below */}
+
+            {/* Follow buttons (ブログ村 / 人気ブログランキング) */}
+            {(()=>{
+              const links = [
+                { provider:'blogmura', href:'https://blogmura.com/profiles/11159291/?p_cid=11159291&reader=11159291', src:'https://b.blogmura.com/banner-blogmura-reader-pink.svg', alt:'にほんブログ村でフォロー' },
+                { provider:'with2', href:'https://blog.with2.net/link/?id=2097059&follow', src:'https://blog.with2.net/banner/follow/2097059?t=b', alt:'人気ブログランキングでフォロー' }
+              ]
+              return (
+                <div className="my-4 flex items-center justify-center gap-3 flex-wrap link-row follow-row clear-both">
+                  {links.map((it, idx)=> (
+                    <a key={idx} href={it.href} target="_blank" rel="noopener nofollow" aria-label={it.alt} className="no-underline hover:opacity-95">
+                      <img src={it.src} alt={it.alt} />
+                    </a>
+                  ))}
+                </div>
+              )
+            })()}
             <AdSlot slot="ARTICLE_BOTTOM_SLOT" className="my-4 clear-both" />
           </div>
           <aside className="hidden md:block md:sticky md:top-20 h-max space-y-6">
