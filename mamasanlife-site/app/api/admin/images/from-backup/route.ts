@@ -111,15 +111,35 @@ export async function POST(req: Request){
 
     const uploads: { src:string; assetId?:string }[] = []
     for (const it of items){
+      let assetId: string | undefined
+      // 1) try local backup first
       const rel = findLocalBackup(manifestCsv, it.src)
-      if (!rel) { uploads.push({ src: it.src }) ; continue }
-      const filePath = path.join(path.dirname(wxrPath), 'backups', 'wxr-images', rel)
-      if (!fs.existsSync(filePath)) { uploads.push({ src: it.src }); continue }
-      const buf = fs.readFileSync(filePath)
-      const filename = path.basename(filePath)
-      const up:any = await client.assets.upload('image', buf, { filename }).catch(()=>null)
-      if (!up?._id) { uploads.push({ src: it.src }) ; continue }
-      uploads.push({ src: it.src, assetId: up._id })
+      if (rel){
+        const filePath = path.join(path.dirname(wxrPath), 'backups', 'wxr-images', rel)
+        if (fs.existsSync(filePath)){
+          try{
+            const buf = fs.readFileSync(filePath)
+            const filename = path.basename(filePath)
+            const up:any = await client.assets.upload('image', buf, { filename }).catch(()=>null)
+            if (up?._id) assetId = up._id
+          }catch{}
+        }
+      }
+      // 2) fallback: fetch external URL directly and upload to Sanity
+      if (!assetId && /^https?:\/\//i.test(it.src)){
+        try{
+          const res = await fetch(it.src, { cache:'no-store' })
+          if (res.ok){
+            const ab = await res.arrayBuffer()
+            const buf = Buffer.from(ab)
+            const filename = (()=>{ try{ return new URL(it.src).pathname.split('/').pop() || 'image.jpg' }catch{ return 'image.jpg' } })()
+            const up:any = await client.assets.upload('image', buf, { filename }).catch(()=>null)
+            if (up?._id) assetId = up._id
+          }
+        }catch{}
+      }
+      uploads.push({ src: it.src, assetId })
+      if (!assetId) continue
 
       // find anchor index in body
       const anchorNorm = normalize(it.anchor)
@@ -132,9 +152,13 @@ export async function POST(req: Request){
         }
       }
       // insert image block after anchor (or prepend if not found)
-      const imageBlock = { _type:'image', asset:{ _type:'reference', _ref: up._id }, alt: it.alt }
-      if (idx >= 0) body.splice(idx+1, 0, imageBlock)
-      else body.unshift(imageBlock)
+      const imageBlock:any = { _type:'image', asset:{ _type:'reference', _ref: assetId }, alt: it.alt }
+      // avoid immediate duplicate: if the spot already has the same asset ref, skip
+      const insertAt = idx >= 0 ? idx+1 : 0
+      const prev = body[insertAt]
+      if (!(prev?._type==='image' && prev?.asset?._ref===assetId)){
+        body.splice(insertAt, 0, imageBlock)
+      }
     }
 
     await client.patch(baseId).set({ body }).commit()
