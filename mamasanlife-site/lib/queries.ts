@@ -18,7 +18,12 @@ export const postFields = `{
   // カード用の画像: heroImage が無ければ本文最初の画像をフォールバック
   "imageUrl": coalesce(
     heroImage.asset->url,
-    select(count(body[_type=="image"]) > 0 => body[_type=="image"][0].asset->url, "")
+    // 本文の最初の画像ブロック
+    body[_type=="image"][0].asset->url,
+    // 本文の最初のリンク画像（バナー類は除外）
+    body[_type=="linkImageBlock" && !(src match "*blogmura*") && !(src match "*with2.net*") && !(src match "*appreach*") && !(src match "*nabettu.github.io*")][0].src,
+    // 行型の最初の画像（こちらもバナー類は除外）
+    select(count(body[_type=="linkImageRow" && defined(items[0].src) && !(items[0].src match "*blogmura*") && !(items[0].src match "*with2.net*") && !(items[0].src match "*appreach*") && !(items[0].src match "*nabettu.github.io*")]) > 0 => body[_type=="linkImageRow"][0].items[0].src, "")
   ),
   publishedAt,
   updatedAt,
