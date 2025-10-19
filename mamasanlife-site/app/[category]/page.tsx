@@ -6,6 +6,7 @@ import { SectionHeader } from '@/components/SectionHeader'
 import { Sidebar } from '@/components/Sidebar'
 import { uniquePostsBySlugCategory, filterBlocked } from '@/lib/post-utils'
 import { sanityImageRefToUrl } from '@/lib/image-util'
+import { load as cheerioLoad } from 'cheerio'
 import Script from 'next/script'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
@@ -80,6 +81,18 @@ export default async function CategoryPage(
         if (!url){
           const row = body.find(b=> b?._type==='linkImageRow' && Array.isArray(b?.items) && b.items[0]?.src && !/blogmura|with2\.net|appreach|nabettu\.github\.io/.test(String(b.items[0].src)))
           if (row?.items?.[0]?.src) url = String(row.items[0].src)
+        }
+      }
+      if (!url && Array.isArray(full?.body)){
+        // htmlEmbed 内の <img src=...> を探索（バナー系を除外）
+        const html = (full.body as any[]).find(b=> b?._type==='htmlEmbed' && typeof b?.html==='string')?.html as string | undefined
+        if (html){
+          try{
+            const $ = cheerioLoad(String(html))
+            const banned = /(blogmura|with2\.net|appreach|nabettu\.github\.io)/
+            const img = $('img').toArray().map(el=> $(el).attr('src')||'').find(src=> src && !banned.test(src))
+            if (img) url = img
+          }catch{}
         }
       }
       if (url) filled[`${p.category}/${p.slug}`] = url
