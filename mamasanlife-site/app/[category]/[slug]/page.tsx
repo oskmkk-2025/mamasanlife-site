@@ -166,18 +166,70 @@ export default async function PostPage(
     }
     bodyRest.push(b)
   }
-  const headingsAll = extractHeadingsFromPortableText(bodyRest)
+  // Remove tiny images that likely duplicate speech icons right before/after speech blocks
+  function refDims(ref?: string){
+    const m = String(ref||'').match(/-(\d+)x(\d+)-/)
+    return m ? { w: parseInt(m[1],10)||0, h: parseInt(m[2],10)||0 } : { w:0, h:0 }
+  }
+  const bodyClean: any[] = []
+  const hasSpeechAny = bodyRest.some((x:any)=> x?._type==='speechBlock')
+  for (let i=0; i<bodyRest.length; i++){
+    const b:any = bodyRest[i]
+    const isSmallImage = b?._type==='image' && (()=>{ const d=refDims(b?.asset?._ref); return d.w>0 && d.h>0 && Math.max(d.w,d.h) <= 120 })()
+    const isSpeechIconLarge = b?._type==='image' && hasSpeechAny && (()=>{
+      const alt = String(b?.alt||'')
+      const d = refDims(b?.asset?._ref)
+      const ratio = d.h && d.w ? (d.w/d.h) : 1
+      const nearSquare = ratio>0.85 && ratio<1.2
+      const bigEnough = Math.max(d.w, d.h) >= 300
+      const iconWord = /ひーち|アイコン|icon|avatar|プロフィール/i.test(alt)
+      // 先頭近辺に出てくる「正方形寄りの大きい画像」か、altでアイコンと分かるものを除外
+      const nearTop = i <= 20
+      return nearTop && (iconWord || (nearSquare && bigEnough))
+    })()
+    if (isSmallImage){
+      const prev = bodyRest[i-1]
+      const next = bodyRest[i+1]
+      if ((prev?._type==='speechBlock') || (next?._type==='speechBlock')){
+        // skip tiny image adjacent to speech block (likely same icon)
+        continue
+      }
+    }
+    if (isSpeechIconLarge) continue
+    bodyClean.push(b)
+  }
+  // Remove empty text blocks to avoid large blank spaces
+  function isEmptyTextBlock(b:any){
+    if (!b || b._type !== 'block') return false
+    const text = (b.children || []).map((c:any)=> c?.text || '').join('').replace(/\s+/g,'').trim()
+    return text.length === 0
+  }
+  const bodySlim: any[] = []
+  for (const b of bodyClean){
+    if (isEmptyTextBlock(b)) continue
+    bodySlim.push(b)
+  }
+  const headingsAll = extractHeadingsFromPortableText(bodySlim)
   const headings = headingsAll.filter(h => h.level <= 2)
-  // Detect Appreach embed; if exists, do not render hero big image (置換意図)
-  // Always show hero image regardless of Appreach placement in body
-  // Compute hero image (prefer heroImage, fallback to first image block)
+  // Compute hero image
+  // 1) Prefer explicitly set heroImage (post.imageUrl)
+  // 2) Fallback to first sufficiently-large image in sanitized body (exclude tiny icons/banners)
   let heroSrc = post.imageUrl as string | undefined
   let heroAlt = (post as any).imageAlt || post.title
+  function refDims(ref?: string){
+    const m = String(ref||'').match(/-(\d+)x(\d+)-/)
+    return m ? { w: parseInt(m[1],10)||0, h: parseInt(m[2],10)||0 } : { w:0, h:0 }
+  }
   if (!heroSrc && hasBody) {
-    const firstImg = (post.body as any[]).find(b => b?._type==='image' && b?.asset?._ref)
-    if (firstImg) {
-      heroSrc = sanityImageRefToUrl(firstImg.asset._ref, { q: 80, fit:'clip' })
-      heroAlt = firstImg?.alt || heroAlt
+    const MIN_SIDE = 200
+    const candidate = (bodyClean as any[]).find(b => {
+      if (b?._type !== 'image' || !b?.asset?._ref) return false
+      const d = refDims(b.asset._ref)
+      return Math.max(d.w, d.h) >= MIN_SIDE && Math.min(d.w, d.h) >= 120
+    }) as any
+    if (candidate) {
+      heroSrc = sanityImageRefToUrl(candidate.asset._ref, { q: 80, fit:'clip' })
+      heroAlt = candidate?.alt || heroAlt
     }
   }
   // (No suppression)
@@ -219,21 +271,7 @@ export default async function PostPage(
             {post.publishedAt && <time dateTime={post.publishedAt}>公開: {new Date(post.publishedAt).toLocaleDateString('ja-JP')}</time>}
             {post.updatedAt && <time dateTime={post.updatedAt}>更新: {new Date(post.updatedAt).toLocaleDateString('ja-JP')}</time>}
           </div>
-          {introItems.length > 1 && (
-            (()=>{
-              const hasApp = introItems.some((it:any)=> String(it?.src||'').includes('appreach') || String(it?.src||'').includes('nabettu.github.io'))
-              const rowClass = hasApp ? 'banner-row-40' : 'banner-row-31'
-              return (
-                <div className={`my-3 flex items-center ${hasApp? 'justify-center' : 'justify-end'} gap-2 flex-nowrap link-row ${rowClass}`}>
-                  {introItems.map((it:any, idx:number)=> (
-                    <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
-                      <img src={String(it?.src||'')} alt={it?.alt||''} />
-                    </a>
-                  ))}
-                </div>
-              )
-            })()
-          )}
+          {/* banner row moved to body top */}
           {heroSrc && (
             <figure className="mt-4 mb-2">
               <img src={heroSrc} alt={heroAlt} className="w-full h-auto rounded-md" />
@@ -260,9 +298,25 @@ export default async function PostPage(
                        [&_h2]:scroll-mt-24 [&_h3]:scroll-mt-24 [&_h4]:scroll-mt-24
                        [&_a]:underline [&_a]:underline-offset-2 [&_a]:text-[var(--c-emphasis)] hover:[&_a]:text-[var(--c-primary)]"
           >
-            {bodyRest.length ? (
+            {bodyClean.length ? (
               <>
-                <PortableText value={bodyRest} components={ptComponents as any} />
+                {/* Intro banner row (moved from header) */}
+                {introItems.length > 0 && (
+                  (()=>{
+                    const hasApp = introItems.some((it:any)=> String(it?.src||'').includes('appreach') || String(it?.src||'').includes('nabettu.github.io'))
+                    const rowClass = hasApp ? 'banner-row-40' : 'banner-row-31'
+                    return (
+                      <div className={`my-2 flex items-center ${hasApp? 'justify-center' : 'justify-end'} gap-2 flex-wrap link-row ${rowClass}`}>
+                        {introItems.map((it:any, idx:number)=> (
+                          <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
+                            <img src={String(it?.src||'')} alt={it?.alt||''} />
+                          </a>
+                        ))}
+                      </div>
+                    )
+                  })()
+                )}
+                <PortableText value={bodySlim} components={ptComponents as any} />
                 <AffiliateBlocks items={post.affiliateBlocks as any} />
               </>
             ) : (
@@ -277,7 +331,7 @@ export default async function PostPage(
                 const allAppF = footerItems.every((it:any)=> String(it?.src||'').includes('appreach') || String(it?.src||'').includes('nabettu.github.io'))
                 const rowClassF = allAppF ? 'banner-row-40' : 'banner-row-31'
                 return (
-                  <div className={`my-4 flex items-start ${allAppF? 'justify-center' : 'justify-end'} gap-2 flex-nowrap link-row clear-both ${rowClassF}`}>
+                  <div className={`my-4 flex items-start ${allAppF? 'justify-center' : 'justify-end'} gap-2 flex-wrap link-row clear-both ${rowClassF}`}>
                     {footerItems.map((it:any, idx:number)=> (
                       <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
                         <img src={String(it?.src||'')} alt={it?.alt||''} />
@@ -287,7 +341,7 @@ export default async function PostPage(
                 )
               })()
             )}
-            <AdSlot slot="ARTICLE_BOTTOM_SLOT" className="my-6 clear-both" />
+            <AdSlot slot="ARTICLE_BOTTOM_SLOT" className="my-4 clear-both" />
           </div>
           <aside className="hidden md:block md:sticky md:top-20 h-max space-y-6">
             {hasBody && <TableOfContents headings={headings} />}
@@ -390,17 +444,20 @@ const ptComponents = {
       )
     },
     linkImageBlock: ({ value }: any) => {
-      if (!value?.src) return null
-      const src = String(value.src)
+      const src = String(value?.src||'')
       const provider = value?.provider || (src.includes('blogmura') ? 'blogmura' : src.includes('with2.net') ? 'with2' : (src.includes('appreach')||src.includes('nabettu.github.io')) ? 'appreach' : 'other')
       const size = provider==='appreach' ? { w:135, h:40 } : (provider==='blogmura'||provider==='with2') ? { w:110, h:31 } : null
       return (
         <span className="banner-inline float-right ml-2">
           <a href={String(value?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="inline-block no-underline hover:opacity-95 align-middle">
-            {size ? (
-              <img src={src} alt={value?.alt||''} width={size.w} height={size.h} style={{ width:size.w, height:size.h, display:'block' }} />
+            {src ? (
+              size ? (
+                <img src={src} alt={value?.alt||''} width={size.w} height={size.h} style={{ width:size.w, height:size.h, display:'block' }} />
+              ) : (
+                <img src={src} alt={value?.alt||''} className="inline-block max-w-full h-auto" style={{ display:'block' }} />
+              )
             ) : (
-              <img src={src} alt={value?.alt||''} className="inline-block max-w-full h-auto" style={{ display:'block' }} />
+              <span className={`banner-badge ${provider}`}>{provider==='blogmura' ? 'ブログ村' : provider==='with2' ? '人気ブログ' : provider==='appreach' ? 'Appreach' : 'Link'}</span>
             )}
           </a>
         </span>
@@ -420,14 +477,17 @@ const ptComponents = {
       const maxH = hasAppreach ? 40 : 31
       const rowClass = allAppreach ? 'banner-row-40' : 'banner-row-31'
       return (
-        <div className={`my-3 flex items-center ${allAppreach? 'justify-center' : 'justify-end'} gap-2 flex-nowrap link-row ${rowClass}`}>
+        <div className={`my-3 flex items-center ${allAppreach? 'justify-center' : 'justify-end'} gap-2 flex-wrap link-row ${rowClass}`}>
           {items.map((it:any, idx:number)=>{
-            const src = String(it.src)
-            const provider = it?.provider || (src.includes('appreach')||src.includes('nabettu.github.io') ? 'appreach' : 'other')
-            const size = provider==='appreach' ? { w:135, h:40 } : null
+            const src = String(it?.src||'')
+            const provider = it?.provider || (src.includes('appreach')||src.includes('nabettu.github.io') ? 'appreach' : src.includes('blogmura') ? 'blogmura' : src.includes('with2.net') ? 'with2' : 'other')
             return (
               <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
-                <img src={src} alt={it?.alt||''} />
+                {src ? (
+                  <img src={src} alt={it?.alt||''} />
+                ) : (
+                  <span className={`banner-badge ${provider}`}>{provider==='blogmura' ? 'ブログ村' : provider==='with2' ? '人気ブログ' : provider==='appreach' ? 'Appreach' : 'Link'}</span>
+                )}
               </a>
             )
           })}

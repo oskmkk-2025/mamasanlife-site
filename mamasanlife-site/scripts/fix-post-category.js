@@ -4,6 +4,33 @@
 // Dry-run by default. Use --force to apply, --delete-losers to remove the others.
 
 const { createClient } = require('@sanity/client')
+const fs = require('fs')
+const path = require('path')
+
+function loadEnvLocal(){
+  const candidates = [
+    path.join(__dirname, '..', '.env.local'),
+    path.join(process.cwd(), '.env.local'),
+    path.join(process.cwd(), '..', '.env.local')
+  ]
+  for (const p of candidates){
+    if (!fs.existsSync(p)) continue
+    const txt = fs.readFileSync(p,'utf8')
+    for (const line of txt.split(/\r?\n/)){
+      const s = line.trim()
+      if (!s || s.startsWith('#')) continue
+      const m = s.match(/^([A-Z0-9_]+)\s*=\s*(.*)$/)
+      if (!m) continue
+      const k = m[1]
+      let v = m[2]
+      v = v.replace(/^"|"$/g,'').trim()
+      if (!(k in process.env)) process.env[k] = v
+    }
+    break
+  }
+}
+
+loadEnvLocal()
 
 function parseArgs(argv){
   const args = {
@@ -79,4 +106,3 @@ async function main(){
 }
 
 main().catch(e=>{ console.error(e); process.exit(1) })
-

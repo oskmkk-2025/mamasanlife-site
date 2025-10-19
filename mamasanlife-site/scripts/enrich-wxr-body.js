@@ -7,6 +7,32 @@ const pLimit = require('p-limit').default
 const cheerio = require('cheerio')
 const { createClient } = require('@sanity/client')
 
+// Load .env.local if present so CLI実行でも環境変数を拾えるようにする
+function loadEnvLocal(){
+  const candidates = [
+    path.join(__dirname, '..', '.env.local'),
+    path.join(process.cwd(), '.env.local'),
+    path.join(process.cwd(), '..', '.env.local')
+  ]
+  for (const p of candidates){
+    if (!fs.existsSync(p)) continue
+    const txt = fs.readFileSync(p,'utf8')
+    for (const line of txt.split(/\r?\n/)){
+      const s = line.trim()
+      if (!s || s.startsWith('#')) continue
+      const m = s.match(/^([A-Z0-9_]+)\s*=\s*(.*)$/)
+      if (!m) continue
+      const k = m[1]
+      let v = m[2]
+      v = v.replace(/^"|"$/g,'').trim()
+      if (!(k in process.env)) process.env[k] = v
+    }
+    break
+  }
+}
+
+loadEnvLocal()
+
 const projectId = process.env.SANITY_PROJECT_ID || process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'gqv363gs'
 const dataset = process.env.SANITY_DATASET || process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 const apiVersion = process.env.SANITY_API_VERSION || '2025-09-01'

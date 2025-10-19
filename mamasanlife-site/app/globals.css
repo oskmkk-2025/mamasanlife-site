@@ -187,11 +187,16 @@ a:hover:not(.btn-brand) {
 .link-row img[src*="appreach"],
 .link-row img[src*="nabettu.github.io"] { height: 40px !important; width: auto !important; }
 /* 行の下に常に余白を確保して広告と重ならないように */
-.link-row { margin-bottom: 12px; }
+.link-row { margin-bottom: 8px; }
 .clear-both { clear: both; }
+/* Fallback badges when src image is missing */
+.banner-badge { display: inline-flex; align-items: center; justify-content: center; height: 31px; padding: 0 10px; border-radius: 4px; font-weight: 700; font-size: 12px; color: #fff; line-height: 1; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+.banner-badge.blogmura { background: #1da1f2; }
+.banner-badge.with2 { background: #34a853; }
+.banner-badge.appreach { height: 40px; background: #ff6b00; font-size: 13px; }
 /* Appreach card (grid layout) */
 .appreach { display: grid; grid-template-columns: 120px 1fr; grid-template-areas: "icon detail" "icon links"; gap: 12px 16px; align-items: start; border: 1px solid #dcdcdc; padding: 14px; border-radius: 12px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
-.prose-content .appreach { margin: 12px 0; }
+.prose-content .appreach { margin: 8px 0; }
 .appreach__icon { grid-area: icon; width: 120px; height: 120px; border-radius: 16px; object-fit: cover; display: block; }
 .appreach__detail { grid-area: detail; min-width: 0; }
 .appreach__name { font-weight: 700; margin: 2px 0 6px; font-size: 18px; line-height: 1.4; }
