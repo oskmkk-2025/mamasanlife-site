@@ -8,7 +8,8 @@ import { uniquePostsBySlugCategory, filterBlocked } from '@/lib/post-utils'
 import Script from 'next/script'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
-export const revalidate = 120
+// 一時的に強制動的化して、画像フォールバック反映を即時確認
+export const dynamic = 'force-dynamic'
 
 export async function generateStaticParams() {
   return CATS.map(c => ({ category: c.slug }))
