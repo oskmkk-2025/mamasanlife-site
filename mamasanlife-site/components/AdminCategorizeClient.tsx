@@ -91,12 +91,11 @@ export function AdminCategorizeClient({ posts, categories }: { posts: Post[]; ca
       </div>
 
       <div className="flex flex-wrap gap-2 mb-4">
-        {categories.map((c,i)=> (
+        {categories.map((c)=> (
           <span key={c.slug} className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full border bg-white">
-            <span className="opacity-70">{i+1}.</span> {c.title}
+            {c.title}
           </span>
         ))}
-        <span className="text-xs text-gray-500">（ヒント: 数字キー 1〜{categories.length} で直近選択に適用）</span>
       </div>
 
       {msg && <p className="text-sm text-red-600 mb-2">{msg}</p>}
@@ -140,4 +139,3 @@ export function AdminCategorizeClient({ posts, categories }: { posts: Post[]; ca
     </div>
   )
 }
-
