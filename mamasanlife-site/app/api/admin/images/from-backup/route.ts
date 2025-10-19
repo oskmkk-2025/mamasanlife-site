@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { NextResponse } from 'next/server'
 import { createClient } from '@sanity/client'
-import cheerio from 'cheerio'
+import { load as cheerioLoad } from 'cheerio'
 
 export const dynamic = 'force-dynamic'
 
@@ -75,7 +75,7 @@ export async function POST(req: Request){
     const blk = extractPostBlockBySlug(xml, slug)
     if (!blk) return NextResponse.json({ error:'post not found in WXR' }, { status: 404 })
     const html = extractContentHtml(blk.block) || ''
-    const $ = cheerio.load(html)
+    const $ = cheerioLoad(html)
 
     // gather images with nearest preceding paragraph text as anchor
     const items: { src:string; alt:string; anchor:string }[] = []
@@ -145,4 +145,3 @@ export async function POST(req: Request){
     return NextResponse.json({ error: e?.message || 'error' }, { status: 500 })
   }
 }
-
