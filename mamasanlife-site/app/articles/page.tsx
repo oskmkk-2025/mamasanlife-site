@@ -1,0 +1,39 @@
+import { sanityClient } from '@/lib/sanity.client'
+import { categories, recentPostsQuery } from '@/lib/queries'
+import { uniquePostsBySlug, filterBlocked } from '@/lib/post-utils'
+import { FilterablePostList } from '@/components/FilterablePostList'
+
+export const revalidate = 60
+
+export const metadata = {
+  title: '記事一覧',
+  description: 'カテゴリ別にボタンで絞り込める記事一覧ページ',
+}
+
+export default async function ArticlesPage() {
+  let posts: any[] = []
+  try {
+    const raw = await sanityClient.fetch(recentPostsQuery, { limit: 500 })
+    posts = uniquePostsBySlug(filterBlocked(raw)).map((p:any) => ({
+      id: p?._id,
+      slug: p.slug,
+      category: p.category,
+      categoryTitle: p.categoryTitle,
+      title: p.title,
+      excerpt: p.excerpt,
+      date: p.publishedAt,
+      imageUrl: p.imageUrl,
+    }))
+  } catch (e) {
+    console.error('[ArticlesPage] Sanity fetch failed', e)
+    posts = []
+  }
+
+  return (
+    <div className="container-responsive py-10">
+      <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-6">記事一覧</h1>
+      <FilterablePostList posts={posts as any} categories={categories as any} />
+    </div>
+  )
+}
+

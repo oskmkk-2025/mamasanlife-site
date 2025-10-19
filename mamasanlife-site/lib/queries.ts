@@ -9,6 +9,11 @@ export const categories = [
   { slug: 'feature', title: '特集' }
 ] as const
 
+// GROQ の select 用に、カテゴリの表示名マッピングを定数から自動生成
+const CATEGORY_SELECT = categories
+  .map((c) => `category == "${c.slug}" => "${c.title}",`)
+  .join('\n    ')
+
 export const postFields = `{
   _id,
   title,
@@ -30,12 +35,7 @@ export const postFields = `{
   // category is stored as string enum in our schema
   "category": category,
   "categoryTitle": select(
-    category == "money" => "お金・家計管理",
-    category == "parenting" => "子育て・教育",
-    category == "life" => "暮らし・家事",
-    category == "work" => "働き方・キャリア",
-    category == "health" => "心と健康",
-    category == "feature" => "特集",
+    ${CATEGORY_SELECT}
     ""
   ),
   // tags are strings in our schema
@@ -76,12 +76,7 @@ export const postByCategorySlugQuery = groq`
     updatedAt,
     "category": category,
     "categoryTitle": select(
-      category == "money" => "お金・家計管理",
-      category == "parenting" => "子育て・教育",
-      category == "life" => "暮らし・家事",
-      category == "work" => "働き方・キャリア",
-      category == "health" => "心と健康",
-      category == "feature" => "特集",
+      ${CATEGORY_SELECT}
       ""
     ),
     body,
@@ -104,12 +99,7 @@ export const postBySlugAnyCategoryQuery = groq`
     updatedAt,
     "category": category,
     "categoryTitle": select(
-      category == "money" => "お金・家計管理",
-      category == "parenting" => "子育て・教育",
-      category == "life" => "暮らし・家事",
-      category == "work" => "働き方・キャリア",
-      category == "health" => "心と健康",
-      category == "feature" => "特集",
+      ${CATEGORY_SELECT}
       ""
     ),
     body,
