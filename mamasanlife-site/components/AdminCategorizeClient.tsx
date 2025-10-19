@@ -46,7 +46,7 @@ export function AdminCategorizeClient({ posts, categories }: { posts: Post[]; ca
   },[posts, q, filter, catFilter, local])
 
   async function setCategory(id: string, category: string){
-    setPending(new Set(p=>p).add(id))
+    setPending(prev => { const n = new Set(prev); n.add(id); return n })
     setMsg('')
     try{
       const res = await fetch('/api/admin/categorize', {
