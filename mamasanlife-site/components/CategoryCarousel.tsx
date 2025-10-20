@@ -23,7 +23,7 @@ export function CategoryCarousel() {
           <div className="card px-4 py-3 flex items-center gap-4">
             <CategoryIllustration slug={curr.href.replace('/','')} size={56} />
             <div>
-              <span className="text-xs font-bold text-gray-800">カテゴリー</span>
+              <span className="text-xs font-black text-gray-900">カテゴリー</span>
               <div className="text-lg font-semibold" style={{ color:'#B67352' }}>{curr.label}</div>
             </div>
           </div>
