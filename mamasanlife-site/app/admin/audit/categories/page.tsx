@@ -9,6 +9,7 @@ export default function AuditCategoriesPage(){
   const [loading, setLoading] = useState(false)
   const [msg, setMsg] = useState('')
   const [selected, setSelected] = useState<string>(categories[0]?.slug || 'money')
+  const [picked, setPicked] = useState<Set<string>>(new Set())
 
   async function load(){
     setLoading(true); setMsg('')
@@ -31,6 +32,38 @@ export default function AuditCategoriesPage(){
       })
       const j = await res.json()
       if (!res.ok) throw new Error(j?.error || 'error')
+      await load()
+    }catch(e:any){ setMsg('更新エラー: ' + (e?.message||'unknown')) }
+  }
+
+  async function fixSelected(){
+    const ids = Array.from(picked)
+    if (!ids.length){ setMsg('選択がありません'); return }
+    setMsg('')
+    try{
+      const res = await fetch('/api/admin/categorize', {
+        method:'POST', headers:{ 'Content-Type':'application/json', 'x-admin-secret': process.env.NEXT_PUBLIC_ADMIN_SECRET || '' },
+        body: JSON.stringify({ ids, category: selected })
+      })
+      const j = await res.json()
+      if (!res.ok) throw new Error(j?.error || 'error')
+      setPicked(new Set())
+      await load()
+    }catch(e:any){ setMsg('更新エラー: ' + (e?.message||'unknown')) }
+  }
+
+  async function fixAll(){
+    const ids = (data?.invalid||[]).map(p=>p._id)
+    if (!ids.length){ setMsg('対象がありません'); return }
+    setMsg('')
+    try{
+      const res = await fetch('/api/admin/categorize', {
+        method:'POST', headers:{ 'Content-Type':'application/json', 'x-admin-secret': process.env.NEXT_PUBLIC_ADMIN_SECRET || '' },
+        body: JSON.stringify({ ids, category: selected })
+      })
+      const j = await res.json()
+      if (!res.ok) throw new Error(j?.error || 'error')
+      setPicked(new Set())
       await load()
     }catch(e:any){ setMsg('更新エラー: ' + (e?.message||'unknown')) }
   }
@@ -62,6 +95,12 @@ export default function AuditCategoriesPage(){
 
           <section className="card p-4">
             <h2 className="font-semibold mb-2">未設定/未知カテゴリの記事（手動修正）</h2>
+            <div className="flex items-center gap-2 mb-3">
+              <button onClick={()=> setPicked(new Set((data?.invalid||[]).map(p=>p._id)))} className="border rounded px-2 py-1 text-xs">全選択</button>
+              <button onClick={()=> setPicked(new Set())} className="border rounded px-2 py-1 text-xs">選択解除</button>
+              <button onClick={fixSelected} className="btn-brand text-xs">選択を{categories.find(c=>c.slug===selected)?.title}へ設定（{picked.size}件）</button>
+              <button onClick={fixAll} className="border rounded px-2 py-1 text-xs">対象すべてを設定（{data.invalid.length}件）</button>
+            </div>
             {data.invalid.length === 0 ? (
               <p className="text-sm text-gray-500">対象なし</p>
             ) : (
@@ -73,6 +112,9 @@ export default function AuditCategoriesPage(){
                       <div className="text-xs text-gray-500">{p.slug}（現在: {p.category || '未設定'}）</div>
                     </div>
                     <div className="flex items-center gap-2">
+                      <label className="inline-flex items-center gap-1 text-xs">
+                        <input type="checkbox" checked={picked.has(p._id)} onChange={()=> setPicked(prev=>{ const n = new Set(prev); if (n.has(p._id)) n.delete(p._id); else n.add(p._id); return n })} /> 選択
+                      </label>
                       <a className="border rounded px-2 py-1 text-xs" href={`/api/debug/post?slug=${encodeURIComponent(p.slug)}`} target="_blank">Debug</a>
                       <button onClick={()=>fixOne(p._id)} className="btn-brand text-xs">{categories.find(c=>c.slug===selected)?.title}へ設定</button>
                     </div>
@@ -85,4 +127,3 @@ export default function AuditCategoriesPage(){
       )}
     </div>
   )}
-

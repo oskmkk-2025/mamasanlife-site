@@ -19,6 +19,8 @@ export function AdminCategorizeClient({ posts, categories }: { posts: Post[]; ca
   const [pendingIds, setPending] = useState<Set<string>>(new Set())
   const [doneIds, setDone] = useState<Set<string>>(new Set())
   const [local, setLocal] = useState<Map<string,string>>(new Map())
+  const [selectedIds, setSelected] = useState<Set<string>>(new Set())
+  const [bulkCat, setBulkCat] = useState<string>(categories[0]?.slug || 'money')
   const [msg, setMsg] = useState('')
   const [isPending, startTransition] = useTransition()
 
@@ -66,6 +68,28 @@ export function AdminCategorizeClient({ posts, categories }: { posts: Post[]; ca
 
   function resetLocal(){ setLocal(new Map()); setDone(new Set()); setMsg('ローカル表示をリセットしました（保存済みの変更は保持）') }
 
+  async function setBulkSelected(){
+    const ids = Array.from(selectedIds)
+    if (!ids.length){ setMsg('選択がありません'); return }
+    setMsg(''); setPending(prev => { const n = new Set(prev); ids.forEach(id=>n.add(id)); return n })
+    try{
+      const res = await fetch('/api/admin/categorize', {
+        method:'POST', headers:{ 'Content-Type':'application/json', 'x-admin-secret': process.env.NEXT_PUBLIC_ADMIN_SECRET || '' },
+        body: JSON.stringify({ ids, category: bulkCat })
+      })
+      const j = await res.json()
+      if (!res.ok) throw new Error(j?.error || 'error')
+      setLocal(prev => { const m = new Map(prev); ids.forEach(id=> m.set(id, bulkCat)); return m })
+      setDone(prev => { const s = new Set(prev); ids.forEach(id=> s.add(id)); return s })
+      setSelected(new Set())
+    }catch(e:any){ setMsg('エラー: ' + (e?.message||'unknown')) }
+    finally{ setPending(prev=>{ const n = new Set(prev); ids.forEach(id=>n.delete(id)); return n }) }
+  }
+
+  function toggle(id:string){ setSelected(prev=>{ const n = new Set(prev); if (n.has(id)) n.delete(id); else n.add(id); return n }) }
+  function selectAllFiltered(){ setSelected(new Set(filtered.map(p=>p._id))) }
+  function clearSelection(){ setSelected(new Set()) }
+
   return (
     <div className="container-responsive py-8">
       <h1 className="text-xl font-semibold mb-4">カテゴリ振り分けツール</h1>
@@ -90,6 +114,17 @@ export function AdminCategorizeClient({ posts, categories }: { posts: Post[]; ca
         <button onClick={resetLocal} className="border rounded px-3 py-1 text-sm">ローカル表示をリセット</button>
       </div>
 
+      <div className="flex flex-wrap items-end gap-3 mb-4">
+        <label className="text-sm">一括設定先
+          <select value={bulkCat} onChange={e=>setBulkCat(e.target.value)} className="border px-2 py-1 rounded ml-2">
+            {categories.map(c=> <option key={c.slug} value={c.slug}>{c.title}</option>)}
+          </select>
+        </label>
+        <button onClick={setBulkSelected} className="btn-brand text-sm">選択を一括設定（{selectedIds.size}件）</button>
+        <button onClick={selectAllFiltered} className="border rounded px-3 py-1 text-sm">表示中を全選択（{filtered.length}件）</button>
+        <button onClick={clearSelection} className="border rounded px-3 py-1 text-sm">選択解除</button>
+      </div>
+
       <div className="flex flex-wrap gap-2 mb-4">
         {categories.map((c)=> (
           <span key={c.slug} className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full border bg-white">
@@ -105,9 +140,14 @@ export function AdminCategorizeClient({ posts, categories }: { posts: Post[]; ca
           const catNow = local.get(p._id) || p.category || ''
           const isPending = pendingIds.has(p._id)
           const isDone = doneIds.has(p._id)
+          const isSel = selectedIds.has(p._id)
           return (
             <li key={p._id} className="p-3 flex flex-col gap-2">
               <div className="flex items-center gap-2">
+                <label className="inline-flex items-center gap-2 text-xs">
+                  <input type="checkbox" checked={isSel} onChange={()=>toggle(p._id)} />
+                  選択
+                </label>
                 <span className="text-xs text-gray-500 font-mono">{p.slug}</span>
                 <span className="text-xs text-gray-500">({new Date(p.publishedAt||p.updatedAt||Date.now()).toLocaleDateString('ja-JP')})</span>
               </div>
