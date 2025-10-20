@@ -94,6 +94,7 @@ input::placeholder { color: #6b7280; }
 .btn-brand { @apply inline-flex items-center gap-2 px-4 py-2 rounded-md text-white; background: var(--c-primary); }
 .btn-brand:hover { filter: brightness(1.05); }
 .chip-accent { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium; background: var(--c-accent); color: #fff; }
+.chip-cat { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium; background: var(--c-primary); color: #fff; }
 .chip-primary { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium; background: var(--c-primary); color: #fff; }
 .text-emphasis { color: var(--c-emphasis); }
 .border-primary { border-color: var(--c-primary) !important; }

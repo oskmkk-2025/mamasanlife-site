@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { sanityClient } from '@/lib/sanity.client'
 import { popularQuery, recentPostsQuery, tagCloudQuery, categories as CATS, tagsByCategoryFlatQuery } from '@/lib/queries'
+import { toHiragana } from 'wanakana'
 import { ProfileCard } from './ProfileCard'
 
 export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
@@ -37,52 +38,101 @@ export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
       .slice(0,50)
   }
 
+  const catsSorted = [...CATS].sort((a,b)=> toHiragana(a.title).localeCompare(toHiragana(b.title), 'ja'))
+
   return (
     <aside className="space-y-6">
       <ProfileCard />
-      <div className="card p-4">
-        <div className="font-semibold mb-3 heading-accent">人気記事</div>
-        <ul className="text-sm space-y-2">
-          {popular?.map((p:any)=> {
-            const href = p?.category ? `/${p.category}/${p.slug}` : `/${p.slug}`
-            return (
-              <li key={p._id}>
-                <Link href={href}>{p.title}</Link>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
-      <div className="card p-4">
-        <div className="font-semibold mb-3 heading-accent">新着記事</div>
-        <ul className="text-sm space-y-2">
-          {recent?.map((p:any)=> {
-            const href = p?.category ? `/${p.category}/${p.slug}` : `/${p.slug}`
-            return (
-              <li key={p._id}>
-                <Link href={href}>{p.title}</Link>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
-      <div className="card p-4">
-        <div className="font-semibold mb-3 heading-accent">カテゴリー</div>
-        <ul className="text-sm flex flex-wrap gap-2">
-          {['money','parenting','life','work','health','feature'].map(c => (
-            <li key={c}><Link href={`/${c}`} className="chip-accent">{c}</Link></li>
-          ))}
-        </ul>
-      </div>
-      {tagList.length > 0 && (
-        <div className="card p-4">
-          <div className="font-semibold mb-3 heading-accent">タグ</div>
-          <div className="flex flex-wrap gap-2 text-xs">
-            {tagList.map((t:string, i:number)=> (
-              <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="px-2 py-1 rounded-md bg-white border text-gray-700">#{t}</Link>
-            ))}
+
+      {/* カテゴリページではご要望の順序: 新着記事 → カテゴリー → タグ */}
+      {onlyCategory ? (
+        <>
+          <div className="card p-4">
+            <div className="font-semibold mb-3 heading-accent">新着記事</div>
+            <ul className="text-sm space-y-2">
+              {recent?.map((p:any)=> {
+                const href = p?.category ? `/${p.category}/${p.slug}` : `/${p.slug}`
+                return (
+                  <li key={p._id}>
+                    <Link href={href}>{p.title}</Link>
+                  </li>
+                )
+              })}
+            </ul>
           </div>
-        </div>
+
+          <div className="card p-4">
+            <div className="font-semibold mb-3 heading-accent">カテゴリー</div>
+            <ul className="text-sm flex flex-wrap gap-2">
+              {catsSorted.map(c => (
+                <li key={c.slug}><Link href={`/${c.slug}`} className="chip-cat">{c.title}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          {tagList.length > 0 && (
+            <div className="card p-4">
+              <div className="font-semibold mb-3 heading-accent">タグ</div>
+              <div className="flex flex-wrap gap-2 text-xs">
+                {tagList.map((t:string, i:number)=> (
+                  <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="px-2 py-1 rounded-md bg-white border text-gray-700">#{t}</Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 人気記事はカテゴリページでは省略（必要なら下に追加可） */}
+        </>
+      ) : (
+        <>
+          <div className="card p-4">
+            <div className="font-semibold mb-3 heading-accent">人気記事</div>
+            <ul className="text-sm space-y-2">
+              {popular?.map((p:any)=> {
+                const href = p?.category ? `/${p.category}/${p.slug}` : `/${p.slug}`
+                return (
+                  <li key={p._id}>
+                    <Link href={href}>{p.title}</Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+
+          <div className="card p-4">
+            <div className="font-semibold mb-3 heading-accent">新着記事</div>
+            <ul className="text-sm space-y-2">
+              {recent?.map((p:any)=> {
+                const href = p?.category ? `/${p.category}/${p.slug}` : `/${p.slug}`
+                return (
+                  <li key={p._id}>
+                    <Link href={href}>{p.title}</Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+
+          <div className="card p-4">
+            <div className="font-semibold mb-3 heading-accent">カテゴリー</div>
+            <ul className="text-sm flex flex-wrap gap-2">
+              {catsSorted.map(c => (
+                <li key={c.slug}><Link href={`/${c.slug}`} className="chip-cat">{c.title}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          {tagList.length > 0 && (
+            <div className="card p-4">
+              <div className="font-semibold mb-3 heading-accent">タグ</div>
+              <div className="flex flex-wrap gap-2 text-xs">
+                {tagList.map((t:string, i:number)=> (
+                  <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="px-2 py-1 rounded-md bg-white border text-gray-700">#{t}</Link>
+                ))}
+              </div>
+            </div>
+          )}
+        </>
       )}
     </aside>
   )
