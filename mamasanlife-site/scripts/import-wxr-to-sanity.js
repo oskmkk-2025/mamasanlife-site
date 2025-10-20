@@ -68,7 +68,11 @@ async function main(){
       const bodyText = stripHtml(contentHtml)
       const pubAt = wpDateToISO(it['wp:post_date_gmt'] || it['wp:post_date'])
       const upAt = wpDateToISO(it['wp:post_modified_gmt'] || it['wp:post_modified'])
-      const tags = catNodes.filter(c=> (c.domain||c['@_domain'])==='post_tag').map(c=> slugify(String(c.text||c['#text']||c||'')))
+      // タグは原文（日本語）で保持（検索/表示に使用）。先頭の # は除去。
+      const tags = catNodes
+        .filter(c=> (c.domain||c['@_domain'])==='post_tag')
+        .map(c=> String(c.text||c['#text']||c||'').normalize('NFKC').replace(/^#+\s*/, '').trim())
+        .filter(Boolean)
 
       // upsert by slug
       // 1) fetch existing id
