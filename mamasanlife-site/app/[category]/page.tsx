@@ -55,10 +55,9 @@ export default async function CategoryPage(
     sanityClient.fetch(countQuery, since ? { category, since } : { category })
   ])
   let posts = uniquePostsBySlugCategory(filterBlocked(postsRaw))
-  // カテゴリ画面では、データ側のcategoryが欠損している記事は表示中カテゴリで補完
+  // 表示名のみ補完（カテゴリ自体はデータの値を優先）
   posts = posts.map((p:any)=> ({
     ...p,
-    category: p?.category || category,
     categoryTitle: p?.categoryTitle || cat.title
   }))
   // 画像フォールバック: 一覧用imageUrlが空のものは本文から1枚目を探索

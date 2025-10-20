@@ -8,6 +8,7 @@ function normToken(t?: string){
 }
 
 type ResolveMode = 'delete' | 'report'
+type PreferMode = 'recent' | 'blocks'
 
 export async function POST(req: Request){
   try{
@@ -16,7 +17,7 @@ export async function POST(req: Request){
     if (!ADMIN_SECRET || adminHeader !== ADMIN_SECRET){
       return NextResponse.json({ error:'unauthorized' }, { status: 401 })
     }
-    const { mode = 'delete', dryRun = true, limit = 1000 } = await req.json().catch(()=>({})) as { mode?: ResolveMode; dryRun?: boolean; limit?: number }
+    const { mode = 'delete', dryRun = true, limit = 1000, prefer = 'recent' } = await req.json().catch(()=>({})) as { mode?: ResolveMode; dryRun?: boolean; limit?: number; prefer?: PreferMode }
 
     const projectId = process.env.SANITY_PROJECT_ID || process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
     const dataset = process.env.SANITY_DATASET || process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
@@ -48,7 +49,13 @@ export async function POST(req: Request){
     const results:any[] = []
     let removed = 0
     for (const g of groups){
-      const sorted = [...g.items].sort((a,b)=> (b.blocks||0)-(a.blocks||0) || new Date(b.updatedAt||b._updatedAt||0).getTime() - new Date(a.updatedAt||a._updatedAt||0).getTime())
+      const sorted = [...g.items].sort((a,b)=> {
+        if (prefer === 'recent') {
+          return new Date(b.updatedAt||b._updatedAt||0).getTime() - new Date(a.updatedAt||a._updatedAt||0).getTime() || (b.blocks||0)-(a.blocks||0)
+        }
+        // prefer === 'blocks'
+        return (b.blocks||0)-(a.blocks||0) || new Date(b.updatedAt||b._updatedAt||0).getTime() - new Date(a.updatedAt||a._updatedAt||0).getTime()
+      })
       const primary = sorted[0]
       const secondary = sorted.slice(1)
       const act:any = { slug: g.slug, keep: { id: primary._id, category: primary.category, title: primary.title, blocks: primary.blocks }, remove: secondary.map(s=>({ id:s._id, category:s.category, title:s.title, blocks:s.blocks })) }
@@ -66,4 +73,3 @@ export async function POST(req: Request){
     return NextResponse.json({ error: e?.message || 'error' }, { status: 500 })
   }
 }
-

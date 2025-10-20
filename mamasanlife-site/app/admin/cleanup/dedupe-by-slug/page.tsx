@@ -10,13 +10,14 @@ export default function DedupeBySlugPage(){
   const [msg, setMsg] = useState('')
   const [limit, setLimit] = useState(1000)
   const [dryRun, setDryRun] = useState(true)
+  const [prefer, setPrefer] = useState<'recent'|'blocks'>('recent')
 
   async function load(){
     setLoading(true); setMsg('')
     try{
       const res = await fetch('/api/admin/cleanup/dedupe-by-slug', {
         method:'POST', headers:{ 'Content-Type':'application/json', 'x-admin-secret': process.env.NEXT_PUBLIC_ADMIN_SECRET || '' },
-        body: JSON.stringify({ mode: 'report', limit })
+        body: JSON.stringify({ mode: 'report', limit, prefer })
       })
       const j = await res.json()
       if (!res.ok) throw new Error(j?.error || 'error')
@@ -33,7 +34,7 @@ export default function DedupeBySlugPage(){
     try{
       const res = await fetch('/api/admin/cleanup/dedupe-by-slug', {
         method:'POST', headers:{ 'Content-Type':'application/json', 'x-admin-secret': process.env.NEXT_PUBLIC_ADMIN_SECRET || '' },
-        body: JSON.stringify({ mode: 'delete', limit, dryRun })
+        body: JSON.stringify({ mode: 'delete', limit, dryRun, prefer })
       })
       const j = await res.json()
       if (!res.ok) throw new Error(j?.error || 'error')
@@ -52,6 +53,12 @@ export default function DedupeBySlugPage(){
         </label>
         <label className="text-sm inline-flex items-center gap-1">
           <input type="checkbox" checked={dryRun} onChange={e=>setDryRun(e.target.checked)} /> dryRun
+        </label>
+        <label className="text-sm">優先
+          <select value={prefer} onChange={e=>setPrefer(e.target.value as any)} className="border rounded px-2 py-1 ml-2">
+            <option value="recent">最近更新（振り分けを優先）</option>
+            <option value="blocks">本文量（従来）</option>
+          </select>
         </label>
         <button onClick={load} className="border rounded px-3 py-1 text-sm">再読込</button>
         <button onClick={apply} className="btn-brand text-sm" disabled={loading}>推奨ルールで整理（削除）</button>
@@ -74,4 +81,3 @@ export default function DedupeBySlugPage(){
     </div>
   )
 }
-
