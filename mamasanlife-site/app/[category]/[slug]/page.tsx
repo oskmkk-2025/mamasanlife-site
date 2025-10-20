@@ -294,7 +294,7 @@ export default async function PostPage(
                   <Link
                     key={`${t}-${i}`}
                     href={`/search?${new URLSearchParams({ tag: t }).toString()}`}
-                    className="chip-accent"
+                    className="chip-tag"
                   >
                     #{t}
                   </Link>

@@ -75,7 +75,7 @@ export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
               <div className="font-semibold mb-3 heading-accent">タグ</div>
               <div className="flex flex-wrap gap-2 text-xs">
                 {tagList.map((t:string, i:number)=> (
-                  <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="chip-accent">#{t}</Link>
+                  <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="chip-tag">#{t}</Link>
                 ))}
               </div>
             </div>
@@ -127,7 +127,7 @@ export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
               <div className="font-semibold mb-3 heading-accent">タグ</div>
               <div className="flex flex-wrap gap-2 text-xs">
                 {tagList.map((t:string, i:number)=> (
-                  <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="chip-accent">#{t}</Link>
+                  <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="chip-tag">#{t}</Link>
                 ))}
               </div>
             </div>
