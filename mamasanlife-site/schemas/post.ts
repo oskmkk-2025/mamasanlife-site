@@ -47,7 +47,12 @@ export default defineType({
         {title:'心と健康', value:'health'},
         {title:'特集', value:'feature'},
       ]},
-      validation: R => R.required()
+      validation: R => R.required().custom((v:any)=>{
+        const allowed = ['money','parenting','life','work','health','feature']
+        if (!v) return '必須です'
+        if (!allowed.includes(String(v))) return '無効なカテゴリです（選択肢から選んでください）'
+        return true
+      })
     }),
     defineField({ name: 'tags', title: 'タグ', type: 'array', of: [{type: 'string'}] }),
     defineField({
