@@ -88,7 +88,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
       {isTag ? (
         <p className="text-sm text-gray-600">タグ「<span className="font-semibold">#{tag}</span>」の検索結果: {posts.length}件（最大{limit}件） / 並び: {sort==='popular'?'人気':'新着'} / 期間: {days==='30'?'30日':'全期間'}</p>
       ) : q ? (
-        <p className="text-sm text-gray-600">「{q}」の検索結果: {posts.length}件（最大{limit}件） / 並び: {sort==='人気'?'人気':'新着'} / 期間: {days==='30'?'30日':'全期間'}</p>
+        <p className="text-sm text-gray-600">「{q}」の検索結果: {posts.length}件（最大{limit}件） / 並び: {sort==='popular'?'人気':'新着'} / 期間: {days==='30'?'30日':'全期間'}</p>
       ) : null}
 
       {isTag || q ? (
