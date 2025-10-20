@@ -65,7 +65,7 @@ export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
             <div className="font-semibold mb-3 heading-accent">カテゴリー</div>
             <ul className="text-sm flex flex-wrap gap-2">
               {catsSorted.map(c => (
-                <li key={c.slug}><Link href={`/${c.slug}`} className="chip-cat">{c.title}</Link></li>
+                <li key={c.slug}><Link href={`/${c.slug}`} className="chip-accent">{c.title}</Link></li>
               ))}
             </ul>
           </div>
@@ -75,7 +75,7 @@ export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
               <div className="font-semibold mb-3 heading-accent">タグ</div>
               <div className="flex flex-wrap gap-2 text-xs">
                 {tagList.map((t:string, i:number)=> (
-                  <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="px-2 py-1 rounded-md bg-white border text-gray-700">#{t}</Link>
+                  <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="chip-accent">#{t}</Link>
                 ))}
               </div>
             </div>
@@ -117,7 +117,7 @@ export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
             <div className="font-semibold mb-3 heading-accent">カテゴリー</div>
             <ul className="text-sm flex flex-wrap gap-2">
               {catsSorted.map(c => (
-                <li key={c.slug}><Link href={`/${c.slug}`} className="chip-cat">{c.title}</Link></li>
+                <li key={c.slug}><Link href={`/${c.slug}`} className="chip-accent">{c.title}</Link></li>
               ))}
             </ul>
           </div>
@@ -127,7 +127,7 @@ export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
               <div className="font-semibold mb-3 heading-accent">タグ</div>
               <div className="flex flex-wrap gap-2 text-xs">
                 {tagList.map((t:string, i:number)=> (
-                  <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="px-2 py-1 rounded-md bg-white border text-gray-700">#{t}</Link>
+                  <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="chip-accent">#{t}</Link>
                 ))}
               </div>
             </div>
