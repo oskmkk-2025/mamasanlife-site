@@ -19,6 +19,11 @@ export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
   }
   popular = popular.slice(0,5)
   recent = recent.slice(0,5)
+  // タグのクレンジング（空文字/無効ハッシュのみ/# を除外）
+  const tagList = (Array.isArray(tags) ? tags : [])
+    .map((t:any)=> String(t||'').trim())
+    .filter((t)=> t && t !== '#')
+
   return (
     <aside className="space-y-6">
       <ProfileCard />
@@ -56,11 +61,11 @@ export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
           ))}
         </ul>
       </div>
-      {tags?.length > 0 && (
+      {tagList.length > 0 && (
         <div className="card p-4">
           <div className="font-semibold mb-3 heading-accent">タグ</div>
           <div className="flex flex-wrap gap-2 text-xs">
-            {tags.map((t:string, i:number)=> (
+            {tagList.map((t:string, i:number)=> (
               <Link key={i} href={`/search?${new URLSearchParams({ tag: t }).toString()}`} className="px-2 py-1 rounded-md bg-white border text-gray-700">#{t}</Link>
             ))}
           </div>
