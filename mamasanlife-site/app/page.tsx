@@ -26,7 +26,8 @@ export default async function HomePage() {
     )
     // 2) 最新記事（トップは最新のみ）
     const latestRaw = await sanityClient.fetch(recentPostsQuery, { limit: 24 })
-    latest = uniquePostsBySlug(filterBlocked(latestRaw)).slice(0,12)
+    const allowed = new Set(categories.map(c=>c.slug))
+    latest = uniquePostsBySlug(filterBlocked(latestRaw)).filter((p:any)=> allowed.has(p?.category)).slice(0,12)
   } catch (e) {
     console.error('[HomePage] Sanity fetch failed, rendering with empty data', e)
     perCat = categories.map(c => ({ slug:c.slug, title:c.title, posts: [] }))

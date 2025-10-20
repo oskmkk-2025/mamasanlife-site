@@ -14,7 +14,8 @@ export default async function ArticlesPage() {
   let posts: any[] = []
   try {
     const raw = await sanityClient.fetch(recentPostsQuery, { limit: 500 })
-    posts = uniquePostsBySlug(filterBlocked(raw)).map((p:any) => ({
+    const allowed = new Set(categories.map(c=>c.slug))
+    posts = uniquePostsBySlug(filterBlocked(raw)).filter((p:any)=> allowed.has(p?.category)).map((p:any) => ({
       id: p?._id,
       slug: p.slug,
       category: p.category,
@@ -36,4 +37,3 @@ export default async function ArticlesPage() {
     </div>
   )
 }
-
