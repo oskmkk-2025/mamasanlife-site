@@ -10,6 +10,17 @@ function normToken(t?: string){
   return (t||'').replace(/^Bearer\s+/i,'').replace(/\r?\n/g,'').trim().replace(/^"|"$/g,'')
 }
 
+function slugify(s = ''){
+  return String(s)
+    .normalize('NFKC')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]+/g, ' ')
+    .trim()
+    .replace(/[\s_-]+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
 type Mode = 'replace' | 'merge'
 
 export async function POST(req: Request){
@@ -81,7 +92,9 @@ export async function POST(req: Request){
     const errors: any[] = []
     for (const [slug, tags] of map.entries()){
       try{
-        const doc = await client.fetch("*[_type=='post' && slug.current==$s][0]{ _id, tags }", { s: slug }).catch(()=>null)
+        const s1 = slugify(slug)
+        const s2 = String(slug || '').trim()
+        const doc = await client.fetch("*[_type=='post' && defined(slug.current) && (slug.current==$s1 || slug.current==$s2)][0]{ _id, tags }", { s1, s2 }).catch(()=>null)
         if (!doc?._id){ skipped++; continue }
         const prev: string[] = Array.isArray(doc.tags) ? doc.tags : []
         const next: string[] = mode==='merge' ? Array.from(new Set(prev.concat(tags))) : tags
