@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { ImgWithPlaceholder } from '@/components/ImgWithPlaceholder'
 import { notFound } from 'next/navigation'
 import { sanityClient } from '@/lib/sanity.client'
@@ -280,6 +281,27 @@ export default async function PostPage(
               {heroAlt && <figcaption className="text-xs text-gray-500 mt-2 text-center">{heroAlt}</figcaption>}
             </figure>
           )}
+          {/* タグ（存在する場合のみ表示） */}
+          {Array.isArray((post as any).tags) && (post as any).tags.length > 0 && (()=>{
+            const raw = (post as any).tags as any[]
+            const tagList = raw
+              .map((t:any)=> String(t||'').trim())
+              .filter((t)=> t && t !== '#')
+            if (!tagList.length) return null
+            return (
+              <div className="mt-3 flex flex-wrap items-center gap-2" aria-label="タグ">
+                {tagList.map((t, i)=> (
+                  <Link
+                    key={`${t}-${i}`}
+                    href={`/search?${new URLSearchParams({ tag: t }).toString()}`}
+                    className="px-2 py-1 rounded-md bg-white border text-xs text-gray-700 hover:bg-gray-50"
+                  >
+                    #{t}
+                  </Link>
+                ))}
+              </div>
+            )
+          })()}
         </header>
 
         {/* PR disclosure (景品表示法ステマ規制対応): 記事本文の直前に表示 */}
