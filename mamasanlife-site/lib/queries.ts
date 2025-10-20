@@ -62,6 +62,18 @@ export const tagCloudQuery = groq`
   array::unique(*[_type == "post" && defined(tags)][].tags)
 `
 
+// タグ検索用のビルダー（カテゴリ検索と同様の並び替え/期間をサポート）
+export function buildTagQuery({withSince, orderPopular}:{withSince:boolean; orderPopular:boolean}){
+  const since = withSince ? ' && defined(publishedAt) && publishedAt >= $since' : ''
+  const order = orderPopular ? 'coalesce(views,0) desc, publishedAt desc' : 'publishedAt desc'
+  return `*[_type == "post" && defined(slug.current) && $tag in tags${since}] | order(${order})[0...$limit] ${postFields}`
+}
+
+export function buildTagCountQuery({withSince}:{withSince:boolean}){
+  const since = withSince ? ' && defined(publishedAt) && publishedAt >= $since' : ''
+  return `count(*[_type == "post" && defined(slug.current) && $tag in tags${since}])`
+}
+
 export const postByCategorySlugQuery = groq`
   *[_type == "post" && defined(slug.current) && slug.current == $slug && category == $category]
   | order(coalesce(count(body), 0) desc, coalesce(updatedAt, publishedAt) desc, _updatedAt desc)[0]{

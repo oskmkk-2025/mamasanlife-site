@@ -1,25 +1,40 @@
 import Link from 'next/link'
 import { sanityClient } from '@/lib/sanity.client'
-import { buildSearchQuery, recentPostsQuery, latestByCategoryQuery, buildCategoryCountQuery, categories as CATS } from '@/lib/queries'
+import { buildSearchQuery, recentPostsQuery, latestByCategoryQuery, buildCategoryCountQuery, categories as CATS, buildTagQuery, buildTagCountQuery } from '@/lib/queries'
 import { uniquePostsBySlug, filterBlocked } from '@/lib/post-utils'
 import { PostList } from '@/components/PostList'
 import { SectionHeader } from '@/components/SectionHeader'
 
 export const revalidate = 60
 
-export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q?: string, sort?: string, days?: string }> }) {
+export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q?: string, tag?: string, sort?: string, days?: string }> }) {
   const sp = await searchParams
   const q = (sp?.q || '').trim()
+  const tag = (sp?.tag || '').trim()
   const sort = (sp?.sort || 'new') as 'new' | 'popular'
   const days = (sp?.days || 'all') as 'all' | '30'
   const limit = 30
   const withSince = days === '30'
   const orderPopular = sort === 'popular'
   const since = withSince ? new Date(Date.now() - 30*24*60*60*1000).toISOString() : undefined
-  const query = buildSearchQuery({withSince, orderPopular})
-  const params:any = { q: q ? `${q}*` : '*', limit }
-  if (since) params.since = since
-  const posts = q ? uniquePostsBySlug(filterBlocked(await sanityClient.fetch(query, params).catch(()=>[]))) : []
+  const allowed = new Set(CATS.map(c=>c.slug))
+
+  // 検索モード: tag があればタグ検索、無ければキーワード
+  const isTag = !!tag
+  let posts: any[] = []
+  if (isTag) {
+    const qTag = buildTagQuery({ withSince, orderPopular })
+    const params:any = { tag, limit }
+    if (since) params.since = since
+    const raw = await sanityClient.fetch(qTag, params).catch(()=>[])
+    posts = uniquePostsBySlug(filterBlocked(raw)).filter((p:any)=> allowed.has(p?.category))
+  } else {
+    const query = buildSearchQuery({withSince, orderPopular})
+    const params:any = { q: q ? `${q}*` : '*', limit }
+    if (since) params.since = since
+    const raw = q ? await sanityClient.fetch(query, params).catch(()=>[]) : []
+    posts = uniquePostsBySlug(filterBlocked(raw)).filter((p:any)=> allowed.has(p?.category))
+  }
   const recommendations = q && posts.length === 0
     ? uniquePostsBySlug(filterBlocked(await sanityClient.fetch(recentPostsQuery, { limit: 12 }).catch(()=>[]))).slice(0,6)
     : []
@@ -44,7 +59,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
     <div className="container-responsive py-8 space-y-6">
       <h1 className="text-2xl font-bold text-emphasis">検索結果</h1>
       <form action="/search" method="get" className="flex flex-col md:flex-row items-stretch md:items-center gap-2">
-        <input name="q" defaultValue={q} placeholder="キーワードで検索" className="flex-1 border rounded-md px-3 py-2"/>
+        <input name="q" defaultValue={isTag ? '' : q} placeholder={isTag ? `タグ #${tag} を解除してキーワード検索` : 'キーワードで検索'} className="flex-1 border rounded-md px-3 py-2"/>
         <input type="hidden" name="sort" value={sort}/>
         <input type="hidden" name="days" value={days}/>
         <button className="btn-brand md:w-28">検索</button>
@@ -53,28 +68,30 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
       {/* 並び替え/期間（カテゴリと同じUX） */}
       <div className="flex flex-wrap items-center gap-3">
         <div role="group" aria-label="並び替え" className="flex items-center gap-2">
-          <Link href={`/search?${new URLSearchParams({ q, sort:'new', days }).toString()}`}
+          <Link href={`/search?${new URLSearchParams(isTag ? { tag, sort:'new', days } : { q, sort:'new', days }).toString()}`}
             aria-current={sort==='new' ? 'true' : undefined}
             className={`tab ${sort==='new' ? 'tab--active' : ''}`}>新着順</Link>
-          <Link href={`/search?${new URLSearchParams({ q, sort:'popular', days }).toString()}`}
+          <Link href={`/search?${new URLSearchParams(isTag ? { tag, sort:'popular', days } : { q, sort:'popular', days }).toString()}`}
             aria-current={sort==='popular' ? 'true' : undefined}
             className={`tab ${sort==='popular' ? 'tab--active' : ''}`}>人気順</Link>
         </div>
         <div role="group" aria-label="期間" className="flex items-center gap-2">
-          <Link href={`/search?${new URLSearchParams({ q, sort, days:'all' }).toString()}`}
+          <Link href={`/search?${new URLSearchParams(isTag ? { tag, sort, days:'all' } : { q, sort, days:'all' }).toString()}`}
             aria-current={days==='all' ? 'true' : undefined}
             className={`tab ${days==='all' ? 'tab--active' : ''}`}>全期間</Link>
-          <Link href={`/search?${new URLSearchParams({ q, sort, days:'30' }).toString()}`}
+          <Link href={`/search?${new URLSearchParams(isTag ? { tag, sort, days:'30' } : { q, sort, days:'30' }).toString()}`}
             aria-current={days==='30' ? 'true' : undefined}
             className={`tab ${days==='30' ? 'tab--active' : ''}`}>直近30日</Link>
         </div>
       </div>
 
-      {q && (
-        <p className="text-sm text-gray-600">「{q}」の検索結果: {posts.length}件（最大{limit}件） / 並び: {sort==='popular'?'人気':'新着'} / 期間: {days==='30'?'30日':'全期間'}</p>
-      )}
+      {isTag ? (
+        <p className="text-sm text-gray-600">タグ「<span className="font-semibold">#{tag}</span>」の検索結果: {posts.length}件（最大{limit}件） / 並び: {sort==='popular'?'人気':'新着'} / 期間: {days==='30'?'30日':'全期間'}</p>
+      ) : q ? (
+        <p className="text-sm text-gray-600">「{q}」の検索結果: {posts.length}件（最大{limit}件） / 並び: {sort==='人気'?'人気':'新着'} / 期間: {days==='30'?'30日':'全期間'}</p>
+      ) : null}
 
-      {q ? (
+      {isTag || q ? (
         <section className="py-2">
           <PostList posts={posts.map((p:any)=>({ id:p._id, slug:p.slug, category:p.category, categoryTitle:p.categoryTitle, title:p.title, excerpt:p.excerpt, date:p.publishedAt, imageUrl:p.imageUrl }))} />
         </section>
@@ -82,7 +99,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
         <p className="text-sm text-gray-600">キーワードを入力して検索してください。</p>
       )}
 
-      {q && posts.length === 0 && (
+      {(isTag || q) && posts.length === 0 && (
         <section className="py-6">
           <p className="text-sm text-gray-600">該当する記事は見つかりませんでした。代わりに最新記事をご案内します。</p>
           <div className="mt-4">

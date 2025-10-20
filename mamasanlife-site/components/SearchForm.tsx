@@ -10,7 +10,10 @@ export function SearchForm({ className }: { className?: string }) {
   useEffect(()=>{ setQ(params.get('q') || '') },[params])
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
-    const target = '/search?q=' + encodeURIComponent(q.trim())
+    const input = q.trim()
+    const target = input.startsWith('#')
+      ? '/search?tag=' + encodeURIComponent(input.replace(/^#+/, ''))
+      : '/search?q=' + encodeURIComponent(input)
     router.push(target)
   }
   return (
