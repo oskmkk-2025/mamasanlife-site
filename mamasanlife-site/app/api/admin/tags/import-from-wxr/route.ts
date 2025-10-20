@@ -22,10 +22,20 @@ export async function POST(req: Request){
     const body = await req.json().catch(()=>({})) as { file?: string; mode?: Mode }
     const mode: Mode = (body.mode === 'merge' ? 'merge' : 'replace')
     const baseDir = process.cwd().replace(/\\/g,'/')
-    const rel = body.file || '../../WordPress.2025-10-08.xml'
-    const filePath = path.resolve(baseDir, rel)
-    if (!fs.existsSync(filePath)){
-      return NextResponse.json({ error:`xml not found: ${filePath}` }, { status: 400 })
+    const rel = body.file || '../WordPress.2025-10-08.xml'
+    const candidates: string[] = []
+    const basename = path.basename(rel)
+    if (path.isAbsolute(rel)) candidates.push(rel)
+    candidates.push(
+      path.resolve(baseDir, rel),
+      path.resolve(baseDir, '..', rel),
+      path.resolve(baseDir, '../..', rel),
+      path.resolve(baseDir, '..', basename),
+      path.resolve(baseDir, '../..', basename)
+    )
+    const filePath = candidates.find(p=> fs.existsSync(p))
+    if (!filePath){
+      return NextResponse.json({ error:`xml not found. tried: ${candidates.join(' | ')}` }, { status: 400 })
     }
     const xml = fs.readFileSync(filePath,'utf8')
     const parser = new XMLParser({ ignoreAttributes:false, attributeNamePrefix:'', textNodeName:'text', trimValues:false })
@@ -86,4 +96,3 @@ export async function POST(req: Request){
     return NextResponse.json({ error: e?.message || 'error' }, { status: 500 })
   }
 }
-

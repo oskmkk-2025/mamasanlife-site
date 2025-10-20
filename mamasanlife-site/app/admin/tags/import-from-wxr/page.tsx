@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 export default function ImportTagsFromWxrPage(){
-  const [file, setFile] = useState('../../WordPress.2025-10-08.xml')
+  const [file, setFile] = useState('../WordPress.2025-10-08.xml')
   const [mode, setMode] = useState<'replace'|'merge'>('replace')
   const [msg, setMsg] = useState('')
   const [res, setRes] = useState<any>(null)
@@ -45,4 +45,3 @@ export default function ImportTagsFromWxrPage(){
     </div>
   )
 }
-
