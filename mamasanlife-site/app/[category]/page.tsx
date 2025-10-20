@@ -153,7 +153,7 @@ export default async function CategoryPage(
           )}
           </div>
         </div>
-        <Sidebar />
+        <Sidebar onlyCategory={category} />
       </div>
       <Script id="cat-ld" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify({ '@context': 'https://schema.org', '@type': 'ItemList', name: cat.title, itemListElement: posts.map((p:any, i:number)=>({ '@type':'ListItem', position: i+1, url: `${process.env.NEXT_PUBLIC_SITE_URL || ''}/${p.category}/${p.slug}` })) })}

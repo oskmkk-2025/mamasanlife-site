@@ -3,7 +3,7 @@ import { sanityClient } from '@/lib/sanity.client'
 import { popularQuery, recentPostsQuery, tagCloudQuery, categories as CATS } from '@/lib/queries'
 import { ProfileCard } from './ProfileCard'
 
-export async function Sidebar() {
+export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
   const [popularRaw, recentRaw, tags] = await Promise.all([
     sanityClient.fetch(popularQuery, { limit: 10 }).catch(() => []),
     sanityClient.fetch(recentPostsQuery, { limit: 10 }).catch(() => []),
@@ -11,8 +11,14 @@ export async function Sidebar() {
   ])
   const { filterBlocked, uniquePostsBySlug } = await import('@/lib/post-utils')
   const allowed = new Set(CATS.map(c=>c.slug))
-  const popular = uniquePostsBySlug(filterBlocked(popularRaw)).filter((p:any)=> allowed.has(p?.category)).slice(0,5)
-  const recent = uniquePostsBySlug(filterBlocked(recentRaw)).filter((p:any)=> allowed.has(p?.category)).slice(0,5)
+  let popular = uniquePostsBySlug(filterBlocked(popularRaw)).filter((p:any)=> allowed.has(p?.category))
+  let recent = uniquePostsBySlug(filterBlocked(recentRaw)).filter((p:any)=> allowed.has(p?.category))
+  if (onlyCategory){
+    popular = popular.filter((p:any)=> p?.category === onlyCategory)
+    recent = recent.filter((p:any)=> p?.category === onlyCategory)
+  }
+  popular = popular.slice(0,5)
+  recent = recent.slice(0,5)
   return (
     <aside className="space-y-6">
       <ProfileCard />
