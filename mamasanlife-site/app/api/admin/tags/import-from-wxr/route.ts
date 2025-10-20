@@ -30,7 +30,7 @@ export async function POST(req: Request){
     if (!ADMIN_SECRET || adminHeader !== ADMIN_SECRET){
       return NextResponse.json({ error:'unauthorized' }, { status: 401 })
     }
-    const body = await req.json().catch(()=>({})) as { file?: string; mode?: Mode }
+    const body = await req.json().catch(()=>({})) as { file?: string; mode?: Mode; report?: boolean }
     const mode: Mode = (body.mode === 'merge' ? 'merge' : 'replace')
     const baseDir = process.cwd().replace(/\\/g,'/')
     const rel = body.file || '../WordPress.2025-10-08.xml'
@@ -90,21 +90,26 @@ export async function POST(req: Request){
 
     let updated = 0, skipped = 0
     const errors: any[] = []
+    const notFound: string[] = []
+    const noChange: string[] = []
+    const changed: string[] = []
     for (const [slug, tags] of map.entries()){
       try{
         const s1 = slugify(slug)
         const s2 = String(slug || '').trim()
         const doc = await client.fetch("*[_type=='post' && defined(slug.current) && (slug.current==$s1 || slug.current==$s2)][0]{ _id, tags }", { s1, s2 }).catch(()=>null)
-        if (!doc?._id){ skipped++; continue }
+        if (!doc?._id){ skipped++; notFound.push(slug); continue }
         const prev: string[] = Array.isArray(doc.tags) ? doc.tags : []
         const next: string[] = mode==='merge' ? Array.from(new Set(prev.concat(tags))) : tags
         const same = prev.length === next.length && prev.every((t,i)=> t===next[i])
-        if (same){ skipped++; continue }
+        if (same){ skipped++; noChange.push(slug); continue }
         await client.patch(String(doc._id).replace(/^drafts\./,'')).set({ tags: next }).commit()
-        updated++
+        updated++; changed.push(slug)
       }catch(e:any){ errors.push({ slug, error: e?.message||'error' }) }
     }
-    return NextResponse.json({ ok:true, updated, skipped, total: map.size, mode, errors })
+    const res:any = { ok:true, updated, skipped, total: map.size, mode, errors }
+    if (body.report){ res.changed = changed; res.noChange = noChange; res.notFound = notFound }
+    return NextResponse.json(res)
   }catch(e:any){
     return NextResponse.json({ error: e?.message || 'error' }, { status: 500 })
   }

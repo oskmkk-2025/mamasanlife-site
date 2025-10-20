@@ -1,13 +1,12 @@
 import Link from 'next/link'
 import { sanityClient } from '@/lib/sanity.client'
-import { popularQuery, recentPostsQuery, tagCloudQuery, categories as CATS } from '@/lib/queries'
+import { popularQuery, recentPostsQuery, tagCloudQuery, categories as CATS, tagsByCategoryFlatQuery } from '@/lib/queries'
 import { ProfileCard } from './ProfileCard'
 
 export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
-  const [popularRaw, recentRaw, tags] = await Promise.all([
+  const [popularRaw, recentRaw] = await Promise.all([
     sanityClient.fetch(popularQuery, { limit: 10 }).catch(() => []),
-    sanityClient.fetch(recentPostsQuery, { limit: 10 }).catch(() => []),
-    sanityClient.fetch(tagCloudQuery).catch(() => [])
+    sanityClient.fetch(recentPostsQuery, { limit: 10 }).catch(() => [])
   ])
   const { filterBlocked, uniquePostsBySlug } = await import('@/lib/post-utils')
   const allowed = new Set(CATS.map(c=>c.slug))
@@ -19,10 +18,24 @@ export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
   }
   popular = popular.slice(0,5)
   recent = recent.slice(0,5)
-  // タグのクレンジング（空文字/無効ハッシュのみ/# を除外）
-  const tagList = (Array.isArray(tags) ? tags : [])
-    .map((t:any)=> String(t||'').trim())
-    .filter((t)=> t && t !== '#')
+  // タグ: カテゴリページでは当該カテゴリのタグ頻出順、その他は全体のタグ
+  let tagList: string[] = []
+  if (onlyCategory) {
+    const flat = await sanityClient.fetch(tagsByCategoryFlatQuery, { category: onlyCategory }).catch(()=>[] as any[])
+    const freq = new Map<string, number>()
+    for (const raw of flat||[]){
+      const t = String(raw||'').trim()
+      if (!t || t === '#') continue
+      freq.set(t, (freq.get(t)||0)+1)
+    }
+    tagList = Array.from(freq.entries()).sort((a,b)=> (b[1]||0)-(a[1]||0)).map(([t])=>t).slice(0,30)
+  } else {
+    const tagsAll = await sanityClient.fetch(tagCloudQuery).catch(()=>[] as any[])
+    tagList = (Array.isArray(tagsAll) ? tagsAll : [])
+      .map((t:any)=> String(t||'').trim())
+      .filter((t)=> t && t !== '#')
+      .slice(0,50)
+  }
 
   return (
     <aside className="space-y-6">

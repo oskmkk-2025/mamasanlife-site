@@ -7,13 +7,14 @@ export default function ImportTagsFromWxrPage(){
   const [msg, setMsg] = useState('')
   const [res, setRes] = useState<any>(null)
   const [loading, setLoading] = useState(false)
+  const [report, setReport] = useState(true)
 
   const run = async ()=>{
     setLoading(true); setMsg(''); setRes(null)
     try{
       const r = await fetch('/api/admin/tags/import-from-wxr', {
         method:'POST', headers:{ 'Content-Type':'application/json', 'x-admin-secret': process.env.NEXT_PUBLIC_ADMIN_SECRET || '' },
-        body: JSON.stringify({ file, mode })
+        body: JSON.stringify({ file, mode, report })
       })
       const j = await r.json()
       if (!r.ok) throw new Error(j?.error || 'error')
@@ -34,6 +35,9 @@ export default function ImportTagsFromWxrPage(){
             <option value="replace">置換（WXRのタグで上書き）</option>
             <option value="merge">マージ（既存と統合）</option>
           </select>
+        </label>
+        <label className="inline-flex items-center gap-2 text-sm">
+          <input type="checkbox" checked={report} onChange={e=>setReport(e.target.checked)} /> 詳細レポート（changed/noChange/notFound）
         </label>
         <button onClick={run} className="btn-brand" disabled={loading}>{loading? '実行中...' : '取り込みを実行'}</button>
         {msg && <p className="text-sm text-red-600">{msg}</p>}

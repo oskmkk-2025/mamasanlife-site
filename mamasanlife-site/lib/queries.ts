@@ -62,6 +62,11 @@ export const tagCloudQuery = groq`
   array::unique(*[_type == "post" && defined(tags)][].tags)
 `
 
+// 指定カテゴリに属する記事のタグ（平坦化配列）
+export const tagsByCategoryFlatQuery = groq`
+  *[_type == "post" && defined(slug.current) && category == $category && defined(tags)][].tags
+`
+
 // タグ検索用のビルダー（カテゴリ検索と同様の並び替え/期間をサポート）
 export function buildTagQuery({withSince, orderPopular}:{withSince:boolean; orderPopular:boolean}){
   const since = withSince ? ' && defined(publishedAt) && publishedAt >= $since' : ''
