@@ -99,6 +99,14 @@ input::placeholder { color: #6b7280; }
   border: 1px solid var(--c-accent);
   color: var(--c-accent);
 }
+
+/* LINE button */
+.btn-line {
+  background: #06C755; /* LINE green */
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(6,199,85,0.25);
+}
+.btn-line:hover { filter: brightness(1.05); }
 .chip-cat { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium; background: var(--c-primary); color: #fff; }
 .chip-primary { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium; background: var(--c-primary); color: #fff; }
 .text-emphasis { color: var(--c-emphasis); }

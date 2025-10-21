@@ -10,6 +10,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { AdSlot } from '@/components/AdSlot'
 import { AffiliateBlocks } from '@/components/AffiliateBlocks'
 import Script from 'next/script'
+import { LineFollowButton } from '@/components/LineFollowButton'
 import { sanityOptimized, sanityImageRefToUrl } from '@/lib/image-util'
 import { SpeechBlockView } from '@/components/SpeechBlockView'
 import { FloatingToc } from '@/components/FloatingToc'
@@ -344,6 +345,13 @@ export default async function PostPage(
             <AdSlot slot="SIDEBAR_SLOT" />
           </aside>
         </div>
+
+        {/* LINEフォロー（記事末/関連記事の直前） */}
+        {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
+          <div className="mt-10 flex justify-center">
+            <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="更新通知を受け取る" size="lg" />
+          </div>
+        )}
 
         {related?.length > 0 && (
           <section className="mt-12">
