@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@sanity/client'
-import cheerio from 'cheerio'
+import * as cheerio from 'cheerio'
 
 export const dynamic = 'force-dynamic'
 

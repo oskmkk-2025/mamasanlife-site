@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import path from 'path'
 import fs from 'fs'
 import { XMLParser } from 'fast-xml-parser'
-import cheerio from 'cheerio'
+import * as cheerio from 'cheerio'
 import { createClient } from '@sanity/client'
 
 export const dynamic = 'force-dynamic'
@@ -256,4 +256,3 @@ export async function POST(req: Request){
     return NextResponse.json({ error: e?.message || 'error' }, { status: 500 })
   }
 }
-
