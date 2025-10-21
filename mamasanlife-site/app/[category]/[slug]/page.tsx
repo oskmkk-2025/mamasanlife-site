@@ -349,22 +349,24 @@ export default async function PostPage(
           <section className="mt-12">
             <h2 className="text-xl font-semibold mb-4 text-emphasis">関連記事</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {related.map((r: any) => {
+              {(related.slice(0,2)).map((r: any) => {
                 const href = r.category ? `/${r.category}/${r.slug}` : `/${r.slug}`
                 return (
-                <a key={r._id} href={href} className="card hover:shadow overflow-hidden">
-                  <div className="relative w-full aspect-[16/9] bg-gray-100">
-                    {r.imageUrl ? (
-                      <ImgWithPlaceholder src={sanityOptimized(r.imageUrl, { q: 70, fit:'crop' })} alt={r.title} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover"/>
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">No Image</div>
-                    )}
+                  <div key={r._id}>
+                    {(() => {
+                      const RelatedCard = require('@/components/RelatedCard').RelatedCard
+                      return (
+                        <RelatedCard
+                          href={href}
+                          title={r.title}
+                          excerpt={r.excerpt}
+                          imageUrl={r.imageUrl}
+                          categoryTitle={r.categoryTitle || r.category}
+                        />
+                      )
+                    })()}
                   </div>
-                  <div className="p-4">
-                    <div className="text-xs text-white inline-flex rounded-full px-3 py-1" style={{ background:'#8CB9BD' }}>{r.categoryTitle || r.category}</div>
-                    <div className="mt-2 font-medium line-clamp-2">{r.title}</div>
-                  </div>
-                </a>)
+                )
               })}
             </div>
           </section>
