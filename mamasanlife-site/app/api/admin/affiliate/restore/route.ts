@@ -22,15 +22,18 @@ function slugify(s = ''){
     .replace(/^-+|-+$/g, '')
 }
 
-type Network = 'amazon' | 'rakuten' | 'a8' | 'moshimo' | 'valuecommerce' | 'yahoo' | 'others'
+type Network = 'amazon' | 'rakuten' | 'a8' | 'moshimo' | 'valuecommerce' | 'yahoo' | 'afb' | 'others'
 
 const MATCHERS: Record<Network, RegExp[]> = {
   amazon: [/amazon\.co\.jp/i, /amzn\.to\//i, /amazon-adsystem/i],
-  rakuten: [/hb\.afl\.rakuten\.co\.jp/i, /affiliate\.rakuten\.co\.jp/i, /item\.rakuten\.co\.jp/i],
-  a8: [/a8\.net\//i, /px\.a8\.net\//i, /as\.a8\.net\//i],
+  // Rakuten: official + shortener (a.r10.to)
+  rakuten: [/hb\.afl\.rakuten\.co\.jp/i, /affiliate\.rakuten\.co\.jp/i, /item\.rakuten\.co\.jp/i, /a\.r10\.to\//i],
+  a8: [/a8\.net\//i, /px\.a8\.net\//i, /as\.a8\.net\//i, /rpx\.a8\.net\//i],
   moshimo: [/moshimo\.com\//i, /af\.moshimo\.com\//i, /c\.af\.moshimo\.com\//i],
   valuecommerce: [/ck\.jp\.ap\.valuecommerce\.com/i, /ac\.valuecommerce\.com/i],
   yahoo: [/ck\.yahoo\.co\.jp/i, /shopping\.yahoo\.co\.jp/i, /travel\.yahoo\.co\.jp/i],
+  // afb (Affiliate B): track.affiliate-b.com / t.afi-b.com
+  afb: [/affiliate-b\.com/i, /t\.afi-b\.com/i],
   others: []
 }
 
