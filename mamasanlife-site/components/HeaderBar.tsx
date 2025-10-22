@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { useState, Suspense } from 'react'
 import { SearchForm } from './SearchForm'
+import { LineFollowButton } from './LineFollowButton'
 const cats = [
   { href: '/money', label: 'お金・家計管理' },
   { href: '/parenting', label: '子育て・教育' },
@@ -14,7 +15,7 @@ const cats = [
 export function HeaderBar() {
   const [open, setOpen] = useState(false)
   return (
-    <header className="border-b bg-primary">
+    <header className="border-b bg-primary sticky top-0 z-50">
       <div className="container-responsive h-16 flex items-center justify-between gap-4">
         <div className="flex items-center">
           {/* 小出し対応: サイト名テキストをトップへ戻るリンクに（アクセシビリティ/可読性向上） */}
@@ -34,6 +35,11 @@ export function HeaderBar() {
             <SearchForm />
           </Suspense>
         </div>
+        {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
+          <div className="hidden md:block">
+            <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="更新通知" size="sm" />
+          </div>
+        )}
         <button
           className="md:hidden text-white rounded-md focus-ring"
           aria-label={open ? 'メニューを閉じる' : 'メニューを開く'}
@@ -55,6 +61,11 @@ export function HeaderBar() {
               <li><Link href="/site-map" onClick={()=>setOpen(false)} className="rounded-md px-2 py-1 focus-ring">サイトマップ</Link></li>
               <li><Link href="/contact" onClick={()=>setOpen(false)} className="rounded-md px-2 py-1 focus-ring">お問い合わせ</Link></li>
             </ul>
+            {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
+              <div className="pt-2">
+                <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="更新通知" size="md" />
+              </div>
+            )}
             <div className="opacity-80 mt-1">— Categories —</div>
             <ul className="flex flex-col gap-1">
               {cats.map(c=> (

@@ -6,7 +6,6 @@ import { SectionHeader } from '@/components/SectionHeader'
 import { HeroCard } from '@/components/HeroCard'
 import { uniquePostsBySlug, filterBlocked } from '@/lib/post-utils'
 import Script from 'next/script'
-import { LineFollowBanner } from '@/components/LineFollowBanner'
 
 export const revalidate = 60
 
@@ -57,8 +56,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* LINE 友だち追加バナー */}
-      <LineFollowBanner />
 
       {/* ヒーロー（推し記事） */}
       {hero && (

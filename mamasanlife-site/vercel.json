@@ -12,5 +12,8 @@
       "permanent": true,
       "has": [{ "type": "host", "value": "www.mamasanmoney-bu.com" }]
     }
+  ],
+  "crons": [
+    { "path": "/api/cron/line/daily-broadcast", "schedule": "0 11 * * *" }
   ]
 }
