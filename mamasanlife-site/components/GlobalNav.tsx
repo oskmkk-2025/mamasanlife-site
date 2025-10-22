@@ -14,7 +14,7 @@ const items = [
 export function GlobalNav() {
   const pathname = usePathname()
   return (
-    <nav className="w-full border-b bg-white border-primary" aria-label="グローバルナビゲーション">
+    <nav className="w-full border-b bg-white border-primary sticky top-16 z-40" aria-label="グローバルナビゲーション">
       <ul className="container-responsive h-12 flex items-center gap-4 overflow-x-auto text-sm text-gray-800">
         {items.map((it) => {
           const active = pathname?.startsWith(it.href)

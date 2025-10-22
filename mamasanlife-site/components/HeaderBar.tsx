@@ -37,13 +37,13 @@ export function HeaderBar() {
         </div>
         {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
           <div className="hidden md:flex flex-col items-end gap-1">
-            <span className="text-[11px] text-white font-bold leading-none">LINEでブログ更新をお知らせ</span>
+            <span className="text-[11px] text-white font-bold leading-none">ブログの更新をお知らせ(無料)</span>
             <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="LINEで友だちになる" size="sm" />
           </div>
         )}
         {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
           <div className="md:hidden flex flex-col items-end gap-0.5">
-            <span className="text-[10px] text-white font-bold leading-none">LINEでブログ更新をお知らせ</span>
+            <span className="text-[10px] text-white font-bold leading-none">ブログの更新をお知らせ(無料)</span>
             <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="LINEで友だちになる" size="sm" />
           </div>
         )}
