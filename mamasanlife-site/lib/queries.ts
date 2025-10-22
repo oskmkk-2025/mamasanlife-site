@@ -43,28 +43,28 @@ export const postFields = `{
 }`
 
 export const latestByCategoryQuery = groq`
-  *[_type == "post" && defined(slug.current) && category == $category]
+  *[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published" && category == $category]
   | order(publishedAt desc)[0...$limit]
   ${postFields}
 `
 
 export const popularQuery = groq`
-  *[_type == "post" && defined(slug.current)] | order(coalesce(views,0) desc, publishedAt desc)[0...$limit]
+  *[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published"] | order(coalesce(views,0) desc, publishedAt desc)[0...$limit]
   ${postFields}
 `
 
 export const recentPostsQuery = groq`
-  *[_type == "post" && defined(slug.current)] | order(publishedAt desc)[0...$limit]
+  *[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published"] | order(publishedAt desc)[0...$limit]
   ${postFields}
 `
 
 export const tagCloudQuery = groq`
-  array::unique(*[_type == "post" && defined(tags)][].tags)
+  array::unique(*[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published" && defined(tags)][].tags)
 `
 
 // 指定カテゴリに属する記事のタグ（平坦化配列）
 export const tagsByCategoryFlatQuery = groq`
-  *[_type == "post" && defined(slug.current) && category == $category && defined(tags)][].tags
+  *[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published" && category == $category && defined(tags)][].tags
 `
 
 // タグ検索用のビルダー（カテゴリ検索と同様の並び替え/期間をサポート）
@@ -80,7 +80,7 @@ export function buildTagCountQuery({withSince}:{withSince:boolean}){
 }
 
 export const postByCategorySlugQuery = groq`
-  *[_type == "post" && defined(slug.current) && slug.current == $slug && category == $category]
+  *[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published" && slug.current == $slug && category == $category]
   | order(coalesce(count(body), 0) desc, coalesce(updatedAt, publishedAt) desc, _updatedAt desc)[0]{
     _id,
     title,
@@ -104,7 +104,7 @@ export const postByCategorySlugQuery = groq`
 `
 
 export const postBySlugAnyCategoryQuery = groq`
-  *[_type == "post" && defined(slug.current) && slug.current == $slug]
+  *[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published" && slug.current == $slug]
   | order(coalesce(count(body), 0) desc, coalesce(updatedAt, publishedAt) desc, _updatedAt desc)[0]{
     _id,
     title,
@@ -128,17 +128,17 @@ export const postBySlugAnyCategoryQuery = groq`
 `
 
 export const listByCategoryQuery = groq`
-  *[_type == "post" && defined(slug.current) && category == $category]
+  *[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published" && category == $category]
   | order(publishedAt desc)[$offset...$end]
   ${postFields}
 `
 
 export const countByCategoryQuery = groq`
-  count(*[_type == "post" && defined(slug.current) && category == $category])
+  count(*[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published" && category == $category])
 `
 
 export const relatedByTagsQuery = groq`
-  *[_type == "post" && defined(slug.current) && slug.current != $slug && count(tags[@ in $tags]) > 0]
+  *[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published" && slug.current != $slug && count(tags[@ in $tags]) > 0]
   | order(publishedAt desc)[0...5]
   ${postFields}
 `
@@ -147,6 +147,7 @@ export const allPostSlugsQuery = groq`*[_type == "post"
   && defined(slug.current)
   && defined(publishedAt)
   && publishedAt <= now()
+  && workflowStatus == "Published"
 ]{ 
   _id, title, publishedAt, updatedAt, _updatedAt,
   "slug": slug.current, "category": category,
@@ -154,7 +155,7 @@ export const allPostSlugsQuery = groq`*[_type == "post"
 }`
 
 export const searchPostsQuery = groq`
-  *[_type == "post" && defined(slug.current) && (
+  *[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published" && (
     title match $q || excerpt match $q || pt::text(body) match $q
   )]
   | order(publishedAt desc)[0...$limit]
@@ -162,21 +163,21 @@ export const searchPostsQuery = groq`
 `
 
 // 動的に order/since を差し込む用途向けに、ベースのみをエクスポート
-export const SEARCH_POSTS_BASE = `*[_type == "post" && defined(slug.current) && (title match $q || excerpt match $q || pt::text(body) match $q) ${''}]`
+export const SEARCH_POSTS_BASE = `*[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == \"Published\" && (title match $q || excerpt match $q || pt::text(body) match $q) ${''}]`
 
 export function buildSearchQuery({withSince, orderPopular}:{withSince:boolean; orderPopular:boolean}){
   const since = withSince ? ' && defined(publishedAt) && publishedAt >= $since' : ''
   const order = orderPopular ? 'coalesce(views,0) desc, publishedAt desc' : 'publishedAt desc'
-  return `*[_type == "post" && defined(slug.current) && (title match $q || excerpt match $q || pt::text(body) match $q)${since}] | order(${order})[0...$limit] ${postFields}`
+  return `*[_type == \"post\" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == \"Published\" && (title match $q || excerpt match $q || pt::text(body) match $q)${since}] | order(${order})[0...$limit] ${postFields}`
 }
 
 export function buildCategoryQuery({withSince, orderPopular}:{withSince:boolean; orderPopular:boolean}){
   const since = withSince ? ' && defined(publishedAt) && publishedAt >= $since' : ''
   const order = orderPopular ? 'coalesce(views,0) desc, publishedAt desc' : 'publishedAt desc'
-  return `*[_type == "post" && defined(slug.current) && category == $category${since}] | order(${order})[$offset...$end] ${postFields}`
+  return `*[_type == \"post\" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == \"Published\" && category == $category${since}] | order(${order})[$offset...$end] ${postFields}`
 }
 
 export function buildCategoryCountQuery({withSince}:{withSince:boolean}){
   const since = withSince ? ' && defined(publishedAt) && publishedAt >= $since' : ''
-  return `count(*[_type == "post" && defined(slug.current) && category == $category${since}])`
+  return `count(*[_type == \"post\" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == \"Published\" && category == $category${since}])`
 }
