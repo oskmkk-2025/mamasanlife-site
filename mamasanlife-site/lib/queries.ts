@@ -98,6 +98,7 @@ export const postByCategorySlugQuery = groq`
     ),
     body,
     adsPlacement,
+    showLineCta,
     "tags": tags
   }
 `
@@ -121,6 +122,7 @@ export const postBySlugAnyCategoryQuery = groq`
     ),
     body,
     adsPlacement,
+    showLineCta,
     "tags": tags
   }
 `

@@ -347,9 +347,16 @@ export default async function PostPage(
         </div>
 
         {/* LINEフォロー（記事末/関連記事の直前） */}
-        {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
-          <div className="mt-10 flex justify-center">
-            <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="友だちになる" size="lg" />
+        {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (post as any)?.showLineCta !== false && (
+          <div className="mt-10">
+            <div className="text-center text-sm text-gray-700 whitespace-pre-line leading-relaxed">
+{`下のボタンから公式LINEの友達追加をしていただくと新しく記事が投稿された時に通知を受け取ることができます。
+
+「いいな」と思ったら気軽に追加してね♪`}
+            </div>
+            <div className="mt-3 flex justify-center">
+              <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="友だちになる" size="lg" />
+            </div>
           </div>
         )}
 
