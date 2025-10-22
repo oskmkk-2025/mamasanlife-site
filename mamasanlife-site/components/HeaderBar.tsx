@@ -66,11 +66,6 @@ export function HeaderBar() {
               <li><Link href="/site-map" onClick={()=>setOpen(false)} className="rounded-md px-2 py-1 focus-ring">サイトマップ</Link></li>
               <li><Link href="/contact" onClick={()=>setOpen(false)} className="rounded-md px-2 py-1 focus-ring">お問い合わせ</Link></li>
             </ul>
-            {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
-              <div className="pt-2">
-                <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="更新通知" size="md" />
-              </div>
-            )}
             <div className="opacity-80 mt-1">— Categories —</div>
             <ul className="flex flex-col gap-1">
               {cats.map(c=> (
