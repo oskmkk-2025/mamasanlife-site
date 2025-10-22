@@ -107,6 +107,7 @@ input::placeholder { color: #6b7280; }
   box-shadow: 0 2px 6px rgba(6,199,85,0.25);
 }
 .btn-line:hover { filter: brightness(1.05); }
+.caption-soft { text-shadow: 0 1px 2px rgba(0,0,0,.35); }
 .chip-cat { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium; background: var(--c-primary); color: #fff; }
 .chip-primary { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium; background: var(--c-primary); color: #fff; }
 .text-emphasis { color: var(--c-emphasis); }
