@@ -127,7 +127,7 @@ export default defineType({
     // LINE案内（記事下の固定表示）
     defineField({
       name:'showLineCta', title:'記事下にLINE案内を表示', type:'boolean', initialValue: true,
-      description: '記事本文の下に「ブログの更新をお知らせ(無料)」＋「LINEで友達になる」ボタンを表示します。'
+      description: '記事本文の下に「ブログの更新をお知らせ(無料)」＋「LINEで友だちになる」ボタンを表示します。'
     }),
 
     

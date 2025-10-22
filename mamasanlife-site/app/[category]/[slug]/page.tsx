@@ -355,7 +355,7 @@ export default async function PostPage(
 「いいな」と思ったら気軽に追加してね♪`}
             </div>
             <div className="mt-3 flex justify-center">
-              <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="LINEで友達になる" size="lg" variant="solid" />
+              <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="LINEで友だちになる" size="lg" variant="outlineGreen" />
             </div>
           </div>
         )}
