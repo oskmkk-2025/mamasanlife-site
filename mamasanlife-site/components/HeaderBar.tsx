@@ -40,6 +40,11 @@ export function HeaderBar() {
             <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="更新通知" size="sm" />
           </div>
         )}
+        {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
+          <div className="md:hidden">
+            <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="更新通知" size="sm" />
+          </div>
+        )}
         <button
           className="md:hidden text-white rounded-md focus-ring"
           aria-label={open ? 'メニューを閉じる' : 'メニューを開く'}
