@@ -349,7 +349,7 @@ export default async function PostPage(
         {/* LINEフォロー（記事末/関連記事の直前） */}
         {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
           <div className="mt-10 flex justify-center">
-            <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="LINEで友だちになる" size="lg" />
+            <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="友だちになる" size="lg" />
           </div>
         )}
 
