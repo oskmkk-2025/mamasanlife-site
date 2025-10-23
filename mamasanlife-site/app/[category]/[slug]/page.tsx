@@ -65,19 +65,12 @@ export default async function PostPage(
     const b = bodyBlocks[i]
     if (!b) continue
     if (b._type === 'linkImageBlock') {
-      const p = (b as any)?.provider || ''
-      const src = String((b as any)?.src || '')
-      if (!(p==='blogmura' || p==='with2' || /blogmura|with2\.net/.test(src))) {
-        introItems.push(b)
-      }
+      // 先頭に並べるバナー候補（ブログ村/人気ブログも含める）
+      introItems.push(b)
       toRemove.add(i); continue
     }
     if (b._type === 'linkImageRow' && Array.isArray(b.items)) {
-      const allowed = (b.items as any[]).filter(it=>{
-        const p = (it as any)?.provider || ''
-        const src = String((it as any)?.src || '')
-        return !(p==='blogmura' || p==='with2' || /blogmura|with2\.net/.test(src))
-      })
+      const allowed = (b.items as any[])
       if (allowed.length){ introItems.push(...allowed) }
       toRemove.add(i); continue
     }
@@ -325,7 +318,25 @@ export default async function PostPage(
           >
             {bodyClean.length ? (
               <>
-                {/* (Removed) Intro banner row */}
+                {/* Intro banner row（右寄せ）：ブログ村/人気ブログなど冒頭バナーを一列表示 */}
+                {introItems.length > 0 && (
+                  <div className="my-2 flex items-center justify-end gap-2 flex-wrap link-row banner-row-31">
+                    {introItems.map((it:any, idx:number)=>{
+                      const src = String(it?.src||'')
+                      const provider = it?.provider || (src.includes('appreach')||src.includes('nabettu.github.io') ? 'appreach' : src.includes('blogmura') ? 'blogmura' : src.includes('with2.net') ? 'with2' : 'other')
+                      const maxH = provider==='appreach' ? 40 : 31
+                      return (
+                        <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
+                          {src ? (
+                            <img src={src} alt={it?.alt||''} style={{ height: maxH, width: 'auto', display:'inline-block' }} />
+                          ) : (
+                            <span className={`banner-badge ${provider}`}>{provider==='blogmura' ? 'ブログ村' : provider==='with2' ? '人気ブログ' : provider==='appreach' ? 'Appreach' : 'Link'}</span>
+                          )}
+                        </a>
+                      )
+                    })}
+                  </div>
+                )}
                 <PortableText value={bodySlim} components={ptComponents as any} />
                 <AffiliateBlocks items={post.affiliateBlocks as any} />
               </>

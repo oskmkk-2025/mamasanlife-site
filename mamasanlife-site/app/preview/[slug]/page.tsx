@@ -1,6 +1,9 @@
 import { sanityClient } from '@/lib/sanity.client'
 import { postBySlugAnyStatusQuery } from '@/lib/queries'
 import { PortableText } from '@portabletext/react'
+import { ImgWithPlaceholder } from '@/components/ImgWithPlaceholder'
+import { sanityImageRefToUrl } from '@/lib/image-util'
+import { AdSlot } from '@/components/AdSlot'
 import Link from 'next/link'
 
 export const revalidate = 0
@@ -10,6 +13,67 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
   const post = await sanityClient.fetch(postBySlugAnyStatusQuery, { slug }).catch(()=>null)
   if (!post) return <div className="container-responsive py-10">見つかりませんでした（slug: {slug}）。</div>
   const href = post?.category && post?.slug ? `/${post.category}/${post.slug}` : `/${post.slug}`
+  const ptComponents = {
+    types: {
+      image: ({ value }: any) => {
+        const src = sanityImageRefToUrl(value?.asset?._ref, { q: 80, fit:'clip' })
+        if (!src) return null
+        const m = String(value?.asset?._ref||'').match(/-(\d+)x(\d+)-/)
+        const w = m ? parseInt(m[1],10) : undefined
+        const h = m ? parseInt(m[2],10) : undefined
+        return (
+          <figure className="my-6">
+            {w && h ? (
+              <ImgWithPlaceholder src={src} alt={value?.alt || ''} width={w} height={h} sizes="100vw" style={{ width:'100%', height:'auto' }} className="mx-auto" />
+            ) : (
+              <ImgWithPlaceholder src={src} alt={value?.alt || ''} fill sizes="100vw" className="object-contain bg-white" />
+            )}
+            {value?.alt && <figcaption className="text-xs text-gray-500 mt-2 text-center">{value.alt}</figcaption>}
+          </figure>
+        )
+      },
+      htmlEmbed: ({ value }: any) => (
+        <div className="embed-html" dangerouslySetInnerHTML={{ __html: String(value?.html||'') }} />
+      )
+    },
+    marks: {
+      link: ({children, value}: any) => {
+        const href = String(value?.href||'')
+        let out = href
+        try{
+          const u = new URL(href)
+          const host = u.hostname.replace(/^www\./,'')
+          if (host === 'mamasanmoney-bu.com'){
+            const parts = u.pathname.split('/').filter(Boolean)
+            const slug = parts[parts.length-1] || ''
+            if (slug) out = `/go/${slug}`
+          }
+        }catch{}
+        const isInternal = out.startsWith('/')
+        return (
+          <a href={out} target={isInternal? undefined : (value?.blank? '_blank' : undefined)} rel={isInternal? undefined : (value?.blank? 'noopener noreferrer' : undefined)} className="underline underline-offset-2 text-[var(--c-emphasis)] hover:text-[var(--c-primary)]">{children}</a>
+        )
+      }
+    },
+    block: {
+      h2: ({ children }: any) => (
+        <h2 className="mt-8 mb-3 text-[1.5rem] md:text-[1.875rem] font-bold">{children}</h2>
+      ),
+      h3: ({ children }: any) => (
+        <h3 className="mt-6 mb-2 text-[1.25rem] md:text-[1.5rem] font-semibold">{children}</h3>
+      ),
+      normal: ({ children }: any) => {
+        const raw = (Array.isArray(children) ? children.join(' ') : String(children||'')).trim()
+        if (raw === '[ad]') return <AdSlot slot="IN_ARTICLE_SLOT" className="my-6 clear-both" />
+        return <p className="my-4 leading-[1.9] tracking-[.005em]">{children}</p>
+      }
+    },
+    list: {
+      bullet: ({children}: any) => <ul className="list-disc pl-6 my-4">{children}</ul>,
+      number: ({children}: any) => <ol className="list-decimal pl-6 my-4">{children}</ol>
+    }
+  }
+
   return (
     <div className="container-responsive py-8 max-w-3xl">
       <div className="mb-4 p-3 rounded-md border text-sm bg-yellow-50">これは“プレビュー”です。ステータス: <b>{post.workflowStatus || 'Unknown'}</b>／本番URL: <Link href={href} className="underline text-[var(--c-emphasis)]">{href}</Link></div>
@@ -20,7 +84,7 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
         {post.excerpt && (<p className="text-gray-700 mb-4">{post.excerpt}</p>)}
         {Array.isArray(post.body) ? (
           <div className="prose max-w-none">
-            <PortableText value={post.body as any} />
+            <PortableText value={post.body as any} components={ptComponents as any} />
           </div>
         ) : (
           <p className="text-gray-500">本文がまだありません。</p>
@@ -29,4 +93,3 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
     </div>
   )
 }
-
