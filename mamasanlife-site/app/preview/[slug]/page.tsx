@@ -13,6 +13,23 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
   const post = await sanityClient.fetch(postBySlugAnyStatusQuery, { slug }).catch(()=>null)
   if (!post) return <div className="container-responsive py-10">見つかりませんでした（slug: {slug}）。</div>
   const href = post?.category && post?.slug ? `/${post.category}/${post.slug}` : `/${post.slug}`
+  const hasBody = Array.isArray(post.body) && (post.body as any[]).length > 0
+  const bodyBlocks: any[] = hasBody ? (post.body as any[]) : []
+  // 記事冒頭のバナー（ブログ村/人気ブログ）は出さない方針：冒頭行への持ち上げは行わない
+  const bodyAfterIntro: any[] = bodyBlocks
+  // 指定の見出しの直下へ、先頭の大きめ画像を移動
+  const TARGET_H2 = '中部電力ミライズの「従量電灯B」と「とくとくプラン」を比較'
+  let bodySlimAdjusted: any[] = [...bodyAfterIntro]
+  try{
+    const hIdx = bodySlimAdjusted.findIndex((b:any)=> b?._type==='block' && b?.style==='h2' && (b?.children||[]).map((c:any)=>c?.text||'').join('').includes(TARGET_H2))
+    if (hIdx >= 0){
+      const firstImgIdx = bodySlimAdjusted.findIndex((b:any)=> b?._type==='image')
+      if (firstImgIdx >= 0 && firstImgIdx < hIdx){
+        const [imgBlk] = bodySlimAdjusted.splice(firstImgIdx, 1)
+        bodySlimAdjusted.splice(hIdx+1, 0, imgBlk)
+      }
+    }
+  }catch{}
   const ptComponents = {
     types: {
       image: ({ value }: any) => {
@@ -82,9 +99,11 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
         <div className="text-xs text-gray-500 mb-4">{post.publishedAt && (<time dateTime={post.publishedAt}>公開: {new Date(post.publishedAt).toLocaleDateString('ja-JP')}</time>)} {post.updatedAt && (<span className="ml-2">更新: {new Date(post.updatedAt).toLocaleDateString('ja-JP')}</span>)}</div>
         {post.imageUrl && (<img src={post.imageUrl} alt={post.imageAlt || post.title} className="w-full h-auto rounded mb-4" />)}
         {post.excerpt && (<p className="text-gray-700 mb-4">{post.excerpt}</p>)}
+        {/* AdSense（プレビュー用スロット） */}
+        <AdSlot slot="ARTICLE_TOP_SLOT" className="my-4" />
         {Array.isArray(post.body) ? (
           <div className="prose max-w-none">
-            <PortableText value={post.body as any} components={ptComponents as any} />
+            <PortableText value={bodySlimAdjusted as any} components={ptComponents as any} />
           </div>
         ) : (
           <p className="text-gray-500">本文がまだありません。</p>
