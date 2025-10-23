@@ -77,7 +77,7 @@ export async function POST(req: Request){
     const html = extractContentHtml(blk.block) || ''
     const $ = cheerioLoad(html)
 
-    // gather images with nearest preceding paragraph text as anchor
+    // gather images with nearest preceding paragraph text as anchor（ランキング系/アプリーチは除外）
     const items: { src:string; alt:string; anchor:string }[] = []
     let lastText = ''
     $('body').children().each((_, el)=>{
@@ -87,13 +87,17 @@ export async function POST(req: Request){
         if (t) lastText = t
         $(el).find('img').each((__,img)=>{
           const src = String($(img).attr('src')||'')
-          if (src){ items.push({ src, alt: String($(img).attr('alt')||''), anchor: lastText }) }
+          if (src && !/blogmura|with2\.net|appreach|nabettu\.github\.io/i.test(src)){
+            items.push({ src, alt: String($(img).attr('alt')||''), anchor: lastText })
+          }
         })
       } else if (tag === 'figure' || tag === 'div' || tag === 'img'){
         const img = tag==='img'? el : $(el).find('img').get(0)
         if (img){
           const src = String($(img).attr('src')||'')
-          if (src) items.push({ src, alt:String($(img).attr('alt')||''), anchor: lastText })
+          if (src && !/blogmura|with2\.net|appreach|nabettu\.github\.io/i.test(src)){
+            items.push({ src, alt:String($(img).attr('alt')||''), anchor: lastText })
+          }
         }
       }
     })
@@ -151,10 +155,11 @@ export async function POST(req: Request){
           if (normalize(t).includes(anchorNorm)) { idx = i; break }
         }
       }
-      // insert image block after anchor (or prepend if not found)
+      // insert image block after anchor（アンカーが見つからない場合は挿入しない＝先頭に入れない）
       const imageBlock:any = { _type:'image', asset:{ _type:'reference', _ref: assetId }, alt: it.alt }
+      if (idx < 0) continue
       // avoid immediate duplicate: if the spot already has the same asset ref, skip
-      const insertAt = idx >= 0 ? idx+1 : 0
+      const insertAt = idx + 1
       const prev = body[insertAt]
       if (!(prev?._type==='image' && prev?.asset?._ref===assetId)){
         body.splice(insertAt, 0, imageBlock)
