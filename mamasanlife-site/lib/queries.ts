@@ -127,6 +127,32 @@ export const postBySlugAnyCategoryQuery = groq`
   }
 `
 
+// プレビュー用：workflowStatus や公開日時に関わらず slug で1件取得
+export const postBySlugAnyStatusQuery = groq`
+  *[_type == "post" && defined(slug.current) && slug.current == $slug]
+  | order(coalesce(count(body), 0) desc, coalesce(updatedAt, publishedAt) desc, _updatedAt desc)[0]{
+    _id,
+    title,
+    "slug": slug.current,
+    excerpt,
+    heroImage,
+    "imageAlt": heroImage.alt,
+    "imageUrl": heroImage.asset->url,
+    publishedAt,
+    updatedAt,
+    workflowStatus,
+    "category": category,
+    "categoryTitle": select(
+      ${CATEGORY_SELECT}
+      ""
+    ),
+    body,
+    adsPlacement,
+    showLineCta,
+    "tags": tags
+  }
+`
+
 export const listByCategoryQuery = groq`
   *[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && workflowStatus == "Published" && category == $category]
   | order(publishedAt desc)[$offset...$end]
