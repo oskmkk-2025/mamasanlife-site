@@ -158,6 +158,13 @@ export async function POST(req: Request){
       // insert image block after anchor（アンカーが見つからない場合は挿入しない＝先頭に入れない）
       const imageBlock:any = { _type:'image', asset:{ _type:'reference', _ref: assetId }, alt: it.alt }
       if (idx < 0) continue
+      // 直前直後が吹き出しなら挿入しない（会話レイアウトを守る）
+      const prevB:any = body[idx]
+      const nextB:any = body[idx+1]
+      if (prevB?._type==='speechBlock' || nextB?._type==='speechBlock') continue
+      // アンカーテキストが短すぎる/空なら挿入しない（誤マッチ回避）
+      const anchorText = (prevB?.children||[]).map((c:any)=>c.text||'').join('').trim()
+      if ((prevB?.style!=='h2' && prevB?.style!=='h3' && prevB?.style!=='h4') && anchorText.replace(/[\s\u3000]+/g,'').length < 8) continue
       // avoid immediate duplicate: if the spot already has the same asset ref, skip
       const insertAt = idx + 1
       const prev = body[insertAt]
