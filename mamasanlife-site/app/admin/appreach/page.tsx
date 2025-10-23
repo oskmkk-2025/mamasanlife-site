@@ -34,6 +34,9 @@ export default function AppreachAdmin(){
         <label className="block text-sm">Slug
           <input value={slug} onChange={e=>setSlug(e.target.value)} className="border w-full px-2 py-1 rounded"/>
         </label>
+        <div className="flex items-center gap-3">
+          <a href={`/preview/${slug || ''}`} target="_blank" rel="noopener" className="border rounded px-3 py-2 text-sm">プレビューを開く</a>
+        </div>
         <label className="block text-sm">HTML（アプリーチのコード）
           <textarea value={html} onChange={e=>setHtml(e.target.value)} rows={8} className="border w-full px-2 py-1 rounded font-mono"/>
         </label>

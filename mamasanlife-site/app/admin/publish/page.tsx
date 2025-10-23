@@ -30,6 +30,7 @@ export default function PublishAdmin(){
         <div className="flex items-center gap-3">
           <button onClick={()=>run('publish')} disabled={busy} className="btn-brand">公開（Published）</button>
           <button onClick={()=>run('draft')} disabled={busy} className="border rounded px-3 py-2">下書きに戻す</button>
+          <a href={`/preview/${slug || ''}`} target="_blank" rel="noopener" className="border rounded px-3 py-2 text-sm">プレビューを開く</a>
         </div>
         {msg && <p className="text-sm mt-2">{msg}</p>}
         <p className="text-xs text-gray-500">Published の記事だけがサイトに表示されます。公開すると publishedAt が空なら「今」に自動設定します。</p>
@@ -37,4 +38,3 @@ export default function PublishAdmin(){
     </div>
   )
 }
-

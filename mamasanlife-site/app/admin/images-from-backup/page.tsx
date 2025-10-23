@@ -23,10 +23,12 @@ export default function ImagesFromBackupAdmin(){
       <label className="block text-sm mb-3">Slug
         <input value={slug} onChange={e=>setSlug(e.target.value)} className="border w-full px-2 py-1 rounded"/>
       </label>
-      <button onClick={run} className="btn-brand">復元を実行</button>
+      <div className="flex items-center gap-3">
+        <button onClick={run} className="btn-brand">復元を実行</button>
+        <a href={`/preview/${slug || ''}`} target="_blank" rel="noopener" className="border rounded px-3 py-2 text-sm">プレビューを開く</a>
+      </div>
       {msg && <p className="text-sm text-gray-600 mt-3">{msg}</p>}
       <p className="text-xs text-gray-500 mt-4">注意: 環境変数 NEXT_PUBLIC_ADMIN_SECRET と SANITY_WRITE_TOKEN が必要です。WXRと画像のバックアップはリポジトリ直下/backupsを参照します。</p>
     </div>
   )
 }
-
