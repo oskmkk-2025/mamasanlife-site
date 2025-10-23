@@ -516,9 +516,23 @@ const ptComponents = {
     strong: ({children}: any) => <strong className="font-semibold">{children}</strong>,
     em: ({children}: any) => <em className="italic">{children}</em>,
     highlight: ({children}: any) => <span className="marker-pen">{children}</span>,
-    link: ({children, value}: any) => (
-      <a href={value?.href} target={value?.blank? '_blank' : undefined} rel={value?.blank? 'noopener noreferrer' : undefined} className="underline underline-offset-2 text-[var(--c-emphasis)] hover:text-[var(--c-primary)]">{children}</a>
-    )
+    link: ({children, value}: any) => {
+      const href = String(value?.href||'')
+      let out = href
+      try{
+        const u = new URL(href)
+        const host = u.hostname.replace(/^www\./,'')
+        if (host === 'mamasanmoney-bu.com'){
+          const parts = u.pathname.split('/').filter(Boolean)
+          const slug = parts[parts.length-1] || ''
+          if (slug) out = `/go/${slug}`
+        }
+      }catch{}
+      const isInternal = out.startsWith('/')
+      return (
+        <a href={out} target={isInternal? undefined : (value?.blank? '_blank' : undefined)} rel={isInternal? undefined : (value?.blank? 'noopener noreferrer' : undefined)} className="underline underline-offset-2 text-[var(--c-emphasis)] hover:text-[var(--c-primary)]">{children}</a>
+      )
+    }
   },
   block: {
     h2: ({ children }: any) => (
