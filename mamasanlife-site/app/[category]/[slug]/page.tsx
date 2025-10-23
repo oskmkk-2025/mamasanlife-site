@@ -206,7 +206,21 @@ export default async function PostPage(
     if (isEmptyTextBlock(b)) continue
     bodySlim.push(b)
   }
-  const headingsAll = extractHeadingsFromPortableText(bodySlim)
+  // Move the first large image under hero to a specific section heading if requested
+  const TARGET_H2 = '中部電力ミライズの「従量電灯B」と「とくとくプラン」を比較'
+  let bodySlimAdjusted: any[] = [...bodySlim]
+  try{
+    const hIdx = bodySlimAdjusted.findIndex((b:any)=> b?._type==='block' && b?.style==='h2' && (b?.children||[]).map((c:any)=>c?.text||'').join('').includes(TARGET_H2))
+    if (hIdx >= 0){
+      const firstImgIdx = bodySlimAdjusted.findIndex((b:any)=> b?._type==='image')
+      if (firstImgIdx >= 0 && firstImgIdx < hIdx){
+        const [imgBlk] = bodySlimAdjusted.splice(firstImgIdx, 1)
+        bodySlimAdjusted.splice(hIdx+1, 0, imgBlk)
+      }
+    }
+  }catch{}
+
+  const headingsAll = extractHeadingsFromPortableText(bodySlimAdjusted)
   const headings = headingsAll.filter(h => h.level <= 2)
   // Compute hero image
   // 1) Prefer explicitly set heroImage (post.imageUrl)
@@ -321,7 +335,7 @@ export default async function PostPage(
                 {/* Intro banner row（右寄せ）：ブログ村/人気ブログなど冒頭バナーを一列表示 */}
                 {introItems.length > 0 && (
                   <div className="my-2 flex items-center justify-end gap-2 flex-wrap link-row banner-row-31">
-                    {introItems.map((it:any, idx:number)=>{
+                    {introItems.slice(0,2).map((it:any, idx:number)=>{
                       const src = String(it?.src||'')
                       const provider = it?.provider || (src.includes('appreach')||src.includes('nabettu.github.io') ? 'appreach' : src.includes('blogmura') ? 'blogmura' : src.includes('with2.net') ? 'with2' : 'other')
                       const maxH = provider==='appreach' ? 40 : 31
@@ -337,7 +351,7 @@ export default async function PostPage(
                     })}
                   </div>
                 )}
-                <PortableText value={bodySlim} components={ptComponents as any} />
+                <PortableText value={bodySlimAdjusted} components={ptComponents as any} />
                 <AffiliateBlocks items={post.affiliateBlocks as any} />
               </>
             ) : (
