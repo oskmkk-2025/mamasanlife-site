@@ -18,11 +18,17 @@ export function HeaderBar() {
     <header className="border-b bg-primary sticky top-0 z-50">
       <div className="container-responsive h-16 flex items-center justify-between gap-4">
         <div className="flex items-center">
-          {/* 小出し対応: サイト名テキストをトップへ戻るリンクに（アクセシビリティ/可読性向上） */}
-          <a href="/" className="brand-title text-xl md:text-2xl tracking-wide hover:opacity-90 focus-ring" aria-label="Mamasan Life トップへ" title="Mamasan Life">
-            <span className="brand-word">Mamasan</span>
-            <span>&nbsp;</span>
-            <span className="brand-word">Life</span>
+          <a href="/" className="focus-ring flex items-center gap-2" aria-label="Mamasan Life トップへ" title="Mamasan Life">
+            <img
+              src="/icons/site-logo.png"
+              alt="Mamasan Life"
+              className="h-16 w-auto hidden md:block"
+            />
+            <img
+              src="/icons/site-logo.png"
+              alt="Mamasan Life"
+              className="h-14 w-auto md:hidden"
+            />
           </a>
         </div>
         <nav className="hidden md:flex items-center gap-5 text-sm text-white/90" aria-label="ユーティリティナビゲーション">

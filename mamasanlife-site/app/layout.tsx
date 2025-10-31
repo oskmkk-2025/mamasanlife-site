@@ -70,7 +70,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {process.env.NEXT_PUBLIC_GSC_VERIFICATION && (
           <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_VERIFICATION} />
         )}
-        <link rel="icon" href="/icons/logo-mark-b.svg" type="image/svg+xml" />
+        <link rel="icon" href="/icons/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/icons/favicon.png" />
+        <meta name="theme-color" content="#8CB9BD" />
         <a href="#main" className="sr-only focus:not-sr-only fixed top-2 left-2 z-50 bg-white text-black border px-3 py-2 rounded">メインコンテンツへスキップ</a>
         <MigrationNotice />
         <HeaderBar />

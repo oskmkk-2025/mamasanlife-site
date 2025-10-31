@@ -56,7 +56,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-
       {/* ヒーロー（推し記事） */}
       {hero && (
         <section className="container-responsive py-10">
