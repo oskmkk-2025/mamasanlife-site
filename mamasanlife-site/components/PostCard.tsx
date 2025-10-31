@@ -34,8 +34,8 @@ export function PostCard({ slug, category, categoryTitle, title, excerpt, date, 
         </div>
         <div className="p-4">
           <div className="text-xs text-white inline-flex rounded-full px-3 py-1" style={{ background:'#8CB9BD' }}>{categoryTitle || category}</div>
-          <h3 className="text-lg font-semibold text-gray-900 card-title line-clamp-none sm:line-clamp-2">{title}</h3>
-          {excerpt && <p className="mt-2 text-sm text-gray-600 line-clamp-none sm:line-clamp-2 lg:line-clamp-3">{excerpt}</p>}
+          <h3 className="text-lg font-semibold text-gray-900 card-title sm:line-clamp-2">{title}</h3>
+          {excerpt && <p className="mt-2 text-sm text-gray-600 sm:line-clamp-2 lg:line-clamp-3">{excerpt}</p>}
           <div className="mt-3 text-xs text-gray-500">
             {date && <time dateTime={date}>{new Date(date).toLocaleDateString('ja-JP')}</time>}
           </div>

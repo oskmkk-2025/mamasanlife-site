@@ -1,14 +1,24 @@
-export function AffiliateBlocks({ items }: { items?: { title?: string; html?: string; note?: string }[] }) {
-  if (!items?.length) return null
+type AffiliateItem = { title?: string; html?: string; note?: string }
+
+export function AffiliateBlocks({ items }: { items?: AffiliateItem[] }) {
+  if (!Array.isArray(items) || !items.length) return null
   return (
-    <section className="mt-4 mb-2 space-y-3">
-      {items.map((b, i) => (
-        <div key={i} className="border rounded-md p-3 bg-white">
-          {b.title && <div className="font-semibold mb-2">{b.title}</div>}
-          {b.html && <div dangerouslySetInnerHTML={{ __html: b.html }} />}
-          {b.note && <div className="text-xs text-gray-500 mt-2">{b.note}</div>}
-        </div>
-      ))}
+    <section className="affiliate-blocks mt-6 space-y-4" aria-label="おすすめリンク">
+      {items.map((item, index) => {
+        const key = `${item.title || ''}-${item.html || ''}-${item.note || ''}-${index}`
+        return (
+          <article key={key} className="affiliate-block">
+            {item.title && <p className="affiliate-block__title">{item.title}</p>}
+            {item.html && (
+              <div
+                className="affiliate-block__body"
+                dangerouslySetInnerHTML={{ __html: item.html }}
+              />
+            )}
+            {item.note && <p className="affiliate-block__note">{item.note}</p>}
+          </article>
+        )
+      })}
     </section>
   )
 }

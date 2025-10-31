@@ -11,7 +11,8 @@
     "start:prod:local": "next build && next start -p 3001 -H 127.0.0.1",
     "import:wxr": "node scripts/import-wxr-to-sanity.js --file ../WordPress.2025-08-19.xml --dataset production",
     "enrich:wxr": "node scripts/enrich-wxr-body.js ../WordPress.2025-08-19.xml",
-    "enrich:wxr:latest": "node scripts/enrich-wxr-body.js ../WordPress.2025-10-08.xml"
+    "enrich:wxr:latest": "node scripts/enrich-wxr-body.js ../WordPress.2025-10-08.xml",
+    "affiliate:sync": "node scripts/sync-affiliate-blocks.js --file ../WordPress.2025-10-08.xml"
   },
   "dependencies": {
     "@portabletext/react": "^3.0.11",
