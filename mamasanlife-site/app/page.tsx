@@ -6,6 +6,7 @@ import { SectionHeader } from '@/components/SectionHeader'
 import { HeroCard } from '@/components/HeroCard'
 import { uniquePostsBySlug, filterBlocked } from '@/lib/post-utils'
 import Script from 'next/script'
+import { LineStampPromo } from '@/components/LineStampPromo'
 
 export const revalidate = 60
 
@@ -62,6 +63,8 @@ export default async function HomePage() {
           <HeroCard post={hero} />
         </section>
       )}
+
+      <LineStampPromo />
 
       {/* グローバルメニューの下：カテゴリ別（2件）を自動切替 */}
       <CategoryTicker groups={perCat as any} />
