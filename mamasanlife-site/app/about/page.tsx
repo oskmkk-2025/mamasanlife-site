@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const missionItems = [
   '家計管理や保険の見直しなど「お金の整え方」を等身大の目線で共有すること',
   '子育て・家事・働き方の両立で得た体験を、同じ境遇のママに還元すること',
@@ -71,14 +73,33 @@ const values = [
 export default function AboutPage() {
   return (
     <main className="container-responsive py-12 max-w-4xl space-y-10">
-      <header className="space-y-4">
-        <h1 className="text-4xl font-bold text-emphasis">運営者について</h1>
-        <p className="text-lg leading-8 text-gray-700">
-          はじめまして、Mamasan Life（旧ママさんマネー部）を運営している「ひーちママ」です。
-          事務職として20年以上働きつつ、子育て・暮らし・お金の悩みに寄り添う情報をブログで発信してきました。
-          2025年からは職業訓練校のWebクリエイト科に通い、在宅ワークにも活かせるデザインとコーディングを実戦的に学んでいます。
-          家庭で得たリアルな体験をとことん掘り下げ、ママが毎日をちょっとラクに、ちょっとハッピーにできるヒントを届けていきます。
-        </p>
+      <header className="space-y-6">
+        <div className="flex flex-col items-center gap-4 md:flex-row md:items-start md:gap-6">
+          <div className="flex flex-col items-center text-center md:text-left">
+            <div className="overflow-hidden rounded-full border border-[var(--c-accent-light)] bg-white p-1 shadow-sm">
+              <Image
+                src="/images/mamasan.PNG"
+                alt="ひーちママのアイコン"
+                width={96}
+                height={96}
+                className="h-20 w-20 object-cover"
+                priority
+              />
+            </div>
+            <span className="mt-2 text-xs font-medium text-gray-500">ひーちママ</span>
+          </div>
+          <div className="w-full space-y-4 text-center md:flex-1 md:text-left">
+            <h1 className="text-4xl font-bold text-emphasis">運営者について</h1>
+            <div className="rounded-2xl border border-[var(--c-accent-light)] bg-white/80 px-5 py-4 text-left text-gray-700 shadow-sm">
+              <p className="text-lg leading-8">
+                はじめまして、Mamasan Life（旧ママさんマネー部）を運営している「ひーちママ」です。
+                事務職として20年以上働きつつ、子育て・暮らし・お金の悩みに寄り添う情報をブログで発信してきました。
+                2025年からは職業訓練校のWebクリエイト科に通い、在宅ワークにも活かせるデザインとコーディングを実戦的に学んでいます。
+                家庭で得たリアルな体験をとことん掘り下げ、ママが毎日をちょっとラクに、ちょっとハッピーにできるヒントを届けていきます。
+              </p>
+            </div>
+          </div>
+        </div>
       </header>
 
       <section className="space-y-3">
