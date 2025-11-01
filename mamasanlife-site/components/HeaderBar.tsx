@@ -16,7 +16,7 @@ export function HeaderBar() {
   const [open, setOpen] = useState(false)
   return (
     <header className="border-b bg-primary sticky top-0 z-50">
-      <div className="container-responsive h-16 flex items-center justify-between gap-4">
+      <div className="container-responsive flex flex-wrap items-center justify-between gap-3 py-2 md:py-0 md:h-16">
         <div className="flex items-center">
           <a href="/" className="focus-ring flex items-center gap-2" aria-label="Mamasan Life トップへ" title="Mamasan Life">
             <img
@@ -48,9 +48,15 @@ export function HeaderBar() {
           </div>
         )}
         {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
-          <div className="md:hidden flex flex-col items-center gap-0.5">
-            <span className="w-full text-center text-[10px] text-white font-bold leading-none caption-soft">ブログの更新をお知らせ(無料)</span>
-            <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="LINEで友だちになる" size="sm" variant="outlineWhite" />
+          <div className="md:hidden flex w-full flex-col items-center gap-1">
+            <span className="w-full text-center text-[11px] text-white font-bold leading-tight caption-soft">ブログの更新をお知らせ(無料)</span>
+            <LineFollowButton
+              href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL}
+              label="LINEで友だちになる"
+              size="sm"
+              variant="outlineWhite"
+              className="w-full justify-center max-w-[220px]"
+            />
           </div>
         )}
         <button
