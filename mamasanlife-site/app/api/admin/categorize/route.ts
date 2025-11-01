@@ -20,7 +20,9 @@ export async function POST(req: Request){
     const body = (await req.json().catch(()=>({}))) as Body
     const cat = String(body.category||'').trim()
     const allowed = new Set(categories.map(c=>c.slug))
-    if (!cat || !allowed.has(cat)) return NextResponse.json({ error: 'invalid category' }, { status: 400 })
+    if (!cat || !allowed.has(cat as (typeof categories)[number]['slug'])) {
+      return NextResponse.json({ error: 'invalid category' }, { status: 400 })
+    }
 
     let targets: string[] = []
     if (Array.isArray(body.ids)) targets = body.ids.filter(Boolean)
@@ -50,4 +52,3 @@ export async function POST(req: Request){
     return NextResponse.json({ error: e?.message || 'error' }, { status: 500 })
   }
 }
-
