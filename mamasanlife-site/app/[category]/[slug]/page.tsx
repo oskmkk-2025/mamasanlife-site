@@ -18,6 +18,8 @@ import { FloatingToc } from '@/components/FloatingToc'
 import { redirect } from 'next/navigation'
 // import { TocMobileBar } from '@/components/TocMobileBar'
 const ViewTracker = (await import('@/components/ViewTracker')).ViewTracker
+import { PAYWALLED_ARTICLES } from '@/lib/paywalled-articles'
+import { PaywallNotice } from '@/components/PaywallNotice'
 
 export const revalidate = 300
 export const dynamic = 'force-dynamic'
@@ -229,8 +231,17 @@ export default async function PostPage(
     }
   }catch{}
 
-  const headingsAll = extractHeadingsFromPortableText(bodySlimAdjusted)
+  const paywall = PAYWALLED_ARTICLES[post.slug as string]
+  let displayBlocks: any[] = bodySlimAdjusted
+  if (paywall) {
+    const limit = paywall.previewBlocks ?? 4
+    const safeLimit = Math.max(0, Math.min(limit, bodySlimAdjusted.length))
+    displayBlocks = bodySlimAdjusted.slice(0, safeLimit || bodySlimAdjusted.length)
+  }
+  const headingsAll = extractHeadingsFromPortableText(displayBlocks)
   const headings = headingsAll.filter(h => h.level <= 2)
+  const codocUrl = paywall?.codocUrl || (paywall?.entryCode ? `https://codoc.jp/books/${paywall.entryCode}` : undefined)
+
   // Compute hero image
   // 1) Prefer explicitly set heroImage (post.imageUrl)
   // 2) Fallback to first sufficiently-large image in sanitized body (exclude tiny icons/banners)
@@ -262,7 +273,7 @@ export default async function PostPage(
       <Breadcrumbs items={crumbs} />
       <article className="container-responsive py-8 max-w-3xl">
         {/* Compact floating TOC (mobile, H2まで) */}
-        <FloatingToc headings={headingsAll.filter(h=>h.level<=2)} />
+        <FloatingToc headings={headings} />
         <Script id="post-jsonld" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify({
             '@context': 'https://schema.org',
@@ -335,10 +346,17 @@ export default async function PostPage(
                        [&_h2]:scroll-mt-24 [&_h3]:scroll-mt-24 [&_h4]:scroll-mt-24
                        [&_a]:underline [&_a]:underline-offset-2 [&_a]:text-[var(--c-emphasis)] hover:[&_a]:text-[var(--c-primary)]"
           >
-            {bodyClean.length ? (
+            {displayBlocks.length ? (
               <>
                 {/* Intro banner row は非表示（ブログ村/人気ブログを含むバナーを記事冒頭に出さない） */}
-                <PortableText value={bodySlimAdjusted} components={ptComponents as any} />
+                <PortableText value={displayBlocks} components={ptComponents as any} />
+                {paywall && (
+                  <PaywallNotice
+                    codocUrl={codocUrl}
+                    priceLabel={paywall.priceLabel}
+                    message={paywall.message}
+                  />
+                )}
                 <AffiliateBlocks items={post.affiliateBlocks as any} />
               </>
             ) : (
