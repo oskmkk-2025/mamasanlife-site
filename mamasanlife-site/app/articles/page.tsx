@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { sanityClient } from '@/lib/sanity.client'
 import { categories, recentPostsQuery } from '@/lib/queries'
 import { uniquePostsBySlug, filterBlocked } from '@/lib/post-utils'
@@ -33,7 +34,9 @@ export default async function ArticlesPage() {
   return (
     <div className="container-responsive py-10">
       <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-6">記事一覧</h1>
-      <FilterablePostList posts={posts as any} categories={categories as any} />
+      <Suspense fallback={<p className="text-sm text-gray-500">絞り込みを読み込んでいます…</p>}>
+        <FilterablePostList posts={posts as any} categories={categories as any} />
+      </Suspense>
     </div>
   )
 }
