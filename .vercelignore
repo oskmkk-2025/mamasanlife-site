@@ -1,0 +1,9 @@
+node_modules/
+backups/
+archive/
+snapshot-*.tar.gz
+mamasanlife-site/node_modules/
+mamasanlife-site/backups/
+mamasanlife-site/archive/
+**/*.tar.gz
+**/node_modules/

@@ -1,9 +1,5 @@
-import path from 'path'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Monorepo での警告抑止とトレース最適化
-  outputFileTracingRoot: path.join(process.cwd(), '..'),
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'cdn.sanity.io' },
