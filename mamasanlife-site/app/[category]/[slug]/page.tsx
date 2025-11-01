@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ImgWithPlaceholder } from '@/components/ImgWithPlaceholder'
+import { HtmlEmbed } from '@/components/HtmlEmbed'
 import { notFound } from 'next/navigation'
 import { sanityClient } from '@/lib/sanity.client'
 import { postByCategorySlugQuery, postBySlugAnyCategoryQuery, relatedByTagsQuery } from '@/lib/queries'
@@ -523,9 +524,7 @@ const ptComponents = {
       )
     }
     ,
-    htmlEmbed: ({ value }: any) => (
-      <div className="embed-html" dangerouslySetInnerHTML={{ __html: String(value?.html||'') }} />
-    )
+    htmlEmbed: ({ value }: any) => <HtmlEmbed html={String(value?.html || '')} />
   },
   marks: {
     strong: ({children}: any) => <strong className="font-semibold">{children}</strong>,
