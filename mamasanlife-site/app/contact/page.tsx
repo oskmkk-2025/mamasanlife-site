@@ -9,10 +9,10 @@ export default function ContactPage(){
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSe-2FHoF1qFkVsDElmDbDZI_tiXunozsiBABBUzdFG8qsuedw/viewform?embedded=true"
           width="100%"
-          height="900"
-          frameBorder="0"
-          marginHeight="0"
-          marginWidth="0"
+          height={900}
+          frameBorder={0}
+          marginHeight={0}
+          marginWidth={0}
         >
           読み込んでいます…
         </iframe>
