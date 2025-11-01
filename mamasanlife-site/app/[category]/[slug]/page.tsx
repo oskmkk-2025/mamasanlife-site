@@ -173,9 +173,9 @@ export default async function PostPage(
     bodyRest.push(b)
   }
   // Remove tiny images that likely duplicate speech icons right before/after speech blocks
-  function refDims(ref?: string){
-    const m = String(ref||'').match(/-(\d+)x(\d+)-/)
-    return m ? { w: parseInt(m[1],10)||0, h: parseInt(m[2],10)||0 } : { w:0, h:0 }
+  const refDims = (ref?: string) => {
+    const m = String(ref || '').match(/-(\d+)x(\d+)-/)
+    return m ? { w: parseInt(m[1], 10) || 0, h: parseInt(m[2], 10) || 0 } : { w: 0, h: 0 }
   }
   const bodyClean: any[] = []
   const hasSpeechAny = bodyRest.some((x:any)=> x?._type==='speechBlock')
@@ -236,10 +236,6 @@ export default async function PostPage(
   // 2) Fallback to first sufficiently-large image in sanitized body (exclude tiny icons/banners)
   let heroSrc = post.imageUrl as string | undefined
   let heroAlt = (post as any).imageAlt || post.title
-  function refDims(ref?: string){
-    const m = String(ref||'').match(/-(\d+)x(\d+)-/)
-    return m ? { w: parseInt(m[1],10)||0, h: parseInt(m[2],10)||0 } : { w:0, h:0 }
-  }
   if (!heroSrc && hasBody) {
     const MIN_SIDE = 200
     const candidate = (bodyClean as any[]).find(b => {
