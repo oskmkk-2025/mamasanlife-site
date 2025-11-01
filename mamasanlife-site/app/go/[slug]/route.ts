@@ -1,9 +1,9 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { sanityClient } from '@/lib/sanity.client'
 import { postBySlugAnyCategoryQuery } from '@/lib/queries'
 
-export async function GET(_: Request, { params }: { params: { slug?: string } }){
-  const slug = String(params?.slug||'').trim().toLowerCase()
+export async function GET(_: NextRequest, { params }: { params: { slug?: string } }) {
+  const slug = String(params?.slug || '').trim().toLowerCase()
   if (!slug) return NextResponse.redirect(new URL('/', process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'))
   const doc = await sanityClient.fetch(postBySlugAnyCategoryQuery, { slug }).catch(()=>null)
   if (doc?.slug && doc?.category){
@@ -12,4 +12,3 @@ export async function GET(_: Request, { params }: { params: { slug?: string } })
   }
   return NextResponse.redirect(new URL('/', process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'))
 }
-
