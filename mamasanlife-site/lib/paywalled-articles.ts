@@ -33,12 +33,5 @@ export const PAYWALLED_ARTICLES: Record<string, PaywallConfig> = {
     previewBlocks: 5,
     priceLabel: '¥300',
     message: '指導の具体的な内容と費用の内訳は codoc 記事でお読みいただけます。'
-  },
-  // TODO: 体験記②の codoc エントリーコードが確定次第、entryCode を更新する
-  'silver-tutors-experience2': {
-    previewBlocks: 4,
-    priceLabel: '¥300',
-    message: '続きは codoc にて公開予定です。設定が整い次第リンクを更新します。'
   }
 }
-
