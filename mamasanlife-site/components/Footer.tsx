@@ -6,16 +6,9 @@ export function Footer() {
       <div className="container-responsive py-10 text-sm text-gray-700 grid md:grid-cols-4 gap-6">
         <section aria-labelledby="ft-about">
           <h2 id="ft-about" className="font-semibold heading-accent">About</h2>
-          <div className="mt-4 flex items-center gap-4">
-            <img
-              src="/icons/site-logo.png"
-              alt="Mamasan Life"
-              className="h-20 w-auto"
-            />
-            <p className="text-gray-600 leading-7">
-              ママの毎日に役立つ生活情報をお届けします。家計・暮らし・子育てのリアルな体験をシェア中。
-            </p>
-          </div>
+          <p className="mt-4 text-gray-600 leading-7">
+            ママの毎日に役立つ生活情報をお届けします。家計・暮らし・子育てのリアルな体験をシェア中。
+          </p>
         </section>
         <nav aria-labelledby="ft-links">
           <h2 id="ft-links" className="font-semibold heading-accent">Links</h2>
