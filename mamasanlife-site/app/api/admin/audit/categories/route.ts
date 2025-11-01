@@ -23,14 +23,15 @@ export async function GET(req: Request){
     const dist: Record<string, number> = { total: Array.isArray(all) ? all.length : 0 }
     for (const c of cats) dist[c] = 0
     dist['invalid'] = 0
-    for (const it of (all||[])){
-      const cat = String(it?.category||'')
-      if (cats.includes(cat)) dist[cat] = (dist[cat]||0)+1
-      else dist['invalid']++
+    for (const it of (all || [])) {
+      const cat = String(it?.category || '')
+      if (cats.includes(cat as (typeof cats)[number])) {
+        const key = cat as (typeof cats)[number]
+        dist[key] = (dist[key] || 0) + 1
+      } else dist['invalid']++
     }
     return NextResponse.json({ ok:true, dist, invalid })
   }catch(e:any){
     return NextResponse.json({ error: e?.message || 'error' }, { status: 500 })
   }
 }
-
