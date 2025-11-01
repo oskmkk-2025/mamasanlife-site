@@ -1,18 +1,17 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Mamasan Life'
-export const size = { width: 1200, height: 630 }
-export const contentType = 'image/png'
+
+const WIDTH = 1200
+const HEIGHT = 630
 
 export function GET() {
-  const { width, height } = size
   return new ImageResponse(
     (
       <div
         style={{
-          width,
-          height,
+          width: WIDTH,
+          height: HEIGHT,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -28,7 +27,6 @@ export function GET() {
         <div style={{ marginTop: 16, fontSize: 28, color: '#2b2b2b' }}>ママの毎日をちょっとラクに、ちょっとハッピーに</div>
       </div>
     ),
-    { ...size }
+    { width: WIDTH, height: HEIGHT }
   )
 }
-
