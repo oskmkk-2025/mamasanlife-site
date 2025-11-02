@@ -23,7 +23,8 @@ function resolveSlotAlias(nameOrId: string | undefined): string | undefined {
 }
 
 export function AdSlot({ slot, layout, format = 'auto', responsive = true, className }: Props) {
-  const client = process.env.NEXT_PUBLIC_ADSENSE_ID
+  const rawClient = process.env.NEXT_PUBLIC_ADSENSE_ID
+  const client = rawClient ? (rawClient.startsWith('ca-') ? rawClient : `ca-${rawClient}`) : undefined
   const resolvedSlot = resolveSlotAlias(slot) || slot
   useEffect(() => {
     try { (window as any).adsbygoogle = (window as any).adsbygoogle || []; (window as any).adsbygoogle.push({}) } catch {}

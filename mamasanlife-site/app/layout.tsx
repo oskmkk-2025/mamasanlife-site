@@ -35,7 +35,10 @@ const bodyDIN = Barlow({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID
-  const adsId = process.env.NEXT_PUBLIC_ADSENSE_ID
+  const rawAdsId = process.env.NEXT_PUBLIC_ADSENSE_ID
+  const adsClient = rawAdsId
+    ? rawAdsId.startsWith('ca-') ? rawAdsId : `ca-${rawAdsId}`
+    : undefined
   return (
     <html lang="ja" className={`${displayJP.variable} ${bodyDIN.variable}`}>
       <head>
@@ -45,11 +48,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         )}
         {/* Font Awesome 5 Free for paw icon (fallback to emoji if unavailable) */}
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossOrigin="anonymous" />
-        {adsId && (
+        {adsClient && (
           <Script
             id="adsense"
             async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsId}`}
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsClient}`}
             crossOrigin="anonymous"
           />
         )}
