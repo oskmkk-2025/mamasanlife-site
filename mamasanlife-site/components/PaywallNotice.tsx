@@ -1,23 +1,45 @@
 import Link from 'next/link'
+import Script from 'next/script'
 
 type Props = {
   codocUrl?: string
   priceLabel?: string
   message?: string
+  entryCode?: string
+  userCode?: string
+  codocCss?: string
 }
 
 /**
  * Paywall notice that invites the reader to continue the article on codoc.
  */
-export function PaywallNotice({ codocUrl, priceLabel, message }: Props) {
+export function PaywallNotice({ codocUrl, priceLabel, message, entryCode, userCode, codocCss }: Props) {
   const priceText = priceLabel || '有料'
+  const canEmbed = Boolean(entryCode && userCode)
+  const embedId = entryCode ? `codoc-entry-${entryCode}` : undefined
+
   return (
     <div className="mt-8 space-y-3 rounded-xl border border-[var(--c-accent-light)] bg-white/90 p-6 text-center shadow-sm">
       <p className="text-base font-semibold text-[var(--c-emphasis)]">
         この記事の続きは codoc で公開しています。
       </p>
       {message && <p className="text-sm leading-relaxed text-gray-600">{message}</p>}
-      {codocUrl ? (
+      {canEmbed ? (
+        <>
+          <Script
+            id={`codoc-script-${entryCode}`}
+            src="https://codoc.jp/js/cms.js"
+            strategy="afterInteractive"
+            defer
+            charSet="UTF-8"
+            data-css={codocCss || 'rainbow-square'}
+            data-usercode={userCode}
+          />
+          <div id={embedId} className="codoc-entries text-sm font-semibold text-[var(--c-accent)]">
+            この続きは codoc で購読できます
+          </div>
+        </>
+      ) : codocUrl ? (
         <div className="flex flex-col items-center gap-2">
           <Link
             href={codocUrl}
@@ -38,4 +60,3 @@ export function PaywallNotice({ codocUrl, priceLabel, message }: Props) {
     </div>
   )
 }
-

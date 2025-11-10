@@ -240,7 +240,7 @@ export default async function PostPage(
   }
   const headingsAll = extractHeadingsFromPortableText(displayBlocks)
   const headings = headingsAll.filter(h => h.level <= 2)
-  const codocUrl = paywall?.codocUrl || (paywall?.entryCode ? `https://codoc.jp/books/${paywall.entryCode}` : undefined)
+  const codocUrl = paywall?.codocUrl
 
   // Compute hero image
   // 1) Prefer explicitly set heroImage (post.imageUrl)
@@ -355,6 +355,9 @@ export default async function PostPage(
                     codocUrl={codocUrl}
                     priceLabel={paywall.priceLabel}
                     message={paywall.message}
+                    entryCode={paywall.entryCode}
+                    userCode={paywall.codocUserCode}
+                    codocCss={paywall.codocCss}
                   />
                 )}
                 <AffiliateBlocks items={post.affiliateBlocks as any} />
