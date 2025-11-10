@@ -18,9 +18,10 @@ const SLOT_ENV_MAP: Record<string, { value?: string; env: string; label: string 
 
 function resolveSlotAlias(nameOrId: string | undefined): { slot?: string; env?: string; label?: string } {
   if (!nameOrId) return undefined
+  const key = nameOrId.trim()
   // If numeric-looking, return as-is
-  if (/^\d{6,}$/.test(nameOrId)) return { slot: nameOrId }
-  const entry = SLOT_ENV_MAP[nameOrId]
+  if (/^\d{6,}$/.test(key)) return { slot: key }
+  const entry = SLOT_ENV_MAP[key]
   if (entry) return { slot: entry.value, env: entry.env, label: entry.label }
   return { slot: undefined }
 }
