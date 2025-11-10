@@ -29,7 +29,7 @@ export const PAYWALLED_ARTICLES: Record<string, PaywallConfig> = {
     message: '家庭教師の詳しい体験談は codoc で公開しています。'
   },
   'silver-tutors-experience1': {
-    entryCode: 'qEF41bBNjQ',
+    codocUrl: 'https://codoc.jp/me/entries/282713/view',
     previewBlocks: 5,
     priceLabel: '¥300',
     message: '指導の具体的な内容と費用の内訳は codoc 記事でお読みいただけます。'
