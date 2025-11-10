@@ -25,12 +25,19 @@ function resolveSlotAlias(nameOrId: string | undefined): string | undefined {
 export function AdSlot({ slot, layout, format = 'auto', responsive = true, className }: Props) {
   const rawClient = process.env.NEXT_PUBLIC_ADSENSE_ID
   const client = rawClient ? (rawClient.startsWith('ca-') ? rawClient : `ca-${rawClient}`) : undefined
-  const resolvedSlot = resolveSlotAlias(slot) || slot
+  const resolvedSlot = resolveSlotAlias(slot)
   useEffect(() => {
     try { (window as any).adsbygoogle = (window as any).adsbygoogle || []; (window as any).adsbygoogle.push({}) } catch {}
   }, [])
   if (!client) return <div className="ads-fallback">AdSense未設定（NEXT_PUBLIC_ADSENSE_ID）</div>
-  if (!resolvedSlot) return <div className="ads-fallback">ad-slot未設定</div>
+  const validSlot = resolvedSlot && /^\d{6,}$/.test(String(resolvedSlot))
+  if (!validSlot) {
+    return (
+      <div className="ads-fallback">
+        広告ユニットID未設定（{slot}）。AdSenseの「広告ユニット ID」を環境変数 NEXT_PUBLIC_GADS_SLOT_{slot} に設定してください。
+      </div>
+    )
+  }
   return (
     <ins className={`adsbygoogle block ${className || ''}`}
       style={{ display: 'block' }}
