@@ -16,7 +16,7 @@ const SLOT_ENV_MAP: Record<string, { value?: string; env: string; label: string 
   'IN_ARTICLE_SLOT': { value: process.env.NEXT_PUBLIC_GADS_SLOT_IN_ARTICLE, env: 'NEXT_PUBLIC_GADS_SLOT_IN_ARTICLE', label: '本文中広告' }
 }
 
-function resolveSlotAlias(nameOrId: string | undefined): { slot?: string; env?: string; label?: string } {
+function resolveSlotAlias(nameOrId: string | undefined): { slot?: string; env?: string; label?: string } | undefined {
   if (!nameOrId) return undefined
   const key = nameOrId.trim()
   // If numeric-looking, return as-is
