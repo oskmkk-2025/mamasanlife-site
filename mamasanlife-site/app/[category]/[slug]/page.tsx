@@ -237,6 +237,9 @@ export default async function PostPage(
     const limit = paywall.previewBlocks ?? 4
     const safeLimit = Math.max(0, Math.min(limit, bodySlimAdjusted.length))
     displayBlocks = bodySlimAdjusted.slice(0, safeLimit || bodySlimAdjusted.length)
+    if (paywall.previewCharLimit && displayBlocks.length === bodySlimAdjusted.length && displayBlocks.length) {
+      displayBlocks = [truncatePortableBlock(displayBlocks[0], paywall.previewCharLimit)]
+    }
   }
   const headingsAll = extractHeadingsFromPortableText(displayBlocks)
   const headings = headingsAll.filter(h => h.level <= 2)
@@ -437,6 +440,26 @@ function extractHeadingsFromPortableText(blocks: any[]) {
     result.push({ id, text, level })
   }
   return result
+}
+
+function truncatePortableBlock(block: any, charLimit: number) {
+  if (!block || block._type !== 'block' || charLimit <= 0) return block
+  const children = Array.isArray(block.children) ? block.children : []
+  const fullText = children.map((c: any) => String(c?.text || '')).join('')
+  if (!fullText) return block
+  if (fullText.length <= charLimit) return block
+  let trimmed = fullText.slice(0, charLimit)
+  trimmed = trimmed.replace(/\s+\S*$/, '')
+  return {
+    ...block,
+    children: [
+      {
+        _type: 'span',
+        text: `${trimmed}…`
+      }
+    ],
+    markDefs: []
+  }
 }
 
 const ptComponents = {

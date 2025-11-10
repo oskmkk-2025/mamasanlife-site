@@ -9,6 +9,8 @@ export type PaywallConfig = {
   codocUrl?: string
   /** Number of Portable Text blocks to show before the paywall. */
   previewBlocks?: number
+  /** Optional char limit fallback when block slicing doesn't reduce content. */
+  previewCharLimit?: number
   /** Optional price label shown next to the CTA. */
   priceLabel?: string
   /** Optional custom message displayed above the purchase button. */
@@ -24,7 +26,8 @@ export const PAYWALLED_ARTICLES: Record<string, PaywallConfig> = {
     entryCode: 'f9E59PN70w',
     codocUserCode: 'UMquYFhjGw',
     codocCss: 'rainbow-square',
-    previewBlocks: 6,
+    previewBlocks: 3,
+    previewCharLimit: 800,
     priceLabel: '¥980',
     message: 'この記事の続きは codoc の有料マガジンで読めます。'
   },
@@ -32,7 +35,8 @@ export const PAYWALLED_ARTICLES: Record<string, PaywallConfig> = {
     entryCode: 'Gs8kvjOBHg',
     codocUserCode: 'UMquYFhjGw',
     codocCss: 'rainbow-square',
-    previewBlocks: 5,
+    previewBlocks: 2,
+    previewCharLimit: 600,
     priceLabel: '¥300',
     message: '家庭教師の詳しい体験談は codoc で公開しています。'
   },
