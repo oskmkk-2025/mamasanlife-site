@@ -66,7 +66,6 @@ export const postsBySlugsQuery = groq`
     && publishedAt <= now()
     && (!defined(workflowStatus) || workflowStatus == "Published")
   ]
-  | order(array::position($slugs, slug.current) asc)
   ${postFields}
 `
 
@@ -109,6 +108,7 @@ export const postByCategorySlugQuery = groq`
       ""
     ),
     body,
+    affiliateBlocks,
     adsPlacement,
     showLineCta,
     "tags": tags
@@ -133,6 +133,7 @@ export const postBySlugAnyCategoryQuery = groq`
       ""
     ),
     body,
+    affiliateBlocks,
     adsPlacement,
     showLineCta,
     "tags": tags
@@ -159,6 +160,7 @@ export const postBySlugAnyStatusQuery = groq`
       ""
     ),
     body,
+    affiliateBlocks,
     adsPlacement,
     showLineCta,
     "tags": tags

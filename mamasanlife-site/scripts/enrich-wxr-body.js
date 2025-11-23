@@ -47,8 +47,42 @@ function buildBlocksFromHtml(html){
   const $ = cheerio.load(html || '', { decodeEntities:true })
   const blocks = []
   let markKeySeed = 0
+  const handledNodes = new WeakSet()
+
+  const getAffiliateButtonHtml = (node) => {
+    if (!node) return null
+    const $node = $(node)
+    const isAnchor = ($node.get(0)?.tagName || '').toLowerCase() === 'a'
+    const matchSelector = 'a[class*="affiliate-btn"]'
+    const $btn = isAnchor ? ($node.is(matchSelector) ? $node : null) : $node.find(matchSelector).first()
+    if ($btn && $btn.length) {
+      return $.html($btn)
+    }
+    return null
+  }
 
   const pushTextBlock = (text)=>{ blocks.push({ _type:'block', style:'normal', markDefs:[], children:[{ _type:'span', text, marks:[] }] }) }
+
+  function maybeExtractMoshimoEmbed(el){
+    const $el = $(el)
+    const id = String($el.attr('id')||'')
+    if (!/^msmaflink-/.test(id)) return null
+    const parts = []
+    let prev = $el.prev()
+    while (prev.length){
+      const node = prev.get(0)
+      const tagName = (node?.tagName||'').toLowerCase()
+      if (tagName !== 'script') break
+      const htmlChunk = $.html(prev)
+      if (!htmlChunk.includes('msmaflink') && !htmlChunk.includes('dn.msmstatic.com')) break
+      parts.unshift(htmlChunk)
+      handledNodes.add(node)
+      prev = prev.prev()
+    }
+    parts.push($.html($el))
+    handledNodes.add(el)
+    return parts.join('')
+  }
 
   function pushPara($el){
     let children=[]; let markDefs=[]; let mk=0
@@ -61,6 +95,7 @@ function buildBlocksFromHtml(html){
       children=[]; markDefs=[]; mk=0
     }
     function walkInline(node, activeMarks=[]){
+      if (handledNodes.has(node)) return
       const tag=(node.tagName||'').toLowerCase?.()||''
       if (node.type==='text'){
         const t = $(node).text()
@@ -86,6 +121,12 @@ function buildBlocksFromHtml(html){
         }
       }
       if (tag==='a'){
+        const html = getAffiliateButtonHtml(node)
+        if (html){
+          finalize()
+          blocks.push({ _type:'affiliateButton', html })
+          return
+        }
         const href = $(node).attr('href') || ''
         const _key = `m${markKeySeed++}-${mk++}`
         markDefs.push({ _key, _type:'link', href })
@@ -114,8 +155,19 @@ function buildBlocksFromHtml(html){
 
   function walk($nodes){
     $nodes.each((_, el)=>{
+      if (handledNodes.has(el)) return
       const tag = (el.tagName||'').toLowerCase()
       const cls = ($(el).attr('class')||'').toString()
+      const moshimoHtml = maybeExtractMoshimoEmbed(el)
+      if (moshimoHtml){
+        blocks.push({ _type:'htmlEmbed', html: moshimoHtml })
+        return
+      }
+      const affiliateHtml = getAffiliateButtonHtml(el)
+      if (affiliateHtml && !$(el).text().replace(/\s+/g,'').length){
+        blocks.push({ _type:'affiliateButton', html: affiliateHtml })
+        return
+      }
       // Cocoon speech balloon block
       if (/speech-wrap/.test(cls)){
         try{
@@ -150,6 +202,18 @@ function buildBlocksFromHtml(html){
         // else: fallback into contents
       }
       if (tag==='br') { pushPara($('<p>\n</p>')); return }
+      if (tag==='div' && (cls || '').toLowerCase().includes('blogcard')){
+        const $link = $(el).find('a[href]').first()
+        if ($link.length){
+          const textUrl = ($link.text()||'').trim()
+          const href = ($link.attr('href')||'').trim()
+          const url = textUrl.startsWith('http') ? textUrl : href
+          if (url){
+            blocks.push({ _type:'blogCard', url })
+            return
+          }
+        }
+      }
       if (tag==='div' || tag==='section' || tag==='article' || tag==='span'){
         // Treat as paragraph container, splitting by <br>
         const $el = $(el)

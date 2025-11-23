@@ -1,6 +1,30 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
 
+const SPEECH_ICON_MAP: Record<string, string> = {
+  'img_69ad0d2f343e-1-2.jpeg': '/images/speech-icons/IMG_69AD0D2F343E-1-2.jpeg',
+  'cropped-img_69ad0d2f343e-1-2-300x300.jpeg': '/images/speech-icons/cropped-IMG_69AD0D2F343E-1-2-300x300.jpeg',
+  'c204902d-b54f-43b3-b6df-88b08c9aebf6-e1668691519166.png': '/images/speech-icons/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png',
+  'bb011f9f-4f89-4229-944d-c474c0fad557-e1668692285329.png': '/images/speech-icons/BB011F9F-4F89-4229-944D-C474C0FAD557-e1668692285329.png',
+  'woman.png': '/images/speech-icons/woman.png',
+  'man.png': '/images/speech-icons/man.png'
+}
+
+function resolveSpeechIcon(url?: string) {
+  if (!url) return undefined
+  try {
+    const decoded = decodeURIComponent(url).split('?')[0]
+    const file = decoded.split('/').pop()
+    if (file) {
+      const key = file.toLowerCase()
+      if (SPEECH_ICON_MAP[key]) return SPEECH_ICON_MAP[key]
+    }
+  } catch {
+    // ignore decode issues
+  }
+  return url
+}
+
 export function SpeechBlockView({ value }: { value: any }){
   const alignRight = value?.align === 'right'
   const bubbleRef = useRef<HTMLDivElement|null>(null)
@@ -15,12 +39,13 @@ export function SpeechBlockView({ value }: { value: any }){
     setIconSize(size)
   },[value?.paras])
 
+  const iconSrc = resolveSpeechIcon(value?.iconUrl)
   return (
     <div className={`my-5 flex ${alignRight ? 'justify-end' : 'justify-start'}`}>
       <div className={`max-w-[720px] w-full flex items-start gap-4 ${alignRight ? 'flex-row-reverse' : ''}`}>
         <div className={`flex flex-col items-center justify-start shrink-0 ${alignRight ? 'ml-2' : 'mr-2'}`} style={{ minHeight: iconSize }}>
-          {value?.iconUrl && (
-            <img src={String(value.iconUrl)} alt={value?.name||''}
+          {iconSrc && (
+            <img src={String(iconSrc)} alt={value?.name||''}
                  width={iconSize} height={iconSize}
                  className="rounded-full overflow-hidden object-cover border shadow-sm"
                  style={{ width: iconSize, height: iconSize }} />

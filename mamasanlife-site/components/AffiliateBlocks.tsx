@@ -1,3 +1,5 @@
+import { HtmlEmbed } from './HtmlEmbed'
+
 type AffiliateItem = { title?: string; html?: string; note?: string }
 
 export function AffiliateBlocks({ items }: { items?: AffiliateItem[] }) {
@@ -10,10 +12,9 @@ export function AffiliateBlocks({ items }: { items?: AffiliateItem[] }) {
           <article key={key} className="affiliate-block">
             {item.title && <p className="affiliate-block__title">{item.title}</p>}
             {item.html && (
-              <div
-                className="affiliate-block__body"
-                dangerouslySetInnerHTML={{ __html: item.html }}
-              />
+              <div className="affiliate-block__body">
+                <HtmlEmbed html={item.html} />
+              </div>
             )}
             {item.note && <p className="affiliate-block__note">{item.note}</p>}
           </article>

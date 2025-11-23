@@ -4,22 +4,44 @@ import { ImgWithPlaceholder } from '@/components/ImgWithPlaceholder'
 import { HtmlEmbed } from '@/components/HtmlEmbed'
 import { notFound } from 'next/navigation'
 import { sanityClient } from '@/lib/sanity.client'
-import { postByCategorySlugQuery, postBySlugAnyCategoryQuery, relatedByTagsQuery } from '@/lib/queries'
+import { postByCategorySlugQuery, postBySlugAnyCategoryQuery, postsBySlugsQuery, relatedByTagsQuery } from '@/lib/queries'
 import { PortableText } from '@portabletext/react'
 import { TableOfContents } from '@/components/TableOfContents'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { AdSlot } from '@/components/AdSlot'
-import { AffiliateBlocks } from '@/components/AffiliateBlocks'
 import Script from 'next/script'
 import { LineFollowButton } from '@/components/LineFollowButton'
 import { sanityOptimized, sanityImageRefToUrl } from '@/lib/image-util'
 import { SpeechBlockView } from '@/components/SpeechBlockView'
 import { FloatingToc } from '@/components/FloatingToc'
+import { BlogCard } from '@/components/BlogCard'
 import { redirect } from 'next/navigation'
 // import { TocMobileBar } from '@/components/TocMobileBar'
 const ViewTracker = (await import('@/components/ViewTracker')).ViewTracker
 import { PAYWALLED_ARTICLES } from '@/lib/paywalled-articles'
 import { PaywallNotice } from '@/components/PaywallNotice'
+
+const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_URL || 'https://mamasanmoney-bu.com'
+const FOLLOWER_SENTENCE = 'このブログは「にほんブログ村」と「ブログリーダー」に参加しています。'
+const FOLLOW_PROMPT_SENTENCE = '下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪'
+const AFFILIATE_HOSTS = [
+  { match: 'hb.afl.rakuten.co.jp', variant: 'rakuten' },
+  { match: 'ck.jp.ap.valuecommerce.com', variant: 'valuecommerce' },
+  { match: 'px.a8.net', variant: 'a8' },
+  { match: 'moshimo.com', variant: 'moshimo' },
+  { match: 'amazon.co.jp', variant: 'amazon' },
+  { match: 'shopping.yahoo.co.jp', variant: 'yahoo' },
+  { match: 'afb', variant: 'afb' }
+]
+
+type BlogCardResolved = {
+  slug: string
+  category: string
+  title: string
+  excerpt?: string
+  imageUrl?: string
+  categoryTitle?: string
+}
 
 export const revalidate = 300
 export const dynamic = 'force-dynamic'
@@ -134,6 +156,12 @@ export default async function PostPage(
   // Remove any blogmura/with2 banners (画像リンク以外のボタン型を含む) を本文から除外
   const bodyRest: any[] = []
   for (const b of bodyRestInitial){
+    if (b?._type === 'block'){
+      const textCombined = ((b as any).children || []).map((c:any)=>String(c?.text||'')).join('')
+      if (textCombined.includes(FOLLOWER_SENTENCE) || textCombined.includes(FOLLOW_PROMPT_SENTENCE)){
+        continue
+      }
+    }
     if (b?._type === 'linkImageBlock'){
       const src = String((b as any)?.src||'')
       const prov = (b as any)?.provider || (src.includes('blogmura')? 'blogmura' : (src.includes('with2.net')? 'with2' : 'other'))
@@ -241,6 +269,7 @@ export default async function PostPage(
       displayBlocks = [truncatePortableBlock(displayBlocks[0], paywall.previewCharLimit)]
     }
   }
+  displayBlocks = await enrichBlogCardBlocks(displayBlocks)
   const headingsAll = extractHeadingsFromPortableText(displayBlocks)
   const headings = headingsAll.filter(h => h.level <= 2)
   const codocUrl = paywall?.codocUrl
@@ -363,7 +392,6 @@ export default async function PostPage(
                     codocCss={paywall.codocCss}
                   />
                 )}
-                <AffiliateBlocks items={post.affiliateBlocks as any} />
               </>
             ) : (
               <div className="text-gray-700">
@@ -482,6 +510,76 @@ const ptComponents = {
       )
     },
     speechBlock: ({ value }: any) => <SpeechBlockView value={value} />,
+    blogCard: ({ value }: any) => {
+      const resolved = value?.resolved
+      const href = resolved ? `/${resolved.category}/${resolved.slug}` : normalizeHref(value?.href || value?.url)
+      const title = resolved?.title || value?.title || value?.url || '関連記事'
+      return (
+        <div className="my-6">
+          <BlogCard
+            href={href || '#'}
+            title={title}
+            excerpt={resolved?.excerpt}
+            imageUrl={resolved?.imageUrl}
+            categoryTitle={resolved?.categoryTitle}
+          />
+        </div>
+      )
+    },
+    buttonLink: ({ value }: any) => {
+      if (!value?.href) return null
+      const variant = detectAffiliateVariant(value.href)
+      const label = value?.label || value.href
+      const normalizedHref = normalizeHref(value.href)
+      if (!variant) {
+        return (
+          <p className="my-4 leading-[1.9] tracking-[.005em]">
+            <a href={normalizedHref} target="_blank" rel="noopener noreferrer nofollow sponsored" className="underline underline-offset-2 text-[var(--c-emphasis)] hover:text-[var(--c-primary)]">{label}</a>
+          </p>
+        )
+      }
+      return (
+        <div className="my-5 affiliate-inline">
+          <a href={normalizedHref} target="_blank" rel="noopener noreferrer nofollow sponsored" className={`affiliate-btn affiliate-btn--${variant}`}>
+            {label}
+          </a>
+        </div>
+      )
+    },
+    affiliateButton: ({ value }: any) => {
+      if (!value?.html) return null
+      return (
+        <div className="my-5 affiliate-inline" dangerouslySetInnerHTML={{ __html: value.html }} />
+      )
+    },
+    moshimoEasyLink: ({ value }: any) => {
+      const data = value?.data
+      if (!data) return null
+      return (
+        <div className="moshimo-card my-5">
+          {data.image && (
+            <div className="moshimo-card__image">
+              <img src={data.image} alt={data.title || ''} />
+            </div>
+          )}
+          <div className="moshimo-card__body">
+            {data.brand && <p className="text-xs text-gray-500 mb-1">{data.brand}</p>}
+            {data.title && <p className="font-semibold text-base text-gray-900">{data.title}</p>}
+            <div className="moshimo-card__buttons mt-3">
+              {(data.buttons || []).map((btn: any, idx: number) => {
+                const variant = detectAffiliateVariant(btn.url) || 'others'
+                const style = btn.color ? { background: btn.color } : undefined
+                return (
+                  <a key={idx} href={btn.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className={`affiliate-btn affiliate-btn--${variant}`} style={style}>
+                    {btn.label || 'リンクを見る'}
+                  </a>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      )
+    },
     tableBlock: ({ value }: any) => {
       const rows: string[][] = (value?.rows || []).map((r:any)=> Array.isArray(r?.cells)? r.cells : [])
       if (!rows?.length) return null
@@ -517,8 +615,8 @@ const ptComponents = {
       const provider = value?.provider || (src.includes('blogmura') ? 'blogmura' : src.includes('with2.net') ? 'with2' : (src.includes('appreach')||src.includes('nabettu.github.io')) ? 'appreach' : 'other')
       const size = provider==='appreach' ? { w:135, h:40 } : (provider==='blogmura'||provider==='with2') ? { w:110, h:31 } : null
       return (
-        <span className="banner-inline float-right ml-2">
-          <a href={String(value?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="inline-block no-underline hover:opacity-95 align-middle">
+        <div className="banner-inline my-3">
+          <a href={String(value?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="inline-flex no-underline hover:opacity-95 align-middle">
             {src ? (
               size ? (
                 <img src={src} alt={value?.alt||''} width={size.w} height={size.h} style={{ width:size.w, height:size.h, display:'block' }} />
@@ -529,7 +627,7 @@ const ptComponents = {
               <span className={`banner-badge ${provider}`}>{provider==='blogmura' ? 'ブログ村' : provider==='with2' ? '人気ブログ' : provider==='appreach' ? 'Appreach' : 'Link'}</span>
             )}
           </a>
-        </span>
+        </div>
       )
     },
     linkImageRow: ({ value }: any) => {
@@ -546,7 +644,7 @@ const ptComponents = {
       const maxH = hasAppreach ? 40 : 31
       const rowClass = allAppreach ? 'banner-row-40' : 'banner-row-31'
       return (
-        <div className={`my-3 flex items-center ${allAppreach? 'justify-center' : 'justify-end'} gap-2 flex-wrap link-row ${rowClass}`}>
+        <div className={`my-3 flex items-center justify-start gap-2 flex-wrap link-row ${rowClass}`}>
           {items.map((it:any, idx:number)=>{
             const src = String(it?.src||'')
             const provider = it?.provider || (src.includes('appreach')||src.includes('nabettu.github.io') ? 'appreach' : src.includes('blogmura') ? 'blogmura' : src.includes('with2.net') ? 'with2' : 'other')
@@ -583,6 +681,16 @@ const ptComponents = {
         }
       }catch{}
       const isInternal = out.startsWith('/')
+      const affiliateVariant = detectAffiliateVariant(href)
+      if (affiliateVariant){
+        return (
+          <span className="affiliate-inline-button">
+            <a href={out} target="_blank" rel="noopener noreferrer nofollow sponsored" className={`affiliate-btn affiliate-btn--${affiliateVariant}`}>
+              {children}
+            </a>
+          </span>
+        )
+      }
       return (
         <a href={out} target={isInternal? undefined : (value?.blank? '_blank' : undefined)} rel={isInternal? undefined : (value?.blank? 'noopener noreferrer' : undefined)} className="underline underline-offset-2 text-[var(--c-emphasis)] hover:text-[var(--c-primary)]">{children}</a>
       )
@@ -607,5 +715,71 @@ const ptComponents = {
   list: {
     bullet: ({children}: any) => <ul className="list-disc pl-6 my-4">{children}</ul>,
     number: ({children}: any) => <ol className="list-decimal pl-6 my-4">{children}</ol>
+  }
+}
+
+async function enrichBlogCardBlocks(blocks: any[]) {
+  const slugSet = new Set<string>()
+  for (const block of blocks) {
+    if (block?._type === 'blogCard') {
+      const slug = extractSlugFromUrl(block?.url)
+      if (slug) slugSet.add(slug)
+    }
+  }
+  if (!slugSet.size) return blocks
+  const slugs = Array.from(slugSet)
+  const articles = await sanityClient.fetch(postsBySlugsQuery, { slugs })
+  const metaMap = new Map<string, BlogCardResolved>((articles || []).map((item: any) => [item.slug, item]))
+  return blocks.map((block: any) => {
+    if (block?._type === 'blogCard') {
+      const slug = extractSlugFromUrl(block?.url)
+      const resolved = slug ? metaMap.get(slug) : undefined
+      const href = resolved ? `/${resolved.category}/${resolved.slug}` : normalizeHref(block?.url)
+      return { ...block, slug, href, resolved }
+    }
+    return block
+  })
+}
+
+function extractSlugFromUrl(raw?: string | null) {
+  if (!raw) return null
+  try {
+    const url = new URL(raw, SITE_ORIGIN)
+    const paths = url.pathname.split('/').filter(Boolean)
+    if (!paths.length) return null
+    let slug = paths[paths.length - 1]
+    if (slug === 'amp' && paths.length > 1) {
+      slug = paths[paths.length - 2]
+    }
+    return slug || null
+  } catch {
+    return null
+  }
+}
+
+function normalizeHref(raw?: string | null) {
+  if (!raw) return '#'
+  try {
+    const url = new URL(raw, SITE_ORIGIN)
+    const siteHost = new URL(SITE_ORIGIN).host
+    if (url.host === siteHost) {
+      const cleanPath = url.pathname.endsWith('/') && url.pathname !== '/' ? url.pathname.slice(0, -1) : url.pathname
+      return `${cleanPath || '/'}${url.search || ''}${url.hash || ''}`
+    }
+    return url.toString()
+  } catch {
+    return raw
+  }
+}
+
+function detectAffiliateVariant(href?: string | null) {
+  if (!href) return null
+  try {
+    const host = new URL(href, SITE_ORIGIN).hostname.replace(/^www\./,'')
+    if (/appreach|nabettu\.github\.io/.test(host)) return null
+    const match = AFFILIATE_HOSTS.find(entry => host.includes(entry.match))
+    return match?.variant || null
+  } catch {
+    return null
   }
 }
