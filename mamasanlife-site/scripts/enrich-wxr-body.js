@@ -6,6 +6,7 @@ const { XMLParser } = require('fast-xml-parser')
 const pLimit = require('p-limit').default
 const cheerio = require('cheerio')
 const { createClient } = require('@sanity/client')
+const { randomUUID } = require('crypto')
 
 // Load .env.local if present so CLI実行でも環境変数を拾えるようにする
 function loadEnvLocal(){
@@ -345,11 +346,61 @@ function buildBlocksFromHtml(html){
     break
   }
   if (headItems.length >= 2) {
-    // 先頭の複数バナーを1行にまとめる
     const rest = grouped.slice(i)
-    return [{ _type:'linkImageRow', items: headItems }, ...rest]
+    return addPortableTextKeys([{ _type:'linkImageRow', items: headItems }, ...rest])
   }
-  return grouped
+  return addPortableTextKeys(grouped)
+}
+
+function addPortableTextKeys(value, inArray = true) {
+  if (Array.isArray(value)) {
+    let changed = false
+    const next = value.map((item) => {
+      const { node, mutated } = normalizePortableNode(item, true)
+      if (mutated) changed = true
+      return node
+    })
+    return changed ? next : value
+  }
+  const { node } = normalizePortableNode(value, inArray)
+  return node
+}
+
+function normalizePortableNode(value, inArray) {
+  if (Array.isArray(value)) {
+    let mutated = false
+    const next = value.map((item) => {
+      const { node, mutated: childMutated } = normalizePortableNode(item, true)
+      if (childMutated) mutated = true
+      return node
+    })
+    return { node: mutated ? next : value, mutated }
+  }
+  if (value && typeof value === 'object') {
+    let mutated = false
+    let next = value
+    if (inArray && next._type && !next._key) {
+      next = { ...next, _key: randomPortableTextKey() }
+      mutated = true
+    }
+    for (const key of Object.keys(next)) {
+      if (key === '_key') continue
+      const { node, mutated: childMutated } = normalizePortableNode(next[key], false)
+      if (childMutated) {
+        if (!mutated) {
+          next = next === value ? { ...next } : next
+          mutated = true
+        }
+        next[key] = node
+      }
+    }
+    return { node: next, mutated }
+  }
+  return { node: value, mutated: false }
+}
+
+function randomPortableTextKey() {
+  return randomUUID().replace(/-/g, '').slice(0, 12)
 }
 
 async function main(){

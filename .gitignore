@@ -1,2 +1,22 @@
+# Local env / secrets
+.env*
 .vercel
-.env*.local
+
+# Build caches
+.next/
+out/
+dist/
+*.log
+
+# Dependencies
+node_modules/
+mamasanlife-site/node_modules/
+mamasanlife-site/.next/
+mamasanlife-site/out/
+mamasanlife-site/.turbo/
+
+# Large archives & backups (keep locally only)
+archive/
+backups/
+snapshot-*.tar.gz
+スクリーンショット*.png

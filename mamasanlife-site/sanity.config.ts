@@ -1,6 +1,17 @@
 import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
+import {structureTool, type DefaultDocumentNodeResolver} from 'sanity/structure'
 import {schemaTypes} from './schemas'
+import PreviewPane from './studio/PreviewPane'
+
+const defaultDocumentNode: DefaultDocumentNodeResolver = (S, {schemaType}) => {
+  if (schemaType === 'post') {
+    return S.document().views([
+      S.view.form().title('編集'),
+      S.view.component(PreviewPane).title('プレビュー')
+    ])
+  }
+  return undefined
+}
 
 export default defineConfig({
   name: 'default',
@@ -8,7 +19,7 @@ export default defineConfig({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   basePath: '/studio',
-  plugins: [structureTool()],
+  plugins: [structureTool({ defaultDocumentNode })],
   schema: { types: schemaTypes },
   document: {
     actions: (prev) => prev,
