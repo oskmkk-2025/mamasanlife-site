@@ -14,8 +14,8 @@ const items = [
 export function GlobalNav() {
   const pathname = usePathname()
   return (
-    <nav className="w-full border-b bg-white border-primary sticky top-16 z-40" aria-label="グローバルナビゲーション">
-      <ul className="container-responsive h-12 flex items-center gap-4 overflow-x-auto text-sm text-gray-800">
+    <nav className="w-full border-b border-[var(--border-glass)] bg-[var(--bg-glass)] backdrop-blur-md sticky top-20 z-40" aria-label="グローバルナビゲーション">
+      <ul className="container-responsive h-14 flex items-center gap-8 overflow-x-auto text-[13px] font-medium tracking-widest uppercase text-[var(--c-emphasis)] scrollbar-hide">
         {items.map((it) => {
           const active = pathname?.startsWith(it.href)
           return (
@@ -23,10 +23,12 @@ export function GlobalNav() {
               <Link
                 href={it.href}
                 aria-current={active ? 'page' : undefined}
-                className={`whitespace-nowrap py-2 px-2 rounded-md focus-ring ${active ? 'font-semibold text-emphasis' : ''}`}
-                style={active ? { borderBottom:'2px solid var(--c-emphasis)' } : {}}
+                className={`whitespace-nowrap py-1 transition-all duration-300 relative ${active ? 'text-[var(--c-primary)] font-bold' : 'hover:text-[var(--c-primary)]'}`}
               >
                 {it.label}
+                {active && (
+                  <span className="absolute -bottom-[11px] left-0 w-full h-0.5 bg-[var(--c-accent)]" />
+                )}
               </Link>
             </li>
           )

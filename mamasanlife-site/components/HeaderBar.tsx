@@ -16,8 +16,8 @@ const cats = [
 export function HeaderBar() {
   const [open, setOpen] = useState(false)
   return (
-    <header className="border-b bg-primary sticky top-0 z-50">
-      <div className="container-responsive h-16 flex items-center justify-between gap-4">
+    <header className="border-b border-[var(--border-glass)] bg-[var(--bg-glass)] backdrop-blur-md sticky top-0 z-50 transition-colors duration-300">
+      <div className="container-responsive h-20 flex items-center justify-between gap-4">
         <div className="flex items-center">
           <Link href="/" className="focus-ring flex items-center gap-2" aria-label="Mamasan Life トップへ" title="Mamasan Life">
             <Image
@@ -38,13 +38,13 @@ export function HeaderBar() {
             />
           </Link>
         </div>
-        <nav className="hidden md:flex items-center gap-5 text-sm text-white/90" aria-label="ユーティリティナビゲーション">
-          <Link href="/about" className="rounded-md px-2 py-1 focus-ring">自己紹介</Link>
-          <Link href="/site-map" className="rounded-md px-2 py-1 focus-ring">サイトマップ</Link>
-          <Link href="/contact" className="rounded-md px-2 py-1 focus-ring">お問い合わせ</Link>
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest uppercase text-[var(--c-primary)]" aria-label="ユーティリティナビゲーション">
+          <Link href="/about" className="hover:opacity-60 transition-opacity focus-ring">Intro</Link>
+          <Link href="/site-map" className="hover:opacity-60 transition-opacity focus-ring">Index</Link>
+          <Link href="/contact" className="hover:opacity-60 transition-opacity focus-ring">Contact</Link>
         </nav>
         <div className="hidden md:block min-w-[260px] w-72">
-          <Suspense fallback={<div className="h-9"/>}>
+          <Suspense fallback={<div className="h-9" />}>
             <SearchForm />
           </Suspense>
         </div>
@@ -67,13 +67,13 @@ export function HeaderBar() {
           </div>
         )}
         <button
-          className="md:hidden text-white rounded-md focus-ring"
+          className="md:hidden text-[var(--c-primary)] rounded-md focus-ring p-2 hover:bg-black/5"
           aria-label={open ? 'メニューを閉じる' : 'メニューを開く'}
           aria-controls="mobileMenu"
           aria-expanded={open}
-          onClick={()=>setOpen(v=>!v)}
+          onClick={() => setOpen(v => !v)}
         >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg>
         </button>
       </div>
       {open && (
@@ -83,14 +83,14 @@ export function HeaderBar() {
               <SearchForm />
             </Suspense>
             <ul className="flex flex-col gap-2">
-              <li><Link href="/about" onClick={()=>setOpen(false)} className="rounded-md px-2 py-1 focus-ring">自己紹介</Link></li>
-              <li><Link href="/site-map" onClick={()=>setOpen(false)} className="rounded-md px-2 py-1 focus-ring">サイトマップ</Link></li>
-              <li><Link href="/contact" onClick={()=>setOpen(false)} className="rounded-md px-2 py-1 focus-ring">お問い合わせ</Link></li>
+              <li><Link href="/about" onClick={() => setOpen(false)} className="rounded-md px-2 py-1 focus-ring">自己紹介</Link></li>
+              <li><Link href="/site-map" onClick={() => setOpen(false)} className="rounded-md px-2 py-1 focus-ring">サイトマップ</Link></li>
+              <li><Link href="/contact" onClick={() => setOpen(false)} className="rounded-md px-2 py-1 focus-ring">お問い合わせ</Link></li>
             </ul>
             <div className="opacity-80 mt-1">— Categories —</div>
             <ul className="flex flex-col gap-1">
-              {cats.map(c=> (
-                <li key={c.href}><Link href={c.href} onClick={()=>setOpen(false)} className="pl-1 rounded-md px-1 py-1 focus-ring">{c.label}</Link></li>
+              {cats.map(c => (
+                <li key={c.href}><Link href={c.href} onClick={() => setOpen(false)} className="pl-1 rounded-md px-1 py-1 focus-ring">{c.label}</Link></li>
               ))}
             </ul>
           </div>
