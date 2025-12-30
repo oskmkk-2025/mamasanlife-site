@@ -16,6 +16,10 @@
   /* ガラスモーフィズム用の透明度 */
   --bg-glass: rgba(255, 255, 255, 0.75);
   --border-glass: rgba(255, 255, 255, 0.15);
+
+  /* H2肉球イラスト用 */
+  --h2-paw-size: 1.2em;
+  --h2-paw-gap: 0.5rem;
 }
 
 body {
@@ -619,6 +623,7 @@ a:hover:not(.btn-brand) {
 
 /* 肉球ぶんだけH2テキストを右にオフセット */
 .prose-content h2 {
+  position: relative;
   padding-left: calc(var(--h2-paw-size) + var(--h2-paw-gap));
 }
 
