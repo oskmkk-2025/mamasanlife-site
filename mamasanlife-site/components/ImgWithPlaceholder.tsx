@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 type Props = ImageProps & { shimmerClassName?: string }
 
-export function ImgWithPlaceholder({ shimmerClassName, className, onLoadingComplete, ...rest }: Props) {
+export function ImgWithPlaceholder({ shimmerClassName, className, onLoadingComplete, alt = '', ...rest }: Props) {
   const [loaded, setLoaded] = useState(false)
   return (
     <div className="relative w-full h-full">
@@ -19,6 +19,7 @@ export function ImgWithPlaceholder({ shimmerClassName, className, onLoadingCompl
         />
       )}
       <Image
+        alt={alt}
         {...rest}
         className={className}
         onLoadingComplete={(img)=>{ setLoaded(true); onLoadingComplete?.(img) }}
@@ -26,4 +27,3 @@ export function ImgWithPlaceholder({ shimmerClassName, className, onLoadingCompl
     </div>
   )
 }
-

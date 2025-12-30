@@ -1,5 +1,5 @@
 "use client"
-import { useMemo, useState, useEffect } from 'react'
+import { useMemo } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { PostList } from './PostList'
 
@@ -20,15 +20,7 @@ export function FilterablePostList({ posts, categories }: { posts: Post[]; categ
   const router = useRouter()
   const pathname = usePathname()
   const sp = useSearchParams()
-  const initial = sp?.get('cat') || 'all'
-  const [active, setActive] = useState<string>(initial)
-
-  // URL のクエリと状態を同期
-  useEffect(() => {
-    const urlCat = sp?.get('cat') || 'all'
-    setActive(urlCat)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sp])
+  const active = sp?.get('cat') || 'all'
 
   const counts = useMemo(() => {
     const map: Record<string, number> = { all: posts.length }
@@ -77,4 +69,3 @@ export function FilterablePostList({ posts, categories }: { posts: Post[]; categ
     </div>
   )
 }
-

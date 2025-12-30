@@ -38,7 +38,20 @@ const PreviewPane = ({ document }: PreviewProps) => {
   }
 
   return (
-    <div style={{ width: '100%', height: '100%', background: '#f6f7f9' }}>
+    <div style={{ width: '100%', height: '100%', background: '#f6f7f9', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ padding: '8px 12px', borderBottom: '1px solid #e5e7eb', display: 'flex', gap: '8px', alignItems: 'center' }}>
+        <span style={{ fontSize: 12, color: '#6b7280' }}>プレビュー</span>
+        {previewUrl && (
+          <a
+            href={previewUrl}
+            target="_blank"
+            rel="noreferrer"
+            style={{ fontSize: 12, color: '#2563eb', textDecoration: 'underline' }}
+          >
+            別タブで全画面表示
+          </a>
+        )}
+      </div>
       <iframe
         title="Preview"
         src={previewUrl || 'about:blank'}

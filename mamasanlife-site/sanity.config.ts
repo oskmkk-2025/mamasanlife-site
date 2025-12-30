@@ -6,8 +6,8 @@ import PreviewPane from './studio/PreviewPane'
 const defaultDocumentNode: DefaultDocumentNodeResolver = (S, {schemaType}) => {
   if (schemaType === 'post') {
     return S.document().views([
-      S.view.form().title('編集'),
-      S.view.component(PreviewPane).title('プレビュー')
+      S.view.form().id('editor').title('編集'),
+      S.view.component(PreviewPane).id('preview').title('プレビュー')
     ])
   }
   return undefined

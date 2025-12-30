@@ -4,10 +4,11 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
+    "studio:dev": "sanity dev",
     "dev:local": "next dev -p 3001 -H 127.0.0.1",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "start:prod:local": "next build && next start -p 3001 -H 127.0.0.1",
     "import:wxr": "node scripts/import-wxr-to-sanity.js --file ../WordPress.2025-08-19.xml --dataset production",
     "enrich:wxr": "node scripts/enrich-wxr-body.js ../WordPress.2025-08-19.xml",
@@ -23,7 +24,7 @@
     "fast-xml-parser": "^5.2.5",
     "framer-motion": "^12.23.12",
     "groq": "^3.53.0",
-    "next": "^15.5.3",
+    "next": "^15.5.7",
     "p-limit": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -34,6 +35,9 @@
   "devDependencies": {
     "@types/react": "^18.2.66",
     "autoprefixer": "^10.4.16",
+    "baseline-browser-mapping": "^2.9.5",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.8",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.4.7",
     "typescript": "^5.5.2"

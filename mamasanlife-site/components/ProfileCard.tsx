@@ -1,5 +1,5 @@
 "use client"
-import Image from 'next/image'
+import Link from 'next/link'
 
 export function ProfileCard() {
   return (
@@ -7,6 +7,7 @@ export function ProfileCard() {
       <div className="flex items-center gap-4">
         <div className="relative w-16 h-16 rounded-full overflow-hidden bg-gray-100">
           {/* Use plain <img> for robust fallback chain */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/mamasan.PNG"
             alt="ひーちママのプロフィールアイコン"
@@ -25,8 +26,8 @@ export function ProfileCard() {
         </div>
       </div>
       <div className="mt-3 flex items-center gap-3 text-sm">
-        <a href="/about">プロフィール</a>
-        <a href="/contact">お問い合わせ</a>
+        <Link href="/about">プロフィール</Link>
+        <Link href="/contact">お問い合わせ</Link>
       </div>
     </div>
   )

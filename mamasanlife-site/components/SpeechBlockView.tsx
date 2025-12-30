@@ -1,4 +1,5 @@
 "use client"
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef, useState } from 'react'
 
 const SPEECH_ICON_MAP: Record<string, string> = {

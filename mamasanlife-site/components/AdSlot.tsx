@@ -1,5 +1,5 @@
 "use client"
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 type Props = {
   slot: string
@@ -31,9 +31,42 @@ export function AdSlot({ slot, layout, format = 'auto', responsive = true, class
   const client = rawClient ? (rawClient.startsWith('ca-') ? rawClient : `ca-${rawClient}`) : undefined
   const aliasInfo = resolveSlotAlias(slot)
   const resolvedSlot = aliasInfo?.slot?.trim()
+  const adRef = useRef<HTMLModElement | null>(null)
+
   useEffect(() => {
-    try { (window as any).adsbygoogle = (window as any).adsbygoogle || []; (window as any).adsbygoogle.push({}) } catch {}
-  }, [])
+    const el = adRef.current
+    if (!el) return
+    // Skip if the element is already initialized (prevents TagError on re-renders/StrictMode)
+    if (el.getAttribute('data-adsbygoogle-status') === 'done') return
+
+    let canceled = false
+    const initAd = () => {
+      if (canceled || !adRef.current) return
+      // guard again just before pushing
+      if (adRef.current.getAttribute('data-adsbygoogle-status') === 'done') return
+      try {
+        const ads = (window as any).adsbygoogle || []
+        ads.push({})
+      } catch (err) {
+        console.warn('AdSense push failed', err)
+      }
+    }
+
+    // adsbygoogle is loaded asynchronously; wait until push is available
+    if (typeof window !== 'undefined' && (window as any).adsbygoogle?.push) {
+      initAd()
+    } else {
+      const timer = setInterval(() => {
+        if ((window as any).adsbygoogle?.push) {
+          clearInterval(timer)
+          initAd()
+        }
+      }, 150)
+      return () => { canceled = true; clearInterval(timer) }
+    }
+
+    return () => { canceled = true }
+  }, [resolvedSlot])
   if (!client) return <div className="ads-fallback">AdSense未設定（NEXT_PUBLIC_ADSENSE_ID）</div>
   const validSlot = resolvedSlot && /^\d{6,}$/.test(resolvedSlot)
   if (!validSlot) {
@@ -44,7 +77,7 @@ export function AdSlot({ slot, layout, format = 'auto', responsive = true, class
     )
   }
   return (
-    <ins className={`adsbygoogle block ${className || ''}`}
+    <ins ref={adRef} className={`adsbygoogle block ${className || ''}`}
       style={{ display: 'block' }}
       data-ad-client={client}
       data-ad-slot={resolvedSlot}

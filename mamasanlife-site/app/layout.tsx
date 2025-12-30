@@ -8,7 +8,7 @@ import { Footer } from '@/components/Footer'
 import { MigrationNotice } from '@/components/MigrationNotice'
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3002'),
   title: {
     default: 'Mamasan Life',
     template: '%s | Mamasan Life'
@@ -16,7 +16,13 @@ export const metadata = {
   description: 'ママの毎日をちょっとラクに、ちょっとハッピーに。生活情報ポータル。',
   openGraph: { type: 'website', siteName: 'Mamasan Life' },
   twitter: { card: 'summary_large_image' },
-  robots: process.env.NEXT_PUBLIC_NOINDEX === 'true' ? { index: false, follow: false } : undefined
+  robots: process.env.NEXT_PUBLIC_NOINDEX === 'true' ? { index: false, follow: false } : undefined,
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION
+  },
+  alternates: {
+    canonical: './'
+  }
 }
 
 // 無料代替: タイトル=こぶりな(近似) → Zen Kaku Gothic New、本文=DIN(近似) → Barlow
@@ -69,10 +75,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         )}
       </head>
       <body>
-        {/* Google Search Console verification (if set) */}
-        {process.env.NEXT_PUBLIC_GSC_VERIFICATION && (
-          <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_VERIFICATION} />
-        )}
+        {/* Google Search Console verification moved to metadata */}
         <link rel="icon" href="/icons/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/icons/favicon.png" />
         <meta name="theme-color" content="#8CB9BD" />

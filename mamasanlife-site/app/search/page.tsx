@@ -16,6 +16,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
   const limit = 30
   const withSince = days === '30'
   const orderPopular = sort === 'popular'
+  // eslint-disable-next-line react-hooks/purity
   const since = withSince ? new Date(Date.now() - 30*24*60*60*1000).toISOString() : undefined
   const allowed = new Set(CATS.map(c=>c.slug))
 
@@ -40,6 +41,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
     : []
   const catRecs: { slug:string; title:string; posts:any[]; count:number }[] = []
   if (q && posts.length === 0) {
+    // eslint-disable-next-line react-hooks/purity
     const since30 = new Date(Date.now() - 30*24*60*60*1000).toISOString()
     const countQuery = buildCategoryCountQuery({ withSince: true })
     const groups = await Promise.all(

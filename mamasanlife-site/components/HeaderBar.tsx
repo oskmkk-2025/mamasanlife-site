@@ -1,5 +1,6 @@
 "use client"
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, Suspense } from 'react'
 import { SearchForm } from './SearchForm'
 import { LineFollowButton } from './LineFollowButton'
@@ -18,18 +19,24 @@ export function HeaderBar() {
     <header className="border-b bg-primary sticky top-0 z-50">
       <div className="container-responsive h-16 flex items-center justify-between gap-4">
         <div className="flex items-center">
-          <a href="/" className="focus-ring flex items-center gap-2" aria-label="Mamasan Life トップへ" title="Mamasan Life">
-            <img
+          <Link href="/" className="focus-ring flex items-center gap-2" aria-label="Mamasan Life トップへ" title="Mamasan Life">
+            <Image
               src="/icons/site-logo.png"
               alt="Mamasan Life"
-              className="h-16 w-auto hidden md:block"
+              width={180}
+              height={64}
+              className="hidden md:block h-16 w-auto"
+              priority
             />
-            <img
+            <Image
               src="/icons/site-logo.png"
               alt="Mamasan Life"
-              className="h-14 w-auto md:hidden"
+              width={160}
+              height={56}
+              className="md:hidden h-14 w-auto"
+              priority
             />
-          </a>
+          </Link>
         </div>
         <nav className="hidden md:flex items-center gap-5 text-sm text-white/90" aria-label="ユーティリティナビゲーション">
           <Link href="/about" className="rounded-md px-2 py-1 focus-ring">自己紹介</Link>

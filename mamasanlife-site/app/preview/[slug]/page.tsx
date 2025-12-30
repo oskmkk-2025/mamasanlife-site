@@ -5,6 +5,7 @@ import { ImgWithPlaceholder } from '@/components/ImgWithPlaceholder'
 import { sanityImageRefToUrl } from '@/lib/image-util'
 import { AdSlot } from '@/components/AdSlot'
 import Link from 'next/link'
+import { HtmlEmbed } from '@/components/HtmlEmbed'
 
 export const revalidate = 0
 
@@ -49,9 +50,7 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
           </figure>
         )
       },
-      htmlEmbed: ({ value }: any) => (
-        <div className="embed-html" dangerouslySetInnerHTML={{ __html: String(value?.html||'') }} />
-      )
+      htmlEmbed: ({ value }: any) => <HtmlEmbed html={String(value?.html || '')} />
     },
     marks: {
       link: ({children, value}: any) => {
@@ -97,7 +96,12 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
       <article>
         <h1 className="text-2xl font-bold mb-2">{post.title}</h1>
         <div className="text-xs text-gray-500 mb-4">{post.publishedAt && (<time dateTime={post.publishedAt}>公開: {new Date(post.publishedAt).toLocaleDateString('ja-JP')}</time>)} {post.updatedAt && (<span className="ml-2">更新: {new Date(post.updatedAt).toLocaleDateString('ja-JP')}</span>)}</div>
-        {post.imageUrl && (<img src={post.imageUrl} alt={post.imageAlt || post.title} className="w-full h-auto rounded mb-4" />)}
+        {post.imageUrl && (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={post.imageUrl} alt={post.imageAlt || post.title} className="w-full h-auto rounded mb-4" />
+          </>
+        )}
         {post.excerpt && (<p className="text-gray-700 mb-4">{post.excerpt}</p>)}
         {/* AdSense（プレビュー用スロット） */}
         <AdSlot slot="ARTICLE_TOP_SLOT" className="my-4" />

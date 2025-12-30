@@ -333,6 +333,7 @@ export default async function PostPage(
           {/* banner row moved to body top */}
           {heroSrc && (
             <figure className="mt-4 mb-2">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={heroSrc} alt={heroAlt} className="w-full h-auto rounded-md" />
               {heroAlt && <figcaption className="text-xs text-gray-500 mt-2 text-center">{heroAlt}</figcaption>}
             </figure>
@@ -559,6 +560,7 @@ const ptComponents = {
         <div className="moshimo-card my-5">
           {data.image && (
             <div className="moshimo-card__image">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={data.image} alt={data.title || ''} />
             </div>
           )}
@@ -619,9 +621,15 @@ const ptComponents = {
           <a href={String(value?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="inline-flex no-underline hover:opacity-95 align-middle">
             {src ? (
               size ? (
-                <img src={src} alt={value?.alt||''} width={size.w} height={size.h} style={{ width:size.w, height:size.h, display:'block' }} />
+                <>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={src} alt={value?.alt||''} width={size.w} height={size.h} style={{ width:size.w, height:size.h, display:'block' }} />
+                </>
               ) : (
-                <img src={src} alt={value?.alt||''} className="inline-block max-w-full h-auto" style={{ display:'block' }} />
+                <>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={src} alt={value?.alt||''} className="inline-block max-w-full h-auto" style={{ display:'block' }} />
+                </>
               )
             ) : (
               <span className={`banner-badge ${provider}`}>{provider==='blogmura' ? 'ブログ村' : provider==='with2' ? '人気ブログ' : provider==='appreach' ? 'Appreach' : 'Link'}</span>
@@ -645,17 +653,18 @@ const ptComponents = {
       const rowClass = allAppreach ? 'banner-row-40' : 'banner-row-31'
       return (
         <div className={`my-3 flex items-center justify-start gap-2 flex-wrap link-row ${rowClass}`}>
-          {items.map((it:any, idx:number)=>{
-            const src = String(it?.src||'')
-            const provider = it?.provider || (src.includes('appreach')||src.includes('nabettu.github.io') ? 'appreach' : src.includes('blogmura') ? 'blogmura' : src.includes('with2.net') ? 'with2' : 'other')
-            return (
-              <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
-                {src ? (
-                  <img src={src} alt={it?.alt||''} />
-                ) : (
-                  <span className={`banner-badge ${provider}`}>{provider==='blogmura' ? 'ブログ村' : provider==='with2' ? '人気ブログ' : provider==='appreach' ? 'Appreach' : 'Link'}</span>
-                )}
-              </a>
+            {items.map((it:any, idx:number)=>{
+              const src = String(it?.src||'')
+              const provider = it?.provider || (src.includes('appreach')||src.includes('nabettu.github.io') ? 'appreach' : src.includes('blogmura') ? 'blogmura' : src.includes('with2.net') ? 'with2' : 'other')
+              return (
+                <a key={idx} href={String(it?.href||'#')} target="_blank" rel="noopener nofollow sponsored" className="no-underline hover:opacity-95 align-middle">
+                  {src ? (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img src={src} alt={it?.alt||''} />
+                  ) : (
+                    <span className={`banner-badge ${provider}`}>{provider==='blogmura' ? 'ブログ村' : provider==='with2' ? '人気ブログ' : provider==='appreach' ? 'Appreach' : 'Link'}</span>
+                  )}
+                </a>
             )
           })}
         </div>

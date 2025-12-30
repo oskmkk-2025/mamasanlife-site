@@ -4,12 +4,11 @@ import Link from 'next/link'
 
 export function MigrationNotice() {
   const flag = process.env.NEXT_PUBLIC_SHOW_MIGRATION_NOTICE
-  const [hidden, setHidden] = useState(true)
-  useEffect(()=>{
-    if (flag === 'false') { setHidden(true); return }
-    const v = localStorage.getItem('hide_migration_notice')
-    setHidden(v === '1')
-  },[flag])
+  const [hidden, setHidden] = useState<boolean>(() => {
+    if (flag === 'false') return true
+    if (typeof window === 'undefined') return true
+    return localStorage.getItem('hide_migration_notice') === '1'
+  })
   if (hidden) return null
   return (
     <div className="w-full bg-white border-b border-primary">
@@ -23,4 +22,3 @@ export function MigrationNotice() {
     </div>
   )
 }
-

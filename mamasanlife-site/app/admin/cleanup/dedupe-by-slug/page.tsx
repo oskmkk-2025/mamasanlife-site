@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 type Item = { id: string; category?: string; title?: string; blocks?: number }
 type Group = { slug: string; keep: Item; remove: Item[] }
@@ -12,7 +12,7 @@ export default function DedupeBySlugPage(){
   const [dryRun, setDryRun] = useState(true)
   const [prefer, setPrefer] = useState<'recent'|'blocks'>('recent')
 
-  async function load(){
+  const load = useCallback(async ()=>{
     setLoading(true); setMsg('')
     try{
       const res = await fetch('/api/admin/cleanup/dedupe-by-slug', {
@@ -25,8 +25,8 @@ export default function DedupeBySlugPage(){
       setMsg(`${j.groups||0} グループ検出`)
     }catch(e:any){ setMsg('読み込みエラー: ' + (e?.message||'unknown')) }
     finally{ setLoading(false) }
-  }
-  useEffect(()=>{ load() },[])
+  }, [limit, prefer])
+  useEffect(()=>{ load() },[load])
 
   async function apply(){
     if (!groups.length){ setMsg('重複がありません'); return }
