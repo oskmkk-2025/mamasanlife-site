@@ -2,19 +2,35 @@ import Link from 'next/link'
 
 type Variant = 'solid' | 'outlineWhite' | 'outlineAccent' | 'outlineGreen'
 
-export function LineFollowButton({ href, label='友だち追加', size='md', variant='outlineAccent', className }: { href: string; label?: string; size?: 'sm'|'md'|'lg'; variant?: Variant; className?: string }){
-  const sizeCls = size==='lg' ? 'text-base px-5 py-3' : size==='sm' ? 'text-sm px-3 py-2' : 'text-sm px-4 py-2.5'
+export function LineFollowButton({ href, label = '友だち追加', size = 'md', variant = 'outlineAccent', className }: { href: string; label?: string; size?: 'sm' | 'md' | 'lg'; variant?: Variant; className?: string }) {
+  const sizeCls = size === 'lg' ? 'text-base px-5 py-3' : size === 'sm' ? 'text-sm px-3 py-2' : 'text-sm px-4 py-2.5'
   const base = 'inline-flex items-center gap-2 rounded-full font-bold transition-colors'
   const style = variant === 'solid'
-    ? 'btn-line'
+    ? 'btn-line-solid'
     : variant === 'outlineWhite'
       ? 'bg-transparent border-2 border-white text-white'
       : variant === 'outlineGreen'
-        ? 'bg-transparent border-2 border-[#06C755] text-[#06C755]'
+        ? 'btn-line-outline'
         : 'bg-transparent border-2 border-[var(--c-accent)] text-[var(--c-accent)]'
+
+  // Inline style fallback for critical visibility (Solid Green design)
+  const inlineStyle: React.CSSProperties = variant === 'outlineGreen' ? {
+    backgroundColor: '#06C755',
+    borderColor: '#06C755',
+    color: '#ffffff',
+    borderWidth: '2px',
+    borderStyle: 'solid',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+  } : {}
+
   return (
-    <Link href={href} className={`${base} ${style} ${sizeCls} ${className||''}`} aria-label={`LINEで${label}`}>
-      <svg width="18" height="18" viewBox="0 0 36 36" aria-hidden="true"><path fill="currentColor" d="M18 3C9.716 3 3 8.82 3 15.999C3 22.16 8.025 27.288 14.7 28.71c.574.123.487.335.466.665-.017.228-.024.74-.024 1.415c0 .446-.298.964 0 1.2c.308.246 1.96-.707 2.247-.89c1.832-1.16 4.353-3.014 5.959-4.34C29.172 26.178 33 21.51 33 15.999C33 8.82 26.284 3 18 3Z"/></svg>
+    <Link
+      href={href}
+      className={`${base} ${style} ${sizeCls} ${className || ''}`}
+      style={inlineStyle}
+      aria-label={`LINEで${label}`}
+    >
+      <svg width="18" height="18" viewBox="0 0 36 36" aria-hidden="true"><path fill="currentColor" d="M18 3C9.716 3 3 8.82 3 15.999C3 22.16 8.025 27.288 14.7 28.71c.574.123.487.335.466.665-.017.228-.024.74-.024 1.415c0 .446-.298.964 0 1.2c.308.246 1.96-.707 2.247-.89c1.832-1.16 4.353-3.014 5.959-4.34C29.172 26.178 33 21.51 33 15.999C33 8.82 26.284 3 18 3Z" /></svg>
       <span>{label}</span>
     </Link>
   )

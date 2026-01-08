@@ -50,19 +50,19 @@ export function HeaderBar() {
         </div>
         {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
           <div className="hidden md:flex flex-col items-center gap-1">
-            <span className="w-full text-center text-[11px] text-white font-bold leading-none caption-soft">ブログの更新をお知らせ(無料)</span>
-            <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="LINEで友だちになる" size="sm" variant="outlineWhite" />
+            <span className="w-full text-center text-[11px] text-gray-600 font-bold leading-none">ブログの更新をお知らせ(無料)</span>
+            <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="LINEで友だちになる" size="sm" variant="outlineGreen" />
           </div>
         )}
         {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
           <div className="md:hidden flex flex-col items-center gap-0.5 leading-none">
-            <span className="text-[10px] text-white font-semibold tracking-tight whitespace-nowrap">更新お知らせをLINEで受け取る</span>
+            <span className="text-[10px] text-gray-600 font-semibold tracking-tight whitespace-nowrap">更新お知らせをLINEで</span>
             <LineFollowButton
               href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL}
-              label="追加する"
+              label="追加"
               size="sm"
-              variant="outlineWhite"
-              className="px-3 py-1.5 text-xs leading-none"
+              variant="outlineGreen"
+              className="px-3 py-1 text-xs leading-none"
             />
           </div>
         )}
