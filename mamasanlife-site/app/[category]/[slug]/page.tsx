@@ -635,7 +635,12 @@ const ptComponents = {
               ) : (
                 <>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={src} alt={value?.alt || ''} className="inline-block max-w-full h-auto" style={{ display: 'block' }} />
+                  <img
+                    src={src}
+                    alt={value?.alt || ''}
+                    className="inline-block max-w-full"
+                    style={{ height: '54px', width: 'auto', display: 'block' }}
+                  />
                 </>
               )
             ) : (
@@ -670,7 +675,12 @@ const ptComponents = {
                   <img
                     src={src}
                     alt={it?.alt || ''}
-                    style={provider === 'appreach' ? { height: '40px', width: 'auto', maxWidth: 'none', display: 'block' } : {}}
+                    style={{
+                      height: (hasAppreach ? '44px' : (provider === 'blogmura' || provider === 'with2') ? '31px' : 'auto'),
+                      width: 'auto',
+                      maxWidth: 'none',
+                      display: 'block'
+                    }}
                   />
                 ) : (
                   <span className={`banner-badge ${provider}`}>{provider === 'blogmura' ? 'ブログ村' : provider === 'with2' ? '人気ブログ' : provider === 'appreach' ? 'Appreach' : 'Link'}</span>
