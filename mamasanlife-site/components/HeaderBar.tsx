@@ -16,24 +16,24 @@ const cats = [
 export function HeaderBar() {
   const [open, setOpen] = useState(false)
   return (
-    <header className="border-b border-[var(--border-glass)] bg-[var(--bg-glass)] backdrop-blur-md sticky top-0 z-50 transition-colors duration-300">
-      <div className="container-responsive h-20 flex items-center justify-between gap-4">
+    <header className="border-b border-[var(--border-glass)] bg-white/40 backdrop-blur-md sticky top-0 z-50 transition-colors duration-300">
+      <div className="container-responsive h-24 md:h-32 flex items-center justify-between gap-4">
         <div className="flex items-center">
           <Link href="/" className="focus-ring flex items-center gap-2" aria-label="Mamasan Life トップへ" title="Mamasan Life">
             <Image
               src="/icons/site-logo.png"
               alt="Mamasan Life"
-              width={240}
-              height={80}
-              className="hidden md:block h-20 w-auto"
+              width={320}
+              height={128}
+              className="hidden md:block h-32 w-auto"
               priority
             />
             <Image
               src="/icons/site-logo.png"
               alt="Mamasan Life"
-              width={180}
-              height={60}
-              className="md:hidden h-16 w-auto"
+              width={220}
+              height={100}
+              className="md:hidden h-28 w-auto"
               priority
             />
           </Link>
