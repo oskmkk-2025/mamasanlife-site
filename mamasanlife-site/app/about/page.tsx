@@ -92,7 +92,7 @@ export default function AboutPage() {
             <h1 className="text-4xl font-bold text-emphasis">運営者について</h1>
             <div className="rounded-2xl border border-[var(--c-accent-light)] bg-white/80 px-5 py-4 text-left text-gray-700 shadow-sm">
               <p className="text-lg leading-8">
-                はじめまして、Mamasan Life（旧ママさんマネー部）を運営している「ひーちママ」です。
+                はじめまして、Mamasan Life（ママさんライフ）を運営している「ひーちママ」です。
                 事務職として20年以上働きつつ、子育て・暮らし・お金の悩みに寄り添う情報をブログで発信してきました。
                 2025年からは職業訓練校のWebクリエイト科に通い、在宅ワークにも活かせるデザインとコーディングを実戦的に学んでいます。
                 家庭で得たリアルな体験をとことん掘り下げ、ママが毎日をちょっとラクに、ちょっとハッピーにできるヒントを届けていきます。

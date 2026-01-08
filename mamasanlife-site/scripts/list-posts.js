@@ -24,7 +24,7 @@ const client = createClient({
 
 async function listPosts() {
     try {
-        const posts = await client.fetch('*[_type == "post"]{_id, title, "imageUrl": heroImage.asset->url}');
+        const posts = await client.fetch('*[_type == "post"]{_id, title, "slug": slug.current, "imageUrl": heroImage.asset->url}');
         console.log(JSON.stringify(posts, null, 2));
     } catch (err) {
         console.error('Failed to fetch posts:', err);

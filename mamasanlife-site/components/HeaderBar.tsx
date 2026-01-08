@@ -23,17 +23,17 @@ export function HeaderBar() {
             <Image
               src="/icons/site-logo.png"
               alt="Mamasan Life"
-              width={180}
-              height={64}
-              className="hidden md:block h-16 w-auto"
+              width={240}
+              height={80}
+              className="hidden md:block h-20 w-auto"
               priority
             />
             <Image
               src="/icons/site-logo.png"
               alt="Mamasan Life"
-              width={160}
-              height={56}
-              className="md:hidden h-14 w-auto"
+              width={180}
+              height={60}
+              className="md:hidden h-16 w-auto"
               priority
             />
           </Link>
