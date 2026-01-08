@@ -739,3 +739,123 @@ a:hover:not(.btn-brand) {
   background: #ff6b00;
   font-size: 13px;
 }
+
+/* Appreach Rich Card Layout */
+.appreach {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+  border: 1px solid #ccc !important;
+  padding: 16px !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  width: 100% !important;
+  max-width: 600px !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  box-sizing: border-box !important;
+  font-family: sans-serif !important;
+  text-align: left !important;
+}
+
+@media (max-width: 480px) {
+  .appreach {
+    padding: 12px !important;
+    gap: 12px !important;
+  }
+}
+
+.appreach__icon {
+  width: 80px !important;
+  height: 80px !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+@media (min-width: 600px) {
+  .appreach__icon {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 22px !important;
+  }
+}
+
+.appreach__icon img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+.appreach__detail {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+
+.appreach__name {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  margin: 0 0 6px !important;
+  line-height: 1.4 !important;
+  color: #333 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+@media (min-width: 600px) {
+  .appreach__name {
+    font-size: 18px !important;
+  }
+}
+
+.appreach__info {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 12px !important;
+  color: #666 !important;
+  margin: 0 0 12px !important;
+}
+
+.appreach__links {
+  display: flex !important;
+  gap: 8px !important;
+  margin-top: auto !important;
+  flex-wrap: wrap !important;
+}
+
+/* Ensure store buttons are correctly sized even in native blocks */
+.appreach__links img,
+.appreach__aslink img,
+.appreach__gplink img {
+  height: 34px !important;
+  width: auto !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+@media (min-width: 600px) {
+
+  .appreach__links img,
+  .appreach__aslink img,
+  .appreach__gplink img {
+    height: 40px !important;
+  }
+}
+
+.appreach__footer {
+  font-size: 10px !important;
+  color: #999 !important;
+  margin-top: 8px !important;
+}

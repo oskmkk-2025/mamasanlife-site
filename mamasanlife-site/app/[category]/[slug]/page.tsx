@@ -271,6 +271,7 @@ export default async function PostPage(
     }
   }
   displayBlocks = await enrichBlogCardBlocks(displayBlocks)
+  displayBlocks = groupAppreachBlocks(displayBlocks)
   const headingsAll = extractHeadingsFromPortableText(displayBlocks)
   const headings = headingsAll.filter(h => h.level <= 2)
   const codocUrl = paywall?.codocUrl
@@ -500,7 +501,11 @@ const ptComponents = {
       const m = String(value?.asset?._ref || '').match(/-(\d+)x(\d+)-/)
       const w = m ? parseInt(m[1], 10) : undefined
       const h = m ? parseInt(m[2], 10) : undefined
-      const isAppIcon = w && h && Math.abs(w - h) < 10 && (value?.alt?.includes('アプリ') || value?.alt?.includes('App') || /メルカリ|ペイ|Pay|PayPay|Amazon|LINE|Google/i.test(value?.alt || ''))
+      const isAppIcon = w && h && Math.abs(w - h) < 10 && (
+        value?.alt?.includes('アプリ') ||
+        value?.alt?.includes('App') ||
+        /メルカリ|ペイ|Pay|PayPay|Amazon|LINE|Google|楽天|280|blocker/i.test(value?.alt || '')
+      )
       const imgStyle: React.CSSProperties = isAppIcon
         ? { height: '80px', width: '80px', objectFit: 'cover', borderRadius: '16px' }
         : { width: '100%', height: 'auto' }
@@ -698,7 +703,31 @@ const ptComponents = {
       )
     }
     ,
-    htmlEmbed: ({ value }: any) => <HtmlEmbed html={String(value?.html || '')} />
+    htmlEmbed: ({ value }: any) => <HtmlEmbed html={String(value?.html || '')} />,
+    appreachCard: ({ value }: any) => {
+      const src = sanityImageRefToUrl(value.icon?.asset?._ref, { q: 80, fit: 'clip' })
+      return (
+        <div className="appreach">
+          <div className="appreach__icon">
+            <img src={src || ''} alt={value.appName} />
+          </div>
+          <div className="appreach__detail">
+            <div className="appreach__name">{value.appName}</div>
+            <div className="appreach__info">
+              {value.devInfo && <span>開発元: {value.devInfo}</span>}
+              {value.price && <span>価格: {value.price}</span>}
+            </div>
+            <div className="appreach__links">
+              {value.links?.items?.map((it: any, idx: number) => (
+                <a key={idx} href={it.href} target="_blank" rel="noopener nofollow">
+                  <img src={it.src} alt="" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )
+    }
   },
   marks: {
     strong: ({ children }: any) => <strong className="font-semibold">{children}</strong>,
