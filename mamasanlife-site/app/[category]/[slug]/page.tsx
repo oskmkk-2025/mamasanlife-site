@@ -500,12 +500,18 @@ const ptComponents = {
       const m = String(value?.asset?._ref || '').match(/-(\d+)x(\d+)-/)
       const w = m ? parseInt(m[1], 10) : undefined
       const h = m ? parseInt(m[2], 10) : undefined
+      const isAppIcon = w && h && Math.abs(w - h) < 10 && (value?.alt?.includes('アプリ') || value?.alt?.includes('App') || /メルカリ|ペイ|Pay|PayPay|Amazon|LINE|Google/i.test(value?.alt || ''))
+      const imgStyle: React.CSSProperties = isAppIcon
+        ? { height: '80px', width: '80px', objectFit: 'cover', borderRadius: '16px' }
+        : { width: '100%', height: 'auto' }
+      const figClass = isAppIcon ? "my-6 flex justify-center" : "my-6"
+
       return (
-        <figure className="my-6">
+        <figure className={figClass}>
           {w && h ? (
-            <ImgWithPlaceholder src={src} alt={value?.alt || ''} width={w} height={h} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="mx-auto" />
+            <ImgWithPlaceholder src={src} alt={value?.alt || ''} width={w} height={h} sizes="100vw" style={imgStyle} className="mx-auto" />
           ) : (
-            <ImgWithPlaceholder src={src} alt={value?.alt || ''} fill sizes="100vw" className="object-contain bg-white" />
+            <ImgWithPlaceholder src={src} alt={value?.alt || ''} fill sizes="100vw" style={isAppIcon ? { width: '80px', height: '80px' } : {}} className="object-contain bg-white" />
           )}
           {value?.alt && <figcaption className="text-xs text-gray-500 mt-2 text-center">{value.alt}</figcaption>}
         </figure>
