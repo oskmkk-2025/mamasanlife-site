@@ -854,3 +854,55 @@ function detectAffiliateVariant(href?: string | null) {
     return null
   }
 }
+
+function groupAppreachBlocks(blocks: any[]) {
+  const result: any[] = []
+  let i = 0
+  while (i < blocks.length) {
+    const b = blocks[i]
+    if (b?._type === 'image') {
+      const next1 = blocks[i + 1]
+      const next2 = blocks[i + 2]
+
+      const isStoreButtons = (bl: any) => bl?._type === 'linkImageRow' && bl.items?.some((it: any) => /itune|gplay|apple|google/i.test(it.src || ''))
+      const isCredit = (bl: any) => {
+        if (bl?._type !== 'block') return false
+        const text = (bl.children || []).map((c: any) => c.text || '').join('')
+        return text.includes('アプリーチ') || text.includes('posted with')
+      }
+
+      const hasStoreButtons = isStoreButtons(next1)
+      const hasCredit = isCredit(next1) || isCredit(next2)
+
+      if (hasStoreButtons || hasCredit) {
+        const linksBlock = hasStoreButtons ? next1 : (isStoreButtons(next2) ? next2 : null)
+        const creditBlock = isCredit(next1) ? next1 : (isCredit(next2) ? next2 : null)
+
+        if (linksBlock || creditBlock) {
+          const creditText = (creditBlock?.children || []).map((c: any) => c.text || '').join('')
+          const appName = creditText.split('開発元:')[0]?.replace(/\n/g, '').trim() || b.alt || 'App'
+          const devInfo = creditText.match(/開発元:(.*?)価格/)?.[1]?.trim() || creditText.match(/開発元:(.*?)posted/)?.[1]?.trim() || creditText.match(/開発元:(.*?)$/)?.[1]?.trim()
+          const price = creditText.includes('無料') ? '無料' : ''
+
+          result.push({
+            _type: 'appreachCard',
+            _key: `appreach-${b._key}`,
+            appName,
+            devInfo,
+            price,
+            icon: b,
+            links: linksBlock,
+            credit: creditBlock
+          })
+
+          const skipCount = (linksBlock === next1 || creditBlock === next1 ? 1 : 0) + (linksBlock === next2 || creditBlock === next2 ? 1 : 0)
+          i += skipCount + 1
+          continue
+        }
+      }
+    }
+    result.push(b)
+    i++
+  }
+  return result
+}
