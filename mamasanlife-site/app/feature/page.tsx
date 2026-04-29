@@ -2,7 +2,7 @@ import { sanityClient } from '@/lib/sanity.client'
 import { latestByCategoryQuery } from '@/lib/queries'
 import { PostList } from '@/components/PostList'
 
-export const revalidate = 120
+export const revalidate = 3600
 
 export const metadata = { title: '特集', description: '特集記事の一覧' }
 

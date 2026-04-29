@@ -1,0 +1,1894 @@
+{
+  "_createdAt": "2025-08-26T10:23:41Z",
+  "_id": "drafts.mebuq6EaBE5xLCmLicoE3v",
+  "_rev": "1oPbursIe3uojjO5Zc1vDg",
+  "_system": {
+    "base": {
+      "id": "mebuq6EaBE5xLCmLicoE3v",
+      "rev": "mebuq6EaBE5xLCmLicoE0P"
+    }
+  },
+  "_type": "post",
+  "_updatedAt": "2026-01-09T06:51:05Z",
+  "body": [
+    {
+      "_key": "690b4891823b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7797041de11",
+          "_type": "span",
+          "marks": [],
+          "text": "は2014年から約10年と長い付き合いでしたので今回の"
+        },
+        {
+          "_key": "a781bc5e53c2",
+          "_type": "span",
+          "marks": [],
+          "text": "へのNMPのりかえは久しぶりとなります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "de1a886d06c8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d2b0ded59927",
+          "_type": "span",
+          "marks": [],
+          "text": "長らくお世話になったiijmioさま。10年前のIIJmioは、現在のMVNOの先駆け的な存在であり、"
+        },
+        {
+          "_key": "e6b08de87751",
+          "_type": "span",
+          "marks": [],
+          "text": "と言えました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4cb76a3f89fe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ff1e0b572483",
+          "_type": "span",
+          "marks": [],
+          "text": "時代は令和。今では格安SIM会社も増加し各社いろいろなプランを打ち出しております。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9385f4fa7448",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "26c460f20128",
+          "_type": "span",
+          "marks": [],
+          "text": "この度固定費見直しを検討した結果、日本通信SIMへのりかえることに。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b73e859d0e0f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1abf0b3ff384",
+          "_type": "span",
+          "marks": [],
+          "text": "その際につまづいた点や発見があったのでこれからのりかえる方に向けて役立つ情報になれば、とお伝えします。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b82661889c4d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d02300cb002b",
+          "_type": "span",
+          "marks": [],
+          "text": "子どものスマホ回線も日本通信SIMできまり！新規加入の場合の記事はこちら↓"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1501391210d1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3342931ca031",
+          "_type": "span",
+          "marks": [],
+          "text": "月末最終日にNMP乗り換えした場合の請求について"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "a183a01b24fd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9e5d81024223",
+          "_type": "span",
+          "marks": [],
+          "text": "IIJmioと日本通信SIMの両社とも、月額料金の"
+        },
+        {
+          "_key": "cfb2dce5cc89",
+          "_type": "span",
+          "marks": [],
+          "text": "ことから、切り替え月は両方の事業者の料金がかかります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ccfa93a994b8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2a37dc0aa922",
+          "_type": "span",
+          "marks": [],
+          "text": "つまり、この記事でおすすめする「月末最終日にNMP乗り換え」した場合"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dd6ceae79f67",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8616276bbbf6",
+          "_type": "span",
+          "marks": [],
+          "text": "①当月分（まるまる1ヶ月分）の請求が"
+        },
+        {
+          "_key": "438a41a11079",
+          "_type": "span",
+          "marks": [],
+          "text": "から"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d283e17dc33d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "939c53503dfc",
+          "_type": "span",
+          "marks": [],
+          "text": "②月末最終日から翌月最終日前日までの請求が"
+        },
+        {
+          "_key": "64a7b1d7363c",
+          "_type": "span",
+          "marks": [],
+          "text": "から"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c1de5ce84ddd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e55968e3d882",
+          "_type": "span",
+          "marks": [],
+          "text": "それぞれ請求されることになります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "65724ef88202",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8c9d348f8662",
+          "_type": "span",
+          "marks": [],
+          "text": "結論として、日割り計算こそありませんが、月末乗り換えをすることにより"
+        },
+        {
+          "_key": "14349d4faaee",
+          "_type": "span",
+          "marks": [],
+          "text": "できた上で"
+        },
+        {
+          "_key": "8156726c1b3b",
+          "_type": "span",
+          "marks": [],
+          "text": "ことができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "79e0959ad05c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "de929b421c49",
+          "_type": "span",
+          "marks": [],
+          "text": "ここでは、"
+        },
+        {
+          "_key": "6786b1602a32",
+          "_type": "span",
+          "marks": [],
+          "text": "から"
+        },
+        {
+          "_key": "f8d5257de878",
+          "_type": "span",
+          "marks": [],
+          "text": "へのMNPのりかえの手順と注意点をわかりやすく解説していきます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9b0d14b383ab",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d12eb565dc3d",
+          "_type": "span",
+          "marks": [],
+          "text": "MNP（モバイル番号ポータビリティ）とは？"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "003642c1fab8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "873f93a7d746",
+          "_type": "span",
+          "marks": [],
+          "text": "は「Mobile Number Portability」の略で、携帯電話の電話番号を変えずに、別の携帯電話会社に乗り換えることができるサービスのことです。ユーザーは電話番号を保持しつつ、より良いサービスや料金プランを求めて他社に移行できます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "033e88a11a5c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "03296807a9e0",
+          "_type": "span",
+          "marks": [],
+          "text": "今回のりかえの際に"
+        },
+        {
+          "_key": "4516026648a9",
+          "_type": "span",
+          "marks": [],
+          "text": "NMP予約番号発行手続きが必要になりました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e24e71f59181",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "42144fbb7f99",
+          "_type": "span",
+          "marks": [],
+          "text": "NMPの方式には２種類ある！"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "f74d4b916b48",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9fb54318db5c",
+          "_type": "span",
+          "marks": [],
+          "text": "NMPには2024/5/24から始まった新方式の"
+        },
+        {
+          "_key": "c45e492fa5e1",
+          "_type": "span",
+          "marks": [],
+          "text": "と従来型の"
+        },
+        {
+          "_key": "db5bce93a618",
+          "_type": "span",
+          "marks": [],
+          "text": "があります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4a4c62848bba",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "088f191777de",
+          "_type": "span",
+          "marks": [],
+          "text": "それぞれについて簡単に表にしました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d6e8f165f4b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c84dc15b3f50",
+          "_type": "span",
+          "marks": [],
+          "text": "ワンストップ方式は日本通信SIMの"
+        },
+        {
+          "_key": "40cc29286e11",
+          "_type": "span",
+          "marks": [],
+          "text": "をダウンロードしてそこから申し込みます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "34757637b15b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6700d74594d8",
+          "_type": "span",
+          "marks": [],
+          "text": "筆者は"
+        },
+        {
+          "_key": "e330b077b8b3",
+          "_type": "span",
+          "marks": [],
+          "text": "で開通申込み、夫は"
+        },
+        {
+          "_key": "bbcfb5ea1f14",
+          "_type": "span",
+          "marks": [],
+          "text": "で開通申込みと違ったパターンで申し込みましたがSIMが届いたのは同日でした。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "63c354b0bf4e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dd1843d5b0e3",
+          "_type": "span",
+          "marks": [],
+          "text": "つまり、お届けにかかる期間が短縮になるというより手間が省けるだけワンストップが便利という結論でした。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "35a5b8d75f49",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3ac10dbc6764",
+          "_type": "span",
+          "marks": [],
+          "text": "SIMカードも2種類ある！"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "72e67edbc3cb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "af20f55d582b",
+          "_type": "span",
+          "marks": [],
+          "text": "SIMカードには物理SIMとeSIMの2種類があります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2a3c6b378442",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "de1434e07fce",
+          "_type": "span",
+          "marks": [],
+          "text": "・"
+        },
+        {
+          "_key": "6caa52f64188",
+          "_type": "span",
+          "marks": [],
+          "text": "は多くの端末に対応しているため、互換性が高いですが、SIMカードの紛失・破損のリスクがあります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "80cc14be49af",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3fb93e6fed6c",
+          "_type": "span",
+          "marks": [],
+          "text": "・"
+        },
+        {
+          "_key": "696a38609edd",
+          "_type": "span",
+          "marks": [],
+          "text": "は、SIMカードの紛失・破損のリスクがなく、端末変更時の手続きが簡単ですが、対応端末が限定的です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "97220e84b29c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6df3c9276a9c",
+          "_type": "span",
+          "marks": [],
+          "text": "メリットとデメリットは、使用する人の利用シーンや端末によって異なります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d182f48522d1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "095145c675dc",
+          "_type": "span",
+          "marks": [],
+          "text": "個人のニーズに合わせて、物理的SIMとeSIMを選択することが大切です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dfbfe68d2d56",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "88496cdc56ee",
+          "_type": "span",
+          "marks": [],
+          "text": "「物理的SIM」と「eSIM」のメリットとデメリットを比較"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "f5f6672642d5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "136ad14fef66",
+          "_type": "span",
+          "marks": [],
+          "text": "以下は、"
+        },
+        {
+          "_key": "c91b81baaf85",
+          "_type": "span",
+          "marks": [],
+          "text": "の「物理的SIM」と「eSIM」のメリットとデメリットを比較した表です。この表を参考にして、自分に最適な選択肢を見つけてくださいね。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6b2c7cab8ba8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2db101a22b95",
+          "_type": "span",
+          "marks": [],
+          "text": "日本通信SIMのMNP発行を伴う開通申し込み手順"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "0021265e9268",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "28153173a24d",
+          "_type": "span",
+          "marks": [],
+          "text": "ここでは早くて安くてうまい、牛丼のような乗り換え手続き方法をのせます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "67b65cb4d872",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "52a819924233",
+          "_type": "span",
+          "marks": [],
+          "text": "スターターパックを事前に購入して初期手数料を節約しよう"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "f41e527d7435",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f67084bff649",
+          "_type": "span",
+          "marks": [
+            "m0"
+          ],
+          "text": "日本通信SIM"
+        },
+        {
+          "_key": "3856d2eed272",
+          "_type": "span",
+          "marks": [],
+          "text": "のスターターパックはAmazonなどで購入できます。事前に購入することで、初期手数料を"
+        },
+        {
+          "_key": "8cfc39d8d904",
+          "_type": "span",
+          "marks": [],
+          "text": "できます。(セール時期だと30％以上お得に購入できることも！)"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m0",
+          "_type": "link",
+          "href": "https://www.nihontsushin.com/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "f41e527d7435_moshimo_0",
+      "_type": "htmlEmbed",
+      "html": "<!-- START MoshimoAffiliateEasyLink -->\n<script type=\"text/javascript\">\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"【日本通信SIM】音声対応：合理的（シンプル290プラン、みんなのプラン、50GBプラン、他）またはデータ通信専用：（ネットだけプラン）から選んでお申込みいただける新スターターパック NT-ST2-P ドコモネットワーク 4G\\/3G\",\"b\":\"アイサポモバイル\",\"t\":\"NT-ST2-P2\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\\/images\\/I\",\"p\":[\"\\/51+xe2eux3L._SL500_.jpg\",\"\\/51fEO8IctQL._SL500_.jpg\",\"\\/61IR5SPrb4L._SL500_.jpg\",\"\\/41ZW9l7B8eL._SL500_.jpg\",\"\\/61GXEicsstL._SL500_.jpg\",\"\\/41zA97p6k2L._SL500_.jpg\",\"\\/51mDRqL3x1L._SL500_.jpg\",\"\\/61rSbn+2kgL._SL500_.jpg\",\"\\/41knpiswZBL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B0DQC4LNLQ\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":1,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B0DQC4LNLQ\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":1},{\"id\":2,\"u_tx\":\"楽天市場で見る\",\"u_bc\":\"#f76956\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/%E3%80%90%E6%97%A5%E6%9C%AC%E9%80%9A%E4%BF%A1SIM%E3%80%91%E9%9F%B3%E5%A3%B0%E5%AF%BE%E5%BF%9C%EF%BC%9A%E5%90%88%E7%90%86%E7%9A%84%EF%BC%88%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB290%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%83%97%E3%83%A9%E3%83%B3%E3%80%8150GB%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E4%BB%96%EF%BC%89%E3%81%BE%E3%81%9F%E3%81%AF%E3%83%87%E3%83%BC%E3%82%BF%E9%80%9A%E4%BF%A1%E5%B0%82%E7%94%A8%EF%BC%9A%EF%BC%88%E3%83%8D%E3%83%83%E3%83%88%E3%81%A0%E3%81%91%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89%E3%81%8B%E3%82%89%E9%81%B8%E3%82%93%E3%81%A7%E3%81%8A%E7%94%B3%E8%BE%BC%E3%81%BF%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%82%8B%E6%96%B0%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%91%E3%83%83%E3%82%AF%20NT-ST2-P%20%E3%83%89%E3%82%B3%E3%83%A2%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%204G%2F3G\\/\",\"a_id\":4046502,\"p_id\":54,\"pl_id\":27059,\"pc_id\":54,\"s_n\":\"rakuten\",\"u_so\":2},{\"id\":3,\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_bc\":\"#66a7ff\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=%E3%80%90%E6%97%A5%E6%9C%AC%E9%80%9A%E4%BF%A1SIM%E3%80%91%E9%9F%B3%E5%A3%B0%E5%AF%BE%E5%BF%9C%EF%BC%9A%E5%90%88%E7%90%86%E7%9A%84%EF%BC%88%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB290%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%83%97%E3%83%A9%E3%83%B3%E3%80%8150GB%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E4%BB%96%EF%BC%89%E3%81%BE%E3%81%9F%E3%81%AF%E3%83%87%E3%83%BC%E3%82%BF%E9%80%9A%E4%BF%A1%E5%B0%82%E7%94%A8%EF%BC%9A%EF%BC%88%E3%83%8D%E3%83%83%E3%83%88%E3%81%A0%E3%81%91%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89%E3%81%8B%E3%82%89%E9%81%B8%E3%82%93%E3%81%A7%E3%81%8A%E7%94%B3%E8%BE%BC%E3%81%BF%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%82%8B%E6%96%B0%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%91%E3%83%83%E3%82%AF%20NT-ST2-P%20%E3%83%89%E3%82%B3%E3%83%A2%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%204G%2F3G\",\"a_id\":4046520,\"p_id\":1225,\"pl_id\":27061,\"pc_id\":1925,\"s_n\":\"yahoo\",\"u_so\":3}],\"eid\":\"1b4yz\",\"s\":\"s\"});\n</script>\n<div id=\"msmaflink-1b4yz\">リンク</div>\n<!-- MoshimoAffiliateEasyLink END -->"
+    },
+    {
+      "_key": "8431fb1ab35c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "78ba3afc50ad",
+          "_type": "span",
+          "marks": [],
+          "text": "スターターパックのQRコードにアクセス"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "ad55a1c73f40",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a9bc1dcdcc47",
+          "_type": "span",
+          "marks": [],
+          "text": "スターターパックに載っているQRコードまたはこちら↓から日本通信SIMのアプリをダウンロードする。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1977142462bb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a262644cbddb",
+          "_type": "span",
+          "marks": [],
+          "text": "料金プランを選ぶ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "7785076bf7ba",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dc7766e0226d",
+          "_type": "span",
+          "marks": [],
+          "text": "自分の利用状況に合わせて適切なデータプランや通話プランを選択します。2024年9月30日よりギガを増量する発表がありました！みんなのプランでは"
+        },
+        {
+          "_key": "9ced40571cef",
+          "_type": "span",
+          "marks": [],
+          "text": "へ、30GBプランでは"
+        },
+        {
+          "_key": "64ba3df52d50",
+          "_type": "span",
+          "marks": [],
+          "text": "へ料金は据え置きでそれぞれ使える容量アップいたします。それによりWifi環境下でなくても容量をさほど気にすることなく動画視聴や学習・ビジネス利用できる場面が増え便利になりますね。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "87fd6737521c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "24698ff932d7",
+          "_type": "span",
+          "marks": [],
+          "text": "プランごとの損益分岐点"
+        }
+      ],
+      "markDefs": [],
+      "style": "h4"
+    },
+    {
+      "_key": "ab67e0624b1a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0057e107a3f0",
+          "_type": "span",
+          "marks": [],
+          "text": "プランごとにどのぐらいの使用量で損益分岐点となるか調べてみました。"
+        },
+        {
+          "_key": "053d903978b8",
+          "_type": "span",
+          "marks": [],
+          "text": "しています。毎月ご利用されるギガ数に応じてプランを選ぶ際に参考にしてくださいね。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8fb0e801330b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "84b9b0ce7ebc",
+          "_type": "span",
+          "marks": [],
+          "text": "注意点："
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "65f48b3912c4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5f5a9dc1dd10",
+          "_type": "span",
+          "marks": [],
+          "text": "この表をもとに、自身のデータ使用量や通話ニーズを考慮して最適なプランを選択してください。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "10caadd695b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d6b3c6d5a573",
+          "_type": "span",
+          "marks": [],
+          "text": "事前準備とMNP予約方式などの入力"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "a6b3117aca8d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d57d817cf102",
+          "_type": "span",
+          "marks": [],
+          "text": "✔️「"
+        },
+        {
+          "_key": "71900e599d71",
+          "_type": "span",
+          "marks": [],
+          "text": "を選択"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1d711a665cc1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e440973d2a53",
+          "_type": "span",
+          "marks": [],
+          "text": "✔️「"
+        },
+        {
+          "_key": "ba890af5952e",
+          "_type": "span",
+          "marks": [],
+          "text": "」を選択"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e3867956837f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "58b3c69190f9",
+          "_type": "span",
+          "marks": [],
+          "text": "データ量の上限値やオプションを設定する"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "37b3c22767c7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "234b97876b19",
+          "_type": "span",
+          "marks": [],
+          "text": "データ使用量の上限を設定をすることで、簡単に"
+        },
+        {
+          "_key": "0200795fb732",
+          "_type": "span",
+          "marks": [],
+          "text": "できて安心です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a76427ff5f2c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "56def12a4374",
+          "_type": "span",
+          "marks": [],
+          "text": "例えば、上限を5GBに設定しておくと、それ以上はデータを消費せず低速モード（無料）へ切り替わります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1bbe4e4a498a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "675922a86273",
+          "_type": "span",
+          "marks": [],
+          "text": "とは言ってもデータの追加(220円/1GB)はいつでも可能です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "20484ab33186",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "546e4cf0decc",
+          "_type": "span",
+          "marks": [],
+          "text": "お支払い額は、設定した上限ではなく、実際に使ったデータ量に応じた額になります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e9cfcc5ce954",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f593aaf108bb",
+          "_type": "span",
+          "marks": [],
+          "text": "マイページを作成する"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "dd4e40fb45ed",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2d17f1d4079",
+          "_type": "span",
+          "marks": [],
+          "text": "マイページから申し込みをする"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "1fae1f6f5cd3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "894042fbe9d4",
+          "_type": "span",
+          "marks": [],
+          "text": "登録完了後メールでお知らせが来るので貼ってあるURLからマイページに進む。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3d9a3db85cb6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8503199b2d45",
+          "_type": "span",
+          "marks": [],
+          "text": "本人確認書類の提出"
+        }
+      ],
+      "markDefs": [],
+      "style": "h4"
+    },
+    {
+      "_key": "8019e4c25d48",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9dfc817c0d5a",
+          "_type": "span",
+          "marks": [],
+          "text": "✔️スターターパックの申込コードを入力する"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "186067a8e773",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2e7ab0453c4d",
+          "_type": "span",
+          "marks": [],
+          "text": "✔️マイナンバーカードをアプリで読み取る"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "49d614fe7e3c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "223839efb2e9",
+          "_type": "span",
+          "marks": [],
+          "text": "✔️クレジットカード情報を入力する"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d8e2f7e860de",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8822fcdd8e29",
+          "_type": "span",
+          "marks": [],
+          "text": "SIMカードの発行手続き"
+        }
+      ],
+      "markDefs": [],
+      "style": "h4"
+    },
+    {
+      "_key": "312df7f2bdbc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5b29d21176bb",
+          "_type": "span",
+          "marks": [],
+          "text": "申込内容が確認されると、日本通信SIMからSIMカードが発行され、指定の住所に郵送されます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b018ccec965a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8013f2ed966f",
+          "_type": "span",
+          "marks": [],
+          "text": "新しいSIMカードが届いたら、開通作業を行います。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "913eedf51d2e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9600b596d8f",
+          "_type": "span",
+          "marks": [],
+          "text": "SIMカードの受け取りとMNPの開通作業"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "c5a1afaace12",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4f0f8c1d2aaa",
+          "_type": "span",
+          "marks": [],
+          "text": "マイページにログインし画面に沿って「MNP回線切り替え」または「SIMを開通する」ボタンを押す"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d5b9714f9427",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "24553263e1db",
+          "_type": "span",
+          "marks": [],
+          "text": "となります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "605285023bcd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cf0b3688bc14",
+          "_type": "span",
+          "marks": [],
+          "text": "開通にはボタンを押した時間により数時間から24時間程度かかる場合があります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "06af9c38daf6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d2c50c7310f6",
+          "_type": "span",
+          "marks": [],
+          "text": "開通後、完了メールが届きます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ab332a7d177c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2420dacf93d",
+          "_type": "span",
+          "marks": [],
+          "text": "SIMカードの挿入"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "023f7be08155",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a5bf0c545361",
+          "_type": "span",
+          "marks": [],
+          "text": "現在のスマートフォンのSIMカードを日本通信SIMのものに交換します。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4a791dfac5d2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "485e5419344f",
+          "_type": "span",
+          "marks": [],
+          "text": "端末の設定をします。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "855a275dd856",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "03fe0972dfbf",
+          "_type": "span",
+          "marks": [],
+          "text": "サービスの確認"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "dfb6d47f6511",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fdfb63259467",
+          "_type": "span",
+          "marks": [],
+          "text": "スマートフォンから通話やデータ通信が正常に行えるかを確認します。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "00fd33b47e2b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "506d06ff3f0a",
+          "_type": "span",
+          "marks": [],
+          "text": "旧携帯会社との契約解除"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3df8ebcb3aec",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "80c14242cc09",
+          "_type": "span",
+          "marks": [],
+          "text": "MNPが成功すると、"
+        },
+        {
+          "_key": "731df4c1b2d5",
+          "_type": "span",
+          "marks": [],
+          "text": "されます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9b2cab605fca",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9880a14a37b3",
+          "_type": "span",
+          "marks": [],
+          "text": "注意事項"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "aaab8b7a2462",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "21dccbf77e96",
+          "_type": "span",
+          "marks": [],
+          "text": "MNP予約番号の有効期限：取得から15日以内に日本通信SIMの申込みを完了する必要があります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9103c7a079bd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c7a20c4f35ae",
+          "_type": "span",
+          "marks": [],
+          "text": "有効期限が短いため、予約番号取得後は速やかに次の手続きを行うことが重要です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d96083c9ebd0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ad6beda5ee0b",
+          "_type": "span",
+          "marks": [],
+          "text": "通話およびデータ確認：開通後は必ず通話やデータ通信が正常に利用できるか確認し、問題があれば日本通信SIMのカスタマーサポートに問い合わせてください。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "23914a83377e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a53e36a1528d",
+          "_type": "span",
+          "marks": [],
+          "text": "この手順に沿って、スムーズに日本通信SIMへの乗り換えを行うことができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3426bbe36b2e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5f0cfe11572",
+          "_type": "span",
+          "marks": [],
+          "text": "のりかえスケジュール事例"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "950d45c3203b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f1c7ab60cf46",
+          "_type": "span",
+          "marks": [],
+          "text": "実際に筆者と筆者の夫が"
+        },
+        {
+          "_key": "6eff0e6d14ff",
+          "_type": "span",
+          "marks": [],
+          "text": "から"
+        },
+        {
+          "_key": "857439f8a135",
+          "_type": "span",
+          "marks": [],
+          "text": "に乗り換えた際の手順は以下の通りです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2a0a41411b42",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fa18435de7f2",
+          "_type": "span",
+          "marks": [],
+          "text": "2024/05/08　"
+        },
+        {
+          "_key": "04ca5d682491",
+          "_type": "span",
+          "marks": [],
+          "text": "でスターターパック(2,816円　※5/8時点の価格）を2つ購入"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "656e4c29598a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "06fd9cba4d31",
+          "_type": "span",
+          "marks": [],
+          "text": "2024/05/09　スターターパックが到着"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a11204a65244",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "eb2158c20995",
+          "_type": "span",
+          "marks": [],
+          "text": "2024/05/26　夫：IIJmioのMNP予約番号を発行　"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "26c385db928a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4cdb8e8437b6",
+          "_type": "span",
+          "marks": [],
+          "text": "2024/05/26　筆者：日本通信SIMアプリから新方式の"
+        },
+        {
+          "_key": "a48939c91c2c",
+          "_type": "span",
+          "marks": [],
+          "text": "で開通申込み　"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1564023310e0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6240ac26f40e",
+          "_type": "span",
+          "marks": [],
+          "text": "2024/05/28　夫：早朝、IIJmioから予約番号が発行メールが届き日本通信SIMアプリで従来型の"
+        },
+        {
+          "_key": "bb44a57c2438",
+          "_type": "span",
+          "marks": [],
+          "text": "で開通申込み　"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "117e230da9f6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ec8041a5efcf",
+          "_type": "span",
+          "marks": [],
+          "text": "SIMの到着までには"
+        },
+        {
+          "_key": "7ff44cd490c4",
+          "_type": "span",
+          "marks": [],
+          "text": "かかりますが"
+        },
+        {
+          "_key": "f82eaf45f754",
+          "_type": "span",
+          "marks": [],
+          "text": "この時は2日後に届きました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "39a8c2a19d1c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "372e5519205a",
+          "_type": "span",
+          "marks": [],
+          "text": "2024/05/30　日本通信SIMより２人分のSIMと開通手続きの書類が届く。仕事のため、受け取り指定時間を"
+        },
+        {
+          "_key": "ba65eb6f7e2c",
+          "_type": "span",
+          "marks": [],
+          "text": "に指定。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "50c52afaa8e0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ff3b56f6d240",
+          "_type": "span",
+          "marks": [],
+          "text": "2024/05/30　筆者：開通手続き完了"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2a51c3f01db2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "349195810999",
+          "_type": "span",
+          "marks": [],
+          "text": "2024/05/31 　　夫：開通手続き完了"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f8e288428bdf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "782ec352a7b7",
+          "_type": "span",
+          "marks": [],
+          "text": "私たちは月末ギリギリでワンストップ・ツーストップ方式で手続き方法に違いがありましたが"
+        },
+        {
+          "_key": "fcd826db62b1",
+          "_type": "span",
+          "marks": [],
+          "text": "しました。月を超えると"
+        },
+        {
+          "_key": "6d98a85d750d",
+          "_type": "span",
+          "marks": [],
+          "text": "への月額使用料が1ヶ月分まるまるかかってしまうため届くまで"
+        },
+        {
+          "_key": "9766e640d9a0",
+          "_type": "span",
+          "marks": [],
+          "text": "でした。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b600c236004e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "254b90375830",
+          "_type": "span",
+          "marks": [],
+          "text": "月末乗り換えの最適スケジュール（30日、31日の月の場合）"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "7223ab7a93ef",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7d1198b68961",
+          "_type": "span",
+          "marks": [],
+          "text": "自分自身のしくじり体験や調べてわかったことをもとに、月末（30日、31日の月の場合）に乗り換えるための最適なスケジュールを紹介します。2月に乗り換える場合は表示する日から2日ほどマイナスしてください。乗り換えするときの参考にしてみてくださいね。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dd8d65591da3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "40cd64bf155c",
+          "_type": "span",
+          "marks": [],
+          "text": "　Amazonや楽天などであらかじめスターターパックを購入（セール時だとさらにお得にGET！)"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dd8d65591da3_moshimo_1",
+      "_type": "htmlEmbed",
+      "html": "<!-- START MoshimoAffiliateEasyLink -->\n<script type=\"text/javascript\">\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"【日本通信SIM】音声対応：合理的（シンプル290プラン、みんなのプラン、50GBプラン、他）またはデータ通信専用：（ネットだけプラン）から選んでお申込みいただける新スターターパック NT-ST2-P ドコモネットワーク 4G\\/3G\",\"b\":\"アイサポモバイル\",\"t\":\"NT-ST2-P2\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\\/images\\/I\",\"p\":[\"\\/51+xe2eux3L._SL500_.jpg\",\"\\/51fEO8IctQL._SL500_.jpg\",\"\\/61IR5SPrb4L._SL500_.jpg\",\"\\/41ZW9l7B8eL._SL500_.jpg\",\"\\/61GXEicsstL._SL500_.jpg\",\"\\/41zA97p6k2L._SL500_.jpg\",\"\\/51mDRqL3x1L._SL500_.jpg\",\"\\/61rSbn+2kgL._SL500_.jpg\",\"\\/41knpiswZBL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B0DQC4LNLQ\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":1,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B0DQC4LNLQ\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":1},{\"id\":2,\"u_tx\":\"楽天市場で見る\",\"u_bc\":\"#f76956\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/%E3%80%90%E6%97%A5%E6%9C%AC%E9%80%9A%E4%BF%A1SIM%E3%80%91%E9%9F%B3%E5%A3%B0%E5%AF%BE%E5%BF%9C%EF%BC%9A%E5%90%88%E7%90%86%E7%9A%84%EF%BC%88%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB290%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%83%97%E3%83%A9%E3%83%B3%E3%80%8150GB%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E4%BB%96%EF%BC%89%E3%81%BE%E3%81%9F%E3%81%AF%E3%83%87%E3%83%BC%E3%82%BF%E9%80%9A%E4%BF%A1%E5%B0%82%E7%94%A8%EF%BC%9A%EF%BC%88%E3%83%8D%E3%83%83%E3%83%88%E3%81%A0%E3%81%91%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89%E3%81%8B%E3%82%89%E9%81%B8%E3%82%93%E3%81%A7%E3%81%8A%E7%94%B3%E8%BE%BC%E3%81%BF%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%82%8B%E6%96%B0%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%91%E3%83%83%E3%82%AF%20NT-ST2-P%20%E3%83%89%E3%82%B3%E3%83%A2%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%204G%2F3G\\/\",\"a_id\":4046502,\"p_id\":54,\"pl_id\":27059,\"pc_id\":54,\"s_n\":\"rakuten\",\"u_so\":2},{\"id\":3,\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_bc\":\"#66a7ff\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=%E3%80%90%E6%97%A5%E6%9C%AC%E9%80%9A%E4%BF%A1SIM%E3%80%91%E9%9F%B3%E5%A3%B0%E5%AF%BE%E5%BF%9C%EF%BC%9A%E5%90%88%E7%90%86%E7%9A%84%EF%BC%88%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB290%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%83%97%E3%83%A9%E3%83%B3%E3%80%8150GB%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E4%BB%96%EF%BC%89%E3%81%BE%E3%81%9F%E3%81%AF%E3%83%87%E3%83%BC%E3%82%BF%E9%80%9A%E4%BF%A1%E5%B0%82%E7%94%A8%EF%BC%9A%EF%BC%88%E3%83%8D%E3%83%83%E3%83%88%E3%81%A0%E3%81%91%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89%E3%81%8B%E3%82%89%E9%81%B8%E3%82%93%E3%81%A7%E3%81%8A%E7%94%B3%E8%BE%BC%E3%81%BF%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%82%8B%E6%96%B0%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%91%E3%83%83%E3%82%AF%20NT-ST2-P%20%E3%83%89%E3%82%B3%E3%83%A2%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%204G%2F3G\",\"a_id\":4046520,\"p_id\":1225,\"pl_id\":27061,\"pc_id\":1925,\"s_n\":\"yahoo\",\"u_so\":3}],\"eid\":\"1b4yz\",\"s\":\"s\"});\n</script>\n<div id=\"msmaflink-1b4yz\">リンク</div>\n<!-- MoshimoAffiliateEasyLink END -->"
+    },
+    {
+      "_key": "5878ca014cfb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6a8f8861240c",
+          "_type": "span",
+          "marks": [],
+          "text": "20日：　MNP予約番号を発行（MNPワンストップ方式が利用できない事業者の場合はツーストップ方式で行う）　"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0ee3d1239e75",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7ec937e31dd3",
+          "_type": "span",
+          "marks": [],
+          "text": "23日までに：　日本通信SIMアプリから開通申込み（ツーストップ方式・ワンストップ方式）　"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a22aaf8bbad5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "526ff8d2514b",
+          "_type": "span",
+          "marks": [],
+          "text": "物理SIMの到着までには"
+        },
+        {
+          "_key": "981027e1692b",
+          "_type": "span",
+          "marks": [],
+          "text": "かかります"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cf1a7edf96e3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e237cb0e3db8",
+          "_type": "span",
+          "marks": [],
+          "text": "29日までに：　日本通信SIMより開通手続きの書類が届く"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3b728f706f1b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0dda5b08d8a",
+          "_type": "span",
+          "marks": [],
+          "text": "月末最終日：　20時までに「開通手続き」の申込を完了させる"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9ae71ce55326",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "43b9ccec4857",
+          "_type": "span",
+          "marks": [],
+          "text": "開通手続きは"
+        },
+        {
+          "_key": "77de4fdce0f2",
+          "_type": "span",
+          "marks": [],
+          "text": "【"
+        },
+        {
+          "_key": "2f9778b07ed1",
+          "_type": "span",
+          "marks": [],
+          "text": "】"
+        },
+        {
+          "_key": "d0a9a1aedce1",
+          "_type": "span",
+          "marks": [],
+          "text": "【"
+        },
+        {
+          "_key": "e29d432ac4a5",
+          "_type": "span",
+          "marks": [],
+          "text": "】"
+        },
+        {
+          "_key": "cf17671a8bca",
+          "_type": "span",
+          "marks": [],
+          "text": "そのため月末は注意が必要！"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "632c42fffdd4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6d4a4440fcda",
+          "_type": "span",
+          "marks": [],
+          "text": "手続きは比較的シンプルですが、月末に間に合わせるためタイムスケジュールが重要です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8c9b6aaedfea",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3405d6e28d74",
+          "_type": "span",
+          "marks": [],
+          "text": "MNPのりかえの注意点やリスク"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "71ef8712a576",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "77444e4be725",
+          "_type": "span",
+          "marks": [],
+          "text": "月末の乗り換えは手続きが間に合わないと"
+        },
+        {
+          "_key": "2f35d6f9ba83",
+          "_type": "span",
+          "marks": [],
+          "text": "があります。私たちはギリギリの綱渡りで無事に月末乗り換えができましたが、あと1日届くのが遅かったら、時間通りに届かなかったら。。。と思うと気が気でなかったです。これらの反省点を踏まえて、この記事を作成しました。これから移行を検討している方が、スムーズかつ成功裏にMNP移行を完了できることを願っています 。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d808ac5dd29e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c50dd8ee831d",
+          "_type": "span",
+          "marks": [],
+          "text": "以上を踏まえて早めの準備が重要です。"
+        },
+        {
+          "_key": "08ebdc79e5e9",
+          "_type": "span",
+          "marks": [],
+          "text": "からもMNPのりかえについて注意書きがされていました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d527bdc72a21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d804606265a6",
+          "_type": "span",
+          "marks": [],
+          "text": "まとめ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "5c11f6e1c525",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "905a1f0ebe91",
+          "_type": "span",
+          "marks": [],
+          "text": "IIJmioから日本通信SIMへの乗り換えは、実店舗が少ないのでほとんどの場合自分で操作することになります。手続きは10日前から開始して手順を踏みつつスピーディに進めることが大切です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7f61b35cc56d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0fd74e8c8d2a",
+          "_type": "span",
+          "marks": [],
+          "text": "そして乗り換えの開通日を月末に行うことで、料金を最大限に節約できます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c897080793fa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9176df37b84e",
+          "_type": "span",
+          "marks": [],
+          "text": "事前準備をしっかり行い、スムーズに手続きを進めましょう。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c077f413ee1f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cbebb0769e2f",
+          "_type": "span",
+          "marks": [],
+          "text": "Q&A"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "1194f5871674",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d090be2b2003",
+          "_type": "span",
+          "marks": [],
+          "text": "A: 乗り換え希望日の10日前に取得するのがおすすめです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e5658e4e16a7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d15ec65ff953",
+          "_type": "span",
+          "marks": [],
+          "text": "A: Amazonなどのオンラインストアで購入可能です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e5658e4e16a7_moshimo_2",
+      "_type": "htmlEmbed",
+      "html": "<!-- START MoshimoAffiliateEasyLink -->\n<script type=\"text/javascript\">\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"【日本通信SIM】音声対応：合理的（シンプル290プラン、みんなのプラン、50GBプラン、他）またはデータ通信専用：（ネットだけプラン）から選んでお申込みいただける新スターターパック NT-ST2-P ドコモネットワーク 4G\\/3G\",\"b\":\"アイサポモバイル\",\"t\":\"NT-ST2-P2\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\\/images\\/I\",\"p\":[\"\\/51+xe2eux3L._SL500_.jpg\",\"\\/51fEO8IctQL._SL500_.jpg\",\"\\/61IR5SPrb4L._SL500_.jpg\",\"\\/41ZW9l7B8eL._SL500_.jpg\",\"\\/61GXEicsstL._SL500_.jpg\",\"\\/41zA97p6k2L._SL500_.jpg\",\"\\/51mDRqL3x1L._SL500_.jpg\",\"\\/61rSbn+2kgL._SL500_.jpg\",\"\\/41knpiswZBL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B0DQC4LNLQ\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":1,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B0DQC4LNLQ\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":1},{\"id\":2,\"u_tx\":\"楽天市場で見る\",\"u_bc\":\"#f76956\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/%E3%80%90%E6%97%A5%E6%9C%AC%E9%80%9A%E4%BF%A1SIM%E3%80%91%E9%9F%B3%E5%A3%B0%E5%AF%BE%E5%BF%9C%EF%BC%9A%E5%90%88%E7%90%86%E7%9A%84%EF%BC%88%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB290%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%83%97%E3%83%A9%E3%83%B3%E3%80%8150GB%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E4%BB%96%EF%BC%89%E3%81%BE%E3%81%9F%E3%81%AF%E3%83%87%E3%83%BC%E3%82%BF%E9%80%9A%E4%BF%A1%E5%B0%82%E7%94%A8%EF%BC%9A%EF%BC%88%E3%83%8D%E3%83%83%E3%83%88%E3%81%A0%E3%81%91%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89%E3%81%8B%E3%82%89%E9%81%B8%E3%82%93%E3%81%A7%E3%81%8A%E7%94%B3%E8%BE%BC%E3%81%BF%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%82%8B%E6%96%B0%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%91%E3%83%83%E3%82%AF%20NT-ST2-P%20%E3%83%89%E3%82%B3%E3%83%A2%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%204G%2F3G\\/\",\"a_id\":4046502,\"p_id\":54,\"pl_id\":27059,\"pc_id\":54,\"s_n\":\"rakuten\",\"u_so\":2},{\"id\":3,\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_bc\":\"#66a7ff\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=%E3%80%90%E6%97%A5%E6%9C%AC%E9%80%9A%E4%BF%A1SIM%E3%80%91%E9%9F%B3%E5%A3%B0%E5%AF%BE%E5%BF%9C%EF%BC%9A%E5%90%88%E7%90%86%E7%9A%84%EF%BC%88%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB290%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%83%97%E3%83%A9%E3%83%B3%E3%80%8150GB%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E4%BB%96%EF%BC%89%E3%81%BE%E3%81%9F%E3%81%AF%E3%83%87%E3%83%BC%E3%82%BF%E9%80%9A%E4%BF%A1%E5%B0%82%E7%94%A8%EF%BC%9A%EF%BC%88%E3%83%8D%E3%83%83%E3%83%88%E3%81%A0%E3%81%91%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89%E3%81%8B%E3%82%89%E9%81%B8%E3%82%93%E3%81%A7%E3%81%8A%E7%94%B3%E8%BE%BC%E3%81%BF%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%82%8B%E6%96%B0%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%91%E3%83%83%E3%82%AF%20NT-ST2-P%20%E3%83%89%E3%82%B3%E3%83%A2%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%204G%2F3G\",\"a_id\":4046520,\"p_id\":1225,\"pl_id\":27061,\"pc_id\":1925,\"s_n\":\"yahoo\",\"u_so\":3}],\"eid\":\"1b4yz\",\"s\":\"s\"});\n</script>\n<div id=\"msmaflink-1b4yz\">リンク</div>\n<!-- MoshimoAffiliateEasyLink END -->"
+    },
+    {
+      "_key": "93ef670e0c0c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "97c9f2ae11a3",
+          "_type": "span",
+          "marks": [],
+          "text": "子どものスマホ回線も日本通信SIMできまり！新規加入の場合の記事はこちら↓"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2c87f4eb0b1e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "523b8f8c9946",
+          "_type": "span",
+          "marks": [],
+          "text": "このブログは「にほんブログ村」と「ブログリーダー」に参加しています。下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ],
+  "heroImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-446424d6c672421f54bf456b243bc22122c158fe-1024x1024-jpg",
+      "_type": "reference"
+    }
+  },
+  "slug": {
+    "_type": "slug",
+    "current": "mobile-number-portability"
+  },
+  "title": "月末狙い！IIJmioから日本通信SIMにお得に乗り換える方法"
+}

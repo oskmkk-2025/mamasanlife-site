@@ -10,7 +10,11 @@ import {
   blogCard,
   buttonLink,
   affiliateButton,
-  moshimoEasyLink
+  moshimoEasyLink,
+  faqBlock,
+  summaryBlock,
+  mangaBlock,
+  audioBlock
 } from './blocks'
 
 export const schemaTypes = [
@@ -25,5 +29,9 @@ export const schemaTypes = [
   blogCard,
   buttonLink,
   affiliateButton,
-  moshimoEasyLink
+  moshimoEasyLink,
+  faqBlock,
+  summaryBlock,
+  mangaBlock,
+  audioBlock
 ]

@@ -111,6 +111,8 @@ export const postByCategorySlugQuery = groq`
     affiliateBlocks,
     adsPlacement,
     showLineCta,
+    seoTitle,
+    seoDescription,
     "tags": tags
   }
 `
@@ -136,6 +138,8 @@ export const postBySlugAnyCategoryQuery = groq`
     affiliateBlocks,
     adsPlacement,
     showLineCta,
+    seoTitle,
+    seoDescription,
     "tags": tags
   }
 `
@@ -163,6 +167,8 @@ export const postBySlugAnyStatusQuery = groq`
     affiliateBlocks,
     adsPlacement,
     showLineCta,
+    seoTitle,
+    seoDescription,
     "tags": tags
   }
 `

@@ -15,8 +15,8 @@ if (fs.existsSync(envPath)) {
 }
 
 const client = createClient({
-    projectId: process.env.SANITY_PROJECT_ID,
-    dataset: process.env.SANITY_DATASET,
+    projectId: process.env.SANITY_PROJECT_ID || process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    dataset: process.env.SANITY_DATASET || process.env.NEXT_PUBLIC_SANITY_DATASET,
     apiVersion: '2024-03-14',
     token: process.env.SANITY_WRITE_TOKEN,
     useCdn: false,

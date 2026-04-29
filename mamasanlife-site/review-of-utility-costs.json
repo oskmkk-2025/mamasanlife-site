@@ -1,0 +1,2252 @@
+{
+  "_createdAt": "2025-08-26T10:24:10Z",
+  "_id": "mebuq6EaBE5xLCmLicoGc9",
+  "_rev": "Luzx7FR0qhV1GPaRa9KSa3",
+  "_type": "post",
+  "_updatedAt": "2026-01-09T13:47:05Z",
+  "affiliateBlocks": [
+    {
+      "html": "<a class=\"affiliate-btn affiliate-btn--a8\" href=\"https://px.a8.net/svt/ejp?a8mat=3ZJZJ2+1RPEIA+4CJ0+5ZMCH\" target=\"_blank\" rel=\"noopener noreferrer nofollow sponsored\">公式サイトでチェック</a>",
+      "note": "",
+      "title": ""
+    },
+    {
+      "html": "<a class=\"affiliate-btn affiliate-btn--a8\" href=\"https://px.a8.net/svt/ejp?a8mat=3ZJZJ2+1RPEIA+4CJ0+5YRHE\" target=\"_blank\" rel=\"noopener noreferrer nofollow sponsored\">エネチェンジ をみる</a>",
+      "note": "",
+      "title": ""
+    }
+  ],
+  "body": [
+    {
+      "_key": "476a1861807b",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "d9dfd51249c4",
+          "_type": "linkImageBlock",
+          "alt": "にほんブログ村 その他生活ブログ お得な生活へ",
+          "href": "https://life.blogmura.com/otoku/ranking/in?p_cid=11159291",
+          "src": "https://b.blogmura.com/life/otoku/88_31.gif"
+        }
+      ]
+    },
+    {
+      "_key": "28a3e104f7b8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "31c614fa404f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m0-0",
+          "_type": "link",
+          "href": "/money/in"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "4a2ea7f79d55",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "b8742cd578d3",
+          "_type": "linkImageBlock",
+          "alt": "節約・貯蓄ランキング",
+          "href": "https://blog.with2.net/link/?id=2097059&cid=1545",
+          "src": "https://blog.with2.net/img/banner/c/banner_1/br_c_1545_1.gif"
+        }
+      ]
+    },
+    {
+      "_key": "b8e7a693b620",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4b42ae4bcaaa",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "86cbaee5fdf8",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "b355867fc8d5",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "27c7327d30c6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m1-0",
+          "_type": "link",
+          "href": "/money/in"
+        },
+        {
+          "_key": "m2-1",
+          "_type": "link",
+          "href": "/money/link"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "3fe2d98a1890",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d715a3195f34",
+          "_type": "span",
+          "marks": [],
+          "text": "毎月の光熱費の請求書を見ても、「高いなぁ」と思いながらも、 仕事と家事に追われる毎日で、見直す時間さえありませんでした。でも、ふと気づいたんです。 「このまま放っておいて、本当にいいの？」"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "78f32e1ee852",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "65bcf7d52363",
+          "_type": "span",
+          "marks": [],
+          "text": "あなたはこんな経験、ありませんか？"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c478a6bf6d09",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a7a91cfbf108",
+          "_type": "span",
+          "marks": [],
+          "text": "毎月の光熱費の請求額を見て、ため息をつく "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cf9bc6d18da7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1329d86e046b",
+          "_type": "span",
+          "marks": [],
+          "text": "セット契約だから安いはず…と思い込んでいる "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b256a422ec91",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f1b3cc8cf8f5",
+          "_type": "span",
+          "marks": [],
+          "text": "見直したいけど、面倒で後回しにしている "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a99a2b2713e0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d591891f78e0",
+          "_type": "span",
+          "marks": [],
+          "text": "乗り換えの手続きが複雑そうで二の足を踏む"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "64f426ef3f6d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1a6033939db8",
+          "_type": "span",
+          "marks": [],
+          "text": "実は、私もそうでした。 東邦ガスや中部電力ミライズのセット契約のほうが 「セットだからお得なはず…」と思い込んでいたんです。でも、実際に調べてみたら、意外な真実が！"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d2f922220672",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d225a750c581",
+          "_type": "span",
+          "marks": [],
+          "text": "今回は4人家族の使用実例をもとに、最適な料金プランを検証しました。この記事が乗り換えを考える上でのヒントになれば幸いです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5dc3c0d900da",
+      "_type": "blogCard",
+      "url": "https://mamasanmoney-bu.com/chubu-electric-powers-fuel-cost-adjustment-upper-limit/"
+    },
+    {
+      "_key": "f5ecf90b05c7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "481875533d11",
+          "_type": "span",
+          "marks": [],
+          "text": "セット契約は本当にお得なのか？"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "fbf2e313a28b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "385dffc79c46",
+          "_type": "span",
+          "marks": [],
+          "text": "セット契約が当たり前という考えが、実は無駄な出費を招いているかもしれません。東邦ガスや中部電力ミライズなどからガスと"
+        },
+        {
+          "_key": "34d9e2c085ae",
+          "_type": "span",
+          "marks": [
+            "hl3-0"
+          ],
+          "text": "電気のセット契約で「お得」"
+        },
+        {
+          "_key": "7b3981fb24b9",
+          "_type": "span",
+          "marks": [],
+          "text": "を打ち出しています。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl3-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "472962c5debc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "eba6790ca5d4",
+          "_type": "span",
+          "marks": [],
+          "text": "特に子育て世帯の忙しい日常の中では手続きがシンプルであること、使用料や請求額がまとめて確認できることが魅力ですが、実際の使用量データに基づいて検証してみると意外な結果が見えてきました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7a91ce0e36ec",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3b5ea7423c87",
+          "_type": "span",
+          "marks": [],
+          "text": "ここで比較している会社の紹介"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "2b9bc56e1444",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4ec0304d72d8",
+          "_type": "span",
+          "marks": [],
+          "text": "比較サイトの「エネチェンジ」を利用。我が家の使用量を入力して出てきたおすすめプランをもとにエクセルの計算式に当てはめて"
+        },
+        {
+          "_key": "44f7cbbe7336",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "本当にお得になっているのか"
+        },
+        {
+          "_key": "984d311261d7",
+          "_type": "span",
+          "marks": [],
+          "text": "を比較検証してみました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "853f4f81420d",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "bd290bb17e04",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://px.a8.net/svt/ejp?a8mat=3ZJZJ2+1RPEIA+4CJ0+5ZMCH",
+          "provider": "other",
+          "src": "https://www21.a8.net/svt/bgt?aid=241117598107&wid=001&eno=01&mid=s00000020286001006000&mc=1"
+        }
+      ]
+    },
+    {
+      "_key": "3f12b3b8348e",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d7a07677bf758571dd49b6de3f7de5458b534d49-1x1-gif",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "fc7485eb4530",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "27daeac070ad",
+          "_type": "span",
+          "marks": [],
+          "text": "電気　中部電力エリア"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "846bec18d785",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8d23f2ca824a",
+          "_type": "span",
+          "marks": [],
+          "text": "東邦ガス「シンプルプランI」"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "916dcf06611e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d0af57001ed1",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力ミライズ「とくとくプラン」"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "595d20a6fa48",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8c858c7ad064",
+          "_type": "span",
+          "marks": [],
+          "text": "オクトパスエナジー「グリーンオクトパス」"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bd2abc07c022",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "63b15438ac58",
+          "_type": "span",
+          "marks": [],
+          "text": "idemitsuでんき「Sプラン」"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "20986295b345",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "27c6cdc5c224",
+          "_type": "span",
+          "marks": [],
+          "text": "TERASELでんき「超TERASEL中部B」"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "241b3cdf40c3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "31197e862481",
+          "_type": "span",
+          "marks": [],
+          "text": "ガス　東邦ガスエリア"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d50d28a3f41d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c585e42374d8",
+          "_type": "span",
+          "marks": [],
+          "text": "東邦ガス「がすてきトクトク料金」"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4a59086cba4f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c81bd28c056b",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力ミライズ「カテエネガスプラン1」「カテエネガスプラン2」"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d0e17c54df6e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "82200243279c",
+          "_type": "span",
+          "marks": [],
+          "text": "ミツウロコガス「まる得プラン」"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "279b0203a43e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "87f17c9dbb29",
+          "_type": "span",
+          "marks": [],
+          "text": "ここでは中部エリアの家族向けの利用を例に挙げましたが、「エネチェンジ」サイトを利用すれば、全国どこでも光熱費削減に適した会社を簡単に比較検討できます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b64a02da4627",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "03e1cf2e645f",
+          "_type": "span",
+          "marks": [],
+          "text": "1年間の電気・ガスの使用量がわかると、さらに具体的なプランを提案してもらえます。忙しい毎日を送る現代人にとって、深く検討する時間を確保するのは難しいかもしれませんが、大まかな診断結果でも8割近くの節約を実現できる可能性があります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "449da074f978",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8b1d6da71c97",
+          "_type": "span",
+          "marks": [],
+          "text": "「エネチェンジ」は会員登録が不要で、利用はすべて無料です。この便利なツールを活用して、賢く光熱費を節約してみましょう。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7b7e43c8ff81_standardized_v2",
+      "_type": "htmlEmbed",
+      "html": "<a class=\"affiliate-btn affiliate-btn--a8\" href=\"https://px.a8.net/svt/ejp?a8mat=3Z96BG+3E1VSI+4TIO+5YJRM\" rel=\"nofollow sponsored\"> エネチェンジ をみる ＞ </a>"
+    },
+    {
+      "_key": "30906b81ee1b",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d7a07677bf758571dd49b6de3f7de5458b534d49-1x1-gif",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "c4a7bb40bc36",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4d02bc8ee8f1",
+          "_type": "span",
+          "marks": [],
+          "text": "現状分析と使用実態"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "3aa09fe72ced",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "47185f815a31",
+          "_type": "span",
+          "marks": [],
+          "text": "我が家の使用状況を例に比較検証していきます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c1a25f0fd52d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3129b2ef71dd",
+          "_type": "span",
+          "marks": [],
+          "text": "キャンペーン抜きでも年間通してガスと電気が安くなることが優先"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ed3cb7fcb24a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aff041a9b81d",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ポイント"
+        },
+        {
+          "_key": "103d05602849",
+          "_type": "span",
+          "marks": [],
+          "text": "がもらえると嬉しい"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "91e8fa5f4c56",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cdaaf99b7e3e",
+          "_type": "span",
+          "marks": [],
+          "text": "電気は固定料金の"
+        },
+        {
+          "_key": "9c2e4f8c77ed",
+          "_type": "span",
+          "marks": [],
+          "text": "従量電灯"
+        },
+        {
+          "_key": "c9850e49078b",
+          "_type": "span",
+          "marks": [],
+          "text": "プランで考えている"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b09da91eb7e7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0fd44ed58061",
+          "_type": "span",
+          "marks": [],
+          "text": "状況が近いお宅は参考にしてみてください。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bd15d43d4c00",
+      "_type": "blogCard",
+      "url": "https://mamasanmoney-bu.com/chubu-electric-powers-fuel-cost-adjustment-upper-limit/"
+    },
+    {
+      "_key": "9900ab9aeda5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fef38e85a497",
+          "_type": "span",
+          "marks": [],
+          "text": "■我が家の状況"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c0c65a09b292",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3c9bae714368",
+          "_type": "span",
+          "marks": [],
+          "text": "4人家族（共働き夫婦＋学生2人＋猫） "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "71dd061fb2d9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "82024680ca66",
+          "_type": "span",
+          "marks": [],
+          "text": "マンション住まい "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "49166191a1b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b04091d6bfd6",
+          "_type": "span",
+          "marks": [],
+          "text": "電気：中部電力エリア 40A"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9676a0115132",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e8293eb08af4",
+          "_type": "span",
+          "marks": [],
+          "text": "ガス：東邦ガスエリア　都市ガス"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "36918b3bc241",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4ca1d7f1832e",
+          "_type": "span",
+          "marks": [],
+          "text": "年間使用量：電気3,397kWh／ガス343㎥"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b36ea57ec9eb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e4cb7c83a8b1",
+          "_type": "span",
+          "marks": [],
+          "text": "■月別年間使用量の特徴"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4c81569e6017",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4bdb07fba1c2",
+          "_type": "span",
+          "marks": [],
+          "text": "【電気】 "
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "36b2e1bb602d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e226807f60c5",
+          "_type": "span",
+          "marks": [],
+          "text": "夏季（8-9月）：377-408kWh（エアコン使用増） "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "79bd3655e3ca",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e62996394019",
+          "_type": "span",
+          "marks": [],
+          "text": "中間期（5-6月）：177-196kWh "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6b1b2edbbe32",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8e882aab5752",
+          "_type": "span",
+          "marks": [],
+          "text": "冬季（12-2月）：219-329kWh"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fc90d6bcded6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a0777fbe9fac",
+          "_type": "span",
+          "marks": [],
+          "text": "【ガス】 "
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ebe8177e1368",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "392443867dd8",
+          "_type": "span",
+          "marks": [],
+          "text": "冬季（1-3月）：37-43㎥（暖房・給湯使用増）"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3aed90338f15",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b48d11cfdcfc",
+          "_type": "span",
+          "marks": [],
+          "text": "夏季（8-9月）：14-16㎥ "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a23da5417a22",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9c6d5f07d903",
+          "_type": "span",
+          "marks": [],
+          "text": "中間期：22-31㎥"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4f012019a791",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "731258c68b1d",
+          "_type": "span",
+          "marks": [],
+          "text": "セット契約vs個別契約の徹底比較"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "e6d1aa5cb70c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fb7850b11e7b",
+          "_type": "span",
+          "marks": [],
+          "text": "セット契約のメリット"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "1be65f9a78dd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fb83793db444",
+          "_type": "span",
+          "marks": [],
+          "text": "手続きが一度で完結 "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "534061ee6c58",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "184543d67d06",
+          "_type": "span",
+          "marks": [],
+          "text": "請求書がまとまる "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "66afdf12036d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a2e972428b04",
+          "_type": "span",
+          "marks": [],
+          "text": "契約管理が簡単"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "547196e23d7d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cd931f7479d2",
+          "_type": "span",
+          "marks": [],
+          "text": "セット契約の年間料金比較"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "e23e98df8799",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "21058595c97d",
+          "_type": "span",
+          "marks": [],
+          "text": "我が家の使用量をもとに「東邦ガス」と「中部電力ミライズ」でセット契約した場合に年間でいくらかかるかを算出しました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bbc235d95311",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "41c57866516a",
+          "_type": "span",
+          "marks": [],
+          "text": "【セット契約の場合】"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fb4bb3ab7279",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "32dafafb154b",
+          "_type": "span",
+          "marks": [],
+          "text": "　東邦ガスファミリープラン　"
+        },
+        {
+          "_key": "5477690faf15",
+          "_type": "span",
+          "marks": [],
+          "text": "　¥166,837"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a6da7c88fb73",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "478475c6ad3d",
+          "_type": "span",
+          "marks": [],
+          "text": "セットにすると"
+        },
+        {
+          "_key": "b339c557e346",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "電気代の単価が変わる"
+        },
+        {
+          "_key": "57b95df30533",
+          "_type": "span",
+          "marks": [],
+          "text": "ようです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "141e9cd0988e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f8d158f15c1c",
+          "_type": "span",
+          "marks": [],
+          "text": "具体的には東邦ガスの電気単体契約である「シンプルプランI」と比較すると"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "151b32ca2d3a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "79a1ef56764d",
+          "_type": "span",
+          "marks": [],
+          "text": "今回挙げた使用例の場合は電気代が"
+        },
+        {
+          "_key": "8e0596e2c81e",
+          "_type": "span",
+          "marks": [
+            "hl5-0"
+          ],
+          "text": "4,014円安く"
+        },
+        {
+          "_key": "396a01909bd3",
+          "_type": "span",
+          "marks": [],
+          "text": "なります。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl5-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "a242e787212c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a0a270de1a51",
+          "_type": "span",
+          "marks": [],
+          "text": "ひと月の使用量が"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "691bf1a050f0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "be47898646ab",
+          "_type": "span",
+          "marks": [],
+          "text": "201〜250kWhの第3段階の場合"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3b37b2b2c2a0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "45b96a69d8af",
+          "_type": "span",
+          "marks": [],
+          "text": "電気単体のプラン（シンプルプランI）より"
+        },
+        {
+          "_key": "d7a18b515034",
+          "_type": "span",
+          "marks": [
+            "hl6-0"
+          ],
+          "text": "単価で9.7円安い"
+        },
+        {
+          "_key": "86d205b5f4ed",
+          "_type": "span",
+          "marks": [],
+          "text": "ですが、"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl6-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "ccc60f5a8081",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d0d9188ba887",
+          "_type": "span",
+          "marks": [],
+          "text": "121〜200kWhの第2段階"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "543bface75db",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "21402aaddd93",
+          "_type": "span",
+          "marks": [],
+          "text": "251〜300kWhの第4段階　になると"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b5e2b2be3392",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "85cff8ec7baf",
+          "_type": "span",
+          "marks": [],
+          "text": "シンプルプランIより"
+        },
+        {
+          "_key": "afd52951b03a",
+          "_type": "span",
+          "marks": [
+            "hl7-0"
+          ],
+          "text": "単価で0.3円高く"
+        },
+        {
+          "_key": "819bc00ef094",
+          "_type": "span",
+          "marks": [],
+          "text": "設定されています。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl7-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "8f99732957e3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0dbdf07964c3",
+          "_type": "span",
+          "marks": [],
+          "text": "　中部電力ミライズ　　　"
+        },
+        {
+          "_key": "eec5ddca6b2f",
+          "_type": "span",
+          "marks": [],
+          "text": "¥164,765"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "43a1eecb192a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e7c8533e2098",
+          "_type": "span",
+          "marks": [],
+          "text": "セットにすると"
+        },
+        {
+          "_key": "cebb9479cd22",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "ガス料金の割引（2％）がある"
+        },
+        {
+          "_key": "207704a86f02",
+          "_type": "span",
+          "marks": [],
+          "text": "ようです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "55c271a8fb52",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9437ad76b216",
+          "_type": "span",
+          "marks": [],
+          "text": "具体的には中部電力ミライズのガス単体契約である「カテエネガスプラン1」と比較すると"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6b4a25abf129",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0233d0b9a93b",
+          "_type": "span",
+          "marks": [],
+          "text": "今回挙げた使用例の場合はガス代が"
+        },
+        {
+          "_key": "3194a7d2cb2a",
+          "_type": "span",
+          "marks": [
+            "hl8-0"
+          ],
+          "text": "145円安く"
+        },
+        {
+          "_key": "4dfb4fa331ad",
+          "_type": "span",
+          "marks": [],
+          "text": "なります。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl8-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "e1f396d362ad",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "38133eded08f",
+          "_type": "span",
+          "marks": [],
+          "text": "年間料金の2％で145円の割引。そこまでのお得さは感じられません。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "93b2db10defe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aeaca741b2c0",
+          "_type": "span",
+          "marks": [],
+          "text": "しかし既存契約である東邦ガスの電気ガスセットと比べると"
+        },
+        {
+          "_key": "a433ec9f75b2",
+          "_type": "span",
+          "marks": [
+            "hl9-0"
+          ],
+          "text": "年間で2,072円安く"
+        },
+        {
+          "_key": "49436bf66eb2",
+          "_type": "span",
+          "marks": [],
+          "text": "なります。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl9-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "692075718995",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7a50b5647cc8",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力ミライズ「カテエネガスプラン」1と2の違い"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "556e1ed0afc3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ae50fd94322e",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力ミライズガス単体契約の「カテエネガスプラン」1と2ってどう違うの？について簡単にここで説明します。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dc65a7e8c0c5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0d8a9fa259fc",
+          "_type": "span",
+          "marks": [],
+          "text": "■カテエネガスプラン1 "
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "77c94cd5c02c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a0c3c4d96d7a",
+          "_type": "span",
+          "marks": [],
+          "text": "一般家庭向け "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "84630e393e7a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a4c38a261eca",
+          "_type": "span",
+          "marks": [],
+          "text": "使用量が少～中程度の家庭に最適 "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bb3116e02b05",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "78da630dd7d0",
+          "_type": "span",
+          "marks": [],
+          "text": "■カテエネガスプラン2 "
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7559a2af5e39",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "83f4d5074768",
+          "_type": "span",
+          "marks": [],
+          "text": "使用量の多い家庭向け "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2df0e8a4de3b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cb89c7d6efcb",
+          "_type": "span",
+          "marks": [],
+          "text": "ガス給湯器を使用する家庭に最適"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f79f82890a2a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ddd17c61a660",
+          "_type": "span",
+          "marks": [],
+          "text": "使用時期により価格変動がある"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2c655b84cb60",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ae8e9350793d",
+          "_type": "span",
+          "marks": [],
+          "text": "※料金は2024年11月時点のものです "
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f7ad930072ae",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b9f0b3cc3943",
+          "_type": "span",
+          "marks": [],
+          "text": "※別途、原料費調整額がかかります"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "41f0d9fdf168",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1d76e55a436e",
+          "_type": "span",
+          "marks": [],
+          "text": "基本はガスの契約状況や使用している機器をWEB画面上や電話で聞かれるのでどちらが安くなるかの最適プランを紹介されます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9af4472e0697",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e6781c8bfd9a",
+          "_type": "span",
+          "marks": [],
+          "text": "ガスは中部電力ミライズが安い"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "d2efa5ebdd37",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9f6dcdf46283",
+          "_type": "span",
+          "marks": [],
+          "text": "都市ガス東邦ガスエリアの中で"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f1763503c606",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e054adc5418f",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力ミライズ、東邦ガス、ミツウロコの3社で試算したところ「中部電力ミライズ（カテエネガスプラン2）」が最安の結果となりました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8ff0a615f138",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "db5d3fdf330e",
+          "_type": "span",
+          "marks": [],
+          "text": "個別契約のメリット"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "0842ab66df4b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6dab91a6a633",
+          "_type": "span",
+          "marks": [],
+          "text": "プラン選択の自由度が高い"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3cc8ec3843fc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "599a5a358ac0",
+          "_type": "span",
+          "marks": [],
+          "text": "より大きな節約が可能 "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0cceb3359ba0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bbde0925f8ea",
+          "_type": "span",
+          "marks": [],
+          "text": "各社のキャンペーンを最大活用可能"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "543fc016ced9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7d56c07ded8e",
+          "_type": "span",
+          "marks": [],
+          "text": "個別契約の年間料金比較"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "034105b72166",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "79b8da13762f",
+          "_type": "span",
+          "marks": [],
+          "text": "我が家の使用量をもとに電気とガスぞれぞれを個別契約して"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7854cc4b25ee",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "535d47d26574",
+          "_type": "span",
+          "marks": [],
+          "text": "最安値で組み合わせた場合に年間でいくらかかるかを算出しました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9f9e5542003c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3c684283776b",
+          "_type": "span",
+          "marks": [],
+          "text": "【最安値の組み合わせ】"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f74b4f4a69c6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "21c5075525b2",
+          "_type": "span",
+          "marks": [],
+          "text": "まずは結果から先に↓"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1705e89d6121",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f958fa78f133",
+          "_type": "span",
+          "marks": [],
+          "text": "ガス最安値：中部電力ミライズ　カテエネガスプラン2"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9899cff6e356",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0f3ea3a44bc8",
+          "_type": "span",
+          "marks": [],
+          "text": "電気最安値：TERASELでんき　超TERASEL中部B"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "83b24bfca90d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a6ae016ba367",
+          "_type": "span",
+          "marks": [],
+          "text": "・TERASELでんき＋中部電力ミライズ："
+        },
+        {
+          "_key": "0206684f6d2f",
+          "_type": "span",
+          "marks": [],
+          "text": "¥157,739"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "be2eeae601c3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3a9984e78f9e",
+          "_type": "span",
+          "marks": [],
+          "text": "この2社で組み合わせると電気ガス共に最安になることがわかりました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0aabfda6c89b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2e6fab87abf6",
+          "_type": "span",
+          "marks": [],
+          "text": "2024年11月現在では各社乗り換えキャンペーンも開催中なのでこの機会に乗り換えを検討されてはいかがでしょうか。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "266baa2c7aa1_standardized_v2",
+      "_type": "htmlEmbed",
+      "html": "<a class=\"affiliate-btn affiliate-btn--a8\" href=\"https://px.a8.net/svt/ejp?a8mat=3Z96BG+3E1VSI+4TIO+5YJRM\" rel=\"nofollow sponsored\"> エネチェンジ をみる ＞ </a>"
+    },
+    {
+      "_key": "de21bb080cdf",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d7a07677bf758571dd49b6de3f7de5458b534d49-1x1-gif",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "4d7e9f7f632b",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "TERASELでんきに切り替えの場合は紹介コードから申込するとあなたも筆者も喜ぶにゃん。ただし上の「特典4倍キャンペーン」とは併用できないよ。4倍キャンペーンの期間終了後や条件が当てはまらない時などに使ってネ！"
+      ]
+    },
+    {
+      "_key": "132c7da65fa5_standardized_v2",
+      "_type": "htmlEmbed",
+      "html": "<a class=\"affiliate-btn affiliate-btn--others\" href=\"/money/elswebapplication\" rel=\"nofollow sponsored\"> TERASELでんき紹介特典つき申込（現住所で切替） をみる ＞ </a>"
+    },
+    {
+      "_key": "f89997c62ffe_standardized_v2",
+      "_type": "htmlEmbed",
+      "html": "<a class=\"affiliate-btn affiliate-btn--others\" href=\"/money/elswebapplication\" rel=\"nofollow sponsored\"> TERASELでんき紹介特典つき申込（引越先で切替） をみる ＞ </a>"
+    },
+    {
+      "_key": "a39057401a06",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bf88a23963ec",
+          "_type": "span",
+          "marks": [],
+          "text": "以下エネチェンジでおすすめだった電力会社と料金を比較した結果を掲載します。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "34d14263117b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "61fbee1ac0ab",
+          "_type": "span",
+          "marks": [],
+          "text": "・idemitsuでんき＋中部電力ミライズ："
+        },
+        {
+          "_key": "a43a4714ecd2",
+          "_type": "span",
+          "marks": [],
+          "text": "¥158,185"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7125245f6f44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a0192c7ebaf1",
+          "_type": "span",
+          "marks": [],
+          "text": "・オクトパスエナジー＋中部電力ミライズ："
+        },
+        {
+          "_key": "b9c7113a3302",
+          "_type": "span",
+          "marks": [],
+          "text": "¥158,"
+        },
+        {
+          "_key": "9149f17b916a",
+          "_type": "span",
+          "marks": [],
+          "text": "494"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f4dbf5da8d7f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "927ced456d36",
+          "_type": "span",
+          "marks": [],
+          "text": "エネチェンジで簡単！光熱費の見直し"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "fad0fa26732b",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "73ecdcdcad2f",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://px.a8.net/svt/ejp?a8mat=3ZJZJ2+1RPEIA+4CJ0+5ZMCH",
+          "provider": "other",
+          "src": "https://www21.a8.net/svt/bgt?aid=241117598107&wid=001&eno=01&mid=s00000020286001006000&mc=1"
+        }
+      ]
+    },
+    {
+      "_key": "d78ab49accef",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d7a07677bf758571dd49b6de3f7de5458b534d49-1x1-gif",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "d4dd157ec65b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fe5ca2e3a0bc",
+          "_type": "span",
+          "marks": [],
+          "text": "「でも、実際の見直しって面倒くさそう…」 「どこから始めればいいの？」"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ea991006da33",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "299a90ef564e",
+          "_type": "span",
+          "marks": [],
+          "text": "そんな方にぴったりなのが、エネチェンジです！"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e6275f9854b2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3c00bd49b8ab",
+          "_type": "span",
+          "marks": [],
+          "text": "エネチェンジの3つの特徴"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "5b8e20fb467b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b898cd90345c",
+          "_type": "span",
+          "marks": [],
+          "text": "完全無料で利用可能 "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5c8d8a20e473",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d222cb708a82",
+          "_type": "span",
+          "marks": [],
+          "text": "会員登録不要 "
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "88f05e03ed2a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ee921f2b9b8d",
+          "_type": "span",
+          "marks": [],
+          "text": "たった5分で最安値プランがわかる"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d14212fa85a0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "94c64f7bac13",
+          "_type": "span",
+          "marks": [],
+          "text": "全国どこでも使える！"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "b92888ec4775",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d8eb0a989435",
+          "_type": "span",
+          "marks": [],
+          "text": "今回は中部エリアの4人家族の例をご紹介しましたが、エネチェンジなら全国どのエリアでも最適なプランが見つかります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d6b391d2e902",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc329392d57d",
+          "_type": "span",
+          "marks": [],
+          "text": "より正確な診断をするには？"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "55df8bf548e9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "191b7511075c",
+          "_type": "span",
+          "marks": [],
+          "text": "過去1年分の電気・ガス使用量がわかると、よりあなたのご家庭に合ったプランを提案してくれます。 "
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "574c33fb4847",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c297f9abc644",
+          "_type": "span",
+          "marks": [],
+          "text": "※請求書がすぐに見つからなくても大丈夫！ 概算での診断も可能です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6e1dbc916984",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "73010d02e934",
+          "_type": "span",
+          "marks": [],
+          "text": "忙しいママでも安心"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "a651002dda74",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "35f8926c2b1e",
+          "_type": "span",
+          "marks": [],
+          "text": "「細かい検討する時間がない…」 というママの声も多いはず。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "653b05e44a1f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "29723d75ec28",
+          "_type": "span",
+          "marks": [],
+          "text": "でも、安心してください！ エネチェンジが自動で最適なプランを提案してくれるので、 家事の合間にスマホでサクッと検討から申し込みまでできちゃいます😇"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bb3e30410670",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "91a945b1e781",
+          "_type": "span",
+          "marks": [],
+          "text": "＼今すぐ無料診断をやってみよ／"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "214376c7fbfc_standardized_v2",
+      "_type": "htmlEmbed",
+      "html": "<a class=\"affiliate-btn affiliate-btn--a8\" href=\"https://px.a8.net/svt/ejp?a8mat=3Z96BG+3E1VSI+4TIO+5YJRM\" rel=\"nofollow sponsored\"> エネチェンジ をみる ＞ </a>"
+    },
+    {
+      "_key": "c9bc3a6c785f",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d7a07677bf758571dd49b6de3f7de5458b534d49-1x1-gif",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "bd27e14cb7fc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "268f56576da5",
+          "_type": "span",
+          "marks": [],
+          "text": "診断は完全無料・会員登録不要です"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5a70d95cba5a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2334c90cbeb5",
+          "_type": "span",
+          "marks": [],
+          "text": "いつでも途中で中断できます"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5cdb435c6978",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0d2dab4e05f4",
+          "_type": "span",
+          "marks": [],
+          "text": "固定費見直しは一度ちゃんとやっておけばあとはほっとくだけ！1ヶ月単位で見れば大した節約には見えませんが年単位だと大きな節約につながります。 光熱費の見直しで、家計にゆとりを作りませんか？"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c65a3be1e932",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5ee1f3f6f191",
+          "_type": "span",
+          "marks": [],
+          "text": "このブログは「にほんブログ村」と「ブログリーダー」に参加しています。下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fda0b0667958",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "e0896285f731",
+          "_type": "linkImageBlock",
+          "alt": "ママさんマネー部 - にほんブログ村",
+          "href": "https://blogmura.com/profiles/11159291/?p_cid=11159291&reader=11159291",
+          "provider": "blogmura",
+          "src": "https://b.blogmura.com/banner-blogmura-reader-pink.svg"
+        },
+        {
+          "_key": "b7cf26a7977b",
+          "_type": "linkImageBlock",
+          "alt": "人気ブログランキングでフォロー",
+          "href": "https://blog.with2.net/link/?id=2097059&follow",
+          "provider": "with2",
+          "src": "https://blog.with2.net/banner/follow/2097059?t=b"
+        }
+      ]
+    }
+  ],
+  "category": "money",
+  "heroImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-8771fc98da2bcb1bbc1493aa934785bdeaeb83d0-1024x1024-jpg",
+      "_type": "reference"
+    }
+  },
+  "publishedAt": "2024-11-25T00:00:00Z",
+  "slug": {
+    "_type": "slug",
+    "current": "review-of-utility-costs"
+  },
+  "tags": [
+    "固定費見直し"
+  ],
+  "title": "【実例検証】東邦ガス・中部電力のセット契約は損？",
+  "updatedAt": "2025-10-19T13:32:03.933Z",
+  "views": 1
+}

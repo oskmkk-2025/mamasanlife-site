@@ -1,0 +1,1665 @@
+{
+  "_createdAt": "2025-08-26T10:23:50Z",
+  "_id": "Nn6Sc6MF3u71woMpYvaOrE",
+  "_rev": "4mxkFmP8ahw0J0O2HC5Ma2",
+  "_type": "post",
+  "_updatedAt": "2026-01-05T09:37:38Z",
+  "affiliateBlocks": [
+    {
+      "html": "<a class=\"affiliate-btn affiliate-btn--moshimo\" href=\"//af.moshimo.com/af/c/click?a_id=4556872&amp;p_id=58&amp;pc_id=58&amp;pl_id=669\" target=\"_blank\" rel=\"noopener noreferrer nofollow sponsored\">楽天カードをチェックする＞</a>",
+      "note": "",
+      "title": ""
+    }
+  ],
+  "body": [
+    {
+      "_key": "1b6e501f78d4",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "a66429ecd180",
+          "_type": "linkImageBlock",
+          "alt": "にほんブログ村 その他生活ブログへ",
+          "href": "https://life.blogmura.com/ranking/in?p_cid=11159291",
+          "src": "https://b.blogmura.com/life/88_31.gif"
+        }
+      ]
+    },
+    {
+      "_key": "5a5658f4ad8d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "73fecbf50f1e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m0-0",
+          "_type": "link",
+          "href": "/health/in"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "ca8b08c7f739",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "6d8fea974c4e",
+          "_type": "linkImageBlock",
+          "alt": "散歩・ウォーキングランキング",
+          "href": "https://blog.with2.net/link/?id=2097059&cid=1205",
+          "src": "https://blog.with2.net/img/banner/c/banner_1/br_c_1205_1.gif"
+        }
+      ]
+    },
+    {
+      "_key": "6f026e770cf3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2fde9a481c7a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "7de798df7239",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "b2d778681749",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "d37276aa0e3b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m1-0",
+          "_type": "link",
+          "href": "/health/in"
+        },
+        {
+          "_key": "m2-1",
+          "_type": "link",
+          "href": "/health/link"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "f6f531ec3eec",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "72fb26bb81d9",
+          "_type": "span",
+          "marks": [],
+          "text": "健康な体づくりは何かをやる上で最も重要なことです。健康な体無くしては好きな事やりたい事、学びや仕事家事や子育てなどどれもうまくいきません。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cb918f0879a7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "72b16410e311",
+          "_type": "span",
+          "marks": [],
+          "text": "✔️筋トレや有酸素運動ってやったほうがいいんだろうけどどれも長続きしない"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "045295eaf26e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4beeb8da6459",
+          "_type": "span",
+          "marks": [],
+          "text": "✔️スポーツジムへ入会したのに最近おっくうになり足が遠ざかっているな・・・"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8be9b9f87c0e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3eb8422cff59",
+          "_type": "span",
+          "marks": [],
+          "text": "✔️運動は毎日の積み重ねなんだろうけどやっていても楽しくない"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0ddc3c2c9c9c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "312129e226b2",
+          "_type": "span",
+          "marks": [],
+          "text": "そんな悩みはありませんか？"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4d4fbc0d3c62",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "10570347dbc2",
+          "_type": "span",
+          "marks": [],
+          "text": "実は、運動習慣が定着する上で最も難しいことなんです。でもやったらやった分だけ"
+        },
+        {
+          "_key": "e9502eb910f4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "ご褒美があればがんばっちゃう"
+        },
+        {
+          "_key": "783433917919",
+          "_type": "span",
+          "marks": [],
+          "text": "✨って人にはこれからご紹介するアプリは試してみる価値ありです！"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a5de5cbc1cdd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d9c916bb8d31",
+          "_type": "span",
+          "marks": [],
+          "text": "「楽天ヘルスケア」アプリとはどんなサービスか一緒に学んでいきましょう😇"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9c9f6fd47011",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b068171f9ae2",
+          "_type": "span",
+          "marks": [
+            "m3-0"
+          ],
+          "text": "楽天カードをチェックする＞"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m3-0",
+          "_type": "link",
+          "href": "/health/click"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "2f60e8dc5e88",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1320fbed26e8",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアとは？"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "01cc2c858ce7",
+      "_type": "image",
+      "alt": "楽天ヘルスケア-歩数計で歩いてポイントも貯めて健康もキープ!",
+      "asset": {
+        "_ref": "image-d88ff9d596a40cd885e7d004a96c4c57e8eeb435-512x512-jpg",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "4c66da116950",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "e063bd528b63",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://apps.apple.com/jp/app/%25E6%25A5%25BD%25E5%25A4%25A9%25E3%2583%2598%25E3%2583%25AB%25E3%2582%25B9%25E3%2582%25B1%25E3%2582%25A2-%25E6%25AD%25A9%25E6%2595%25B0%25E8%25A8%2588%25E3%2581%25A7%25E6%25AD%25A9%25E3%2581%2584%25E3%2581%25A6%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2582%25E8%25B2%25AF%25E3%2582%2581%25E3%2581%25A6%25E5%2581%25A5%25E5%25BA%25B7%25E3%2582%2582%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%2597/id1585068047?uo=4",
+          "src": "https://nabettu.github.io/appreach/img/itune_ja.svg"
+        },
+        {
+          "_key": "27dede291a6c",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://play.google.com/store/apps/details?id=jp.co.rakuten.health.android",
+          "src": "https://nabettu.github.io/appreach/img/gplay_ja.png"
+        }
+      ]
+    },
+    {
+      "_key": "6df2ad7ae6ea",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b135c3012290",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケア-歩数計で歩いてポイントも貯めて健康もキープ!"
+        },
+        {
+          "_key": "125ec3da27cb",
+          "_type": "span",
+          "marks": [],
+          "text": "開発元:"
+        },
+        {
+          "_key": "757eda6ed12c",
+          "_type": "span",
+          "marks": [],
+          "text": "Rakuten Group, Inc."
+        },
+        {
+          "_key": "4ef261ab0180",
+          "_type": "span",
+          "marks": [],
+          "text": "無料"
+        },
+        {
+          "_key": "2fd9e2a37f3a",
+          "_type": "span",
+          "marks": [],
+          "text": "posted with"
+        },
+        {
+          "_key": "74be0dfdd64d",
+          "_type": "span",
+          "marks": [
+            "m4-0"
+          ],
+          "text": "アプリーチ"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m4-0",
+          "_type": "link",
+          "href": "/health/app-reach"
+        },
+        {
+          "_key": "m5-1",
+          "_type": "link",
+          "href": "/health/id1585068047"
+        },
+        {
+          "_key": "m6-2",
+          "_type": "link",
+          "href": "/health/details"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "d5efbc564fd1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "45d98af9d824",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアは楽天グループが提供する健康管理プラットフォームです。ヘルスケアアプリを使用することで、日々の運動や食事、体重管理などを簡単に記録し、楽天ポイントを貯めることができます。また、健康管理と連携した様々な特典も受け取ることが可能です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0b07989de360",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2030ecc9506e",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアの機能紹介"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "7c77b6d5bafb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "eba7887ed075",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアは多様な機能を持ち、健康管理をサポートします。以下は主な機能の一覧です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c388bd62e6af",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e1640a84b134",
+          "_type": "span",
+          "marks": [],
+          "text": "歩数計機能"
+        },
+        {
+          "_key": "9aa68266e92c",
+          "_type": "span",
+          "marks": [],
+          "text": " 日々の歩数を記録し、目標達成に応じてポイントを獲得できます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1a92bb371c5b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1932b33b4880",
+          "_type": "span",
+          "marks": [],
+          "text": "食事記録"
+        },
+        {
+          "_key": "f6a8424ac4d3",
+          "_type": "span",
+          "marks": [],
+          "text": " 食事の内容を記録し、カロリー管理を行う機能。健康的な食生活をサポートします。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "770e34bcf0ec",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6bda597476fe",
+          "_type": "span",
+          "marks": [],
+          "text": "体重・体脂肪率の記録"
+        },
+        {
+          "_key": "c0fe5b9777c1",
+          "_type": "span",
+          "marks": [],
+          "text": " 日々の体重や体脂肪率を記録し、その変化をグラフで確認できます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8ff885fae97a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "db3cea45372a",
+          "_type": "span",
+          "marks": [],
+          "text": "運動記録"
+        },
+        {
+          "_key": "454d3b7cfcd0",
+          "_type": "span",
+          "marks": [],
+          "text": " ウォーキング、ランニング、サイクリングなど、様々な運動のデータを記録できます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b5b04b95d7c2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e9b77bb4962d",
+          "_type": "span",
+          "marks": [],
+          "text": "健康イベントやチャレンジ"
+        },
+        {
+          "_key": "4be3f0a4463f",
+          "_type": "span",
+          "marks": [],
+          "text": " 定期的に開催される健康イベントに参加でき、特定の目標を達成することでポイントや特典を獲得できます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7179d90cfcaa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f8a77e835d2e",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアのメリット"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "f78db56dfca6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1c235fef9555",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアを活用することで多くのメリットが得られます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c2e0b334f774",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2917dd11140",
+          "_type": "span",
+          "marks": [],
+          "text": "ポイント獲得"
+        },
+        {
+          "_key": "6704ca627fbc",
+          "_type": "span",
+          "marks": [],
+          "text": " 日々の健康活動に応じて楽天ポイントを獲得でき、これを楽天市場や提携店舗で使用することができます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a91e5462dec1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "896e26403775",
+          "_type": "span",
+          "marks": [],
+          "text": "データの一元管理"
+        },
+        {
+          "_key": "2f1c875374ad",
+          "_type": "span",
+          "marks": [],
+          "text": " 健康データを一つのアプリで一元管理できるため、日々の活動を容易に把握できます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "de1402167ac9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "657b69570f09",
+          "_type": "span",
+          "marks": [],
+          "text": "健康維持のモチベーション向上"
+        },
+        {
+          "_key": "b6506557707b",
+          "_type": "span",
+          "marks": [],
+          "text": " ポイントが貯まることで、健康維持のモチベーションが維持され、楽しく続けられます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ff6078cc0129",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8e88d7549c8b",
+          "_type": "span",
+          "marks": [],
+          "text": "特典が豊富"
+        },
+        {
+          "_key": "5ef52f3a17f4",
+          "_type": "span",
+          "marks": [],
+          "text": " 特定の健康活動やイベント参加で得られる特典が豊富で、楽しみながら健康管理ができます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "712d03d86f93",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e3a4c997218c",
+          "_type": "span",
+          "marks": [],
+          "text": "ウォーキングでポイントを貯める方法"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "65a8b31420b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3fa6857c21e1",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアでのウォーキングによるポイント獲得は、簡単に始められます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "42cf702e63a8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "834ebb67ea76",
+          "_type": "span",
+          "marks": [],
+          "text": "手順"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "986ac019f104",
+      "_type": "image",
+      "alt": "楽天ヘルスケア-歩数計で歩いてポイントも貯めて健康もキープ!",
+      "asset": {
+        "_ref": "image-d88ff9d596a40cd885e7d004a96c4c57e8eeb435-512x512-jpg",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "a4550b9cb653",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "8f2de30add9b",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://apps.apple.com/jp/app/%25E6%25A5%25BD%25E5%25A4%25A9%25E3%2583%2598%25E3%2583%25AB%25E3%2582%25B9%25E3%2582%25B1%25E3%2582%25A2-%25E6%25AD%25A9%25E6%2595%25B0%25E8%25A8%2588%25E3%2581%25A7%25E6%25AD%25A9%25E3%2581%2584%25E3%2581%25A6%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2582%25E8%25B2%25AF%25E3%2582%2581%25E3%2581%25A6%25E5%2581%25A5%25E5%25BA%25B7%25E3%2582%2582%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%2597/id1585068047?uo=4",
+          "src": "https://nabettu.github.io/appreach/img/itune_ja.svg"
+        },
+        {
+          "_key": "80669b14f964",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://play.google.com/store/apps/details?id=jp.co.rakuten.health.android",
+          "src": "https://nabettu.github.io/appreach/img/gplay_ja.png"
+        }
+      ]
+    },
+    {
+      "_key": "be228b587824",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "633f7bd271a4",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケア-歩数計で歩いてポイントも貯めて健康もキープ!"
+        },
+        {
+          "_key": "e429a01477ca",
+          "_type": "span",
+          "marks": [],
+          "text": "開発元:"
+        },
+        {
+          "_key": "aa27fb54beaf",
+          "_type": "span",
+          "marks": [],
+          "text": "Rakuten Group, Inc."
+        },
+        {
+          "_key": "1ee31648d871",
+          "_type": "span",
+          "marks": [],
+          "text": "無料"
+        },
+        {
+          "_key": "245a16ec21df",
+          "_type": "span",
+          "marks": [],
+          "text": "posted with"
+        },
+        {
+          "_key": "a65ebba49dfb",
+          "_type": "span",
+          "marks": [
+            "m7-0"
+          ],
+          "text": "アプリーチ"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m7-0",
+          "_type": "link",
+          "href": "/health/app-reach"
+        },
+        {
+          "_key": "m8-1",
+          "_type": "link",
+          "href": "/health/id1585068047"
+        },
+        {
+          "_key": "m9-2",
+          "_type": "link",
+          "href": "/health/details"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "fca9b086ea79",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "32e94e642ed8",
+          "_type": "span",
+          "marks": [],
+          "text": "アプリのダウンロード"
+        },
+        {
+          "_key": "9466725898a3",
+          "_type": "span",
+          "marks": [],
+          "text": " 楽天ヘルスケアアプリをスマートフォンにダウンロードし、ログインします。"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "eb339892aa90",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9d4d61afe860",
+          "_type": "span",
+          "marks": [],
+          "text": "歩数計の設定"
+        },
+        {
+          "_key": "bee6c0bf20a8",
+          "_type": "span",
+          "marks": [],
+          "text": " アプリ内で歩数計機能を有効にし、スマートフォンを持ち歩くだけで自動的に歩数が記録されます。"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "88b594e7980d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "07db6a6615bc",
+          "_type": "span",
+          "marks": [],
+          "text": "歩数目標の設定"
+        },
+        {
+          "_key": "0e3b2fc9711e",
+          "_type": "span",
+          "marks": [],
+          "text": " 自分に合った歩数目標を設定し、毎日の目標達成に努めます。"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7db9f3085faa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3a63924a652b",
+          "_type": "span",
+          "marks": [],
+          "text": "ポイント獲得"
+        },
+        {
+          "_key": "52f14ea0daeb",
+          "_type": "span",
+          "marks": [],
+          "text": " 毎日の歩数目標を達成することで楽天ポイントを獲得。定期的にイベントやチャレンジも行われており、特別なポイントや特典がもらえることもあります。"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6fe7ba0b9baf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "04c7c0d286e8",
+          "_type": "span",
+          "marks": [],
+          "text": "獲得ポイントの上限について"
+        },
+        {
+          "_key": "54b875e97a95",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "b16596eeabc9",
+          "_type": "span",
+          "marks": [],
+          "text": "iOS版は"
+        },
+        {
+          "_key": "fda5b9bdab03",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "250P"
+        },
+        {
+          "_key": "997d6060c7f8",
+          "_type": "span",
+          "marks": [],
+          "text": "  Android版は"
+        },
+        {
+          "_key": "ae1bc288e75f",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "150P "
+        },
+        {
+          "_key": "25136dc4b42c",
+          "_type": "span",
+          "marks": [],
+          "text": "が月の獲得上限となります。"
+        },
+        {
+          "_key": "099ab2cb8f36",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "288fb1c903cc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2b1fa0330222",
+          "_type": "span",
+          "marks": [],
+          "text": "ポイント連携"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "4ad68367ff1c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ebdadbebe9e1",
+          "_type": "span",
+          "marks": [],
+          "text": "歩数計機能を利用することで、一定の歩数を達成するごとに楽天ポイントがもらえます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "31672a8913bd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6a56b556ef15",
+          "_type": "span",
+          "marks": [],
+          "text": "定期的に開催されるウォーキングイベントやキャンペーンに参加することで、ボーナスポイントを獲得するチャンスもあります。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "69985fd8842b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4646790a5f15",
+          "_type": "span",
+          "marks": [],
+          "text": "体組織計とウェアラブルデバイスの連携"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "f1b666870ac9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2037b212b5b3",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアは、体組織計や様々なウェアラブルデバイスとも連携可能です。これにより、より詳しい健康データを収集し、管理することができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e5c74df40b94",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2e31b895c384",
+          "_type": "span",
+          "marks": [],
+          "text": "連携デバイスの例"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "f152fc3fd73d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bef25cef53ff",
+          "_type": "span",
+          "marks": [],
+          "text": "スマート体組織計"
+        },
+        {
+          "_key": "ce21a2f6a175",
+          "_type": "span",
+          "marks": [],
+          "text": " 体重や体脂肪率、筋肉量などの詳細なデータを自動的にアプリに同期させることができます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0e7e59608b96",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cb8c1666071e",
+          "_type": "span",
+          "marks": [],
+          "text": "ウェアラブルデバイス"
+        },
+        {
+          "_key": "694a9b89ed3c",
+          "_type": "span",
+          "marks": [],
+          "text": " ウェアラブルデバイスには、スマートウォッチ、フィットネストラッカー、スマートグラスなど、さまざまな種類があります。日々の運動量、心拍数、カロリー消費などをリアルタイムでモニタリングし、そのデータをアプリに取り込むことができます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "76113b84f8f5",
+      "_type": "htmlEmbed",
+      "html": "<script type=\"text/javascript\">\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"Apple Watch Series 9（GPSモデル）- 41mmスターライトアルミニウムケースとスターライトスポーツバンド - S\\/M\",\"b\":\"Apple(アップル)\",\"t\":\"\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\\/images\\/I\",\"p\":[\"\\/414uDMi0UYL._SL500_.jpg\",\"\\/317f+We-++L._SL500_.jpg\",\"\\/41oRR48Na6L._SL500_.jpg\",\"\\/415MZW5tRKL._SL500_.jpg\",\"\\/41CE3mc3aGL._SL500_.jpg\",\"\\/31vyXpEAQNL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B0CHXMJYXR\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":4,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B0CHXMJYXR\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":1},{\"id\":7,\"u_tx\":\"楽天市場で見る\",\"u_bc\":\"#f76956\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/Apple%20Watch%20Series%209%EF%BC%88GPS%E3%83%A2%E3%83%87%E3%83%AB%EF%BC%89-%2041mm%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%88%E3%82%A2%E3%83%AB%E3%83%9F%E3%83%8B%E3%82%A6%E3%83%A0%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%A8%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%88%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%E3%83%90%E3%83%B3%E3%83%89%20-%20S%2FM\\/\",\"a_id\":4046502,\"p_id\":54,\"pl_id\":27059,\"pc_id\":54,\"s_n\":\"rakuten\",\"u_so\":2},{\"u_bc\":\"#66a7ff\",\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=Apple%20Watch%20Series%209%EF%BC%88GPS%E3%83%A2%E3%83%87%E3%83%AB%EF%BC%89-%2041mm%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%88%E3%82%A2%E3%83%AB%E3%83%9F%E3%83%8B%E3%82%A6%E3%83%A0%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%A8%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%88%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%E3%83%90%E3%83%B3%E3%83%89%20-%20S%2FM\",\"s_n\":\"yahoo\",\"u_so\":3,\"a_id\":4046520,\"p_id\":1225,\"pc_id\":1925,\"pl_id\":27061}],\"eid\":\"X0swV\",\"s\":\"s\"});\n</script><div id=\"msmaflink-X0swV\">リンク</div>"
+    },
+    {
+      "_key": "f386d8b0c1d8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7f9298a003b1",
+          "_type": "span",
+          "marks": [],
+          "text": "連携の利点"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "40feab98c843",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0523ed785ae5",
+          "_type": "span",
+          "marks": [],
+          "text": "データの自動同期"
+        },
+        {
+          "_key": "716ef019d6f4",
+          "_type": "span",
+          "marks": [],
+          "text": " 健康データが自動的にアプリに同期されるため、手動で記録する手間が省けます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8f27a54bab65",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5f835144482a",
+          "_type": "span",
+          "marks": [],
+          "text": "リアルタイムモニタリング"
+        },
+        {
+          "_key": "7a4758e2cefd",
+          "_type": "span",
+          "marks": [],
+          "text": " ウェアラブルデバイスを利用することで、リアルタイムで自分の健康状態を把握できます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6a24ec830211",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7a888a3f5ae",
+          "_type": "span",
+          "marks": [],
+          "text": "年に数回の健康イベントと特典"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "8139d6df1f8b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0745325e0937",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアでは、年に数回の健康イベントやチャレンジが開催されます。これに参加することで、特別なポイントや特典を獲得することができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "45e17c395081",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "640a03ee48b2",
+          "_type": "span",
+          "marks": [],
+          "text": "イベントの特徴"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "7144f27eb5cc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "52add7e250f0",
+          "_type": "span",
+          "marks": [],
+          "text": "全員参加型イベント"
+        },
+        {
+          "_key": "e19920bdb751",
+          "_type": "span",
+          "marks": [],
+          "text": " 全ての利用者が参加でき、特別な目標にチャレンジする楽しさを享受できます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "454ba1826228",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "196f1dc87b3f",
+          "_type": "span",
+          "marks": [],
+          "text": "特別なコース設定"
+        },
+        {
+          "_key": "996306a75dcc",
+          "_type": "span",
+          "marks": [],
+          "text": " イベントに特化した特別なウォーキングコースや運動プログラムが設定され、新しいチャレンジを楽しむことができます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "08e34f25a3cf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9cca57a3ce29",
+          "_type": "span",
+          "marks": [],
+          "text": "参加特典"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "3fdf0b693c76",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0cbaa9d7d65b",
+          "_type": "span",
+          "marks": [],
+          "text": "ボーナスポイント"
+        },
+        {
+          "_key": "59dba3079564",
+          "_type": "span",
+          "marks": [],
+          "text": " イベント期間中に特定の目標を達成すると、通常より多くのポイントが獲得できます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "19afb007e4e6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bffe6eb4208f",
+          "_type": "span",
+          "marks": [],
+          "text": "記念グッズの配布"
+        },
+        {
+          "_key": "b58718a2ce71",
+          "_type": "span",
+          "marks": [],
+          "text": " イベント参加者には、楽天オリジナルの記念グッズが配布されることがあります。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f9600d281d41",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4c368aa4cfe6",
+          "_type": "span",
+          "marks": [],
+          "text": "抽選による豪華賞品"
+        },
+        {
+          "_key": "edf0da7fc655",
+          "_type": "span",
+          "marks": [],
+          "text": " イベント期間中に参加した全ての会員が対象となる抽選で、豪華賞品が当たるチャンスがあります。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7c22e7f4ee47",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5fb2b430de6b",
+          "_type": "span",
+          "marks": [],
+          "text": "コミュニティ参加"
+        },
+        {
+          "_key": "fa739a1c8046",
+          "_type": "span",
+          "marks": [],
+          "text": " 他の参加者と交流を深める場が設けられ、共に健康生活を楽しむことができます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aabdb98c0701",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f965ca90174e",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ポイントの活用法"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "f65ec91a5cc7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "650bd7089cdf",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアで貯めた楽天ポイントは、さまざまな方法で活用することができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ce25a1bf59c2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d3cecb9de1c0",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天市場で使う"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "9feb4bd82e9c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cfed0d9a9717",
+          "_type": "span",
+          "marks": [],
+          "text": "オンラインショッピング"
+        },
+        {
+          "_key": "02ed9c1a6cf2",
+          "_type": "span",
+          "marks": [],
+          "text": " 楽天市場での商品購入に楽天ポイントを使用できます。ポイント分だけ割引になり、お得に買い物を楽しめます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8d4889f6bf9c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7a5153872d74",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天トラベルで使う"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "d107019f6d24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "de2657bd5209",
+          "_type": "span",
+          "marks": [],
+          "text": "旅行や宿泊"
+        },
+        {
+          "_key": "b46a09567a5d",
+          "_type": "span",
+          "marks": [],
+          "text": " 楽天トラベルでの宿泊予約や旅行プランの支払いにポイントを活用し、お得に旅行を楽しむことができます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f50cfa76f92f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6eaa82dcbb71",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天グループのその他サービスで使う"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "41b4160bb0e9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e4d221465ba8",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ペイ"
+        },
+        {
+          "_key": "ffeb59660059",
+          "_type": "span",
+          "marks": [],
+          "text": " 楽天ペイを使うことで、リアル店舗でもポイントを使うことができます。幅広い提携店舗で利用可能です。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "be93435d496a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4e56042c6e62",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天モバイル"
+        },
+        {
+          "_key": "28f2b3f0d1d6",
+          "_type": "span",
+          "marks": [],
+          "text": " 楽天モバイルの料金支払いにポイントを利用することができます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b2d15f945ac5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "01df7caf5fa9",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天カード"
+        },
+        {
+          "_key": "bb42128d4eb6",
+          "_type": "span",
+          "marks": [],
+          "text": " 楽天カードの利用で貯めたポイントと併用して、多くのサービスでポイントを活用することが可能です。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "59f9aa5aebcc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3ab5e88e2e5b",
+          "_type": "span",
+          "marks": [
+            "m10-0"
+          ],
+          "text": "楽天カードをチェックする＞"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m10-0",
+          "_type": "link",
+          "href": "/health/click"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "a5e7141c91f1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "acad9f790835",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアの機能とメリット"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "78146e5d05cf",
+      "_type": "tableBlock",
+      "hasHeader": true,
+      "rows": [
+        {
+          "cells": [
+            "項目",
+            "説明",
+            "メリット"
+          ]
+        },
+        {
+          "cells": [
+            "楽天ヘルスケア",
+            "健康管理プラットフォーム",
+            "ポイント獲得、データ一元管理"
+          ]
+        },
+        {
+          "cells": [
+            "歩数計機能",
+            "日々の歩数記録",
+            "ポイント獲得、モチベーション向上"
+          ]
+        },
+        {
+          "cells": [
+            "食事記録",
+            "食事の内容を記録・管理",
+            "健康的な食生活のサポート"
+          ]
+        },
+        {
+          "cells": [
+            "体重・体脂肪率の記録",
+            "体重や体脂肪率の変化管理",
+            "健康状態の可視化"
+          ]
+        },
+        {
+          "cells": [
+            "体組織計連動",
+            "体重・体組織データの自動同期",
+            "正確なデータ管理"
+          ]
+        },
+        {
+          "cells": [
+            "ウェアラブルデバイス連携",
+            "運動量や心拍数のリアルタイム管理",
+            "自動同期、詳細データ"
+          ]
+        },
+        {
+          "cells": [
+            "健康イベント",
+            "定期的なチャレンジやイベント",
+            "特典獲得、コミュニティ参加"
+          ]
+        },
+        {
+          "cells": [
+            "楽天ポイント",
+            "健康活動によるポイント獲得",
+            "オンライン・オフライン双方で利用可能"
+          ]
+        }
+      ]
+    },
+    {
+      "_key": "cab4c96cbcea",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e587b60e57bf",
+          "_type": "span",
+          "marks": [],
+          "text": "まとめ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "cba353f66b86",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bd95aa897151",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアを利用することで同様の健康管理とお得な生活を実現することができます。日々の歩数を記録しポイントを貯めることで、健康維持のモチベーションを高め、楽天ポイントという形で実生活に還元することができます。体組織計やウェアラブルデバイスと連携することで、より詳細な健康データを収集し、一元管理することが可能です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7ffca5734b6e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4984e73cdc02",
+          "_type": "span",
+          "marks": [],
+          "text": "年に数回開催される健康イベントやチャレンジに参加することで、特別なポイントやグッズ、豪華な賞品を獲得するチャンスもあります。こうした活動を通じて、楽しみながら健康生活を継続し、さらに楽天ポイントを活用することで、日常生活を豊かにすることができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6ba0ad1b568d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "506fb744a6e0",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアをフル活用し、健康とお得な生活を両立させてみましょう。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7685f2b7aa57",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0919eba6e2e",
+          "_type": "span",
+          "marks": [
+            "m11-0"
+          ],
+          "text": "楽天カードをチェックする＞"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m11-0",
+          "_type": "link",
+          "href": "/health/click"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "60412e592961",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f53b06b8e3d4",
+          "_type": "span",
+          "marks": [],
+          "text": "このブログは「にほんブログ村」と「ブログリーダー」に参加しています。下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "338a3d9f71ed",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "7ba88a6aff75",
+          "_type": "linkImageBlock",
+          "alt": "ママさんマネー部 - にほんブログ村",
+          "href": "https://blogmura.com/profiles/11159291/?p_cid=11159291&reader=11159291",
+          "provider": "blogmura",
+          "src": "https://b.blogmura.com/banner-blogmura-reader-pink.svg"
+        },
+        {
+          "_key": "83542766def4",
+          "_type": "linkImageBlock",
+          "alt": "人気ブログランキングでフォロー",
+          "href": "https://blog.with2.net/link/?id=2097059&follow",
+          "provider": "with2",
+          "src": "https://blog.with2.net/banner/follow/2097059?t=b"
+        }
+      ]
+    }
+  ],
+  "category": "health",
+  "heroImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-9981e1d3a0c34633162a7f7df215bf1608ecff92-1024x1024-jpg",
+      "_type": "reference"
+    }
+  },
+  "publishedAt": "2024-06-22T04:12:53Z",
+  "slug": {
+    "_type": "slug",
+    "current": "rakuten-healthcare"
+  },
+  "tags": [
+    "ウォーキング",
+    "楽天経済圏"
+  ],
+  "title": "ウォーキングでポイントGET！楽天ヘルスケアで楽しく健康管理",
+  "updatedAt": "2025-10-19T13:35:41.588Z"
+}

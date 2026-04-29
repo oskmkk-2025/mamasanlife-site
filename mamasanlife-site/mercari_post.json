@@ -1,0 +1,1792 @@
+{
+  "_createdAt": "2025-08-26T10:23:52Z",
+  "_id": "Nn6Sc6MF3u71woMpYvaP73",
+  "_rev": "YHmk6oGwB8vI6jHijMhwSM",
+  "_type": "post",
+  "_updatedAt": "2026-01-05T09:37:44Z",
+  "affiliateBlocks": [
+    {
+      "html": "<a class=\"affiliate-btn affiliate-btn--moshimo\" href=\"//af.moshimo.com/af/c/click?a_id=4046502&amp;p_id=54&amp;pc_id=54&amp;pl_id=620\" target=\"_blank\" rel=\"noopener noreferrer nofollow sponsored\">公式サイトでチェック</a>",
+      "note": "",
+      "title": ""
+    },
+    {
+      "html": "<a class=\"affiliate-btn affiliate-btn--moshimo\" href=\"//af.moshimo.com/af/c/click?a_id=4556872&amp;p_id=58&amp;pc_id=58&amp;pl_id=669\" target=\"_blank\" rel=\"noopener noreferrer nofollow sponsored\">楽天カードをチェックする＞</a>",
+      "note": "",
+      "title": ""
+    },
+    {
+      "html": "<a class=\"affiliate-btn affiliate-btn--moshimo\" href=\"//af.moshimo.com/af/c/click?a_id=4590780&amp;p_id=55&amp;pc_id=55&amp;pl_id=635\" target=\"_blank\" rel=\"noopener noreferrer nofollow sponsored\">楽天トラベルをみる</a>",
+      "note": "",
+      "title": ""
+    },
+    {
+      "html": "<a class=\"affiliate-btn affiliate-btn--moshimo\" href=\"//af.moshimo.com/af/c/click?a_id=4590782&amp;p_id=56&amp;pc_id=56&amp;pl_id=644\" target=\"_blank\" rel=\"noopener noreferrer nofollow sponsored\">楽天ブックスをみる</a>",
+      "note": "",
+      "title": ""
+    }
+  ],
+  "body": [
+    {
+      "_key": "e2c3ad1493d7",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "1053116144c2",
+          "_type": "linkImageBlock",
+          "alt": "にほんブログ村 その他生活ブログ お得な生活へ",
+          "href": "https://life.blogmura.com/otoku/ranking/in?p_cid=11159291",
+          "src": "https://b.blogmura.com/life/otoku/88_31.gif"
+        }
+      ]
+    },
+    {
+      "_key": "8bc433650394",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "29b7bc4eea6d",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m0-0",
+          "_type": "link",
+          "href": "/money/in"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "788e6acda5af",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "c0177a2c0e2c",
+          "_type": "linkImageBlock",
+          "alt": "節約・貯蓄ランキング",
+          "href": "https://blog.with2.net/link/?id=2097059&cid=1545",
+          "src": "https://blog.with2.net/img/banner/c/banner_1/br_c_1545_1.gif"
+        }
+      ]
+    },
+    {
+      "_key": "b4c73142b5ba",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "25b0ecb4823d",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "7484497f374b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "65eb1ec0ed36",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "d9db58f48ba1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m1-0",
+          "_type": "link",
+          "href": "/money/in"
+        },
+        {
+          "_key": "m2-1",
+          "_type": "link",
+          "href": "/money/link"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "c2a4bb8a8920",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "eaa65e6c3d41",
+          "_type": "span",
+          "marks": [],
+          "text": "「楽天サービス」と「メルカリ」はそれぞれ独自の強みを持っていますが、組み合わせることで相乗効果を生み出し、さらに高い節約効果を期待することができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a00e55757d97",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0ce47bd5a016",
+          "_type": "span",
+          "marks": [],
+          "text": "ざっくり説明すると普段のお買い物で買ったものを不要になったらメルカリへ出品、売れたお金でまたお買い物。お買い物の際に楽天カード払いや楽天ペイ払い、メルペイ払いで済ませます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3fa7e2293efe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "87d52fa4b6a3",
+          "_type": "span",
+          "marks": [],
+          "text": "サイクルで循環できて部屋も片付くので今何を所持しているのか把握できるようになります。本当に必要な分だけ買うようになるので無駄なく暮らすことが可能になります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5367375aecc9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "67355d2e91e7",
+          "_type": "span",
+          "marks": [],
+          "text": "この記事では楽天経済圏とメルカリ経済圏の特徴とそのメリットについて詳しく説明し、次にこれらをどのように組み合わせて活用すると節約効果が最大化できるかについて解説します。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "815d1038bba3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "22eabe255188",
+          "_type": "span",
+          "marks": [],
+          "text": "まだやっていないって方はこのメゾットを取り入れて生活費が下がる実感を感じてみてくださいね。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ccde0051f2ab",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/IMG_69AD0D2F343E-1-2.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "支払いはできるだけ現金化しにくいメルカリの売上金や使用期限のある楽天ポイントから優先的に使ってくださいね"
+      ]
+    },
+    {
+      "_key": "0c4efe2a8d9d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2b05af3e2971",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天経済圏の詳細"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "d2fb44e39cd1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "43de4b6a9a98",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天経済圏とは、楽天グループのサービスを統合的に利用することで、銀行手数料が無料になったり楽天ポイントがどんどん溜まっていくシステム。楽天ポイントは現在、ネットを超えてさまざまな実店舗でも利用できるようになっています。そんな楽天経済圏には以下のようなサービスがあります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "81e33c8fb704",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "42983eea0577",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天市場"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "0ff2bc3c75e5",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "9a9999438ff4",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "//af.moshimo.com/af/c/click?a_id=4046502&p_id=54&pc_id=54&pl_id=620",
+          "provider": "other",
+          "src": "//image.moshimo.com/af-img/0032/000000000620.gif"
+        }
+      ]
+    },
+    {
+      "_key": "af93a4a429f1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5c3a64d26abf",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天市場はオンラインショッピングプラットフォームであり、幅広い商品が手に入ります。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a1011bf69514",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c492ee9592c7",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ポイントが貯まり、次回の買い物で使用できます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4de8c54f6c77",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "18f54e872819",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天カード"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "ba7e3087a3fc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b658053408f1",
+          "_type": "span",
+          "marks": [
+            "m3-0"
+          ],
+          "text": "楽天カードをチェックする＞"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m3-0",
+          "_type": "link",
+          "href": "/money/click"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "fc781855f683",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "df91d5ec3c0f",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天カードは、利用するたびに楽天ポイントが貯まるクレジットカードです。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f5e3fd7ca709",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5417ea772400",
+          "_type": "span",
+          "marks": [],
+          "text": "特定の条件下でポイント倍率がアップするキャンペーンも頻繁に行われます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a4b0fe7db855",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d3e2d64fdbfe",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天銀行"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "008026fbbe7e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f4272486c0de",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天銀行はインターネットバンキングのサービスで、楽天ポイントが貯まったり、使用したりできます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b88223c6a90d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d4cd41104a9b",
+          "_type": "span",
+          "marks": [],
+          "text": "各種手数料の割引やキャッシュバックもあります。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "962f71e1bd0e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a6f245053623",
+          "_type": "span",
+          "marks": [
+            "m4-0"
+          ],
+          "text": "\n楽天銀行をチェックする\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m4-0",
+          "_type": "link",
+          "href": "https://www.rakuten-bank.co.jp/"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "061ca967c43d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "113b1b9e99f1",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天証券"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "028476416ced",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bf04d536b572",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "26e867bc3be8",
+          "_type": "span",
+          "marks": [
+            "m5-0"
+          ],
+          "text": "\n楽天証券をチェックする＞\n"
+        },
+        {
+          "_key": "8e94c6630087",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m5-0",
+          "_type": "link",
+          "href": "/money/312173-389657"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "075e50aad141",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "303bcc25763e",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天証券はネット証券のサービスで、楽天ポイントが貯まったり、使用したりできます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ea5061c83b85",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c52be3332093",
+          "_type": "span",
+          "marks": [],
+          "text": "NISAやiDeco口座を開設して老後資金を運用することができます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b1dba5c61758",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a4fd6b4d6972",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケア"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "6f860192eaef",
+      "_type": "image",
+      "alt": "楽天ヘルスケア-歩数計で歩いてポイントも貯めて健康もキープ!",
+      "asset": {
+        "_ref": "image-d88ff9d596a40cd885e7d004a96c4c57e8eeb435-512x512-jpg",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "8b57cc1f03ff",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "95459173d980",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://apps.apple.com/jp/app/%25E6%25A5%25BD%25E5%25A4%25A9%25E3%2583%2598%25E3%2583%25AB%25E3%2582%25B9%25E3%2582%25B1%25E3%2582%25A2-%25E6%25AD%25A9%25E6%2595%25B0%25E8%25A8%2588%25E3%2581%25A7%25E6%25AD%25A9%25E3%2581%2584%25E3%2581%25A6%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2582%25E8%25B2%25AF%25E3%2582%2581%25E3%2581%25A6%25E5%2581%25A5%25E5%25BA%25B7%25E3%2582%2582%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%2597/id1585068047?uo=4",
+          "src": "https://nabettu.github.io/appreach/img/itune_ja.svg"
+        },
+        {
+          "_key": "5b2a50f1c970",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://play.google.com/store/apps/details?id=jp.co.rakuten.health.android",
+          "src": "https://nabettu.github.io/appreach/img/gplay_ja.png"
+        }
+      ]
+    },
+    {
+      "_key": "bbeb77a6c66a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6740bac2817d",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケア-歩数計で歩いてポイントも貯めて健康もキープ!"
+        },
+        {
+          "_key": "4bd8874f8c17",
+          "_type": "span",
+          "marks": [],
+          "text": "開発元:"
+        },
+        {
+          "_key": "14a665f44d5b",
+          "_type": "span",
+          "marks": [],
+          "text": "Rakuten Group, Inc."
+        },
+        {
+          "_key": "ac6b9aff4754",
+          "_type": "span",
+          "marks": [],
+          "text": "無料"
+        },
+        {
+          "_key": "cc00c7af82d5",
+          "_type": "span",
+          "marks": [],
+          "text": "posted with"
+        },
+        {
+          "_key": "3e827c937798",
+          "_type": "span",
+          "marks": [
+            "m6-0"
+          ],
+          "text": "アプリーチ"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m6-0",
+          "_type": "link",
+          "href": "/money/app-reach"
+        },
+        {
+          "_key": "m7-1",
+          "_type": "link",
+          "href": "/money/id1585068047"
+        },
+        {
+          "_key": "m8-2",
+          "_type": "link",
+          "href": "/money/details"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "d9e1d128e979",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e686fced4b53",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアはフィットネストラッキングや健康管理ツールを提供。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5aff56937ed0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6c80e60eb181",
+          "_type": "span",
+          "marks": [],
+          "text": "健康活動をトラッキングすることで楽天ポイントを獲得できます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "04e3e3330831",
+      "_type": "blogCard",
+      "url": "https://mamasanmoney-bu.com/rakuten-healthcare/"
+    },
+    {
+      "_key": "0fbc298e8abd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "42489fe37d39",
+          "_type": "span",
+          "marks": [],
+          "text": "その他のサービス（楽天トラベル、楽天ブックス、楽天ペイ等）"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "dd4269daea16",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8413b19807f1",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天トラベル：旅行の予約でポイントが貯まる"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3f55f58baf0f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9a3e8cf5b9e1",
+          "_type": "span",
+          "marks": [
+            "m9-0"
+          ],
+          "text": "楽天トラベルをみる"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m9-0",
+          "_type": "link",
+          "href": "/money/click"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "a593182ef521",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5a844825be99",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ブックス：書籍や電子書籍の購入でポイントが貯まる"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a42be9c68319",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1d66e67d636e",
+          "_type": "span",
+          "marks": [
+            "m10-0"
+          ],
+          "text": "楽天ブックスをみる"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m10-0",
+          "_type": "link",
+          "href": "/money/click"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "d4b9b3cca4d3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4c2548fc68a9",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ペイ：日常の決済でポイントが貯まる"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cb436bb2110f",
+      "_type": "image",
+      "alt": "楽天ペイ",
+      "asset": {
+        "_ref": "image-2c3dcdf8078540c9e516a012930cd5bbc0974c02-512x512-jpg",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "5826679f1eaf",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "0c1225da6e1e",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://apps.apple.com/jp/app/%25E6%25A5%25BD%25E5%25A4%25A9%25E3%2583%259A%25E3%2582%25A4-%25E6%25A5%25BD%25E5%25A4%25A9%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%25E3%2582%25AB%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2582%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E6%25B1%25BA%25E6%25B8%2588%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA/id1139755229?uo=4",
+          "src": "https://nabettu.github.io/appreach/img/itune_ja.svg"
+        },
+        {
+          "_key": "246b5ccc1e3d",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://play.google.com/store/apps/details?id=jp.co.rakuten.pay",
+          "src": "https://nabettu.github.io/appreach/img/gplay_ja.png"
+        }
+      ]
+    },
+    {
+      "_key": "d31871733fd7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9175a0478da6",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ペイ"
+        },
+        {
+          "_key": "3d54c48e3544",
+          "_type": "span",
+          "marks": [],
+          "text": "開発元:"
+        },
+        {
+          "_key": "baa310ee1ee1",
+          "_type": "span",
+          "marks": [],
+          "text": "Rakuten Group, Inc."
+        },
+        {
+          "_key": "7440acff0e68",
+          "_type": "span",
+          "marks": [],
+          "text": "無料"
+        },
+        {
+          "_key": "383bc5df3487",
+          "_type": "span",
+          "marks": [],
+          "text": "posted with"
+        },
+        {
+          "_key": "3c9379a76b52",
+          "_type": "span",
+          "marks": [
+            "m11-0"
+          ],
+          "text": "アプリーチ"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m11-0",
+          "_type": "link",
+          "href": "/money/app-reach"
+        },
+        {
+          "_key": "m12-1",
+          "_type": "link",
+          "href": "/money/id1139755229"
+        },
+        {
+          "_key": "m13-2",
+          "_type": "link",
+          "href": "/money/details"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "fc2e4133d0e3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "949578bbacce",
+          "_type": "span",
+          "marks": [],
+          "text": "メルカリ経済圏の詳細"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "a46f8e6e0c44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e6de436b248a",
+          "_type": "span",
+          "marks": [],
+          "text": "メルカリ経済圏とは、メルカリが提供する複数のサービスを利用することで、便利さや経済的なメリットを享受できるエコシステムです。以下はメルカリ経済圏の主なサービスです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "459020736ed9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "21cc1e26d3d1",
+          "_type": "span",
+          "marks": [],
+          "text": "メルカリ（フリマアプリ）"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "63d711283b0b",
+      "_type": "image",
+      "alt": "フリマアプリはメルカリ - メルペイのスマホ決済でもっとお得",
+      "asset": {
+        "_ref": "image-7374cd473437e483762b1abb6fbf86f71fb99055-512x512-jpg",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "ab2abacf9985",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "c57729d2187b",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://apps.apple.com/jp/app/%25E3%2583%2595%25E3%2583%25AA%25E3%2583%259E%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25AF%25E3%2583%25A1%25E3%2583%25AB%25E3%2582%25AB%25E3%2583%25AA-%25E3%2583%25A1%25E3%2583%25AB%25E3%2583%259A%25E3%2582%25A4%25E3%2581%25AE%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E6%25B1%25BA%25E6%25B8%2588%25E3%2581%25A7%25E3%2582%2582%25E3%2581%25A3%25E3%2581%25A8%25E3%2581%258A%25E5%25BE%2597/id667861049?uo=4",
+          "src": "https://nabettu.github.io/appreach/img/itune_ja.svg"
+        },
+        {
+          "_key": "36e343c77247",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://play.google.com/store/apps/details?id=com.kouzoh.mercari",
+          "src": "https://nabettu.github.io/appreach/img/gplay_ja.png"
+        }
+      ]
+    },
+    {
+      "_key": "b39f0a8aaba6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "547b733cc7a5",
+          "_type": "span",
+          "marks": [],
+          "text": "フリマアプリはメルカリ - メルペイのスマホ決済でもっとお得"
+        },
+        {
+          "_key": "75c3313f0a6c",
+          "_type": "span",
+          "marks": [],
+          "text": "開発元:"
+        },
+        {
+          "_key": "ed47c797cf5b",
+          "_type": "span",
+          "marks": [],
+          "text": "Mercari, Inc."
+        },
+        {
+          "_key": "bbb3e6940d7e",
+          "_type": "span",
+          "marks": [],
+          "text": "無料"
+        },
+        {
+          "_key": "63f5bc1aaf35",
+          "_type": "span",
+          "marks": [],
+          "text": "posted with"
+        },
+        {
+          "_key": "97204fd8bbb7",
+          "_type": "span",
+          "marks": [
+            "m14-0"
+          ],
+          "text": "アプリーチ"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m14-0",
+          "_type": "link",
+          "href": "/money/app-reach"
+        },
+        {
+          "_key": "m15-1",
+          "_type": "link",
+          "href": "/money/id667861049"
+        },
+        {
+          "_key": "m16-2",
+          "_type": "link",
+          "href": "/money/details"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "bd3a16a2997d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "265f4b6c3dc8",
+          "_type": "span",
+          "marks": [],
+          "text": "中古品や新品を売買できるプラットフォームです。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8b2465159e71",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1590d2631c0",
+          "_type": "span",
+          "marks": [],
+          "text": "不要になった商品を手軽に現金化することができます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b8a770c23542",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "32e20bf7430e",
+          "_type": "span",
+          "marks": [],
+          "text": "売買取引を経験することで"
+        },
+        {
+          "_key": "07739f2d9cf9",
+          "_type": "span",
+          "marks": [],
+          "text": "物の再販価格（"
+        },
+        {
+          "_key": "fe76423dac33",
+          "_type": "span",
+          "marks": [],
+          "text": "リセールバリュー）を意識した買い方ができるようになります。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d316cac402ae",
+      "_type": "blogCard",
+      "url": "https://mamasanmoney-bu.com/buy-and-sell-on-mercari-and-clean-up-your-room/"
+    },
+    {
+      "_key": "aec883921e8d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ffefbe02eac2",
+          "_type": "span",
+          "marks": [],
+          "text": "メルペイ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "9f83d24d0cda",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f52d2c47efcc",
+          "_type": "span",
+          "marks": [],
+          "text": "メルカリの売上金を利用することで、簡単に日常決済ができるモバイル決済サービスです。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1c4e9c409143",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5b9cbfb35296",
+          "_type": "span",
+          "marks": [],
+          "text": "店舗やオンラインショップでの支払いに利用可能。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d2f449d2cd12",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "47915958c91c",
+          "_type": "span",
+          "marks": [],
+          "text": "メルカリShops"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "8270a0377729",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3e197cd25f81",
+          "_type": "span",
+          "marks": [],
+          "text": "小規模な事業者や個人が自分のオンラインショップを運営できるプラットフォームです。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5c80d22011c2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "037d2057f0e4",
+          "_type": "span",
+          "marks": [],
+          "text": "商品を広く販売するチャンスを提供。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "899bc3a933fa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f6c6ca5fe411",
+          "_type": "span",
+          "marks": [],
+          "text": "メルカリ教室"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "c9e14b5c95e9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "693fa128d8d0",
+          "_type": "span",
+          "marks": [],
+          "text": "初心者でもスムーズにスタートできるよう、メルカリアプリの使い方を学ぶことができます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ac0f2e5d67ee",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3c9d2cd03de4",
+          "_type": "span",
+          "marks": [],
+          "text": "その他のサービス(メルカード、メルカリハロ、ビットコイン取引等）"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "889c987295dd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "762914c5d7f3",
+          "_type": "span",
+          "marks": [],
+          "text": "これらのサービスには手を出しません。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "609ec207d786",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4bf697daba80",
+          "_type": "span",
+          "marks": [],
+          "text": "メルカード：クレジットカード"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "eb1bdbf3f113",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a3fac9336857",
+          "_type": "span",
+          "marks": [],
+          "text": "メルカリハロ：最短1時間から働けるちょっとしたおしごとを探す"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "16e40b6bb373",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9b788f32dd65",
+          "_type": "span",
+          "marks": [],
+          "text": "ビットコイン取引：メルペイ残高やメルペイが発行する無償ポイントを使って1円から購入できる。取引できる暗号資産はビットコイン（BTC）、イーサリアム（ETH）"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b8eb29421cf0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b83b454104fb",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天&メルカリ経済圏を掛け合わせた相乗効果"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b75d98f85c31",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3a1122907f0d",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天とメルカリの経済圏を組み合わせることで、以下の相乗効果を期待することができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7d914372eda9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f049ac68148a",
+          "_type": "span",
+          "marks": [],
+          "text": "メルカリの売上金で楽天ポイントをつける方法"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "238e2f0e880b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2803597a6a33",
+          "_type": "span",
+          "marks": [],
+          "text": "メルカリで不要品を販売し売上金を得る。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d89c08977906",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "05499346a6a4",
+          "_type": "span",
+          "marks": [],
+          "text": "売上金を楽天銀行へ振り込み、楽天キャッシュを使って楽天ペイへチャージ。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "18ccb1022e8a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bbc2fec95884",
+          "_type": "span",
+          "marks": [],
+          "text": "チャージした楽天ペイを支払いに利用することで楽天ポイント1％を獲得。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d8e05fdf3d21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f784bcd70806",
+          "_type": "span",
+          "marks": [],
+          "text": "ただし売上金を銀行へ振り込む際に振り込み手数料が200円発生。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "51a939a2842d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dc99af810301",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ペイのポイント還元率が1%なので、売上金を20,300円以上振り込めば、手数料分を上回るポイントを得る事が可能です。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ccfe994646f9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "50d09a1acd37",
+          "_type": "span",
+          "marks": [],
+          "text": "お得な商品購入"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "34ebf06fc1e8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c0a0a07f6e97",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天市場で商品を購入し、楽天ポイントを貯める。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aacb9d898a97",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5af637812974",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天市場で購入した商品を必要なくなった場合、メルカリで再度販売し、現金化する。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "73d2639f3e7e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "76cc524374db",
+          "_type": "span",
+          "marks": [],
+          "text": "健康活動との連携"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "923d96a4e0f9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a34a639c08a5",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天ヘルスケアで日々の健康活動をトラッキングし、楽天ポイントを貯める。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d854e828ec53",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3de4cee49b4e",
+          "_type": "span",
+          "marks": [],
+          "text": "貯まった楽天ポイントをメルペイに変え、日常の支払いに利用する。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b7818a73e140",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d4b7bbed559b",
+          "_type": "span",
+          "marks": [],
+          "text": "キャンペーンの活用"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "f1c7d508ced2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a48e31aa3fb1",
+          "_type": "span",
+          "marks": [],
+          "text": "両方のプラットフォームで開催されるキャンペーンを活用し、ポイントを効率よく貯める。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e98d898a1100",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "46bdc03b8a7d",
+          "_type": "span",
+          "marks": [],
+          "text": "活用方法を表でまとめる"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "33434eb51291",
+      "_type": "tableBlock",
+      "hasHeader": false,
+      "rows": [
+        {
+          "cells": [
+            "経済圏",
+            "サービス",
+            "活用法",
+            "得られるメリット"
+          ]
+        },
+        {
+          "cells": [
+            "楽天経済圏",
+            "楽天市場",
+            "商品購入",
+            "楽天ポイントを貯める"
+          ]
+        },
+        {
+          "cells": [
+            "楽天経済圏",
+            "楽天ヘルスケア",
+            "健康活動",
+            "楽天ポイントを貯める"
+          ]
+        },
+        {
+          "cells": [
+            "楽天経済圏",
+            "楽天ペイ",
+            "日常決済",
+            "楽天ポイントを貯める"
+          ]
+        },
+        {
+          "cells": [
+            "メルカリ経済圏",
+            "メルカリ",
+            "商品売買",
+            "不要品を現金化する"
+          ]
+        },
+        {
+          "cells": [
+            "メルカリ経済圏",
+            "メルペイ",
+            "日常決済",
+            "メルカリ売上金を効率的に利用"
+          ]
+        },
+        {
+          "cells": [
+            "両方",
+            "楽天ペイ+メルペイ",
+            "売上金を楽天ペイで利用",
+            "楽天ポイントをを貯める"
+          ]
+        }
+      ]
+    },
+    {
+      "_key": "4f51c621da70",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7d1be863e2dc",
+          "_type": "span",
+          "marks": [],
+          "text": "まとめ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "e9b6d61a1563",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "48d7dc9b451a",
+          "_type": "span",
+          "marks": [],
+          "text": "楽天経済圏とメルカリ経済圏は、それぞれ独自の素晴らしいサービスを提供していますが、これらを掛け合わせることでさらに大きな節約効果を得ることができます。大切なのは、どちらのサービスも最大限に活用し、ポイントや現金を効率的に管理・利用することです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4311934ad01b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "544d3b909e74",
+          "_type": "span",
+          "marks": [],
+          "text": "まず、メルカリで不要品を販売し、その売上金をメルペイにチャージすることで、日常の支払いに使いましょう。メルペイを楽天ペイの対応店舗で利用することで、楽天ポイントも一緒に貯まります。さらに、楽天市場での買い物や楽天ヘルスケアを利用して日々の健康活動をポイ活とシンクロさせることで、効率的にポイントを貯めて使うことができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "34434b9732f8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "29ea53ccfb4c",
+          "_type": "span",
+          "marks": [],
+          "text": "また楽天ヘルスケアを活用することで、日常の運動や健康管理が楽天ポイントに直結します。それを利用すれば、節約だけでなく健康管理も一石二鳥です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "496dde04b117",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bfc147131a11",
+          "_type": "span",
+          "marks": [],
+          "text": "最後に、これらの経済圏はキャンペーンや特典が豊富なので、定期的に最新情報をチェックし、もっとお得に使いこなすことが可能です。これらのテクニックを駆使して、賢く節約しながら生活の質を高めることが期待できます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0f7461ecfab8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "04d788bbe11f",
+          "_type": "span",
+          "marks": [],
+          "text": "まとめのポイント"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "1400994b6456",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "95556ce5c19c",
+          "_type": "span",
+          "marks": [],
+          "text": "ポイントを貯める: メルカリと楽天ペイを組み合わせて利用することでポイントを効率的に貯める。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ac21b80cb232",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "627155ff347a",
+          "_type": "span",
+          "marks": [],
+          "text": "お得な商品購入と再販売: 楽天市場で購入した商品をメルカリで再販売することにより、さらなる現金化。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6411bd29dc9f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f2ddb1a1ffdf",
+          "_type": "span",
+          "marks": [],
+          "text": "健康活動をポイ活とシンクロさせる: 楽天ヘルスケアを利用してポイントを貯め、それを日常生活で活用。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dbf4e4f1022c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "516430cb217a",
+          "_type": "span",
+          "marks": [],
+          "text": "キャンペーンの活用: 両プラットフォームのキャンペーンをチェックし、ポイントの効率利用を図る。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "938bf468174d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5e27bf01971b",
+          "_type": "span",
+          "marks": [],
+          "text": "両経済圏をフルに活用することで、本当に必要なものに囲まれる洗練された生活を実現できるでしょう。これらの情報をもとに、自分の生活スタイルに合わせた最適な利用法を見つけてください。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "121a5d080c21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8c870966ed57",
+          "_type": "span",
+          "marks": [
+            "m17-0"
+          ],
+          "text": "楽天カードをチェックする＞"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m17-0",
+          "_type": "link",
+          "href": "/money/click"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "407145f84c10",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "355ba582af75",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "6d61233ee21a",
+          "_type": "span",
+          "marks": [
+            "m18-0"
+          ],
+          "text": "\n楽天証券をチェックする＞\n"
+        },
+        {
+          "_key": "44d66d1f64e6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m18-0",
+          "_type": "link",
+          "href": "/money/312173-389657"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "92e678a7bffe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c3d500bfd8bd",
+          "_type": "span",
+          "marks": [],
+          "text": "このブログは「にほんブログ村」と「ブログリーダー」に参加しています。下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1142b5dcdd93",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "c6aa42c2efb6",
+          "_type": "linkImageBlock",
+          "alt": "ママさんマネー部 - にほんブログ村",
+          "href": "https://blogmura.com/profiles/11159291/?p_cid=11159291&reader=11159291",
+          "provider": "blogmura",
+          "src": "https://b.blogmura.com/banner-blogmura-reader-pink.svg"
+        },
+        {
+          "_key": "55b9b0734f5f",
+          "_type": "linkImageBlock",
+          "alt": "人気ブログランキングでフォロー",
+          "href": "https://blog.with2.net/link/?id=2097059&follow",
+          "provider": "with2",
+          "src": "https://blog.with2.net/banner/follow/2097059?t=b"
+        }
+      ]
+    }
+  ],
+  "category": "money",
+  "heroImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-b2b1d261cf0a76c06de53b43f11ad8485a534547-1024x1024-jpg",
+      "_type": "reference"
+    }
+  },
+  "publishedAt": "2024-06-22T06:12:38Z",
+  "slug": {
+    "_type": "slug",
+    "current": "rakuten-mercari"
+  },
+  "tags": [
+    "メルカリ",
+    "楽天経済圏"
+  ],
+  "title": "楽天とメルカリの相乗効果で賢くやりくり活用法",
+  "updatedAt": "2025-10-19T13:35:39.379Z"
+}

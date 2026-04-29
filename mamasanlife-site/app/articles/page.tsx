@@ -4,7 +4,7 @@ import { categories, recentPostsQuery } from '@/lib/queries'
 import { uniquePostsBySlug, filterBlocked } from '@/lib/post-utils'
 import { FilterablePostList } from '@/components/FilterablePostList'
 
-export const revalidate = 60
+export const revalidate = 3600
 
 export const metadata = {
   title: '記事一覧',
@@ -14,9 +14,9 @@ export const metadata = {
 export default async function ArticlesPage() {
   let posts: any[] = []
   try {
-    const raw = await sanityClient.fetch(recentPostsQuery, { limit: 500 })
-    const allowed = new Set(categories.map(c=>c.slug))
-    posts = uniquePostsBySlug(filterBlocked(raw)).filter((p:any)=> allowed.has(p?.category)).map((p:any) => ({
+    const raw = await sanityClient.fetch(recentPostsQuery, { limit: 100 })
+    const allowed = new Set(categories.map(c => c.slug))
+    posts = uniquePostsBySlug(filterBlocked(raw)).filter((p: any) => allowed.has(p?.category)).map((p: any) => ({
       id: p?._id,
       slug: p.slug,
       category: p.category,

@@ -3,7 +3,7 @@ import { sanityClient } from '@/lib/sanity.client'
 import { filterBlocked } from '@/lib/post-utils'
 import groq from 'groq'
 
-export const revalidate = 300
+export const revalidate = 3600
 
 export async function GET() {
   const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3002'

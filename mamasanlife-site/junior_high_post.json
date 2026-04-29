@@ -1,0 +1,3781 @@
+{
+  "_createdAt": "2025-08-26T10:24:18Z",
+  "_id": "Nn6Sc6MF3u71woMpYvaSQk",
+  "_rev": "SXAs4vSpj9TKR5uI9m6c49",
+  "_type": "post",
+  "_updatedAt": "2026-01-07T08:40:29Z",
+  "body": [
+    {
+      "_key": "e6a222d9462b",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "8b41d8807dfd",
+          "_type": "linkImageBlock",
+          "alt": "にほんブログ村 その他生活ブログ お得な生活へ",
+          "href": "https://life.blogmura.com/otoku/ranking/in?p_cid=11159291",
+          "src": "https://b.blogmura.com/life/otoku/88_31.gif"
+        }
+      ]
+    },
+    {
+      "_key": "0bca720e6017",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2b57b7992661",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m0-0",
+          "_type": "link",
+          "href": "/parenting/in"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "bb12614a763d",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "14b1322deffe",
+          "_type": "linkImageBlock",
+          "alt": "節約・貯蓄ランキング",
+          "href": "https://blog.with2.net/link/?id=2097059&cid=1545",
+          "src": "https://blog.with2.net/img/banner/c/banner_1/br_c_1545_1.gif"
+        }
+      ]
+    },
+    {
+      "_key": "9a5f375dbeb4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "20bb347377af",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "68e612666290",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "7df8417bee81",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "3125c1652bac",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m1-0",
+          "_type": "link",
+          "href": "/parenting/in"
+        },
+        {
+          "_key": "m2-1",
+          "_type": "link",
+          "href": "/parenting/link"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "4ad72c5cc7cc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "71e7e27dad4f",
+          "_type": "span",
+          "marks": [],
+          "text": "現在高1女子と中2男子を育てているひーちママです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "709ef6efdadd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "759064216cf2",
+          "_type": "span",
+          "marks": [],
+          "text": "2025年3月時点。中3娘と中1息子にスマートフォンを持たせるにあたり、事前準備から実際に使用させるまでを試行錯誤して調べたりしたことをご紹介します。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "872900821267",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "47fb806d58ef",
+          "_type": "span",
+          "marks": [],
+          "text": "この記事でご紹介している契約プランではや1ヶ月が経ちました。2人の3月に利用した分の請求額の結果がこれ↓"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4ba82024f0bf",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "安すぎひん⁈ねぇ⁈",
+        "子ども達の連絡のためだけにひいていた固定電話代より安くなってる〜♪"
+      ]
+    },
+    {
+      "_key": "de444f934382",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6929f33ee884",
+          "_type": "span",
+          "marks": [],
+          "text": "同じように「そろそろスマホを…」と考えていらっしゃる保護者の方々のお役に立てればと思い、我が家の実体験と今後の予定をお伝えしていきます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aebec7287415",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "84a295700ff5",
+          "_type": "span",
+          "marks": [],
+          "text": "スマホを持たせるきっかけ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "e3bb7eea4144",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0c080baff8d9",
+          "_type": "span",
+          "marks": [],
+          "text": "長女のケース"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "0e0eac10e97b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "43bb5d91b19e",
+          "_type": "span",
+          "marks": [],
+          "text": "長女はこれまで特にスマホを欲しいと言ったことはありませんでした。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "13248796a6da",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7acfaea48f50",
+          "_type": "span",
+          "marks": [],
+          "text": "スマホへの興味が薄く必要性をあまり感じていないと言っていましたが、友人との連絡手段として手持ちのタブレットを使ってWi-Fi環境下であればLINEを利用できるようにはしていました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "af2956ee89b0",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "実家の電話番号を登録してLINEを利用していました！"
+      ]
+    },
+    {
+      "_key": "f7bfd124e117",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7edd8daa20b5",
+          "_type": "span",
+          "marks": [],
+          "text": "以前より先輩ママからも「卒業前に連絡先をスマホで交換しておくと、友だちとのつながりを維持できるよ」とアドバイスを受けたこともあり"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fd7b323a21af",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "81952545e6ec",
+          "_type": "span",
+          "marks": [],
+          "text": "卒業後の新しい生活環境を考えると、今までの友だちと疎遠になってしまわないように"
+        },
+        {
+          "_key": "aed47190c28f",
+          "_type": "span",
+          "marks": [
+            "hl3-0"
+          ],
+          "text": "受験が終わり卒業式前のタイミング"
+        },
+        {
+          "_key": "b62726e5d0b3",
+          "_type": "span",
+          "marks": [],
+          "text": "でスマホを持たせるのがベストかなと思いました。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl3-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "cc5cd1644419",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/IMG_69AD0D2F343E-1-2.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "高校生になると行動範囲も広がるのでいつでも連絡取れたほうが親としても安心です。"
+      ]
+    },
+    {
+      "_key": "cfd45714bed4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "927d7e104ef1",
+          "_type": "span",
+          "marks": [],
+          "text": "長男のケース"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "1a9e508b5c28",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1fe0baac5e3f",
+          "_type": "span",
+          "marks": [],
+          "text": "一方、長男は中学1年生。小学生の頃からYouTuberへの憧れを抱き親のスマホを使って動画配信を始めていました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f01cbb0a1fe3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1e39b63eb1c7",
+          "_type": "span",
+          "marks": [],
+          "text": "彼はデジタルコンテンツ作成への関心が強く、将来的には自身でスマホを持ち創造的な活動を広げて欲しいと私は考えました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "41f3f5adc180",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "525854a2f99e",
+          "_type": "span",
+          "marks": [],
+          "text": "長男は趣味で手作りのアニメーションを作っており、これをYouTubeにアップロードすることで視聴者からのコメントやいいねの反応でモチベーションを維持しています。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "02bb2edfbbf3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "73b8f1dd1860",
+          "_type": "span",
+          "marks": [],
+          "text": "この体験が彼の成長に繋がると信じ、また交友関係が活発なことから周りの友人からも連絡先を求められているようなので長女と同じタイミングでスマホを持たせることにしました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "429c8a929204",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "SNSやネットリテラシーは小中学校で学習してきていますがまだ不安はつきもの。小学生よりは分別ついてきている中学生のうちに実際に使いながら身につけてくれればとの思いがあります。"
+      ]
+    },
+    {
+      "_key": "4d6c0d23582d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "379a6cc471c7",
+          "_type": "span",
+          "marks": [],
+          "text": "スマホとプランの選び方"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "107835ee7a43",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fe5178c560f1",
+          "_type": "span",
+          "marks": [],
+          "text": "スマホ選びとプランにおいて、我が家が選んだのはコストパフォーマンスの良さに定評のある格安SIMとiPhoneの組み合わせでした。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1ebb50d83bf5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5af30dc74c25",
+          "_type": "span",
+          "marks": [],
+          "text": "端末選択"
+        },
+        {
+          "_key": "4513dcb5b53f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "9cda1ade6c3b",
+          "_type": "span",
+          "marks": [],
+          "text": "\niPhone SE 3(64GB)Amazon整備済み品\n\n\n\n約3年間はOSのサポートが受けられる機種\n\niPhone SE（第3世代）は2022年3月に発売され、AppleのOSアップデートや修理サポートを考慮すると、2028年から2029年頃まで問題なく使用できると見込まれています\n\n\n\n\n\nコンパクトで軽く子どもの手に馴染みやすい\n\n\n\n中古で購入して価格を抑える\n\n\n\n180日間の返品保証付き\n\n\n\n12月のAmazonセールを活用\n"
+        },
+        {
+          "_key": "189301744b00",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bb90673b75f1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "126b0d840b7f",
+          "_type": "span",
+          "marks": [],
+          "text": "プラン選択"
+        },
+        {
+          "_key": "a89a2ede41dd",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "0c31aae3ae91",
+          "_type": "span",
+          "marks": [],
+          "text": "\n私たち親が実際に利用している日本通信SIMを利用\n\n\n\n2GB 月額¥510〜の低料金で利用可能\n\n\n\n昼時間帯を除いて大きな不便がない点が決め手\n"
+        },
+        {
+          "_key": "962d3f36073f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ec6df03e2113",
+      "_type": "tableBlock",
+      "hasHeader": true,
+      "rows": [
+        {
+          "cells": [
+            "項目",
+            "詳細",
+            "長女",
+            "長男"
+          ]
+        },
+        {
+          "cells": [
+            "スマホ本体",
+            "（Amazon整備済み品）iPhone SE 3(64GB)スターライト",
+            "￥34,979",
+            "ー"
+          ]
+        },
+        {
+          "cells": [
+            "〃",
+            "（Amazon整備済み品）iPhone SE 3(64GB)ミッドナイト",
+            "ー",
+            "￥34,653"
+          ]
+        },
+        {
+          "cells": [
+            "スマホケース",
+            "iFace",
+            "¥2,860",
+            "¥3,300"
+          ]
+        },
+        {
+          "cells": [
+            "SIMスターターパック",
+            "日本通信SIM",
+            "¥2,380",
+            "¥2,380"
+          ]
+        },
+        {
+          "cells": [
+            "小　計",
+            "",
+            "¥40,219",
+            "¥40,333"
+          ]
+        },
+        {
+          "cells": [
+            "合　計",
+            "",
+            "",
+            "¥80,552"
+          ]
+        }
+      ]
+    },
+    {
+      "_key": "c332aef57fad",
+      "_type": "htmlEmbed",
+      "html": "<script type=\"text/javascript\">\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"【整備済み品】 Apple iPhone SE（第3世代） 64GB ミッドナイト SIMフリー (整備済み品)\",\"b\":\"Apple(アップル)\",\"t\":\"SIMフリー iPhone SE3 第3世代 64GB\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\\/images\\/I\",\"p\":[\"\\/31YU0ngknqL._SL500_.jpg\",\"\\/212faRZf7ML._SL500_.jpg\",\"\\/31iL65l1AEL._SL500_.jpg\",\"\\/31YbMZlHVcL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B0BBLWS333\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":4,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B0BBLWS333\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":0}],\"eid\":\"2gqW9\",\"s\":\"s\"});\n</script><div id=\"msmaflink-2gqW9\">リンク</div>"
+    },
+    {
+      "_key": "78456cd0909e",
+      "_type": "htmlEmbed",
+      "html": "<script type=\"text/javascript\">\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"iFace First Class KUSUMI iPhone SE(第3世代\\/第2世代)\\/8\\/7 ケース マット仕上げ [くすみグリーン]\",\"b\":\"Hamee(ハミィ)\",\"t\":\"41-9163-925447\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\\/images\\/I\",\"p\":[\"\\/31QthOso-DL._SL500_.jpg\",\"\\/41h4-u3wg6L._SL500_.jpg\",\"\\/41olAXyJjqL._SL500_.jpg\",\"\\/51tbOmPS92L._SL500_.jpg\",\"\\/41hLLPp1I8L._SL500_.jpg\",\"\\/31VcMkbAB9L._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B08R9WTBML\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":4,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/B08R9WTBML\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":0},{\"u_bc\":\"#f76956\",\"u_tx\":\"楽天市場で見る\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/iFace%20First%20Class%20KUSUMI%20iPhone%20SE(%E7%AC%AC3%E4%B8%96%E4%BB%A3%2F%E7%AC%AC2%E4%B8%96%E4%BB%A3)%2F8%2F7%20%E3%82%B1%E3%83%BC%E3%82%B9%20%E3%83%9E%E3%83%83%E3%83%88%E4%BB%95%E4%B8%8A%E3%81%92%20%5B%E3%81%8F%E3%81%99%E3%81%BF%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%5D\\/\",\"s_n\":\"rakuten\",\"u_so\":4,\"a_id\":4046502,\"p_id\":54,\"pc_id\":54,\"pl_id\":27059,\"id\":11},{\"u_bc\":\"#66a7ff\",\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=iFace%20First%20Class%20KUSUMI%20iPhone%20SE(%E7%AC%AC3%E4%B8%96%E4%BB%A3%2F%E7%AC%AC2%E4%B8%96%E4%BB%A3)%2F8%2F7%20%E3%82%B1%E3%83%BC%E3%82%B9%20%E3%83%9E%E3%83%83%E3%83%88%E4%BB%95%E4%B8%8A%E3%81%92%20%5B%E3%81%8F%E3%81%99%E3%81%BF%E3%82%B0%E3%83%AA%E3%83%BC%E3%83%B3%5D\",\"s_n\":\"yahoo\",\"u_so\":5,\"a_id\":4046520,\"p_id\":1225,\"pc_id\":1925,\"pl_id\":27061}],\"eid\":\"ZCyP6\",\"s\":\"s\"});\n</script><div id=\"msmaflink-ZCyP6\">リンク</div>"
+    },
+    {
+      "_key": "6d3577d4c428",
+      "_type": "moshimoEasyLink",
+      "data": {
+        "brand": "日本通信",
+        "buttons": [
+          {
+            "color": "#f79256",
+            "label": "Amazonで見る",
+            "url": "https://www.amazon.co.jp/dp/B0C9325GJJ"
+          },
+          {
+            "color": "#f76956",
+            "label": "楽天市場で見る",
+            "url": "https://search.rakuten.co.jp/search/mall/%E3%80%90%E6%97%A5%E6%9C%AC%E9%80%9A%E4%BF%A1SIM%E3%80%91%20%E5%90%88%E7%90%86%E7%9A%84%EF%BC%88%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB290%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%83%97%E3%83%A9%E3%83%B3%E3%80%8150GB%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E4%BB%96%EF%BC%89%E5%90%84%E3%83%97%E3%83%A9%E3%83%B3%E3%81%8B%E3%82%89%E9%81%B8%E3%82%93%E3%81%A7%E3%81%8A%E7%94%B3%E8%BE%BC%E3%81%BF%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%82%8B%E6%96%B0%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%91%E3%83%83%E3%82%AF%20NT-ST2-P/"
+          },
+          {
+            "color": "#66a7ff",
+            "label": "Yahoo!ショッピングで見る",
+            "url": "https://shopping.yahoo.co.jp/search?first=1&p=%E3%80%90%E6%97%A5%E6%9C%AC%E9%80%9A%E4%BF%A1SIM%E3%80%91%20%E5%90%88%E7%90%86%E7%9A%84%EF%BC%88%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB290%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%83%97%E3%83%A9%E3%83%B3%E3%80%8150GB%E3%83%97%E3%83%A9%E3%83%B3%E3%80%81%E4%BB%96%EF%BC%89%E5%90%84%E3%83%97%E3%83%A9%E3%83%B3%E3%81%8B%E3%82%89%E9%81%B8%E3%82%93%E3%81%A7%E3%81%8A%E7%94%B3%E8%BE%BC%E3%81%BF%E3%81%84%E3%81%9F%E3%81%A0%E3%81%91%E3%82%8B%E6%96%B0%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%91%E3%83%83%E3%82%AF%20NT-ST2-P"
+          }
+        ],
+        "image": "https://m.media-amazon.com/41s3bpWFrPL._SL500_.jpg",
+        "price": "",
+        "title": "【日本通信SIM】 合理的（シンプル290プラン、みんなのプラン、50GBプラン、他）各プランから選んでお申込みいただける新スターターパック NT-ST2-P"
+      }
+    },
+    {
+      "_key": "46707dfb1f5e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9e1e12be84d2",
+          "_type": "span",
+          "marks": [],
+          "text": "私は格安SIMと整備済みのiPhoneを組み合わせることで、総合的なコストパフォーマンスを追求しようと考えました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0af97006e683",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/IMG_69AD0D2F343E-1-2.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "しかし実際に届いた整備済みiPhoneのバッテリー容量は85%！"
+      ]
+    },
+    {
+      "_key": "bc1fa5eae578",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "047ca1902318",
+          "_type": "span",
+          "marks": [],
+          "text": "これには少しがっかりしましたがAmazon整備済み品の説明にはしっかり「バッテリー：元の電池残量が、"
+        },
+        {
+          "_key": "f5a1b2a654e1",
+          "_type": "span",
+          "marks": [
+            "hl4-0"
+          ],
+          "text": "80％以上"
+        },
+        {
+          "_key": "e93046723845",
+          "_type": "span",
+          "marks": [],
+          "text": "残っています。」との説明がありました。（見逃してました）"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl4-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "ee3034d10af6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6e3fc6203f93",
+          "_type": "span",
+          "marks": [],
+          "text": "箱には「非常に良い状態」とのスタンプも。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fd7d99c7bb3f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6773c2b264b7",
+          "_type": "span",
+          "marks": [],
+          "text": "整備済み品は一定の基準はクリアしているようですが、購入を考えている場合は届いて手に取るまで本体の状態がわからないのでその点はリスクとして受け止めた上でポチってくださいね。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f67e1cb9ede2",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "何か不具合があっても180日の返品保証があるから安心して購入はできたにゃんス。"
+      ]
+    },
+    {
+      "_key": "684019afd09b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3bc8256fa7d8",
+          "_type": "span",
+          "marks": [],
+          "text": "バッテリーについての考察"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "42d93e1eaa10",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7da734ff7947",
+          "_type": "span",
+          "marks": [],
+          "text": "バッテリー容量の低下は使用時の持ちの悪さから日常的な使いづらさを感じることにつながります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "928231374bcf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b187f3a1581b",
+          "_type": "span",
+          "marks": [],
+          "text": "さらに将来メルカリで売るなど再販する際の価格にも大きく影響するため無視できない要素にはなり得ます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9d8b5a8bf426",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0b9709bb78d",
+          "_type": "span",
+          "marks": [],
+          "text": "我が家では「"
+        },
+        {
+          "_key": "9bdd91a41cf2",
+          "_type": "span",
+          "marks": [
+            "hl5-0"
+          ],
+          "text": "必要があればバッテリーだけ購入して自分で載せ替えしてもいいか"
+        },
+        {
+          "_key": "ebb991722216",
+          "_type": "span",
+          "marks": [],
+          "text": "」という考えで購入しています。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl5-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "ae7b20dda575",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b458b323aed7",
+          "_type": "span",
+          "marks": [],
+          "text": "整備済み品の価格が"
+        },
+        {
+          "_key": "6f648b686090",
+          "_type": "span",
+          "marks": [
+            "hl6-0"
+          ],
+          "text": "新品の半値程度"
+        },
+        {
+          "_key": "6737fd00f9c9",
+          "_type": "span",
+          "marks": [],
+          "text": "なのは非常に魅力的でした。また、バッテリーの購入は数千円で済むのでそれを含めてもお買い得だと思うのですよ（個人的な感想です）"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl6-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "19ac71ea81e2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "187799139c8f",
+          "_type": "span",
+          "marks": [],
+          "text": "個人間取引での経験"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "c272a861550c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6e94ec260a26",
+          "_type": "span",
+          "marks": [],
+          "text": "以前、メルカリで中古iPhoneを購入したことがあります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "313a473bc083",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9056b7cfd613",
+          "_type": "span",
+          "marks": [],
+          "text": "確かにコストパフォーマンスは良かったのですが実際に使ってみると音声不良が見つかり"
+        },
+        {
+          "_key": "6a2e826b8b29",
+          "_type": "span",
+          "marks": [
+            "hl7-0"
+          ],
+          "text": "通話中に突然切れてしまう"
+        },
+        {
+          "_key": "5777c984ecf2",
+          "_type": "span",
+          "marks": [],
+          "text": "という不具合に悩まされました。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl7-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "ff39a76b1bd2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a86755b7ddf1",
+          "_type": "span",
+          "marks": [],
+          "text": "この経験から"
+        },
+        {
+          "_key": "c6b6c2b4f099",
+          "_type": "span",
+          "marks": [
+            "hl8-0"
+          ],
+          "text": "個人間売買には保証がない"
+        },
+        {
+          "_key": "b708a9476593",
+          "_type": "span",
+          "marks": [],
+          "text": "ため予期せぬリスクがあることを学びました。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl8-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "3b5729fceb04",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "09042ba0607d",
+          "_type": "span",
+          "marks": [],
+          "text": "安さだけでなく、信頼性も重要な要素だと痛感！"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6244f904509a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d4ad13712924",
+          "_type": "span",
+          "marks": [],
+          "text": "売る時は店舗より高値で売れるけど購入は当たりはずれがあるのでそのリスクをのめるかを考える必要があります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e4b1a5ced74c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "de7edf621da0",
+          "_type": "span",
+          "marks": [],
+          "text": "他の選択肢として"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "246339731a83",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "da76fbea16fa",
+          "_type": "span",
+          "marks": [],
+          "text": "整備済み品のバッテリー容量は届くまでわからないため、スマホ本体に関しては予算が取れるのならば"
+        },
+        {
+          "_key": "a3cbad00ce8e",
+          "_type": "span",
+          "marks": [
+            "m9-0"
+          ],
+          "text": "価格.com"
+        },
+        {
+          "_key": "76d5457217a5",
+          "_type": "span",
+          "marks": [],
+          "text": "などで「SIMフリー端末価格比較」から新品を最安値で購入するほうがもしかしたら賢明かもしれません。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m9-0",
+          "_type": "link",
+          "href": "/parenting/m0000000934"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "76fc05f504fc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6c67d1db55e2",
+          "_type": "span",
+          "marks": [],
+          "text": "私が子どもにiPhoneを選んだ理由は長期に渡るOSのサポートや安定した性能が保証されているからと再販する場合にAndroidスマホと比べても人気があり売れやすく値落ちしにくいからです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "28e9e118f100",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2e5645f00a64",
+          "_type": "span",
+          "marks": [],
+          "text": "初期投資は高くても長期的に見ればトータルでお得になると考えています。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4397fbd853ae",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e9dc766f58ca",
+          "_type": "span",
+          "marks": [],
+          "text": "子どもの初スマホに関するよくある質問　❶"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "9eecf680ecdb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0c8b1d95a4c4",
+          "_type": "span",
+          "marks": [],
+          "text": "Q1.　なぜキャリアのスマホ返却プログラムで契約しないのですか？"
+        }
+      ],
+      "markDefs": [],
+      "style": "h4"
+    },
+    {
+      "_key": "00e73c164727",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f2242998c435",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "A1"
+        },
+        {
+          "_key": "41785a900fe1",
+          "_type": "span",
+          "marks": [],
+          "text": ".　"
+        },
+        {
+          "_key": "a6e796b760b8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "月額料金が高かったり本体を2年で返却する必要があるからです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f52142bdd159",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d7c295ef4b3f",
+          "_type": "span",
+          "marks": [],
+          "text": "1円スマホは携帯キャリアが提供する割安な機種で、一見お得に思えるかもしれませんが"
+        },
+        {
+          "_key": "273d477722a5",
+          "_type": "span",
+          "marks": [
+            "hl10-0"
+          ],
+          "text": "長期契約や特定のプランへの加入が条件"
+        },
+        {
+          "_key": "4bc7531fe185",
+          "_type": "span",
+          "marks": [],
+          "text": "となることが多いです。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl10-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "e826a1c2a14f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "763290781417",
+          "_type": "span",
+          "marks": [],
+          "text": "また例えばau「auかえトクプログラム」iPhone SE3の機種の場合の本体代について"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2ab703c66ab4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ba1c3a653b4d",
+          "_type": "span",
+          "marks": [],
+          "text": "•   返却しない場合の総支払額: 本体代金全額（例: 約70,000円～80,000円）。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e522fb7ec208",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e025ef7359f4",
+          "_type": "span",
+          "marks": [],
+          "text": "•   返却した場合の実質負担額: 残価免除により約半額。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a9eb03d7de47",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1a5d166c929d",
+          "_type": "span",
+          "marks": [],
+          "text": "•   差額: 約35,000円～40,000円が追加で発生"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2274b5bf6955",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4ab2ad52d782",
+          "_type": "span",
+          "marks": [],
+          "text": "ということはつまり、"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7941196aa08d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8bc39f8bbe5f",
+          "_type": "span",
+          "marks": [],
+          "text": "「"
+        },
+        {
+          "_key": "510922b8722b",
+          "_type": "span",
+          "marks": [],
+          "text": "新品を4万で借りて2年後返却＆月額が高くなる"
+        },
+        {
+          "_key": "f5315fd83154",
+          "_type": "span",
+          "marks": [],
+          "text": "」"
+        },
+        {
+          "_key": "cc11fce413c8",
+          "_type": "span",
+          "marks": [],
+          "text": "返却プログラム"
+        },
+        {
+          "_key": "f1e0e0e8f874",
+          "_type": "span",
+          "marks": [],
+          "text": "の方がいいか？"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "39751e720b46",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8f6f7e6dc82a",
+          "_type": "span",
+          "marks": [],
+          "text": "「"
+        },
+        {
+          "_key": "a49374ba8ebb",
+          "_type": "span",
+          "marks": [],
+          "text": "中古を4万で買って最後はメルカリで売る＆月額安い"
+        },
+        {
+          "_key": "5239d8fe8ee3",
+          "_type": "span",
+          "marks": [],
+          "text": "」今回お勧めしている方法がいいか？"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4a1fae461292",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "07d241125686",
+          "_type": "span",
+          "marks": [],
+          "text": "トータルの費用で考えると火を見るよりも明らかであることがわかります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "54c990f37de2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "aa48b01cb112",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "返却プログラム"
+        },
+        {
+          "_key": "b7db3da15791",
+          "_type": "span",
+          "marks": [],
+          "text": "は途中で"
+        },
+        {
+          "_key": "13f3e3858ced",
+          "_type": "span",
+          "marks": [
+            "hl11-0"
+          ],
+          "text": "故障や紛失"
+        },
+        {
+          "_key": "9219e1bd6f12",
+          "_type": "span",
+          "marks": [],
+          "text": "した場合さらに追加で費用がかかるので注意が必要です。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl11-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "e5e253a4b385",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8c1daa4ffbc8",
+          "_type": "span",
+          "marks": [],
+          "text": "Q2　なぜ子どもはAndroidではなくiPhoneを選んだほうが良いのですか？"
+        }
+      ],
+      "markDefs": [],
+      "style": "h4"
+    },
+    {
+      "_key": "2a4f7947c7fa",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d3ed80581182",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "A2"
+        },
+        {
+          "_key": "12c66ac9fb48",
+          "_type": "span",
+          "marks": [],
+          "text": "　iPhoneはセキュリティが強固であり、使いやすさでも定評があります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c5aa9d120f2e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "515a2dc9622e",
+          "_type": "span",
+          "marks": [],
+          "text": "特に若い世代にとっては、操作が直感的で慣れるのが早いため、初めてスマホを持つ子どもにも適しています。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "07f075a215e1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0f72494c6ea3",
+          "_type": "span",
+          "marks": [],
+          "text": "また、iPhoneには「スクリーンタイム」や「ファミリー共有」などの親子間での管理機能が充実しており、スマホの使用状況をより安全に管理できる点が大きなメリットです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3e6f17bed3cc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5aa7a94af21c",
+          "_type": "span",
+          "marks": [],
+          "text": "以上のことから親がしっかりと使用を監視し、適切な制限を設定することが可能となります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "055e2b023175",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0468620ad9bc",
+          "_type": "span",
+          "marks": [],
+          "text": "スマホ導入に向けた具体的な準備と手続き"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "56e4a073251d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8bad400c72c4",
+          "_type": "span",
+          "marks": [],
+          "text": "2025年2月より具体的な作業に取り掛かりました。以下にステップごとの詳細を挙げます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "70e447df0b1e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1b1955142490",
+          "_type": "span",
+          "marks": [],
+          "text": "Apple IDの作成手順とGmailを設定する"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "da3e6112e546",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a7439864f1ec",
+          "_type": "span",
+          "marks": [],
+          "text": "Iphoneの初期設定をします。Apple IDを設定する際にはメールアドレスとしてGmailを使用することがおススメ。下の記事で詳しく解説しています。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f3c70b92c5a5",
+      "_type": "blogCard",
+      "url": "https://mamasanmoney-bu.com/apple-id_gmail/"
+    },
+    {
+      "_key": "a537145d5b75",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cc49cfdfd711",
+          "_type": "span",
+          "marks": [],
+          "text": "【Apple】ファミリー共有の設定手順"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "e86d48a85b4e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "255f000727d4",
+          "_type": "span",
+          "marks": [],
+          "text": "初期設定の後ファミリー共有の設定を行います。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "839cd8b0b9a6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f3602875f23e",
+          "_type": "span",
+          "marks": [],
+          "text": "iPhoneの「設定」を開く"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b7c930fd4975",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d6a8ee4a1f63",
+          "_type": "span",
+          "marks": [],
+          "text": "自分の名前をタップ"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "365b2df2df2d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4e502255cd6c",
+          "_type": "span",
+          "marks": [],
+          "text": "「ファミリー共有を設定」または「ファミリー共有」を選択"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7111506a49ce",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8865afe62089",
+          "_type": "span",
+          "marks": [],
+          "text": "「ファミリーグループを作成」を選択"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6ffc00f45f49",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "06c772086610",
+          "_type": "span",
+          "marks": [],
+          "text": "画面の指示に従って設定を進める"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3ae5b39aac09",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f2648ddfca7c",
+          "_type": "span",
+          "marks": [],
+          "text": "ファミリー共有の特徴"
+        },
+        {
+          "_key": "8f4df4ca7036",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "31a58203e293",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "64d644cb01f8",
+          "_type": "span",
+          "marks": [],
+          "text": "最大6人まで参加可能"
+        },
+        {
+          "_key": "25c7c5f96ec9",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "20d7245c0140",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "0d2b83bce7d5",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "d777c23166f9",
+          "_type": "span",
+          "marks": [],
+          "text": "アプリ、音楽、写真などを共有できる"
+        },
+        {
+          "_key": "d0e98c233744",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "feebdd85df30",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "bbcf35c6be50",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "0dd5ca10c0fa",
+          "_type": "span",
+          "marks": [],
+          "text": "子供用アカウントも13歳以下で作成可能"
+        },
+        {
+          "_key": "29c6b1cbbb38",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "428bc1e0bd03",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "208fc03f6a3b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "a0eaafa350c4",
+          "_type": "span",
+          "marks": [],
+          "text": "位置情報共有"
+        },
+        {
+          "_key": "93829abaa0e1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "13c4dd7b7331",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "1fc39e2b4de6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "0bc5f4537776",
+          "_type": "span",
+          "marks": [],
+          "text": "購入管理が容易"
+        },
+        {
+          "_key": "d86ae69757ad",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "9cd0f2ac1e78",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e0f21e193309",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1f2e8c7d8385",
+          "_type": "span",
+          "marks": [],
+          "text": "必要だと思う機能をONして設定します。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8bb145bdc139",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "94d6f5273fc3",
+          "_type": "span",
+          "marks": [],
+          "text": "【Apple】スクリーンタイムの設定手順"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "23231265cd1f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2606674f009d",
+          "_type": "span",
+          "marks": [],
+          "text": "「設定」アプリを開く"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ba2ff0a44470",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "90b6195bbc96",
+          "_type": "span",
+          "marks": [],
+          "text": "「スクリーンタイム」をタップ"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ab4abc33cdea",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4bfff9589ba2",
+          "_type": "span",
+          "marks": [],
+          "text": "「スクリーンタイムをオンにする」をタップ"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "de872a07b7e5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7ddebadd0473",
+          "_type": "span",
+          "marks": [],
+          "text": "「続ける」をタップ"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "363982174197",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7a4c43d2ea46",
+          "_type": "span",
+          "marks": [],
+          "text": "「これは自分用のiPhone」または「これは子供用のiPhone」を選択"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "89e29a192386",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5f9d8b41c734",
+          "_type": "span",
+          "marks": [],
+          "text": "各機能の設定を行う"
+        },
+        {
+          "_key": "ee4f7846331e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "530aac65e2c6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n休止時間\n\n\n\nApp使用時間の制限\n\n\n\n通信/通話の制限\n\n\n\n常に許可するアプリの設定\n\n\n\nコンテンツとプライバシーの制限\n"
+        },
+        {
+          "_key": "46c924a57054",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9edd5149e420",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "578ff40cc037",
+          "_type": "span",
+          "marks": [],
+          "text": "「スクリーンタイム・パスコード」を設定"
+        },
+        {
+          "_key": "65cc94ec2b0c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "9d1d10f76405",
+          "_type": "span",
+          "marks": [],
+          "text": "\nスクリーンタイムを有効にするとデバイスの使用時間が計測されリアルタイムで確認できるようになります。\n\n\n\n必要に応じて各機能の詳細設定を行い使用制限やコンテンツフィルタリングを調整できます。\n"
+        },
+        {
+          "_key": "39022102cb7a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "91ce70d5586f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4295c8dcb7ad",
+          "_type": "span",
+          "marks": [],
+          "text": "スクリーンタイムの特徴"
+        },
+        {
+          "_key": "0d257176e86c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "80108ae5266b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "14fbbd6501e7",
+          "_type": "span",
+          "marks": [],
+          "text": "デバイスの使用時間の計測と確認"
+        },
+        {
+          "_key": "01e43f8b818b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "f787f2569b81",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "a5cb6b8a8151",
+          "_type": "span",
+          "marks": [],
+          "text": "アプリやWebサイトの利用時間をリアルタイムで確認できる"
+        },
+        {
+          "_key": "b95e7f8dd7ca",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "49507cd4a76f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "f329c4c3b45f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "d0f0ba47c47e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "bb4e42554c0b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "233692001877",
+          "_type": "span",
+          "marks": [],
+          "text": "アプリ使用の制限設定"
+        },
+        {
+          "_key": "adea4f9e8f86",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "16ac6f59e310",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "d8e6aacb0533",
+          "_type": "span",
+          "marks": [],
+          "text": "特定のアプリの使用時間に制限を設けることが可能"
+        },
+        {
+          "_key": "b9db92e8db38",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "30753465b553",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "d2591471bb77",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "7b84d9c40365",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "029a43dbd571",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "021d4438aa74",
+          "_type": "span",
+          "marks": [],
+          "text": "コンテンツフィルタリング"
+        },
+        {
+          "_key": "67e66b96613a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "4196d1af87e7",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "315b34f67471",
+          "_type": "span",
+          "marks": [],
+          "text": "成人向けコンテンツなど、不適切なWebサイトへのアクセスを制限できる"
+        },
+        {
+          "_key": "8e9b4f766b76",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "83173b48ddf2",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "334ee54ecffd",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "9501e9533f9f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "1ff7fa19083a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "eb0e7a682515",
+          "_type": "span",
+          "marks": [],
+          "text": "休止時間の設定"
+        },
+        {
+          "_key": "3625f1a8324c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "52a7dc4563b3",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "038aff9431a6",
+          "_type": "span",
+          "marks": [],
+          "text": "スケジュールした時間帯にアプリの使用を制限できる"
+        },
+        {
+          "_key": "08a39e1acb5f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "e4023b330549",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "f9939657477b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "f756035e0e46",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "91a103daaddd",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "3cec0183a7fc",
+          "_type": "span",
+          "marks": [],
+          "text": "通信/通話の制限"
+        },
+        {
+          "_key": "7a480660ba92",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "ffd44f8f421a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "a4d905d15ebd",
+          "_type": "span",
+          "marks": [],
+          "text": "休止時間中や休止時間外の通信や通話を制限できる"
+        },
+        {
+          "_key": "a78d329ffb6b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "d54e75ac8b78",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "c539906f80e2",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "593f9f32108a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "5b3635115066",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "8ec1d941183c",
+          "_type": "span",
+          "marks": [],
+          "text": "プライバシー設定"
+        },
+        {
+          "_key": "3cee4958f002",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "825f5475fea7",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "f6a096e7f8d1",
+          "_type": "span",
+          "marks": [],
+          "text": "位置情報サービスなど、プライバシーに関する設定が可能"
+        },
+        {
+          "_key": "7d120f08ef3f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "2e2e15a252fa",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "49ad204f6273",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "0bba89c415ff",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "8fcad48b53d0",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "c571e89947b1",
+          "_type": "span",
+          "marks": [],
+          "text": "子供用デバイスの管理"
+        },
+        {
+          "_key": "b109281f496a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "01a3ef01162f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "be36bc97d1ea",
+          "_type": "span",
+          "marks": [],
+          "text": "親のiPhoneから子供のiPhoneの設定を変更できる"
+        },
+        {
+          "_key": "64395dbedcfe",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "73675f8de7d3",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "503b08abc14e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "4c92583c6dd0",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fea05c82d92e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "033aa07cfe67",
+          "_type": "span",
+          "marks": [],
+          "text": "広告ブロックアプリの設定"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "056ed4aa75f2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "df5c2c45b794",
+          "_type": "span",
+          "marks": [],
+          "text": "広告ブロックアプリ（280blocker）"
+        },
+        {
+          "_key": "788c00f2ac97",
+          "_type": "span",
+          "marks": [],
+          "text": "を親のスマホにインストール"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2d59c15a2594",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "de878362b755",
+          "_type": "span",
+          "marks": [],
+          "text": "アプリの設定を実施"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f2005350f542",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ae9e6033762c",
+          "_type": "span",
+          "marks": [],
+          "text": "このアプリは"
+        },
+        {
+          "_key": "ed877920b792",
+          "_type": "span",
+          "marks": [],
+          "text": "￥800買い切り"
+        },
+        {
+          "_key": "538556fd3907",
+          "_type": "span",
+          "marks": [],
+          "text": "でファミリー共有できます"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "593eb12226ef",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/IMG_69AD0D2F343E-1-2.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "日本通信SIMでも「フィルタリングサービス」をオプションで用意していますが1台につき月額396円（税込）かかるため下のアプリを1つ買って家族みんなで共有する方が経済的ですよ〜"
+      ]
+    },
+    {
+      "_key": "14307b010a49",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "知ってる！このアプリの評判いいよね♪"
+      ]
+    },
+    {
+      "_key": "aa0e3f498f27",
+      "_type": "image",
+      "alt": "280blocker - 広告ブロック-コンテンツブロッカー",
+      "asset": {
+        "_ref": "image-381ab6688c19f6a4370d3c31aab84c26e4b3fb2c-512x512-jpg",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "504e775ee3bd",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "5fd91fd67027",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://apps.apple.com/jp/app/280blocker-%25E5%25BA%2583%25E5%2591%258A%25E3%2583%2596%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF-%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2583%25B3%25E3%2583%2584%25E3%2583%2596%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AB%25E3%2583%25BC/id1071235820?uo=4",
+          "src": "https://nabettu.github.io/appreach/img/itune_ja.svg"
+        }
+      ]
+    },
+    {
+      "_key": "e29abae6c7e3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "44cef8358607",
+          "_type": "span",
+          "marks": [],
+          "text": "280blocker - 広告ブロック-コンテンツブロッカー"
+        },
+        {
+          "_key": "e2772fa9f54f",
+          "_type": "span",
+          "marks": [],
+          "text": "開発元:"
+        },
+        {
+          "_key": "6b5f79bac6d8",
+          "_type": "span",
+          "marks": [],
+          "text": "Tobila Systems Inc."
+        },
+        {
+          "_key": "27f13bfe9bb2",
+          "_type": "span",
+          "marks": [],
+          "text": "¥800"
+        },
+        {
+          "_key": "f2194473f7c3",
+          "_type": "span",
+          "marks": [],
+          "text": "posted with"
+        },
+        {
+          "_key": "0e80ce843b7d",
+          "_type": "span",
+          "marks": [
+            "m12-0"
+          ],
+          "text": "アプリーチ"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m12-0",
+          "_type": "link",
+          "href": "/parenting/app-reach"
+        },
+        {
+          "_key": "m13-1",
+          "_type": "link",
+          "href": "/parenting/id1071235820"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "2d9dfeb97d34",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9c91fea338b1",
+          "_type": "span",
+          "marks": [],
+          "text": "ファミリー共有を利用して管理者が購入したアプリを家族と共有し、子供の購入を管理する方法は以下の通りです。最大6人まで共有可能で、子どもの年齢制限や購入承認機能が特徴です"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3239c00c829a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "13b7b4b6ba19",
+          "_type": "span",
+          "marks": [],
+          "text": "アプリ共有の仕組み"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "be0ee8503ca2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fa6e4c4f513c",
+          "_type": "span",
+          "marks": [],
+          "text": "ファミリー共有を使うと、以下のコンテンツを家族で共有できて経済的です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a70a6a55d5a7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e9a8630af24a",
+          "_type": "span",
+          "marks": [],
+          "text": "有料アプリ"
+        },
+        {
+          "_key": "eb24bdded637",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "072126be7a79",
+          "_type": "span",
+          "marks": [],
+          "text": "\n例えば、280blockerのような一度買えば使い続けられる¥800の買い切り型アプリも含まれます。\n"
+        },
+        {
+          "_key": "1057d58c5c6a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d3ab73a2d9e8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "79089e884476",
+          "_type": "span",
+          "marks": [],
+          "text": "サブスクリプションサービス"
+        },
+        {
+          "_key": "9c48f5c091be",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "2d0eac1b5d03",
+          "_type": "span",
+          "marks": [],
+          "text": "\nApple MusicやApple TV+のような音楽、ビデオのサブスクリプション、またiCloudのストレージプランも共有できます。\n"
+        },
+        {
+          "_key": "11ac03df53cf",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2204581e118e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d4d9a0e363c8",
+          "_type": "span",
+          "marks": [],
+          "text": "デジタルコンテンツ"
+        },
+        {
+          "_key": "f9c4c6cca04b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "c1626fa68694",
+          "_type": "span",
+          "marks": [],
+          "text": "\n購入した書籍、音楽、映画も家族で共有が可能です。\n"
+        },
+        {
+          "_key": "4de5ef7cabd5",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "44cbb92e2bfd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "06cc2c9ec557",
+          "_type": "span",
+          "marks": [],
+          "text": "インストール手順"
+        }
+      ],
+      "markDefs": [],
+      "style": "h4"
+    },
+    {
+      "_key": "309ad6431cb6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e91f42dae380",
+          "_type": "span",
+          "marks": [],
+          "text": "家族が共有コンテンツを利用したいときの手順は以下の通りです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3ae67b40df2a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dbd2ad2a5d30",
+          "_type": "span",
+          "marks": [],
+          "text": "App Storeを開く"
+        },
+        {
+          "_key": "a199cd5bf975",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "6fe27abc1ca4",
+          "_type": "span",
+          "marks": [],
+          "text": "\n家族メンバーは、自分のデバイスでApp Storeを開きます。\n"
+        },
+        {
+          "_key": "7f609fe55997",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "55900bcef950",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "18d6f0c548a6",
+          "_type": "span",
+          "marks": [],
+          "text": "プロフィールを選ぶ"
+        },
+        {
+          "_key": "b52ba2b43c96",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "25826594cad9",
+          "_type": "span",
+          "marks": [],
+          "text": "\n次に、App Storeの右上にあるプロフィールアイコンを選択します。\n"
+        },
+        {
+          "_key": "581c5774fb9d",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "129e3414f1b3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d617b64d8b16",
+          "_type": "span",
+          "marks": [],
+          "text": "「購入済み」を選択"
+        },
+        {
+          "_key": "75223b782748",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "1342f695dd91",
+          "_type": "span",
+          "marks": [],
+          "text": "\nプロフィール画面で「購入済み」を選びます。\n"
+        },
+        {
+          "_key": "b335359be13f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1874c98f3e13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "285ed1ebc1ec",
+          "_type": "span",
+          "marks": [],
+          "text": "「ファミリー購入」を選ぶ"
+        },
+        {
+          "_key": "7dacebfb2cfe",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "e450cea3beea",
+          "_type": "span",
+          "marks": [],
+          "text": "\n「購入済み」の中の「ファミリー購入」を選択することで、家族が購入したコンテンツを見ることができます。\n"
+        },
+        {
+          "_key": "bf48edfd6648",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "147d633cd43f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "90c6451febcb",
+          "_type": "span",
+          "marks": [],
+          "text": "インストール"
+        },
+        {
+          "_key": "4159d5a5c1df",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "eb5445beee33",
+          "_type": "span",
+          "marks": [],
+          "text": "\n欲しいアプリやコンテンツを選んでインストールすることができます。\n"
+        },
+        {
+          "_key": "1980136339bc",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "594f86bde7e0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "481488739f4f",
+          "_type": "span",
+          "marks": [],
+          "text": "管理者の購入履歴"
+        }
+      ],
+      "markDefs": [],
+      "style": "h4"
+    },
+    {
+      "_key": "e6ca0f83fc26",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f8e50bf8b72c",
+          "_type": "span",
+          "marks": [],
+          "text": "ファミリー共有の管理者が購入したコンテンツは、自動的にリアルタイムで家族メンバーに同期されます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "82afc459b331",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f7f962999209",
+          "_type": "span",
+          "marks": [],
+          "text": "これにより、家族全員がいつでも最新の購入済みコンテンツを利用できます。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bea6897c0279",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8a19b2ad0c97",
+          "_type": "span",
+          "marks": [],
+          "text": "このように、ファミリー共有を利用すると、家族全員が購入済みのアプリやサービスを便利に利用することができ、各自で購入し直す必要がなくなります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "671a24119e4b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "19980b2b1398",
+          "_type": "span",
+          "marks": [],
+          "text": "子どものアプリ課金管理システム"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "d3d2f5cd6ac5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "86c6aea412a7",
+          "_type": "span",
+          "marks": [],
+          "text": "子どもがアプリやゲーム内アイテムを購入する際に、親の承認を必要とするiPhoneの設定があります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cbadd4715555",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3df2fe163a24",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "承認リクエスト設定"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "04ee9bba470f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5885ed384c75",
+          "_type": "span",
+          "marks": [],
+          "text": "「設定」→「ファミリー共有」→子どものアカウント選択→「承認と購入のリクエスト」を有効化"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "19d4031cebff",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d15c3b0b7410",
+          "_type": "span",
+          "marks": [],
+          "text": "13歳未満は自動的に有効、13-18歳は任意設定"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8e3ec8c9fd81",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9158d7ec0a84",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "承認フロー"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "04f83f83a65f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d09cf3e2e61a",
+          "_type": "span",
+          "marks": [],
+          "text": "子どもが無料/有料アイテムをダウンロード→管理者に通知"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "92eb823a4a48",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "867f343c19ac",
+          "_type": "span",
+          "marks": [],
+          "text": "承認方法"
+        },
+        {
+          "_key": "593e8663f62b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "f0db85eb3169",
+          "_type": "span",
+          "marks": [],
+          "text": "\nメッセージアプリから直接承認/拒否\n\n\n\n管理者のiPhoneで「設定」→「ファミリー共有」→リクエスト一覧から対応\n"
+        },
+        {
+          "_key": "2200ef58a376",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "71a9b9a36444",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3903e3910437",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "複数承認者の設定"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "2497abe6f41b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "df33a0e03bce",
+          "_type": "span",
+          "marks": [],
+          "text": "「設定」→「ファミリー共有」→他の成人メンバーを選択"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fb92df7fdc48",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a511ac52cf99",
+          "_type": "span",
+          "marks": [],
+          "text": "「保護者/後見人」オプションを有効化→最大2名まで承認権限付与できる"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1431064022ae",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "81f8387cf149",
+          "_type": "span",
+          "marks": [],
+          "text": "このシステムにより、子どもの思わぬ高額課金を防ぎ、安全にアプリを利用することができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e6ad623c82a3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "59d94e593e57",
+          "_type": "span",
+          "marks": [],
+          "text": "注意点"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "a7598be4120e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "60e785a29e59",
+          "_type": "span",
+          "marks": [],
+          "text": "これらのポイントを理解しておくことで、ファミリー共有をより安全かつ効果的に利用できるようになります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3e0ea8756a6e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2b41fc70ad79",
+          "_type": "span",
+          "marks": [],
+          "text": "共有不可アイテム"
+        },
+        {
+          "_key": "52013217d9f9",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "b36d9632c4fb",
+          "_type": "span",
+          "marks": [],
+          "text": "\n消耗型アプリ内購入（ゲーム通貨など）\n\n一部のアイテムは共有できません。具体的には、ゲーム内で使うコインやポイントなどの「消耗型アプリ内購入」です。これらのアイテムは、他の家族と共有することができないので注意が必要です。\n\n\n"
+        },
+        {
+          "_key": "dea419cd4d8c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e4715e488c1a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dee4405ffaae",
+          "_type": "span",
+          "marks": [],
+          "text": "年齢制限"
+        },
+        {
+          "_key": "d92199edba82",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "9a7740c3d306",
+          "_type": "span",
+          "marks": [],
+          "text": "\n18歳以上の家族には承認機能を適用不可\n\nこの承認機能は、18歳以上の家族メンバーには適用されません。つまり、18歳以上の人がアプリやアイテムを購入する際は、承認を求められないということです。\n\n\n"
+        },
+        {
+          "_key": "e943ce46ac75",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c247299678ec",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "db41972abfc7",
+          "_type": "span",
+          "marks": [],
+          "text": "プライバシー"
+        },
+        {
+          "_key": "7a0fa907ed3b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "e23e3894b23c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n個人データ（写真/メール）は共有されない\n\nファミリー共有を利用しても、個人のプライバシーは守られています。たとえば、写真やメールといった個人データは、ファミリー共有によって他の家族と共有されることはありません。\n\n\n"
+        },
+        {
+          "_key": "d48cb3ae14f2",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2738789a272e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "35039f7774ff",
+          "_type": "span",
+          "marks": [],
+          "text": "購入履歴確認"
+        },
+        {
+          "_key": "ca44edb4307c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "9bd17f7ae8e3",
+          "_type": "span",
+          "marks": [],
+          "text": "\nApp Store購入履歴で家族のダウンロード状況を監視可能\n\nApp Storeでの購入履歴を確認することで、家族がどのアプリやアイテムをダウンロードしているのかを把握することができます。これにより、家族の購入状況を監視し、安心してデジタルコンテンツを利用できる環境を整えることができます。\n\n\n"
+        },
+        {
+          "_key": "445996213522",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bcfacd5d9a55",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "882c32f7163a",
+          "_type": "span",
+          "marks": [],
+          "text": "2月中旬　契約手続きの準備"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "2278ed543bef",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b2a386fb3e98",
+          "_type": "span",
+          "marks": [],
+          "text": "必要書類の準備"
+        },
+        {
+          "_key": "42e753d3b16e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "2a7b3655bc50",
+          "_type": "span",
+          "marks": [],
+          "text": "\n親の本人確認書類としてマイナンバーカードを準備。\n\n\n\nオンライン申し込みに対応できて便利\n\n\n\n支払い方法としてクレジットカードの確認\n"
+        },
+        {
+          "_key": "8435b9ef482e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "56afee704214",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "04c7c0047301",
+          "_type": "span",
+          "marks": [],
+          "text": "具体例として、これまでのクレジットカード利用履歴に基づききちんと支払い可能な範囲を確認します。契約後に不意に高額な請求書が届かないようにします。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "48da668972d6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "03abf42803cb",
+          "_type": "span",
+          "marks": [],
+          "text": "契約内容の確認"
+        },
+        {
+          "_key": "9af704fcd3ce",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "f4e40725eda3",
+          "_type": "span",
+          "marks": [],
+          "text": "\nデータ容量や月額料金を子どもと確認することで契約内容を把握できます。\n"
+        },
+        {
+          "_key": "fa93ae1d9385",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ec47f35c8a78",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d6740706dd44",
+          "_type": "span",
+          "marks": [],
+          "text": "契約申し込み"
+        },
+        {
+          "_key": "8f481e518a45",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "85901df2a290",
+          "_type": "span",
+          "marks": [],
+          "text": "\n日本通信SIMの公式アプリ経由で契約申し込みをします\n"
+        },
+        {
+          "_key": "3645a8e06a3c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "04dc858e32ef",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8f2ff7b6d219",
+          "_type": "span",
+          "marks": [],
+          "text": "3月1日　開通手続きと設定"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "9dd74db60926",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e287ac2eb1b1",
+          "_type": "span",
+          "marks": [],
+          "text": "新規開通する場合は"
+        },
+        {
+          "_key": "7fee2ee62f4a",
+          "_type": "span",
+          "marks": [
+            "hl14-0"
+          ],
+          "text": "1日"
+        },
+        {
+          "_key": "c6af8ffc6b48",
+          "_type": "span",
+          "marks": [],
+          "text": "の開通にするのがベター。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl14-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "09fddea02892",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f821b92a7942",
+          "_type": "span",
+          "marks": [],
+          "text": "ほとんどの回線会社で採用している請求期間に合わせたほうが将来NMPで乗り換えするときにも不便がありません。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ffe457e6bbba",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a45474611a5e",
+          "_type": "span",
+          "marks": [],
+          "text": "開通手続き"
+        },
+        {
+          "_key": "fe0ce387e36c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "ad135e6b87d6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n実際にSIMカードを挿入し開通手続きをします。\n\n\n\n新規の場合SIMカードの台紙に電話番号が記載されています。\n\n\n\nSIMと一緒に送られてきた公式のガイドを参照しながら進めます。\n\n\n\n10:00〜20:00の間に開通手続きを行うと約1時間以内に開通が完了します。\n\n\n\n開通日（3月1日）が毎月の課金日となります。(例：3/1~3/31が翌月請求分となる)\n"
+        },
+        {
+          "_key": "6d5a4bb228bb",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "84f5c67e98e2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "af98b678db3b",
+          "_type": "span",
+          "marks": [],
+          "text": "データ使用量の制限設定 "
+        },
+        {
+          "_key": "c3415cd8ead1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "1ef32dcd61e8",
+          "_type": "span",
+          "marks": [],
+          "text": "\n 月間データ使用量を2GBに制限 \n\n\n\nマイページでの上限値変更方法を確認\n"
+        },
+        {
+          "_key": "c8d340d3aac3",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7b974842f6c6",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/IMG_69AD0D2F343E-1-2.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "2台とも朝8時ごろ開通手続きをして1分ほどで開通しました♪実際はそれほど時間はかかりませんでした。"
+      ]
+    },
+    {
+      "_key": "42627e562634",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "490413409220",
+          "_type": "span",
+          "marks": [],
+          "text": "子どもとのルール作り"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "5173085aa597",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bd0ab76b3c80",
+          "_type": "span",
+          "marks": [],
+          "text": "スマホを正しく利用するために、子どもたちと以下のようなルールを定めました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5656938dc17d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5ad96c52357f",
+          "_type": "span",
+          "marks": [],
+          "text": "データ使用の管理"
+        },
+        {
+          "_key": "a612d87e289e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "f2b8badb08af",
+          "_type": "span",
+          "marks": [],
+          "text": "\n月2GBまでという制限とし、これを超える場合は使い方を確認して必要に応じて見直すようにします。\n\n\n\nデータ量を抑えるため、動画はWi-Fi環境で見るように現実的なルールを設けます。\n"
+        },
+        {
+          "_key": "79d8b667c335",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "70377d841b32",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d9a46fc7649b",
+          "_type": "span",
+          "marks": [],
+          "text": "日常の使用時間の設定"
+        },
+        {
+          "_key": "af54f8e8323a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "e99a44be1301",
+          "_type": "span",
+          "marks": [],
+          "text": "\n長男の学校後の使用時間を制限し、長女には試験前は自己管理のトレーニングも兼ね自主的にスクリーンタイムを設定してもらいます。\n"
+        },
+        {
+          "_key": "846714284e5b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "31af30934def",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c94b2fe9acfe",
+          "_type": "span",
+          "marks": [],
+          "text": "子どもの初スマホに関するよくある質問　❷"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "729ad34e5441",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b94ad3696459",
+          "_type": "span",
+          "marks": [],
+          "text": "Q.　なぜセキュリティ設定や制限が必要なのですか？"
+        }
+      ],
+      "markDefs": [],
+      "style": "h4"
+    },
+    {
+      "_key": "2cfe6562609f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "97c843eb6fec",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "A"
+        },
+        {
+          "_key": "3dd435ada41e",
+          "_type": "span",
+          "marks": [],
+          "text": ".　"
+        },
+        {
+          "_key": "01022f3f3810",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "子どもにスマホを持たせる際は、インターネットの危険性や適切な使用方法を理解させることが大切です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fe9e1feaa3d6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b6323b62fda4",
+          "_type": "span",
+          "marks": [],
+          "text": "セキュリティ設定や各種制限を設けることで、子どもを不適切なコンテンツや危険なウェブサイトから守ることができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "56e8d2c49f1a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "627681cc662e",
+          "_type": "span",
+          "marks": [],
+          "text": "また、スクリーンタイムや使用制限を設定することで、スマホ依存を防ぎ、健康的な生活リズムを維持する手助けとなります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "218324d2618b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0e751977fae8",
+          "_type": "span",
+          "marks": [],
+          "text": "親がこれらの制限をしっかり管理することで、子どもが安心してデジタルライフを楽しめる環境を作ります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2698d1aaa0ea",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a6c7c8659a2c",
+          "_type": "span",
+          "marks": [],
+          "text": "まとめ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "06a61f46e3be",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f47ed255b146",
+          "_type": "span",
+          "marks": [],
+          "text": "子どもにスマホを持たせるのは親にとって大きなチャレンジです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f7cc3244d1e0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f9bff817fd57",
+          "_type": "span",
+          "marks": [],
+          "text": "しかも、子どもたち自身の成長や将来の可能性を考慮し、その子に合ったタイミングを見つけて生活習慣に合わせたルールを設けることが必要です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "edf2f88e98c0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c626b16cd47e",
+          "_type": "span",
+          "marks": [],
+          "text": "新規開通して数日経ったころ、子どもが学校にいる時間に突然！"
+        },
+        {
+          "_key": "926ef1175fac",
+          "_type": "span",
+          "marks": [
+            "hl15-0"
+          ],
+          "text": "中国の電話番号"
+        },
+        {
+          "_key": "1eedce81027b",
+          "_type": "span",
+          "marks": [],
+          "text": "から電話がかかってきました。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl15-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "1ae74793fb0e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c6cfd5dfe92d",
+          "_type": "span",
+          "marks": [],
+          "text": "幸い親の私だけでしたので電話を無視したのちに着信拒否設定して削除しました、が！"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "19dcf87490d8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3bba8f1090f5",
+          "_type": "span",
+          "marks": [],
+          "text": "最近は迷惑メールもさらに増えて迷惑電話もかかってくることがあるので、子どもたちにも"
+        },
+        {
+          "_key": "614532c49ed7",
+          "_type": "span",
+          "marks": [
+            "hl16-0"
+          ],
+          "text": "どのように対応すればいいのか早めに話し合っておく"
+        },
+        {
+          "_key": "2a1baeb0b100",
+          "_type": "span",
+          "marks": [],
+          "text": "必要もありますね。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl16-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "bf2e1ef16240",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "99dca19eabce",
+          "_type": "span",
+          "marks": [],
+          "text": "我が家の体験談がこれからスマホデビューを考えているご家庭のお役に立てれば幸いです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2ad264870ffe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dad7b5fb7d27",
+          "_type": "span",
+          "marks": [],
+          "text": "このブログは「にほんブログ村」と「ブログリーダー」に参加しています。下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fe6d3dfe7ead",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "ed0c94bcd688",
+          "_type": "linkImageBlock",
+          "alt": "ママさんマネー部 - にほんブログ村",
+          "href": "https://blogmura.com/profiles/11159291/?p_cid=11159291&reader=11159291",
+          "provider": "blogmura",
+          "src": "https://b.blogmura.com/banner-blogmura-reader-pink.svg"
+        },
+        {
+          "_key": "d8454fb18af7",
+          "_type": "linkImageBlock",
+          "alt": "人気ブログランキングでフォロー",
+          "href": "https://blog.with2.net/link/?id=2097059&follow",
+          "provider": "with2",
+          "src": "https://blog.with2.net/banner/follow/2097059?t=b"
+        }
+      ]
+    }
+  ],
+  "category": "parenting",
+  "heroImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-3c0cea253d652b901dddc6215308877066929e92-1024x1024-jpg",
+      "_type": "reference"
+    }
+  },
+  "publishedAt": "2025-02-16T08:36:33Z",
+  "slug": {
+    "_type": "slug",
+    "current": "smartphone-for-junior-high-school-students"
+  },
+  "tags": [
+    "固定費見直し",
+    "子育て"
+  ],
+  "title": "【子どものiPhone設定】失敗しない中学生スマホの持たせ方",
+  "updatedAt": "2025-10-19T13:31:15.938Z",
+  "views": 22
+}

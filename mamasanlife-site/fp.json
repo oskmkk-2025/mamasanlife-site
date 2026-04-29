@@ -1,0 +1,2231 @@
+{
+  "_createdAt": "2025-08-26T10:23:25Z",
+  "_id": "Nn6Sc6MF3u71woMpYvaI8Z",
+  "_rev": "SquZ2ThjoVQLTGw2qjo38m",
+  "_type": "post",
+  "_updatedAt": "2026-01-05T06:36:43Z",
+  "affiliateBlocks": [
+    {
+      "html": "<a class=\"affiliate-btn affiliate-btn--a8\" href=\"https://px.a8.net/svt/ejp?a8mat=3NNG1Z+FP0DV6+408S+60WN6\" target=\"_blank\" rel=\"noopener noreferrer nofollow sponsored\">オンスク.jpをみる</a>",
+      "note": "",
+      "title": ""
+    }
+  ],
+  "body": [
+    {
+      "_key": "9f891916b979",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "13a689bf944c",
+          "_type": "linkImageBlock",
+          "alt": "にほんブログ村 資格ブログ 資格試験勉強法へ",
+          "href": "https://qualification.blogmura.com/shikaku_study/ranking/in?p_cid=11159291",
+          "src": "https://b.blogmura.com/qualification/shikaku_study/88_31.gif"
+        },
+        {
+          "_key": "051c863b1648",
+          "_type": "linkImageBlock",
+          "alt": "ファイナンシャルプランナーランキング",
+          "href": "https://blog.with2.net/link/?id=2097059&cid=2457",
+          "src": "https://blog.with2.net/img/banner/c/banner_1/br_c_2457_1.gif"
+        }
+      ]
+    },
+    {
+      "_key": "f4775ff5595f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "135b16da78cb",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "0332353c2fc8",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "846bd40013ff",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "04e3f308661e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m0-0",
+          "_type": "link",
+          "href": "/work/in"
+        },
+        {
+          "_key": "m1-1",
+          "_type": "link",
+          "href": "/work/link"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "6d4a29059454",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f3e64e5156a9",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m2-0",
+          "_type": "link",
+          "href": "/work/link"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "1eb75087da86",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "93d35b548b1e",
+          "_type": "span",
+          "marks": [],
+          "text": "ファイナンシャルプランナーを目指す上で、重要になるのが勉強方法です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d11393c16c9d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c4fa8c029d70",
+          "_type": "span",
+          "marks": [],
+          "text": "時間に余裕があればスクールもたくさんあるので選択肢はありますが、家事や育児に追われている主婦の方や、本業が忙しくてなかなか時間が取れない方は、その勉強方法選びにつまづいてしまうことも。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "66a6e985074a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "de904bd01d57",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "そういった理由もあり、ファイナンシャルプランナー資格を独学で取得しようという人が、コストや時間面から多くいらっしゃるようです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "0acf4e99748f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1864fa521496",
+          "_type": "span",
+          "marks": [],
+          "text": "そこで今回は"
+        },
+        {
+          "_key": "553849430cbc",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "日本FP協会"
+        },
+        {
+          "_key": "e9b8af0f6e86",
+          "_type": "span",
+          "marks": [],
+          "text": "のFP試験を受験する方向けにお伝えしていきます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d34065edb91d",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/cropped-IMG_69AD0D2F343E-1-2-300x300.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "FP試験は金財（金融財政事情研究会）とFP協会（日本FP協会）の２つの機関が実施しておりますが筆者が合格したFP協会の方に的を絞っています。筆者は2022年受験のFPと簿記の２級ホルダーです。この記事が参考になれば幸いです。。"
+      ]
+    },
+    {
+      "_key": "2c92641216ca",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8fdc04336923",
+          "_type": "span",
+          "marks": [],
+          "text": "ファイナンシャルプランナー（FP）は独学でも合格できる？"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "e1276e35e0c6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7645244c1964",
+          "_type": "span",
+          "marks": [],
+          "text": "FP3級の難易度は独学でも合格できる？"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "d06da1836b40",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a696db50fc1c",
+          "_type": "span",
+          "marks": [],
+          "text": "結論だけ言いますとできます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "125b1e38aa42",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dcff81182ff9",
+          "_type": "span",
+          "marks": [],
+          "text": "試験は６割合っていれば合格です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6c1ecbb62be3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e2cc0cfbb66d",
+          "_type": "span",
+          "marks": [],
+          "text": "６分野まんべんなく出題されるので範囲は広いですがマークシート形式で３択問題となります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "294fc0be2998",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "681bb8b92b1f",
+          "_type": "span",
+          "marks": [],
+          "text": "生活している上ですでに知っている知識もあったりとなんとなく当たりをつけることができる問題もあります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9da2ac72407e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3e279f75e27c",
+          "_type": "span",
+          "marks": [],
+          "text": "日本FP協会の試験の合格率は学科・実技共に75％を超えているため、きちんと対策さえすれば多くの人が合格できる難易度"
+        },
+        {
+          "_key": "0f0dc92f3622",
+          "_type": "span",
+          "marks": [],
+          "text": "だと言えるでしょう。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1707f4b941ae",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "14e744afd618",
+          "_type": "span",
+          "marks": [],
+          "text": "FP2級の難易度は独学でも合格できる？"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "9c825a145f21",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5cffb9b6d522",
+          "_type": "span",
+          "marks": [],
+          "text": "独学でも時間をかければ合格できます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b8a212c9e288",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f94f8bcd84c0",
+          "_type": "span",
+          "marks": [],
+          "text": "３級よりもより深い内容となり試験問題も４択になります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "03da5031ee81",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fee903d287ca",
+          "_type": "span",
+          "marks": [],
+          "text": "しっかり語句や計算方法を覚えていかないと点数が取れません。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cc2c3f51469e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9c0c66ea2d3e",
+          "_type": "span",
+          "marks": [],
+          "text": "日本FP協会が実施するFP（ファイナンシャルプランナー）2級試験の"
+        },
+        {
+          "_key": "e8aee3e88e43",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "過去5年間の合格率は 学科試験では39.47%～55.61%の間、実技試験は50.52%～71.01%の間で推移"
+        },
+        {
+          "_key": "c45c1896764a",
+          "_type": "span",
+          "marks": [],
+          "text": "しています 。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c736b78a89bc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "45f80114aea5",
+          "_type": "span",
+          "marks": [],
+          "text": "ファイナンシャルプランナーの勉強を独学でする方法"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "442507e1f988",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3b14fb77c2de",
+          "_type": "span",
+          "marks": [],
+          "text": "基本はテキストと問題集の後に過去問をひたすら何回も解きまくるにつきます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c39c1648849f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8ab041aeaef5",
+          "_type": "span",
+          "marks": [],
+          "text": "しかし黙々とペースを考えながら勉強するのは苦手だなって人は"
+        },
+        {
+          "_key": "f65211fffa4e",
+          "_type": "span",
+          "marks": [
+            "hl3-0"
+          ],
+          "text": "講義動画"
+        },
+        {
+          "_key": "65c30c7fd720",
+          "_type": "span",
+          "marks": [],
+          "text": "もある通信講座の"
+        },
+        {
+          "_key": "78732e037ecc",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "オンスク.jp"
+        },
+        {
+          "_key": "5fbacc4cb86d",
+          "_type": "span",
+          "marks": [],
+          "text": "を受けるのもありだと思います。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl3-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "489e97e5e33c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1a3c44ea2579",
+          "_type": "span",
+          "marks": [
+            "m4-0"
+          ],
+          "text": "オンスク.jpをみる"
+        },
+        {
+          "_key": "9d566bbebf4e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m4-0",
+          "_type": "link",
+          "href": "/work/ejp"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "c7cc2bbef1b4",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d7a07677bf758571dd49b6de3f7de5458b534d49-1x1-gif",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "f52b5424e1a5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "97f2b3f4a28a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "77ab119e61a6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "394ff7e4cca5",
+          "_type": "span",
+          "marks": [],
+          "text": "様々な資格学習が1628円でウケホーダイ！ いつでもどこでも勉強できるオンラインの資格学習サービス"
+        },
+        {
+          "_key": "87fb1d97ae42",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "8cebb0806214",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "965215980949",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "e470548d9b47",
+          "_type": "span",
+          "marks": [],
+          "text": "・月額 1628円で60講座以上の資格学習コンテンツが利用可能"
+        },
+        {
+          "_key": "be014272f7aa",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "a66c3336859b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "ba86b1c02d29",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "a0fa96eacc37",
+          "_type": "span",
+          "marks": [],
+          "text": "・スマホでもPCでも、マルチデバイス対応でどこでも学習が可能 "
+        },
+        {
+          "_key": "aa873c0c9142",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "57f6f6cded7c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "a7c773d1d743",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "aea69462549b",
+          "_type": "span",
+          "marks": [],
+          "text": "・資格の学校TACのノウハウが凝縮された充実の講義ムービー "
+        },
+        {
+          "_key": "0938b4605e22",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "8325fc8e0c90",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "556b239ae288",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "ac8908594e84",
+          "_type": "span",
+          "marks": [],
+          "text": "・過去問を徹底分析した問題演習機能 "
+        },
+        {
+          "_key": "bdd9ef55e9eb",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "54ac5fd7915d",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "eb86f6107e85",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "3afc0c5130ef",
+          "_type": "span",
+          "marks": [],
+          "text": "・スマホやPCで学べる月額1078円のFP講座"
+        },
+        {
+          "_key": "f5eaa1cacd29",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "c764a5aeed19",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4d5743f6d52c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "03a19f5026a1",
+          "_type": "span",
+          "marks": [],
+          "text": "必要な勉強時間目安を知る"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "224ce4214525",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "72d96fe23e0c",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "FP3級"
+        },
+        {
+          "_key": "196499bcbcb5",
+          "_type": "span",
+          "marks": [],
+          "text": "の知識をしっかりと身につけ、内容を確実に理解した上での合格を目指すために必要な総学習時間は、40~60時間、1日1～2時間勉強できる時間を費やせる場合には、約1~2ヶ月あれば十分合格が可能な資格であると言われています。しかし、単に"
+        },
+        {
+          "_key": "f026ea99180e",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "「合格」することだけに焦点を当てた場合には、30時間程度の学習でも合格することは可能ではあります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c2c11dab7f92",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e298a3c36b98",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "FP2級"
+        },
+        {
+          "_key": "4e05615794a8",
+          "_type": "span",
+          "marks": [],
+          "text": "の場合には、必要な総学習時間は、120〜200時間程度が目安となります。1日2時間勉強できる時間を費やせる場合には、約2〜3カ月半程度かかる計算です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aea6c6728db5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a7ebc02dcb87",
+          "_type": "span",
+          "marks": [],
+          "text": "3級合格後、すぐに2級の学習を開始する場合には、３級の知識が衰えない状態でのインプットができますので、学習時間の短縮にも繋がり、効率性の面からもオススメです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c9a627303c9f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6b7abc010108",
+          "_type": "span",
+          "marks": [],
+          "text": "テキストを活用する"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "49ab60cda3c2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b5fb4839f5a9",
+          "_type": "span",
+          "marks": [],
+          "text": "実際に本屋さんで中をみてご自分に合いそうなものを選ばれると良いです。ここでは０からの知識で勉強を始めた"
+        },
+        {
+          "_key": "81f0175c0cb0",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "筆者が実際使用してみて"
+        },
+        {
+          "_key": "0d66f0cbb702",
+          "_type": "span",
+          "marks": [],
+          "text": "使いやすく合格できたテキストを紹介いたします。法改正が毎年あるため常に最新版で学習します。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "47fa27fb0735",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "92d1ce1765f6",
+          "_type": "span",
+          "marks": [
+            "hl5-0"
+          ],
+          "text": "９月・１月・５月"
+        },
+        {
+          "_key": "c2de9714e925",
+          "_type": "span",
+          "marks": [],
+          "text": "試験　のくくりで同じ年度のテキストが使えます。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl5-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "7594ef51cf25",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/IMG_69AD0D2F343E-1-2.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "下は最新版でのせています⭐︎"
+      ]
+    },
+    {
+      "_key": "a6ecff07025a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "33d69b0c7525",
+          "_type": "span",
+          "marks": [],
+          "text": "FP３級"
+        },
+        {
+          "_key": "c25e117afbc0",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "b2d195214d06",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "145b5ad642c5",
+          "_type": "span",
+          "marks": [],
+          "text": "\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"2025-2026年版 みんなが欲しかった! FPの教科書3級 (みんなが欲しかった！)\",\"b\":\"TAC出版\",\"t\":\"\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\",\"p\":[\"\\/images\\/I\\/51kefWnoVAL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300116016\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":4,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300116016\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":1},{\"id\":11,\"u_tx\":\"楽天市場で見る\",\"u_bc\":\"#f76956\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/2025-2026%E5%B9%B4%E7%89%88%20%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20FP%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B83%E7%B4%9A%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81)\\/\",\"a_id\":4046502,\"p_id\":54,\"pl_id\":27059,\"pc_id\":54,\"s_n\":\"rakuten\",\"u_so\":2},{\"id\":12,\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_bc\":\"#66a7ff\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=2025-2026%E5%B9%B4%E7%89%88%20%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20FP%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B83%E7%B4%9A%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81)\",\"a_id\":4046520,\"p_id\":1225,\"pl_id\":27061,\"pc_id\":1925,\"s_n\":\"yahoo\",\"u_so\":3}],\"eid\":\"1dS2q\",\"s\":\"s\"});\n"
+        },
+        {
+          "_key": "7a5948cb13ee",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "e8488853cade",
+          "_type": "span",
+          "marks": [],
+          "text": "リンク"
+        },
+        {
+          "_key": "3d99321e3a12",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "6e0e28fb0eca",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "80426943607b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "cd37c9047e18",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "6bb9a7060ccd",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "320649d38e35",
+          "_type": "span",
+          "marks": [],
+          "text": "\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"2025-2026年版 みんなが欲しかった! FPの問題集3級 (みんなが欲しかった！)\",\"b\":\"TAC出版\",\"t\":\"\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\",\"p\":[\"\\/images\\/I\\/51ohTrbnRHL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300116059\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":4,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300116059\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":1},{\"id\":11,\"u_tx\":\"楽天市場で見る\",\"u_bc\":\"#f76956\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/2025-2026%E5%B9%B4%E7%89%88%20%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20FP%E3%81%AE%E5%95%8F%E9%A1%8C%E9%9B%863%E7%B4%9A%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81)\\/\",\"a_id\":4046502,\"p_id\":54,\"pl_id\":27059,\"pc_id\":54,\"s_n\":\"rakuten\",\"u_so\":2},{\"id\":12,\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_bc\":\"#66a7ff\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=2025-2026%E5%B9%B4%E7%89%88%20%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20FP%E3%81%AE%E5%95%8F%E9%A1%8C%E9%9B%863%E7%B4%9A%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81)\",\"a_id\":4046520,\"p_id\":1225,\"pl_id\":27061,\"pc_id\":1925,\"s_n\":\"yahoo\",\"u_so\":3}],\"eid\":\"aTypd\",\"s\":\"s\"});\n"
+        },
+        {
+          "_key": "26d077b2c093",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "53e353d9e56b",
+          "_type": "span",
+          "marks": [],
+          "text": "リンク"
+        },
+        {
+          "_key": "56246a77cb41",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "a7376b2f62a8",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9eeb6ea5c952",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f6c6e8c4e25e",
+          "_type": "span",
+          "marks": [],
+          "text": "FP２級"
+        },
+        {
+          "_key": "8abd2837f4a3",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "d33092ac88f4",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "c673dda613d1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"2025-2026年版 みんなが欲しかった! FPの教科書2級･AFP (みんなが欲しかった！)\",\"b\":\"TAC出版\",\"t\":\"\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\",\"p\":[\"\\/images\\/I\\/51cDDerqGhL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300116024\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":4,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300116024\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":1},{\"id\":11,\"u_tx\":\"楽天市場で見る\",\"u_bc\":\"#f76956\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/2025-2026%E5%B9%B4%E7%89%88%20%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20FP%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B82%E7%B4%9A%EF%BD%A5AFP%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81)\\/\",\"a_id\":4046502,\"p_id\":54,\"pl_id\":27059,\"pc_id\":54,\"s_n\":\"rakuten\",\"u_so\":2},{\"id\":12,\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_bc\":\"#66a7ff\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=2025-2026%E5%B9%B4%E7%89%88%20%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20FP%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B82%E7%B4%9A%EF%BD%A5AFP%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81)\",\"a_id\":4046520,\"p_id\":1225,\"pl_id\":27061,\"pc_id\":1925,\"s_n\":\"yahoo\",\"u_so\":3}],\"eid\":\"MbsTI\",\"s\":\"s\"});\n"
+        },
+        {
+          "_key": "2aecd8978fd2",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "4782554fdee0",
+          "_type": "span",
+          "marks": [],
+          "text": "リンク"
+        },
+        {
+          "_key": "7d1b64173663",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "55e8a1af7518",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "06006f565bb0",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "e9ae202028ce",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "c9d31b8ac7df",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "4440ece40688",
+          "_type": "span",
+          "marks": [],
+          "text": "\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"2025-2026年版 みんなが欲しかった! FPの問題集2級･AFP (みんなが欲しかった！)\",\"b\":\"TAC出版\",\"t\":\"\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\",\"p\":[\"\\/images\\/I\\/51rkRX2fzlL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300116067\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":4,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300116067\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":1},{\"id\":11,\"u_tx\":\"楽天市場で見る\",\"u_bc\":\"#f76956\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/2025-2026%E5%B9%B4%E7%89%88%20%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20FP%E3%81%AE%E5%95%8F%E9%A1%8C%E9%9B%862%E7%B4%9A%EF%BD%A5AFP%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81)\\/\",\"a_id\":4046502,\"p_id\":54,\"pl_id\":27059,\"pc_id\":54,\"s_n\":\"rakuten\",\"u_so\":2},{\"id\":12,\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_bc\":\"#66a7ff\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=2025-2026%E5%B9%B4%E7%89%88%20%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20FP%E3%81%AE%E5%95%8F%E9%A1%8C%E9%9B%862%E7%B4%9A%EF%BD%A5AFP%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%EF%BC%81)\",\"a_id\":4046520,\"p_id\":1225,\"pl_id\":27061,\"pc_id\":1925,\"s_n\":\"yahoo\",\"u_so\":3}],\"eid\":\"O9N0z\",\"s\":\"s\"});\n"
+        },
+        {
+          "_key": "eb33b5db6568",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "968a47ec0ef6",
+          "_type": "span",
+          "marks": [],
+          "text": "リンク"
+        },
+        {
+          "_key": "4f3f67488828",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "ad1d50687e61",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8317f871a0b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "20fe954a62fe",
+          "_type": "span",
+          "marks": [],
+          "text": "新品じゃなくてもいいんじゃない🎵って方はメルカリで最新版が出品されていないかチェック↓"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "185a9912cac4",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "f758e812661e",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://jp.mercari.com/shops/product/zAWr4fLnchn7iJRmntnY4G?afid=0565616550",
+          "provider": "other",
+          "src": "https://ambassador-system.mercari.com/v1/i?id=zAWr4fLnchn7iJRmntnY4G&svc=ms"
+        }
+      ]
+    },
+    {
+      "_key": "11c6831a1062",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dd1e1aeb1cbc",
+          "_type": "span",
+          "marks": [],
+          "text": "まだメルカリ始めてない方はこちらからダウンロードできます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "be1888cc85da",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "363aac3dcb45",
+          "_type": "span",
+          "marks": [],
+          "text": "紹介コードを貼っておくのでよかったら使ってくださいね。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c17f23de354a",
+      "_type": "tableBlock",
+      "hasHeader": false,
+      "rows": [
+        {
+          "cells": [
+            "メルカリの紹介コードで500円分ポイントゲット"
+          ]
+        },
+        {
+          "cells": [
+            "YFDASQ"
+          ]
+        }
+      ]
+    },
+    {
+      "_key": "d70019be4933",
+      "_type": "image",
+      "alt": "フリマアプリはメルカリ - メルペイのスマホ決済でもっとお得",
+      "asset": {
+        "_ref": "image-c8559d58122d09a8c5edaa03cb52e7addcad787d-512x512-jpg",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "6f3576070054",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "70040ecf2fe2",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://apps.apple.com/jp/app/%25E3%2583%2595%25E3%2583%25AA%25E3%2583%259E%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25AF%25E3%2583%25A1%25E3%2583%25AB%25E3%2582%25AB%25E3%2583%25AA-%25E3%2583%25A1%25E3%2583%25AB%25E3%2583%259A%25E3%2582%25A4%25E3%2581%25AE%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E6%25B1%25BA%25E6%25B8%2588%25E3%2581%25A7%25E3%2582%2582%25E3%2581%25A3%25E3%2581%25A8%25E3%2581%258A%25E5%25BE%2597/id667861049?uo=4",
+          "src": "https://nabettu.github.io/appreach/img/itune_ja.svg"
+        },
+        {
+          "_key": "de0e79f54aba",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://play.google.com/store/apps/details?id=com.kouzoh.mercari",
+          "src": "https://nabettu.github.io/appreach/img/gplay_ja.png"
+        }
+      ]
+    },
+    {
+      "_key": "c4a9a7f4db13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5fa21467965e",
+          "_type": "span",
+          "marks": [],
+          "text": "フリマアプリはメルカリ - メルペイのスマホ決済でもっとお得"
+        },
+        {
+          "_key": "a6d10afa1364",
+          "_type": "span",
+          "marks": [],
+          "text": "開発元:"
+        },
+        {
+          "_key": "ceb959ebfd64",
+          "_type": "span",
+          "marks": [],
+          "text": "Mercari, Inc."
+        },
+        {
+          "_key": "35470d36bca4",
+          "_type": "span",
+          "marks": [],
+          "text": "無料"
+        },
+        {
+          "_key": "f81b8b50b127",
+          "_type": "span",
+          "marks": [],
+          "text": "posted with"
+        },
+        {
+          "_key": "aef274bcff9d",
+          "_type": "span",
+          "marks": [
+            "m6-0"
+          ],
+          "text": "アプリーチ"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m6-0",
+          "_type": "link",
+          "href": "/work/app-reach"
+        },
+        {
+          "_key": "m7-1",
+          "_type": "link",
+          "href": "/work/id667861049"
+        },
+        {
+          "_key": "m8-2",
+          "_type": "link",
+          "href": "/work/details"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "7c28c2b688b7",
+      "_type": "block",
+      "children": [],
+      "markDefs": [
+        {
+          "_key": "m9-0",
+          "_type": "link",
+          "href": "/work/m79376406400"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "36962e8c5a6a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b314a95f7ba8",
+          "_type": "span",
+          "marks": [],
+          "text": "過去問題（無料含む）を利用する"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "9e8df46a9b02",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "adc76107226d",
+          "_type": "span",
+          "marks": [],
+          "text": "◯日本FP協会HPより"
+        },
+        {
+          "_key": "e2477449ecfe",
+          "_type": "span",
+          "marks": [
+            "hl10-0"
+          ],
+          "text": "過去3年分の実際に出題した試験問題"
+        },
+        {
+          "_key": "11e8c9c8bffe",
+          "_type": "span",
+          "marks": [],
+          "text": "（PDF）が"
+        },
+        {
+          "_key": "27363af23bf1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "無料"
+        },
+        {
+          "_key": "1a1073eff6bd",
+          "_type": "span",
+          "marks": [],
+          "text": "で手に入ります。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl10-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "a2e4efbcc167",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1a431015129b",
+          "_type": "span",
+          "marks": [],
+          "text": "試験問題の時間配分に慣れるためにも１度は印刷して解いてみましょう。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6e6024cc07e5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "24234530f20f",
+          "_type": "span",
+          "marks": [
+            "m11-0"
+          ],
+          "text": "日本FP協会の試験問題をみる"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m11-0",
+          "_type": "link",
+          "href": "/work/mohan"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "859d06380e33",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2d1b1e9d01a0",
+          "_type": "span",
+          "marks": [],
+          "text": "◯「"
+        },
+        {
+          "_key": "0f1b5e9b0e3a",
+          "_type": "span",
+          "marks": [],
+          "text": "過去問道場"
+        },
+        {
+          "_key": "f2da1a0e6acb",
+          "_type": "span",
+          "marks": [],
+          "text": "」という無料登録できるWebサイトがあります。通勤通学時間やスキマ時間でサクッと過去問を解いて解説をすぐ確認できるのは便利でした。正答率をグラフ化してくれて"
+        },
+        {
+          "_key": "0fea024b956b",
+          "_type": "span",
+          "marks": [
+            "hl12-0"
+          ],
+          "text": "苦手問題をピックアップできる"
+        },
+        {
+          "_key": "88fec8e99d36",
+          "_type": "span",
+          "marks": [],
+          "text": "ので効率よく学習ができます。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl12-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "ff66fb278efe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e6f4ab7f6569",
+          "_type": "span",
+          "marks": [
+            "m13-0"
+          ],
+          "text": "過去問道場をみる"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m13-0",
+          "_type": "link",
+          "href": "/work/kakomon-php"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "57e318e39f89",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4649c39f3b4",
+          "_type": "span",
+          "marks": [],
+          "text": "FP独学の勉強法の流れ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "d9ac316614a9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ca5a259c0c49",
+          "_type": "span",
+          "marks": [],
+          "text": "効率的よく勉強するためには以下の①〜⑦を試験３週間前に終わらせて⑧を試験日直前までに"
+        },
+        {
+          "_key": "c01f8efe357b",
+          "_type": "span",
+          "marks": [],
+          "text": "80点以上"
+        },
+        {
+          "_key": "d03ddfefd054",
+          "_type": "span",
+          "marks": [],
+          "text": "の正答率に持っていけるようにすることが大事です。"
+        },
+        {
+          "_key": "9be27f2a16b9",
+          "_type": "span",
+          "marks": [
+            "hl14-0"
+          ],
+          "text": "合格点は60点以上"
+        },
+        {
+          "_key": "885628668fda",
+          "_type": "span",
+          "marks": [],
+          "text": "ですが例年は"
+        },
+        {
+          "_key": "4b2c8155294f",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "難化傾向＆見たことない問題"
+        },
+        {
+          "_key": "9e0cfb091664",
+          "_type": "span",
+          "marks": [],
+          "text": "が出題されることがあるので過去出題された問題を"
+        },
+        {
+          "_key": "a16383c47086",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "得点源"
+        },
+        {
+          "_key": "2039a5489e2c",
+          "_type": "span",
+          "marks": [],
+          "text": "にできるようにしましょう。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl14-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "98fed5363c4f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a78b25abf0c1",
+          "_type": "span",
+          "marks": [],
+          "text": "オススメ勉強法"
+        },
+        {
+          "_key": "66883a962c26",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "46568a876f1b",
+          "_type": "span",
+          "marks": [],
+          "text": "①　みんなが欲しかった！FPの教科書（全６チャプター）のうち１チャプターを流し読みする"
+        },
+        {
+          "_key": "f5994899e9bf",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "f5af5f6bb79f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "a231975130a1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "2917dff208dd",
+          "_type": "span",
+          "marks": [],
+          "text": "②　みんなが欲しかった！FPの問題集の対応するチャプターの"
+        },
+        {
+          "_key": "0e1aa308555f",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "学科"
+        },
+        {
+          "_key": "ff67b8f72def",
+          "_type": "span",
+          "marks": [],
+          "text": "を解いてみる"
+        },
+        {
+          "_key": "409ce5f98c6c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "bf2a551ce0d1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "3badbb6d51c9",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "97b723c2ef2b",
+          "_type": "span",
+          "marks": [],
+          "text": "③　解けない問題や間違った箇所は教科書に戻って確認する"
+        },
+        {
+          "_key": "5e6814c0b2a1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "4ac13c5fc51d",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "4214ad3519b8",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "8f5e7bec163b",
+          "_type": "span",
+          "marks": [],
+          "text": "④　①〜③を全６チャプター行う"
+        },
+        {
+          "_key": "56f416d9df87",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "a2160dda7bba",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "20e1a29778a1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "72cd09b5a75e",
+          "_type": "span",
+          "marks": [],
+          "text": "⑤　問題集の学科が全て解き終わったら"
+        },
+        {
+          "_key": "a31b1e53901b",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "実技"
+        },
+        {
+          "_key": "381f6a24fb8b",
+          "_type": "span",
+          "marks": [],
+          "text": "の問題を解く"
+        },
+        {
+          "_key": "229b34c6d350",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "43d3529479d9",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "848b234d495b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "1c59bfdac133",
+          "_type": "span",
+          "marks": [],
+          "text": "※実技問題は他のチャプターとまたがった問題があるため"
+        },
+        {
+          "_key": "d561464b652d",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "学科→実技"
+        },
+        {
+          "_key": "b59465e3db10",
+          "_type": "span",
+          "marks": [],
+          "text": "の順で解く"
+        },
+        {
+          "_key": "e54037b3eaba",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "6c3e1a440e0e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "090defc12c80",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "a405620de9b4",
+          "_type": "span",
+          "marks": [],
+          "text": "⑥　問題集をはじめからババっと解いてみる。（２回目）"
+        },
+        {
+          "_key": "23008bc38934",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "9564a8f86f1b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "328840a328f1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "ee795096d47b",
+          "_type": "span",
+          "marks": [],
+          "text": "⑦　③と⑥を3回目まで繰り返し問題の傾向と要点を覚える"
+        },
+        {
+          "_key": "98132a83332e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "3026b80f04b3",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "51676ced32cb",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "bbb45d447f1b",
+          "_type": "span",
+          "marks": [],
+          "text": "⑧　本試験問題を時間をはかって解いてみる"
+        },
+        {
+          "_key": "1ff9da867f24",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f01cf6a3b3db",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c98c44b5f9d0",
+          "_type": "span",
+          "marks": [],
+          "text": "独学でファイナンシャルプランナー（FP）を目指すメリットとデメリット"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "417efac130c0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0db3ee55bf2c",
+          "_type": "span",
+          "marks": [],
+          "text": "メリット"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "e807bf340611",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3fd2e19e48cf",
+          "_type": "span",
+          "marks": [],
+          "text": "独学でファイナンシャルプランナー（FP）を目指すメリットは、学習のペースや内容を自分自身で調整でるので柔軟に取り組むことができます。また、費用もテキスト購入代くらいになりますので経済的にも気軽に始めることができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "53c517d1e945",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f466900691e6",
+          "_type": "span",
+          "marks": [],
+          "text": "デメリット"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "20b8d3e94423",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7fdffce8c1b1",
+          "_type": "span",
+          "marks": [],
+          "text": "柔軟に取り組める反面、自己管理が必要となります。タイムマネジメントを行い「いつまでに」「どのページまで」を決めてコツコツ取り組む必要があります。時にはモチベーションが上がらなかったり、投げ出しそうになったり・・・。欲しい解説がすぐ見つからなかったりで時間のロスがでることも。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bace97dd5b24",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f4a5189236b0",
+          "_type": "span",
+          "marks": [],
+          "text": "初めは独学で頑張ってみたものの黙々とペースを考えながら勉強するのは苦手だなって人は通信講座を受けるのもありだと思います。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "113cee49e1d6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc14717475a6",
+          "_type": "span",
+          "marks": [],
+          "text": "割安で動画講義もある通信講座"
+        },
+        {
+          "_key": "80c655d4c00b",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "オンスク.jp"
+        },
+        {
+          "_key": "fe4eb6590a15",
+          "_type": "span",
+          "marks": [],
+          "text": "。忙しい社会人や時間のないワーママにこそスキマ時間でサクッと効率的に学習しませんか？"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c265049993a6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "019103ed4cb2",
+          "_type": "span",
+          "marks": [
+            "m15-0"
+          ],
+          "text": "オンスク.jpをみる"
+        },
+        {
+          "_key": "6ca1d579f93d",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m15-0",
+          "_type": "link",
+          "href": "/work/ejp"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "a6ccc56fa29c",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d7a07677bf758571dd49b6de3f7de5458b534d49-1x1-gif",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "d6c29f8b4130",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "177891efc3a7",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "a66dbea81396",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "b535a53db69b",
+          "_type": "span",
+          "marks": [],
+          "text": "様々な資格学習が"
+        },
+        {
+          "_key": "ef129195a479",
+          "_type": "span",
+          "marks": [],
+          "text": "1628円"
+        },
+        {
+          "_key": "00bbe8baf118",
+          "_type": "span",
+          "marks": [],
+          "text": "でウケホーダイ！ いつでもどこでも勉強できるオンラインの資格学習サービス"
+        },
+        {
+          "_key": "872cb74eec21",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "ae981816fe89",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "840bd9164c12",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "027ca7e66797",
+          "_type": "span",
+          "marks": [],
+          "text": "・月額 1628円で60講座以上の資格学習コンテンツが利用可能"
+        },
+        {
+          "_key": "914958324fa2",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "cbd6fbb7b13e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "377530e9f399",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "68490cee64dd",
+          "_type": "span",
+          "marks": [],
+          "text": "・スマホでもPCでも、マルチデバイス対応でどこでも学習が可能 "
+        },
+        {
+          "_key": "49f406753422",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "9f09f86a4cd7",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "fa6f4995928f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "5a95d9201bac",
+          "_type": "span",
+          "marks": [],
+          "text": "・"
+        },
+        {
+          "_key": "0a76d8f2d2cf",
+          "_type": "span",
+          "marks": [
+            "hl16-0"
+          ],
+          "text": "資格の学校TAC"
+        },
+        {
+          "_key": "2e7b28f8cad5",
+          "_type": "span",
+          "marks": [],
+          "text": "のノウハウが凝縮された充実の講義ムービー "
+        },
+        {
+          "_key": "aa9be1936c4e",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "ae728fddd722",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "35f0256e409d",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "e374a4f82f2f",
+          "_type": "span",
+          "marks": [],
+          "text": "・過去問を徹底分析した問題演習機能 "
+        },
+        {
+          "_key": "4d31f274abda",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "e08c21511b06",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "f3158f4e493a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "3dcd19b35e78",
+          "_type": "span",
+          "marks": [],
+          "text": "・スマホやPCで学べる月額1078円のFP講座"
+        },
+        {
+          "_key": "fc0ed4319f73",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "30ee9ddd8d98",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl16-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "0d9227099566",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1159a702a8f8",
+          "_type": "span",
+          "marks": [],
+          "text": "まとめ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "f3f30da6ce2d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8936e9e40b86",
+          "_type": "span",
+          "marks": [],
+          "text": "FP協会のファイナンシャルプランナー（FP）試験について、独学で合格するための方法とおすすめテキストについて解説しました。試験の合格率は高いため、上の記事に書いた対策をすれば多くの人が合格できます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cff6c513d1d5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7f8428872587",
+          "_type": "span",
+          "marks": [],
+          "text": "FP2級の独学合格も可能であり、"
+        },
+        {
+          "_key": "de5c6a79ed3a",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "120〜200時間"
+        },
+        {
+          "_key": "a680a830875a",
+          "_type": "span",
+          "marks": [],
+          "text": "の学習が目安です。FP3級では"
+        },
+        {
+          "_key": "98b9807648f1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "40〜60時間"
+        },
+        {
+          "_key": "42a1051396cc",
+          "_type": "span",
+          "marks": [],
+          "text": "の学習で合格できるとされています。過去問題の活用も重要で、日本FP協会のウェブサイトから試験問題（PDF）を無料で入手できます。さらに、「過去問道場」という無料登録のWebサイトも便利です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "186c54ca8f4b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7ad1f19e6f96",
+          "_type": "span",
+          "marks": [],
+          "text": "初めは独学で頑張ってみたものの黙々とペースを考えながら勉強するのは苦手だなって人は通信講座を受けるのもありです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "81c81ebab76a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8109e9364296",
+          "_type": "span",
+          "marks": [],
+          "text": "FPの知識は生きている上で必ずかかってくる税金やお金問題について正しく判断して"
+        },
+        {
+          "_key": "30fd740b60f3",
+          "_type": "span",
+          "marks": [
+            "hl17-0"
+          ],
+          "text": "あなたの生活を守ってくれます"
+        },
+        {
+          "_key": "bc80431b3ce2",
+          "_type": "span",
+          "marks": [],
+          "text": "。学びたい時が始め時、いざ実践あるのみです👍"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl17-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "357fe3657af9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "904411ea6a90",
+          "_type": "span",
+          "marks": [],
+          "text": "\nhttps://mamasanmoney-bu.com/qualification-nissho-bookkeeping%ef%bc%93-test/\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4e6ce910ea47",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bae40b1ffb23",
+          "_type": "span",
+          "marks": [],
+          "text": "このブログは「にほんブログ村」と「ブログリーダー」に参加しています。下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0ae671cc089e",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "6d301fccdc20",
+          "_type": "linkImageBlock",
+          "alt": "ママさんマネー部 - にほんブログ村",
+          "href": "https://blogmura.com/profiles/11159291/?p_cid=11159291&reader=11159291",
+          "provider": "blogmura",
+          "src": "https://b.blogmura.com/banner-blogmura-reader-pink.svg"
+        },
+        {
+          "_key": "6967c8594c41",
+          "_type": "linkImageBlock",
+          "alt": "人気ブログランキングでフォロー",
+          "href": "https://blog.with2.net/link/?id=2097059&follow",
+          "provider": "with2",
+          "src": "https://blog.with2.net/banner/follow/2097059?t=b"
+        }
+      ]
+    }
+  ],
+  "category": "work",
+  "heroImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-af06501c575a56059760bdc3b1cc68b38313d5b2-1024x1024-jpg",
+      "_type": "reference"
+    }
+  },
+  "publishedAt": "2023-06-05T06:34:49Z",
+  "slug": {
+    "_type": "slug",
+    "current": "recommended-texts-for-self-study-for-financial-planners-and-study-methods-to-pass"
+  },
+  "tags": [
+    "スキルアップ"
+  ],
+  "title": "【FP協会】独学でFP合格！効果的な学習法とおすすめテキスト",
+  "updatedAt": "2025-10-19T13:37:29.831Z",
+  "views": 2
+}

@@ -1,4 +1,4 @@
-export function sanityOptimized(url?: string, opts?: { w?: number; h?: number; q?: number; fit?: 'crop'|'clip'|'fill'|'scale'|'min' }) {
+export function sanityOptimized(url?: string, opts?: { w?: number; h?: number; q?: number; fit?: 'crop' | 'clip' | 'fill' | 'scale' | 'min' }) {
   if (!url) return ''
   try {
     const u = new URL(url)
@@ -18,7 +18,7 @@ export function sanityOptimized(url?: string, opts?: { w?: number; h?: number; q
 }
 
 // Build a Sanity CDN URL from an image asset reference (e.g. image-<id>-<WxH>-<format>)
-export function sanityImageRefToUrl(ref?: string, opts?: { w?: number; h?: number; q?: number; fit?: 'crop'|'clip'|'fill'|'scale'|'min' }){
+export function sanityImageRefToUrl(ref?: string, opts?: { w?: number; h?: number; q?: number; fit?: 'crop' | 'clip' | 'fill' | 'scale' | 'min' }) {
   if (!ref) return ''
   try {
     // ref format: image-<assetId>-<w>x<h>-<format>
@@ -29,5 +29,21 @@ export function sanityImageRefToUrl(ref?: string, opts?: { w?: number; h?: numbe
     if (!projectId || !dataset) return ''
     const base = `https://cdn.sanity.io/images/${projectId}/${dataset}/${id}-${dims}.${format}`
     return sanityOptimized(base, opts)
+  } catch { return '' }
+}
+
+// Build a Sanity CDN URL from a file asset reference (e.g. file-<id>-<format>)
+export function sanityFileRefToUrl(ref?: string) {
+  if (!ref) return ''
+  try {
+    // ref format: file-<assetId>-<format>
+    const parts = String(ref).split('-')
+    const id = parts[1]
+    const format = parts[parts.length - 1]
+    if (!id || !format) return ''
+    const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || process.env.SANITY_PROJECT_ID
+    const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || process.env.SANITY_DATASET || 'production'
+    if (!projectId || !dataset) return ''
+    return `https://cdn.sanity.io/files/${projectId}/${dataset}/${id}.${format}`
   } catch { return '' }
 }

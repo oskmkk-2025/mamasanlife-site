@@ -27,7 +27,7 @@ function resolveSlotAlias(nameOrId: string | undefined): { slot?: string; env?: 
 }
 
 export function AdSlot({ slot, layout, format = 'auto', responsive = true, className }: Props) {
-  const rawClient = process.env.NEXT_PUBLIC_ADSENSE_ID
+  const rawClient = process.env.NEXT_PUBLIC_ADSENSE_ID?.trim()
   const client = rawClient ? (rawClient.startsWith('ca-') ? rawClient : `ca-${rawClient}`) : undefined
   const aliasInfo = resolveSlotAlias(slot)
   const resolvedSlot = aliasInfo?.slot?.trim()

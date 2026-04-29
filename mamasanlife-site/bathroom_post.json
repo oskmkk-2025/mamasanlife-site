@@ -1,0 +1,1390 @@
+{
+  "_createdAt": "2025-08-26T10:23:36Z",
+  "_id": "Nn6Sc6MF3u71woMpYvaLxu",
+  "_rev": "YHmk6oGwB8vI6jHijMOzs6",
+  "_type": "post",
+  "_updatedAt": "2026-01-05T06:45:06Z",
+  "affiliateBlocks": [
+    {
+      "html": "<a class=\"affiliate-btn affiliate-btn--afb\" href=\"https://t.afi-b.com/visit.php?a=G142682-w468243f&amp;p=x929565W\" target=\"_blank\" rel=\"noopener noreferrer nofollow sponsored\">くらしのマーケットをみる</a>",
+      "note": "",
+      "title": ""
+    }
+  ],
+  "body": [
+    {
+      "_key": "8c32306bb6d3",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "f4bd08640c44",
+          "_type": "linkImageBlock",
+          "alt": "にほんブログ村 その他生活ブログ 生活術・ライフハックへ",
+          "href": "https://life.blogmura.com/seikatsujutsu/ranking/in?p_cid=11159291",
+          "src": "https://b.blogmura.com/life/seikatsujutsu/88_31.gif"
+        }
+      ]
+    },
+    {
+      "_key": "eb102e56191a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6b44bb9771a9",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "d1c2f1c39b3d",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m0-0",
+          "_type": "link",
+          "href": "/life/in"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "975e37ddfb67",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "cfe1227bd12a",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://blog.with2.net/link/?id=2097059&cid=4004",
+          "src": "https://blog.with2.net/img/banner/c/banner_1/br_c_4004_1.gif"
+        }
+      ]
+    },
+    {
+      "_key": "c1ad61260c08",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "206a7e4353b5",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "cbd05dd36110",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "25643ed8f722",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "1741ea3e3c23",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "65bcdb81ab95",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m1-0",
+          "_type": "link",
+          "href": "/life/in"
+        },
+        {
+          "_key": "m2-1",
+          "_type": "link",
+          "href": "/life/link"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "97eb910e4581",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "39a4fc14367b",
+          "_type": "span",
+          "marks": [],
+          "text": "お風呂の掃除って、忙しい主婦の皆さんにとって体力もいるし時間もかかって大変なんですよね。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "864d63450b7c",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/IMG_69AD0D2F343E-1-2.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "普段掃除していてもカビや汚れが増えすぎると、どうにもならないときもありますよね。"
+      ]
+    },
+    {
+      "_key": "67263d12b8a7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5ca75f2d3f2b",
+          "_type": "span",
+          "marks": [],
+          "text": "そんな時、くらしのマーケットを使って、プロの手による浴室クリーニングをお任せしてみませんか？"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4b259f0b10a0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "28d85dff84e3",
+          "_type": "span",
+          "marks": [],
+          "text": "✔️家事代行業者に依頼なんて、お金持ちの家の話じゃない？"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6dd9a9350959",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6c05d512fb3a",
+          "_type": "span",
+          "marks": [],
+          "text": "✔️いろんな手は尽くしたものの、自分ではこの黒カビ　もうどうにもならないんだよね・・・"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "489d22fe72fb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "24a34d2d6085",
+          "_type": "span",
+          "marks": [],
+          "text": "＼安心してください、費用も"
+        },
+        {
+          "_key": "497ae2709187",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "お安く"
+        },
+        {
+          "_key": "b4040c20db97",
+          "_type": "span",
+          "marks": [],
+          "text": "できてその上その悩み"
+        },
+        {
+          "_key": "a2036c40e85e",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "プロに解決"
+        },
+        {
+          "_key": "edb5bed31284",
+          "_type": "span",
+          "marks": [],
+          "text": "してもらえるんです／"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fc4e5e82988d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "19b28aa00cea",
+          "_type": "span",
+          "marks": [],
+          "text": "この記事は主婦歴16年、40代に入って独学でFP・簿記２級を取得した倹約家のひーち部長（筆者）が費用を抑えつつも満足度の高い"
+        },
+        {
+          "_key": "8f91bf7f0b24",
+          "_type": "span",
+          "marks": [
+            "hl3-0"
+          ],
+          "text": "家事代行業者"
+        },
+        {
+          "_key": "f4df586a9a7d",
+          "_type": "span",
+          "marks": [],
+          "text": "の利用方法を実体験をもとにお伝えします。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl3-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "e91827762b17",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dd9d5261c470",
+          "_type": "span",
+          "marks": [],
+          "text": "くらしのマーケットとは？"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "446cad0d7cee",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "222fd9a3563e",
+          "_type": "span",
+          "marks": [],
+          "text": "今回清掃をお願いするにあたり大手清掃会社ではなくアプリで簡単に予約ができる「くらしのマーケット」というサービスを使って業者さんに依頼しました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7c68238ee29d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9a7cac18b51f",
+          "_type": "span",
+          "marks": [
+            "m4-0"
+          ],
+          "text": "くらしのマーケットをみる"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m4-0",
+          "_type": "link",
+          "href": "/life/visit-php"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "060421bba40d",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d8600b0b65375126b74348378e0d9b3c8eda2538-1x1-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "cd92357ab4c0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "81960b58a850",
+          "_type": "span",
+          "marks": [],
+          "text": "これまでにもこのアプリを使ってエアコンの分解洗浄や洗濯機の分解洗浄を依頼してコストパフォーマンスの高い仕事をしてくださっていたので、今回の浴室クリーニングも満足度の高い掃除をしてくれるだろうと"
+        },
+        {
+          "_key": "7ca06187732c",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "確信に近い期待"
+        },
+        {
+          "_key": "80ef78c2aee1",
+          "_type": "span",
+          "marks": [],
+          "text": "をして依頼することに決定です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "486e119d5268",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d8b2eb417db7",
+          "_type": "span",
+          "marks": [],
+          "text": "ホームクリーニングの他にも家電取り付けなども依頼ができたり♪筆者お気に入りサービスです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "744e63f155a7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5491849f7cfe",
+          "_type": "span",
+          "marks": [],
+          "text": "くらしのマーケットに登録している業者さんは"
+        },
+        {
+          "_key": "5fbd1f0e4304",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "個人事業主"
+        },
+        {
+          "_key": "567f8d14cadf",
+          "_type": "span",
+          "marks": [],
+          "text": "さんが多く会社組織を通さず直接依頼できるため"
+        },
+        {
+          "_key": "13d7680bbde0",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "同じクオリティ"
+        },
+        {
+          "_key": "dc1851c715f1",
+          "_type": "span",
+          "marks": [],
+          "text": "でも"
+        },
+        {
+          "_key": "7c89b881a733",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "価格を抑えて"
+        },
+        {
+          "_key": "bbc0e422cf60",
+          "_type": "span",
+          "marks": [],
+          "text": "依頼することが出来ます。もちろん作業によって資格が必要な場合もあるのでどんな資格を持っているかの紹介もされています。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1cfce46a11b7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "74416f962eab",
+          "_type": "span",
+          "marks": [],
+          "text": "登録業者さんは下の画像にあるように各カテゴリー別に全国にたくさんいらっしゃいます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b3e328f50817",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "97223ae9aacf",
+          "_type": "span",
+          "marks": [],
+          "text": "依頼するにあたって"
+        },
+        {
+          "_key": "a78cbf0a1fac",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "自分の住まいの地域に対応しているのか"
+        },
+        {
+          "_key": "e85aac3647fc",
+          "_type": "span",
+          "marks": [],
+          "text": "検索で絞った上で、中でも"
+        },
+        {
+          "_key": "a272ddc48826",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "口コミの良い方"
+        },
+        {
+          "_key": "f1a41cb39559",
+          "_type": "span",
+          "marks": [],
+          "text": "にお願いすると安心でしょう。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8bf9214c7852",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "71a4724738a7",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "32f76593f158",
+          "_type": "span",
+          "marks": [],
+          "text": "Screenshot"
+        },
+        {
+          "_key": "8fe07a04ccc8",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "a8f7f2c393bf",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "4ade743616cc",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "6b4afe19d8bd",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "753968e682e5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "edd489f0b3b2",
+          "_type": "span",
+          "marks": [],
+          "text": "時期によっては（繁忙期をずらした時期が多い）"
+        },
+        {
+          "_key": "e313f4cf2375",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "アプリ限定クーポン"
+        },
+        {
+          "_key": "ae8d578b9def",
+          "_type": "span",
+          "marks": [],
+          "text": "がある時も。割引がきいてさらにコストを抑えることが出来ます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bad12e0310db",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "01ec72533679",
+          "_type": "span",
+          "marks": [],
+          "text": "くらしのマーケットの3つのあんしんポイント"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "7c31de581b9d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "57ffb0e97ef4",
+          "_type": "span",
+          "marks": [],
+          "text": "作業中に物を壊されたりしても保証されるの？その業者あやしくない？と心配な方に。くらしのマーケットとして下に挙げる3つの対策をしています。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1ae3c5094ef9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9ea184c67aa3",
+          "_type": "span",
+          "marks": [],
+          "text": "【損害賠償補償】 "
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b61346a93a97",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "985b54dafdf8",
+          "_type": "span",
+          "marks": [],
+          "text": "くらしのマーケット経由で予約をした作業で問題が発生した場合、修理にかかる費用などを、最高1億円まで補償します。 　"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "73bf0baa4a4a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c087b64f97a6",
+          "_type": "span",
+          "marks": [],
+          "text": "（例）作業スタッフが家電を壊してしまった、など。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "44c79ad488bd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6e9895d7328a",
+          "_type": "span",
+          "marks": [],
+          "text": " 【プライバシー保護】 　"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "10ad17e47450",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8085e6666add",
+          "_type": "span",
+          "marks": [],
+          "text": "予約が確定するまで各店に個人情報が公開されないので安心して問い合わせることができます。 "
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e733ed300862",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "79481103bd7d",
+          "_type": "span",
+          "marks": [],
+          "text": "【厳正な出店審査】 　"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "45641f4a16ec",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0787654688d7",
+          "_type": "span",
+          "marks": [],
+          "text": "くらしのマーケットに出店してサービスを掲載できるのは厳正な審査を通過した店舗だけになります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7795d32a905d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d6b92e9a4f0a",
+          "_type": "span",
+          "marks": [],
+          "text": "同業他社との比較"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "b7879456ee4e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bf6c10b8664d",
+          "_type": "span",
+          "marks": [],
+          "text": "清掃大手会社との料金・サービスを一覧にして比較してみました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c5876e25753e",
+      "_type": "tableBlock",
+      "hasHeader": false,
+      "rows": [
+        {
+          "cells": [
+            "",
+            "価　格",
+            "時　間",
+            "内　容",
+            "オプション"
+          ]
+        },
+        {
+          "cells": [
+            "O掃除本舗",
+            "¥19,800（税抜価格¥18,000）",
+            "約2時間",
+            "浴槽／天井／照明／窓（室内側のみ）／蛇口／シャワー／壁面／床／扉／鏡／換気扇フィルター／換気扇カバー（内部は含まず）",
+            "浴室（風呂釜）の追い焚き配管除菌クリーニング　＋22,000円浴室乾燥機クリーニング　＋7,700円鏡の水アカ除去＆コーティング仕上げ　＋3,300円エプロン内部高圧洗浄＆防カビ仕上げ　＋7,700円"
+          ]
+        },
+        {
+          "cells": [
+            "Dスキン",
+            "22,000円（税抜20,000円）",
+            "約2時間",
+            "浴槽／天井／照明／窓（室内側のみ）／蛇口／シャワー／壁面／床／扉／鏡／換気扇フィルター／換気扇カバー（内部は含まず）",
+            "浴室防汚コーティング　＋9,900円浴槽エプロン内部クリーニング　＋5,060円乾燥機 内部クリーニング（取外し不可）＋5,830円乾燥機 内部クリーニング（取外し可）＋10,120円カビ防止コート　＋5,060円浴槽追いだき配管内除菌クリーニング　＋6,600円ジェットバス配管内除菌クリーニング　＋12,100円浴室鏡曇り止めフィルム施工サービス　＋3,630円"
+          ]
+        },
+        {
+          "cells": [
+            "くらしのマーケット",
+            "11,000円〜16,000円",
+            "約2〜3時間",
+            "浴槽（エプロン内部含む） / 天井 / 照明 / 窓 / 蛇口 / シャワー / 壁面 / 床 / 扉 / 鏡 /換気扇（簡易清掃） / 排水口 / トイレ・洗面台の簡易清掃（3点ユニットの場合） / 作業場所の簡易清掃",
+            "業者により無料サービスとしてやってくれることがあります。要問合せ"
+          ]
+        }
+      ]
+    },
+    {
+      "_key": "9aaab90a24b9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "411d3e256474",
+          "_type": "span",
+          "marks": [],
+          "text": "くらしのマーケットの浴室クリーニング、他所と比べても"
+        },
+        {
+          "_key": "89abf62020be",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "圧倒的にお値打ち"
+        },
+        {
+          "_key": "2637094ace48",
+          "_type": "span",
+          "marks": [],
+          "text": "ですね(^ ^)"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9187d7ec30e3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2eabe98d32a7",
+          "_type": "span",
+          "marks": [
+            "m5-0"
+          ],
+          "text": "くらしのマーケットをみる"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m5-0",
+          "_type": "link",
+          "href": "/life/visit-php"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "158a5c1aa352",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d8600b0b65375126b74348378e0d9b3c8eda2538-1x1-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "740200d390ca",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b882a2e86205",
+          "_type": "span",
+          "marks": [],
+          "text": "クリーニングの結果"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ec204f5fc384",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4e61c755fea6",
+          "_type": "span",
+          "marks": [],
+          "text": "プロによる浴室クリーニングは、本当にすごかったです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cb250316fcee",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "95202cf01fa4",
+          "_type": "span",
+          "marks": [],
+          "text": "私が依頼した業者さんは"
+        },
+        {
+          "_key": "588dd267b0db",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "追い焚き配管洗浄"
+        },
+        {
+          "_key": "689c5beec120",
+          "_type": "span",
+          "marks": [],
+          "text": "も追加料金なくやってくださいました。高圧洗浄機で届く範囲で洗浄してもらいスッキリきれい。浴室乾燥機の掃除や排水溝の消毒もしてくださり細かいところまで盛りだくさん掃除してくださいました。さすがプロ✨"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f0ef91f91c1c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b7219c41d5c3",
+          "_type": "span",
+          "marks": [],
+          "text": "くらしのマーケットでの浴室クリーニングの共通の作業内容"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "a88e1885c390",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "27a5ea37d21c",
+          "_type": "span",
+          "marks": [],
+          "text": "鏡の水垢・ウロコ落とし / 浴槽（エプロン内部含む） / 天井 / 照明 / 窓 / 蛇口 / シャワー / 壁面 / 床 / 扉 / 換気扇（簡易清掃） / 排水口 / トイレ・洗面台の簡易清掃（3点ユニットの場合） / 作業場所の簡易清掃"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6fcfb43b1d7e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "615131555eb5",
+          "_type": "span",
+          "marks": [],
+          "text": "これら全て自分で掃除するには時間と手間がかかり長年闘ってきた断固な汚れとなると期待通りの成果が出ないことが多々あります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "acdcbfb737a7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "36f899aaba22",
+          "_type": "span",
+          "marks": [],
+          "text": "フタのふちに生えたガンコな黒カビは完全にはとり切れなかったけど、それでも"
+        },
+        {
+          "_key": "aaaff818aa11",
+          "_type": "span",
+          "marks": [
+            "hl6-0"
+          ],
+          "text": "かなり薄く"
+        },
+        {
+          "_key": "b28874e9975a",
+          "_type": "span",
+          "marks": [],
+          "text": "なって感動しました。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl6-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "b2f39bb398bc",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/themes/cocoon-master/images/man.png",
+      "name": "業者さん",
+      "paras": [
+        "(これでも)だいぶマシにはなりましたが、もう少しつけ置きの時間があればもっときれいになります。"
+      ]
+    },
+    {
+      "_key": "a630d1ed66d5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "456ab5904c36",
+          "_type": "span",
+          "marks": [],
+          "text": "とのことでしたが3時間の作業内いっぱいをつかって落としてくださりありがとうございました（感動✨）"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2e284ba92d03",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/IMG_69AD0D2F343E-1-2.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "業者さんに依頼するまでドラッグストアによくある強力カビ●ラーはじめとする強力系の薬剤を散布してキッチンペーパー＆ラップつけ置きなど自身でできる限り試してわずかに薄くなる程度だったのでこれには驚きでした！"
+      ]
+    },
+    {
+      "_key": "34f773668687",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7af257f3b0cb",
+          "_type": "span",
+          "marks": [],
+          "text": "おまけ　黒カビが気になっている人に朗報です！"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "912c704543c5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6052ec286429",
+          "_type": "span",
+          "marks": [],
+          "text": "後日談となりますが、この"
+        },
+        {
+          "_key": "184f0a61b4b8",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "根の深い黒カビ"
+        },
+        {
+          "_key": "6284a76a7cad",
+          "_type": "span",
+          "marks": [],
+          "text": "にきく業務用の薬剤を"
+        },
+        {
+          "_key": "48b8859f6cbb",
+          "_type": "span",
+          "marks": [
+            "hl7-0"
+          ],
+          "text": "発見いたしました"
+        },
+        {
+          "_key": "6f04e502d7ac",
+          "_type": "span",
+          "marks": [],
+          "text": "！（こんなのを長年求めていたのよ😂）"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl7-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "f94528ad5207",
+      "_type": "moshimoEasyLink",
+      "data": {
+        "brand": "鈴木油脂工業",
+        "buttons": [
+          {
+            "color": "#f79256",
+            "label": "Amazonで見る",
+            "url": "https://www.amazon.co.jp/dp/B005I0GO3O"
+          },
+          {
+            "color": "#f76956",
+            "label": "楽天市場で見る",
+            "url": "https://search.rakuten.co.jp/search/mall/%E6%A5%AD%E5%8B%99%E7%94%A8%20%E3%82%AB%E3%83%93%E3%81%A8%E3%82%8A%E4%B8%80%E7%99%BA%20500g/"
+          },
+          {
+            "color": "#66a7ff",
+            "label": "Yahoo!ショッピングで見る",
+            "url": "https://shopping.yahoo.co.jp/search?first=1&p=%E6%A5%AD%E5%8B%99%E7%94%A8%20%E3%82%AB%E3%83%93%E3%81%A8%E3%82%8A%E4%B8%80%E7%99%BA%20500g"
+          }
+        ],
+        "image": "https://m.media-amazon.com/41h9iqudXtL._SL500_.jpg",
+        "price": "",
+        "title": "業務用 カビとり一発 500g"
+      }
+    },
+    {
+      "_key": "ab1bb0168c1f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "38dd84107e0f",
+          "_type": "span",
+          "marks": [],
+          "text": "こちらは500ｇで2,000円以下と安価ながら名前通り"
+        },
+        {
+          "_key": "44c0a1c6d247",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "効果抜群"
+        },
+        {
+          "_key": "8e853cade280",
+          "_type": "span",
+          "marks": [],
+          "text": "。水分がついていない状態でジェル状の溶剤をカビの上にのせて1〜24時間放置。汚れ具合に合わせて自"
+        },
+        {
+          "_key": "04d33bed9416",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "分でつけ置き時間を決められる"
+        },
+        {
+          "_key": "4afff6d8a6dc",
+          "_type": "span",
+          "marks": [],
+          "text": "ので徹底的にやっつけられます。その後シャワーを流しつつ歯ブラシなどでこすり落とすとほぼほぼ消えてるんです！目からウロコもの✨"
+        },
+        {
+          "_key": "bbc21bc77e1c",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "カビでお困りの方全てに"
+        },
+        {
+          "_key": "73e4ada70939",
+          "_type": "span",
+          "marks": [],
+          "text": "お勧めしたい。マジで騙されたと思って一度使ってみてくだされ。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "242e51267308",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9a6c185b9db4",
+          "_type": "span",
+          "marks": [],
+          "text": "あと"
+        },
+        {
+          "_key": "3c896016420d",
+          "_type": "span",
+          "marks": [
+            "hl8-0",
+            "strong"
+          ],
+          "text": "窓"
+        },
+        {
+          "_key": "5846051f4b7a",
+          "_type": "span",
+          "marks": [
+            "hl8-0"
+          ],
+          "text": "の結露によってできたパッキンの黒カビ"
+        },
+        {
+          "_key": "2b7f814c5e76",
+          "_type": "span",
+          "marks": [],
+          "text": "！これも解決しました。（浴室のように流すことはできないので拭き取りにはなりますが）においはさほどきつくはないけど"
+        },
+        {
+          "_key": "9da58165acc7",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "業務用"
+        },
+        {
+          "_key": "2a8feadcba7c",
+          "_type": "span",
+          "marks": [],
+          "text": "になりますので目や口に入らないよう取り扱いには注意して"
+        },
+        {
+          "_key": "0d025935a646",
+          "_type": "span",
+          "marks": [
+            "hl9-1"
+          ],
+          "text": "手袋をつけて"
+        },
+        {
+          "_key": "6a55f15bb531",
+          "_type": "span",
+          "marks": [],
+          "text": "作業してくださいね。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl8-0",
+          "_type": "highlight",
+          "variant": "accent"
+        },
+        {
+          "_key": "hl9-1",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "d7c8059b7c44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e04fb6fd7441",
+          "_type": "span",
+          "marks": [],
+          "text": "浴室クリーニングまとめ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "8d0ff149302c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8279ebac2d89",
+          "_type": "span",
+          "marks": [],
+          "text": "業者さんの対応は、"
+        },
+        {
+          "_key": "acf3f71280c6",
+          "_type": "span",
+          "marks": [
+            "hl10-0"
+          ],
+          "text": "3時間みっちり"
+        },
+        {
+          "_key": "e9ddbdc67c61",
+          "_type": "span",
+          "marks": [],
+          "text": "掃除してくれて対応もとても丁寧で一生懸命でした。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl10-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "34b3942d3bcd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "91c5e55d3fff",
+          "_type": "span",
+          "marks": [],
+          "text": "・エプロン下の掃除は取り外せないタイプということで掃除は省略"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e735d547b6c6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1de23ce6c59",
+          "_type": "span",
+          "marks": [],
+          "text": "・洗剤の残りが拭き取れていなかった"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4e1ab69f4a86",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "22c5a8ed3d9a",
+          "_type": "span",
+          "marks": [],
+          "text": "この2点は今回利用してちょっと残念ポイントでしたが、大部分は鏡も含めて本当にピカピカにしていただきました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3441fd08a03e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8ebeae4d1031",
+          "_type": "span",
+          "marks": [],
+          "text": "とてもいい仕事をしてくれたのでまた次回もお願いしたいと思います。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bfea949a2781",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fd9f458b5f37",
+          "_type": "span",
+          "marks": [],
+          "text": "迷っているなら一度お試しあれ♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "82b5ee0ccb3e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6e4f77e5e030",
+          "_type": "span",
+          "marks": [
+            "m11-0"
+          ],
+          "text": "くらしのマーケットをみる"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m11-0",
+          "_type": "link",
+          "href": "/life/visit-php"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "2a5cb6bb0cc1",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d8600b0b65375126b74348378e0d9b3c8eda2538-1x1-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "11bf956e6cbe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "28ff69f1cef1",
+          "_type": "span",
+          "marks": [],
+          "text": "このブログは「にほんブログ村」と「ブログリーダー」に参加しています。下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8862b2a0e03c",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "386cfa72dfb4",
+          "_type": "linkImageBlock",
+          "alt": "ママさんマネー部 - にほんブログ村",
+          "href": "https://blogmura.com/profiles/11159291/?p_cid=11159291&reader=11159291",
+          "provider": "blogmura",
+          "src": "https://b.blogmura.com/banner-blogmura-reader-pink.svg"
+        },
+        {
+          "_key": "dd25c4f00b94",
+          "_type": "linkImageBlock",
+          "alt": "人気ブログランキングでフォロー",
+          "href": "https://blog.with2.net/link/?id=2097059&follow",
+          "provider": "with2",
+          "src": "https://blog.with2.net/banner/follow/2097059?t=b"
+        }
+      ]
+    }
+  ],
+  "category": "life",
+  "heroImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-be62c8c7950a28e6c62a6eec2aa26dcd73e4ade4-1024x1024-jpg",
+      "_type": "reference"
+    }
+  },
+  "publishedAt": "2024-05-16T12:55:37Z",
+  "slug": {
+    "_type": "slug",
+    "current": "bathroom-cleaning"
+  },
+  "tags": [
+    "くらしのマーケット"
+  ],
+  "title": "プロが解決！くらしのマーケットで浴室クリーニングを依頼して汚れをスッキリ落とそう",
+  "updatedAt": "2025-10-19T13:36:21.893Z"
+}

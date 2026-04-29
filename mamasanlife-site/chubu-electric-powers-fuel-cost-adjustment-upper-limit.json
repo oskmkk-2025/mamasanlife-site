@@ -1,0 +1,1395 @@
+{
+  "_createdAt": "2025-08-26T10:24:12Z",
+  "_id": "UhrFXXaebw9Cm7yUMOvNUM",
+  "_rev": "Luzx7FR0qhV1GPaRa9KRgP",
+  "_type": "post",
+  "_updatedAt": "2026-01-09T13:47:02Z",
+  "body": [
+    {
+      "_key": "7fcab7df9fa8",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "524f7c61df39",
+          "_type": "linkImageBlock",
+          "alt": "にほんブログ村 その他生活ブログ お得な生活へ",
+          "href": "https://life.blogmura.com/otoku/ranking/in?p_cid=11159291",
+          "src": "https://b.blogmura.com/life/otoku/88_31.gif"
+        }
+      ]
+    },
+    {
+      "_key": "ea9c1bb16e43",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7c037d72f270",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m0-0",
+          "_type": "link",
+          "href": "/money/in"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "02d1a6919811",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "b0070992a170",
+          "_type": "linkImageBlock",
+          "alt": "節約・貯蓄ランキング",
+          "href": "https://blog.with2.net/link/?id=2097059&cid=1545",
+          "src": "https://blog.with2.net/img/banner/c/banner_1/br_c_1545_1.gif"
+        }
+      ]
+    },
+    {
+      "_key": "2688fc0d24ad",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "221e083fa5cc",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "9dffd83e20c6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "62c98fc5cf85",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "3379de675b38",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m1-0",
+          "_type": "link",
+          "href": "/money/in"
+        },
+        {
+          "_key": "m2-1",
+          "_type": "link",
+          "href": "/money/link"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "131cee0a9fc8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9e1b9d39a85b",
+          "_type": "span",
+          "marks": [],
+          "text": "「燃料費調整単価の上限があるプランだから、きっと得なはず…」"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7e008455739d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f3b64ef44dd5",
+          "_type": "span",
+          "marks": [],
+          "text": "そう考えて契約している方も多いのではないでしょうか？しかし、実際の請求額を詳しく検証してみると、意外な事実が見えてきました。特に月の使用量が300kWhを超える家庭では、むしろ損をしている可能性が高いのです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a5a21b1d3650",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d65d3960e35f",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力エリアの現状では、燃料費調整単価が上限に達していないため、上限ありのプランを選ぶメリットが実質的に存在しません。にもかかわらず、「上限がある方が安心」という思い込みから、より高額なプランを選択してしまっているケースが少なくありません。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6e5df014c940",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ade78ea95030",
+          "_type": "span",
+          "marks": [],
+          "text": "本記事では、実際の使用量データと料金プランを徹底比較。「上限あり」と「上限なし」のプランで、どちらが本当にお得なのかを、わかりやすく解説していきます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3255a4e692df",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "390985904c51",
+          "_type": "span",
+          "marks": [],
+          "text": "例えば、4人家族で月の使用量が400kWh程度の場合、年間でどれくらいの差額が生じるのか？また、どの程度の使用量から「上限なし」プランの方が有利になるのか？具体的な数字を示しながら検証していきます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fab7aa68bbac",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a093623966fa",
+          "_type": "span",
+          "marks": [],
+          "text": "「でも、今後燃料費が高騰したら…」という不安も多いはず。そんな将来的なリスクについても、過去のデータを基に分析しました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0f0b72722b75",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6db0c2df3a98",
+          "_type": "span",
+          "marks": [],
+          "text": "あなたの電気料金、実は見直すべき時期かもしれません。ご家庭の電気代節約のヒントになる情報を、ぜひ最後までご覧ください。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cc123636561c",
+      "_type": "blogCard",
+      "url": "https://mamasanmoney-bu.com/review-of-utility-costs/"
+    },
+    {
+      "_key": "00359943ba1e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4d4384452f33",
+          "_type": "span",
+          "marks": [],
+          "text": "旧一般電気事業者は燃料費調整単価に上限がある"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "c15ec2789257",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6f751f44d2af",
+          "_type": "span",
+          "marks": [],
+          "text": "旧一般電気事業者の燃料費調整単価には上限が設定されています。具体的には、中部電力ミライズでは2022年12月から燃料費調整単価の上限が撤廃されましたが、これは一部のプランに限られています。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "425026268bca",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f25ebf5fcd73",
+          "_type": "span",
+          "marks": [],
+          "text": "特に、スマートライフプランなどの基本契約要綱の場合には上限が撤廃されており、従量電灯Bなどの特定小売供給約款では上限が維持されています。このため、燃料費調整単価の上限は契約内容によって異なります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "88bf653c2f2b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c3060fce0be2",
+          "_type": "span",
+          "marks": [],
+          "text": "具体的な適用期間については、2022年12月以降となっていますが、"
+        },
+        {
+          "_key": "36c2b0ea9561",
+          "_type": "span",
+          "marks": [
+            "hl3-0"
+          ],
+          "text": "従量電灯Bなどのプランでは上限が適用"
+        },
+        {
+          "_key": "011dfb86e51f",
+          "_type": "span",
+          "marks": [],
+          "text": "され続けるため、利用者は契約プランに応じて確認する必要があります。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl3-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "92c14bfbee83",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "db02aa147357",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力ミライズは旧一般電気事業者なのか"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "1757a960dbef",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1a7e3197896a",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力ミライズは旧一般電気事業者に該当します。旧一般電気事業者とは、電気事業法に基づき、地域での電力供給を独占的に行っていた電力会社のことを指します。中部電力ミライズはその一部として、従来からの供給区域での電気小売業務を行っています。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "59efccdbd470",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5748c3e43969",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力と中部電力ミライズの関係"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "57c33a77b827",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "91b91e97b4b4",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力"
+        },
+        {
+          "_key": "53aeb1556491",
+          "_type": "span",
+          "marks": [],
+          "text": "：これは、旧一般電気事業者であり、地域の電力供給を行っていた企業です。2019年4月に火力発電事業を「株式会社JERA」に統合し、2020年4月には送配電事業を「中部電力パワーグリッド株式会社」として分社化しました。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d4d039fe589d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "421fbd0deb72",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力ミライズ"
+        },
+        {
+          "_key": "7438f618eaaa",
+          "_type": "span",
+          "marks": [],
+          "text": "：これは、中部電力が販売事業を行うために設立した子会社です。具体的には、電気の小売りやガスの販売を行っています。中部電力ミライズは、家庭向けやビジネス向けの多様な料金プランを提供しており、顧客サービスやポイントプログラム（カテエネポイント）なども展開しています。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a199cf475266",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a8f25c0fe805",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力と中部電力ミライズの違い"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "4da0fd3c5eb5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0da3fdffc439",
+          "_type": "span",
+          "marks": [],
+          "text": "事業内容"
+        },
+        {
+          "_key": "6364307c7938",
+          "_type": "span",
+          "marks": [],
+          "text": "："
+        },
+        {
+          "_key": "a9521f502b3d",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "5c747276f9a5",
+          "_type": "span",
+          "marks": [],
+          "text": "\n中部電力は、発電や送配電を含む広範なエネルギー事業を運営しています。\n\n\n\n中部電力ミライズは、小売り事業に特化しており、顧客への直接的なサービス提供を行っています。\n"
+        },
+        {
+          "_key": "f48313e44a10",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "263be92c48be",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4e8d7a46fc1e",
+          "_type": "span",
+          "marks": [],
+          "text": "料金プラン"
+        },
+        {
+          "_key": "f04cdeb5e1b6",
+          "_type": "span",
+          "marks": [],
+          "text": "："
+        },
+        {
+          "_key": "e35a4931f4f8",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "26379b26717c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n中部電力ミライズは、さまざまな料金プラン（おとくプラン、ポイントプランなど）を提供し、顧客のニーズに応じた選択肢を増やしています。\n"
+        },
+        {
+          "_key": "a635fe79e96b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1fa51cbc117f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9f90ceec5e75",
+          "_type": "span",
+          "marks": [],
+          "text": "顧客サービス"
+        },
+        {
+          "_key": "d671759434a4",
+          "_type": "span",
+          "marks": [],
+          "text": "："
+        },
+        {
+          "_key": "33684dad55e6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "72e9fdf47630",
+          "_type": "span",
+          "marks": [],
+          "text": "\n中部電力ミライズは、「カテエネ」というWebサービスを通じて、使用量の確認や省エネ情報の提供、ポイント還元などのサービスを展開しています。\n"
+        },
+        {
+          "_key": "83cd2dba2483",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5c9efc041422",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "efc0e2aadf8a",
+          "_type": "span",
+          "marks": [],
+          "text": "ブランド名"
+        },
+        {
+          "_key": "ead5dbf5f356",
+          "_type": "span",
+          "marks": [],
+          "text": "："
+        },
+        {
+          "_key": "b29cc1b60cc2",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "cbc49d190f81",
+          "_type": "span",
+          "marks": [],
+          "text": "\n中部電力ミライズは、中部電力のブランド名であるが、新たな形態で顧客にアプローチするために設立された会社です。\n"
+        },
+        {
+          "_key": "4c3015436612",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e9f68bb22066",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4b7a2e90d179",
+          "_type": "span",
+          "marks": [],
+          "text": "このように、中部電力ミライズは、中部電力から分社化された形であり、主に小売りと顧客サービスに特化した企業です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "48a22bdcefc9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8cb3d6c6676a",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力ミライズの燃料費調整単価の上限について"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "ccbb015469af",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a37a1b1ed91d",
+          "_type": "span",
+          "marks": [],
+          "text": "2022年12月から、中部電力ミライズでは一部の電気料金メニュー（ポイントプラン、おとくプラン、とくとくプランなど）について、平均燃料価格の"
+        },
+        {
+          "_key": "cc42147a3f78",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "上限設定を廃止"
+        },
+        {
+          "_key": "fc41f7a1aac6",
+          "_type": "span",
+          "marks": [],
+          "text": "しました。これにより、「とくとくプラン」も含めた対象プランでは、燃料費調整単価が実際の燃料価格に基づいて変動することになります。したがって、「"
+        },
+        {
+          "_key": "fd2eea8ad2ea",
+          "_type": "span",
+          "marks": [
+            "hl4-0"
+          ],
+          "text": "とくとくプラン"
+        },
+        {
+          "_key": "93b7bc67b8d6",
+          "_type": "span",
+          "marks": [],
+          "text": "」は"
+        },
+        {
+          "_key": "9eaf8cb71f76",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "燃料費調整単価に関する上限が撤廃"
+        },
+        {
+          "_key": "417450349038",
+          "_type": "span",
+          "marks": [],
+          "text": "されています。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl4-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "ac0be488891b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4f29babc02dd",
+          "_type": "span",
+          "marks": [],
+          "text": "平均燃料価格の上限設定を廃止したプラン"
+        },
+        {
+          "_key": "fad197a02eab",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "6baa8e045f9d",
+          "_type": "span",
+          "marks": [],
+          "text": "ポイントプラン、おとくプラン、"
+        },
+        {
+          "_key": "ba2a292bcfdc",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "とくとくプラン"
+        },
+        {
+          "_key": "6a3d58fe610d",
+          "_type": "span",
+          "marks": [],
+          "text": "、スマートライフプラン、スマートライフプラン（朝とく）、スマートライフプラン（夜とく）、スマートライフプランforスマート・エアーズ、ビジとくプラン、Eライフプラン（3時間帯別電灯）、タイムプラン（時間帯別電灯）、ピークシフト電灯、低圧季節別時間帯別電力、低圧高利用契約、低圧深夜電力A・B、第2深夜電力、わくわくホット（沸増型電気温水器契約）、防霜用プラン、融雪用電力"
+        },
+        {
+          "_key": "e8f2a6d73bd1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2e46423b3805",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "90da7d3a2c28",
+          "_type": "span",
+          "marks": [],
+          "text": "過去1年分の平均燃料価格"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "13cf5ef03e13",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "309b0a9e5264",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力ミライズによると現在の燃料費調整単価の上限は「68,900円」になります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0273ebf56ebf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8ad459819f9f",
+          "_type": "span",
+          "marks": [],
+          "text": "過去一年分の平均燃料価格と燃料費調整単価の計算式は以下のとおり。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3185427a4ed1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "77cdb4c87651",
+          "_type": "span",
+          "marks": [],
+          "text": "過去一年でみてもまだ上限に達していないことがわかります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "42bde8c07e20",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1865dc173fdb",
+          "_type": "span",
+          "marks": [],
+          "text": "ではここから実際の使用例をもとに燃料費調整額と再生可能エネルギー発電促進賦課金がどれくらい請求料金に乗ってくるのか計算してみました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "46a1693db2cd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7762a159e0a9",
+          "_type": "span",
+          "marks": [],
+          "text": "電気料金の計算方法について"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ba9de4437636",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f61e116c546f",
+          "_type": "span",
+          "marks": [],
+          "text": "まずは従量電灯型の電気料金の計算方法をTERASELでんきのHPに載っていた図をもとに簡単におさらいしてみます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0756304622ab",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c9ea7ac983cf",
+          "_type": "span",
+          "marks": [],
+          "text": "各月の電気料金＝基本料金＋（使用量×単価）＋"
+        },
+        {
+          "_key": "e6845d5c979d",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "燃料費調整額"
+        },
+        {
+          "_key": "5d298854b534",
+          "_type": "span",
+          "marks": [],
+          "text": "＆"
+        },
+        {
+          "_key": "148ec7045174",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "再生可能エネルギー発電促進賦課金"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0f32b8d4a493",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b415eeae9863",
+          "_type": "span",
+          "marks": [],
+          "text": "各プランの月別料金を計算"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "da1e5db55397",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "066c84932909",
+          "_type": "span",
+          "marks": [],
+          "text": "基本料金の確認"
+        },
+        {
+          "_key": "6e9ffafb6788",
+          "_type": "span",
+          "marks": [],
+          "text": ": 両プランの基本料金を確認します。"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "491e49b5b30e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e04498475f67",
+          "_type": "span",
+          "marks": [],
+          "text": "使用量に応じた料金計算"
+        },
+        {
+          "_key": "9fda96ff49bd",
+          "_type": "span",
+          "marks": [],
+          "text": ": 各月の使用量に応じて変動料金部分を計算します。"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d056ccff0728",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "efb47ebb81a8",
+          "_type": "span",
+          "marks": [],
+          "text": "燃料費調整額の計算"
+        },
+        {
+          "_key": "1350a4559a50",
+          "_type": "span",
+          "marks": [],
+          "text": ":"
+        },
+        {
+          "_key": "6de3b5a53eb6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "e97ae113904f",
+          "_type": "span",
+          "marks": [],
+          "text": "\n各月の使用量（kWh）にその月の燃料費調整単価をかける。\n"
+        },
+        {
+          "_key": "cf2d6b68ab98",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6fed7101c6e7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3951e3f1e67d",
+          "_type": "span",
+          "marks": [],
+          "text": "再生可能エネルギー発電促進賦課金の計算"
+        },
+        {
+          "_key": "88b9bdd2cd45",
+          "_type": "span",
+          "marks": [],
+          "text": ":"
+        },
+        {
+          "_key": "a3aca0461a95",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "238b12497165",
+          "_type": "span",
+          "marks": [],
+          "text": "\n各月の使用量（kWh）に再生可能エネルギー発電促進賦課金をかける。\n"
+        },
+        {
+          "_key": "0edc2e0b13f1",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "2681df3c90f1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ad76adbc545f",
+          "_type": "span",
+          "marks": [],
+          "text": "中部電力ミライズの「従量電灯B」と「とくとくプラン」を比較"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "ee5411cb461d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "84d8eea842b7",
+          "_type": "span",
+          "marks": [],
+          "text": "上記の1.2の計算をした時点で中部電力ミライズの「従量電灯B」と「とくとくプラン」を比較してみたところ、「とくとくプラン」が年間で約3,470円安くなることがわかりました。特に、月に300kWh以上の電力を使用する家庭では、「とくとくプラン」がかなりお得です。一方、120kWhまでの電力使用が多い家庭では、「従量電灯B」の単価が-0.5円低いため、少し異なる結果になるかもしれません。自身の電力使用量を考慮しながら最適なプランを選ぶことで、電気代をさらに節約できるかもしれません。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5fbbb8253133",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7173501e1ebd",
+          "_type": "span",
+          "marks": [],
+          "text": "ここまで読んで中部電力ミライズにこだわりがなければこちらの電力プランがおすすめ。電気ガスはどこがお得か調査した結果の記事はこちら。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1c278d7e6f9e",
+      "_type": "blogCard",
+      "url": "https://mamasanmoney-bu.com/review-of-utility-costs/"
+    },
+    {
+      "_key": "a6ba95160405",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "66a073a10c9c",
+          "_type": "span",
+          "marks": [],
+          "text": "TERASELでんきは新規のりかえキャンペーン中なので固定費をさげたいなら検討してみよう。うちも2024年11月にのりかえたばかりです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3ae3c731827a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4c0f2dabcd45",
+          "_type": "span",
+          "marks": [],
+          "text": "年末までの乗り換えで特典4倍キャンペーンがやっています。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d161b4657008",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "TERASELでんきに切り替えの場合は紹介コードから申込するとあなたも筆者も喜ぶにゃん。ただし上の「特典4倍キャンペーン」とは併用できないよ。4倍キャンペーンの期間終了後や条件が当てはまらない時などに使ってネ！"
+      ]
+    },
+    {
+      "_key": "d545c12d641c_standardized_v2",
+      "_type": "htmlEmbed",
+      "html": "<a class=\"affiliate-btn affiliate-btn--others\" href=\"/money/elswebapplication\" rel=\"nofollow sponsored\"> TERASELでんき紹介特典つき申込（現住所で切替） をみる ＞ </a>"
+    },
+    {
+      "_key": "caab1dbdad68_standardized_v2",
+      "_type": "htmlEmbed",
+      "html": "<a class=\"affiliate-btn affiliate-btn--others\" href=\"/money/elswebapplication\" rel=\"nofollow sponsored\"> TERASELでんき紹介特典つき申込（引越先で切替） をみる ＞ </a>"
+    },
+    {
+      "_key": "632ba1613757",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d591bbb4e512",
+          "_type": "span",
+          "marks": [],
+          "text": "毎月の電力使用量ごとの比較表"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "86e2bd48bfe5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ebaca2f47537",
+          "_type": "span",
+          "marks": [],
+          "text": "電力使用量に基づく「燃料費調整額」と「再生可能エネルギー発電促進賦課金」を具体的な単価情報をもとに月別で算出ました。（期間：2023年11月から2024年10月までの1年）"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3d510a590ef0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a5e327562caa",
+          "_type": "span",
+          "marks": [],
+          "text": "各月の電気料金＝基本料金＋（使用量×単価）＋下の表の"
+        },
+        {
+          "_key": "3a529c87c030",
+          "_type": "span",
+          "marks": [
+            "hl7-0"
+          ],
+          "text": "合計"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl7-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "ca2189a5cbcf",
+      "_type": "tableBlock",
+      "hasHeader": false,
+      "rows": [
+        {
+          "cells": [
+            "「燃料費調整額」と「再生可能エネルギー発電促進賦課金」"
+          ]
+        },
+        {
+          "cells": [
+            "年",
+            "月",
+            "使用量(kWh)",
+            "燃料費調整額 (円)",
+            "再エネ賦課金(円)",
+            "合計(円)"
+          ]
+        },
+        {
+          "cells": [
+            "2023年",
+            "11月",
+            "172",
+            "¥437",
+            "¥240",
+            "¥677"
+          ]
+        },
+        {
+          "cells": [
+            "2023年",
+            "12月",
+            "219",
+            "¥526",
+            "¥306",
+            "¥832"
+          ]
+        },
+        {
+          "cells": [
+            "2024年",
+            "1月",
+            "311",
+            "¥775",
+            "¥435",
+            "¥1,210"
+          ]
+        },
+        {
+          "cells": [
+            "2024年",
+            "2月",
+            "329",
+            "¥882",
+            "¥460",
+            "¥1,342"
+          ]
+        },
+        {
+          "cells": [
+            "2024年",
+            "3月",
+            "340",
+            "¥1,085",
+            "¥476",
+            "¥1,561"
+          ]
+        },
+        {
+          "cells": [
+            "2024年",
+            "4月",
+            "338",
+            "¥1,150",
+            "¥473",
+            "¥1,623"
+          ]
+        },
+        {
+          "cells": [
+            "2024年",
+            "5月",
+            "177",
+            "¥627",
+            "¥617",
+            "¥1,244"
+          ]
+        },
+        {
+          "cells": [
+            "2024年",
+            "6月",
+            "196",
+            "¥648",
+            "¥684",
+            "¥1,332"
+          ]
+        },
+        {
+          "cells": [
+            "2024年",
+            "7月",
+            "206",
+            "¥586",
+            "¥718",
+            "¥1,304"
+          ]
+        },
+        {
+          "cells": [
+            "2024年",
+            "8月",
+            "377",
+            "¥957",
+            "¥1,315",
+            "¥2,272"
+          ]
+        },
+        {
+          "cells": [
+            "2024年",
+            "9月",
+            "408",
+            "¥998",
+            "¥1,423",
+            "¥2,421"
+          ]
+        },
+        {
+          "cells": [
+            "2024年",
+            "10月",
+            "324",
+            "¥891",
+            "¥1,130",
+            "¥2,021"
+          ]
+        },
+        {
+          "cells": [
+            "合計",
+            "3,397",
+            "¥9,562",
+            "¥8,277",
+            "¥17,839"
+          ]
+        }
+      ]
+    },
+    {
+      "_key": "36de8df5d60d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e6c6c5d51fc2",
+          "_type": "span",
+          "marks": [],
+          "text": "燃料費調整額はマイナスの場合、請求額から差し引かれます"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5654aa72f8b1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a206fb1a68e7",
+          "_type": "span",
+          "marks": [],
+          "text": "再エネ賦課金は1円未満切り捨て"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "83d54747167c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6784b8e436dd",
+          "_type": "span",
+          "marks": [],
+          "text": "2024年5月以降、再エネ賦課金単価が大幅に上昇（1.40円→3.49円）"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cbdddac03fee",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "238194c03143",
+          "_type": "span",
+          "marks": [],
+          "text": "燃料費調整単価は月によって大きく変動しています"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e7026d32eda2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "345a26a1c034",
+          "_type": "span",
+          "marks": [],
+          "text": "合計金額は燃料費調整額と再エネ賦課金の合算値です"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ca8a30348eab",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ff13ce9a622b",
+          "_type": "span",
+          "marks": [],
+          "text": "まとめ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "f3bca5d50f29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bb530c1b8374",
+          "_type": "span",
+          "marks": [],
+          "text": "電力会社の乗り換えを検討している方にとって今契約しているプランは本当に最適ですか？固定費の見直し検討は面倒と感じる方も多いので実例をもとにしました。この使用量より多いのか少ないのか加味していただいて、ラクに検討できるきっかけになったら嬉しいです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ba47a1fe7482",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "458cd2b68a9d",
+          "_type": "span",
+          "marks": [],
+          "text": "このブログは「にほんブログ村」と「ブログリーダー」に参加しています。下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "01a15194ed82",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "056dffa70346",
+          "_type": "linkImageBlock",
+          "alt": "ママさんマネー部 - にほんブログ村",
+          "href": "https://blogmura.com/profiles/11159291/?p_cid=11159291&reader=11159291",
+          "provider": "blogmura",
+          "src": "https://b.blogmura.com/banner-blogmura-reader-pink.svg"
+        },
+        {
+          "_key": "fd80b450988f",
+          "_type": "linkImageBlock",
+          "alt": "人気ブログランキングでフォロー",
+          "href": "https://blog.with2.net/link/?id=2097059&follow",
+          "provider": "with2",
+          "src": "https://blog.with2.net/banner/follow/2097059?t=b"
+        }
+      ]
+    }
+  ],
+  "category": "money",
+  "heroImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-ce5b8e7d963bdc24702c56690fcd2e2a01fbeefe-1024x1024-jpg",
+      "_type": "reference"
+    }
+  },
+  "publishedAt": "2024-11-26T03:00:00Z",
+  "slug": {
+    "_type": "slug",
+    "current": "chubu-electric-powers-fuel-cost-adjustment-upper-limit"
+  },
+  "tags": [
+    "固定費見直し"
+  ],
+  "title": "中部電力の燃料費調整上限、実は損？検証結果",
+  "updatedAt": "2025-10-19T13:32:00.898Z",
+  "views": 3
+}

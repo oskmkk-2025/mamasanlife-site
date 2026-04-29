@@ -1,0 +1,1745 @@
+{
+  "_createdAt": "2025-08-26T10:23:20Z",
+  "_id": "UhrFXXaebw9Cm7yUMOvGCU",
+  "_rev": "SquZ2ThjoVQLTGw2qhrmkk",
+  "_type": "post",
+  "_updatedAt": "2026-01-04T13:25:52Z",
+  "body": [
+    {
+      "_key": "5561ff6fe6b2",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "00d2bcecb86f",
+          "_type": "linkImageBlock",
+          "alt": "にほんブログ村 資格ブログ 資格試験勉強法へ",
+          "href": "https://qualification.blogmura.com/shikaku_study/ranking/in?p_cid=11159291",
+          "src": "https://b.blogmura.com/qualification/shikaku_study/88_31.gif"
+        },
+        {
+          "_key": "4f3ef66ea511",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://blog.with2.net/link/?id=2097059&cid=2456",
+          "src": "https://blog.with2.net/img/banner/c/banner_1/br_c_2456_1.gif"
+        }
+      ]
+    },
+    {
+      "_key": "50a470b679e8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c56c7a1ec744",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "c7bb5dc0755c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "00303a29cbc6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "5a942f73ee7c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "17b7018ebee6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m0-0",
+          "_type": "link",
+          "href": "/work/in"
+        },
+        {
+          "_key": "m1-1",
+          "_type": "link",
+          "href": "/work/link"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "53e56090f906",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d878cde6feba",
+          "_type": "span",
+          "marks": [],
+          "text": "こんにちは、ママさんマネー部のひーちです。今、求職中の方、新しいキャリアを模索している方に、心強い味方をご紹介します。それは..."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "70ea2f0120e4",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/IMG_69AD0D2F343E-1-2.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "簿記です！"
+      ]
+    },
+    {
+      "_key": "1fefabb330ff",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "えっ、簿記？難しそう...今さら勉強なんて..."
+      ]
+    },
+    {
+      "_key": "8c30b90d98cd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f4ad2608476d",
+          "_type": "span",
+          "marks": [],
+          "text": "今のあなたはこんな思いを抱えていませんか？"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "198ec376afbd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "85eb9e5ccdad",
+          "_type": "span",
+          "marks": [],
+          "text": "家事や育児に追われ、自分の時間が持てない"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "7fec2d2f33ef",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f75ff9fd02bb",
+          "_type": "span",
+          "marks": [],
+          "text": "キャリアアップしたいけど、何から始めればいいか分からない"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a4a9766336f9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9e23f8532d03",
+          "_type": "span",
+          "marks": [],
+          "text": "将来への不安を感じている"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "571c9e9235cd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0c98a7b6a680",
+          "_type": "span",
+          "marks": [],
+          "text": "そんな不安や躊躇を感じる方も多いかもしれません。でも、ご安心ください。私も数字が苦手でしたが、驚くほど短期間で日商簿記3級に合格できたんです！"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dece2e05d7fc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "986f86560931",
+          "_type": "span",
+          "marks": [],
+          "text": "簿記は、あなたの人生に確実にプラスの変化をもたらしてくれるでしょう✨"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0f3192aaf745",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b1e2b4c52d36",
+          "_type": "span",
+          "marks": [],
+          "text": "【自信回復】"
+        },
+        {
+          "_key": "276ba20a84d8",
+          "_type": "span",
+          "marks": [],
+          "text": "「やればできる！」という実感が得られます"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d099a65765d5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0290fd7c11e6",
+          "_type": "span",
+          "marks": [],
+          "text": "【スキルアップ】"
+        },
+        {
+          "_key": "e2d10a06b740",
+          "_type": "span",
+          "marks": [],
+          "text": "どんな業界でも役立つ、普遍的な知識が身につきます"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3f9e1b697f11",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7d9e73abfa49",
+          "_type": "span",
+          "marks": [],
+          "text": "【就職チャンス拡大】"
+        },
+        {
+          "_key": "86a1411c499b",
+          "_type": "span",
+          "marks": [],
+          "text": "経理・会計職はもちろん、多くの職種で評価されます"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8eaed870a98a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4c74cf0a6b37",
+          "_type": "span",
+          "marks": [],
+          "text": "【収入アップの可能性】"
+        },
+        {
+          "_key": "8776335d3c5c",
+          "_type": "span",
+          "marks": [],
+          "text": "専門性を活かし、より高収入の職に就けるチャンスが！"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "08d9faa3b70a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "57ff11d50258",
+          "_type": "span",
+          "marks": [],
+          "text": "【人生の質向上】"
+        },
+        {
+          "_key": "29b3399d5e13",
+          "_type": "span",
+          "marks": [],
+          "text": "お金の流れを理解し、賢明な経済判断ができるように"
+        }
+      ],
+      "listItem": "number",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "760f0783d76d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "334036cd3eda",
+          "_type": "span",
+          "marks": [],
+          "text": "そして何より、「自分を変えられた」という達成感が、あなたの人生を輝かせます♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6caa79c06495",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "でも、時間がないし、お金がかかりそう..."
+      ]
+    },
+    {
+      "_key": "4bc13c542bf3",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/IMG_69AD0D2F343E-1-2.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "そんな心配は無用です！職業訓練校を利用すれば、無料で学べます。"
+      ]
+    },
+    {
+      "_key": "ba63440c8feb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c064231db3ba",
+          "_type": "span",
+          "marks": [],
+          "text": "私の場合、3級取得までにかかった時間は"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c2f0cd18761f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "bc4060602466",
+          "_type": "span",
+          "marks": [],
+          "text": "訓練校での授業：60時間"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "615e593a844a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d0479f018b5a",
+          "_type": "span",
+          "marks": [],
+          "text": "自宅での学習：40時間"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fdabab75e041",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "790a85f67406",
+          "_type": "span",
+          "marks": [],
+          "text": "たったこれだけで、人生を変える資格が手に入るんです！"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e5419126425d",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "よし、挑戦してみよう！"
+      ]
+    },
+    {
+      "_key": "63f9657ae3d2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "852ecc18cc4d",
+          "_type": "span",
+          "marks": [],
+          "text": "そう思ったあなた、ぜひ行動に移してみよう。新しい自分に生まれ変わるチャンスです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c33dabbce108",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c51f8dc2d7e3",
+          "_type": "span",
+          "marks": [],
+          "text": "２級を目指す場合でも、３級の基礎が大切なので、"
+        },
+        {
+          "_key": "14195b0f648a",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "まずは３級を合格してから"
+        },
+        {
+          "_key": "0b5a1bb7b3be",
+          "_type": "span",
+          "marks": [],
+          "text": "２級を受験する方が良いでしょう。簿記の勉強は、問題を解いて"
+        },
+        {
+          "_key": "9fe364d8c1cf",
+          "_type": "span",
+          "marks": [
+            "hl2-0"
+          ],
+          "text": "解き方を覚える"
+        },
+        {
+          "_key": "c244ddc54fc5",
+          "_type": "span",
+          "marks": [],
+          "text": "ことが重要です。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl2-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "672f3c84f7a7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9566fdcf7d68",
+          "_type": "span",
+          "marks": [],
+          "text": "職業訓練校の選び方"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "372fccd34975",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "82152555a639",
+          "_type": "span",
+          "marks": [],
+          "text": "簿記学習の大きな利点の一つは、職業訓練校を利用すれば、無料で学べることです。しかし、すべての職業訓練校が同じではありません。効果的に簿記を学ぶためには、適切な訓練校を選ぶことが極めて重要です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "78d6a5d1945e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2a75083452e5",
+          "_type": "span",
+          "marks": [],
+          "text": "何に時間をかけて教えているかが重要"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "4b595a8fb289",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8454bcc2d675",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "1. 簿記に特化したカリキュラムの有無"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "177962074a9d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f3c18fd916bd",
+          "_type": "span",
+          "marks": [],
+          "text": "多くの職業訓練校では、事務職スキルを総合的に学べるコースが用意されています。PCソフトの操作や就職支援まで幅広くカバーしている一方で、特に簿記に特化した講座を提供しているかどうかを確認することが重要です。簿記は、正しい解法や手順を理解することが重要な学びですから、時間とリソースを割いて教えている訓練校を選ぶことで、学習効率を高められます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "221546556f3d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b43227562ebb",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "2. 専門的な指導体制"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "c5553c7d0936",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "af4f96d22ced",
+          "_type": "span",
+          "marks": [],
+          "text": "簿記を学ぶ際、独学では理解が難しいと感じることが多々あります。そのため、他人から正しい解き方を学ぶことが目標達成への近道です。簿記の授業において、専門的な知識を持った講師陣がいるか、フィードバック体制が整っているかなどを事前にチェックしましょう。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9ed72131ae06",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "11f7745ff22f",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "3. フィードバックとサポート体制"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "71d3b58398bb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d70646802799",
+          "_type": "span",
+          "marks": [],
+          "text": "他の生徒や講師からのフィードバックも学びを深める上で欠かせない要素です。疑問点や理解があやふやな部分を共有できる環境が整っていれば、合格への道も開かれてきます。同じ目標を持ったクラスメートと共に問題を解決していくプロセスは、互いにとってプラスとなるはずです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "11eca77b34b6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "62202c670023",
+          "_type": "span",
+          "marks": [],
+          "text": "リーズナブルな自己投資"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "6ac87615c960",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "00258f8d26ce",
+          "_type": "span",
+          "marks": [],
+          "text": "職業訓練校での簿記講座は、大半が無料で受講できる点も魅力です。ただし、いくつか抑えておくべき費用面の注意点があります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1316bc795b8c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5f717c583bd1",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "1. 授業料は無料"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "19c04976dcfe",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "03f70861cd66",
+          "_type": "span",
+          "marks": [],
+          "text": "授業料が無料であるため、求職中の方でも負担を抑えて学習を進めることができます。ただし、テキスト代や試験代といった実費は必要になることを覚えておきましょう。これらの経費も含めた予算を事前に検討しておくことが大切です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e84112d621e6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "14b321d80cc4",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "2. 自己投資としての価値"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "f613a0cf08a8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "476f3b54f400",
+          "_type": "span",
+          "marks": [],
+          "text": "訓練校を活用し、積極的に資格取得を目指すことは、自己投資ともいえます。資格そのものは時にスキルの証明以上の価値を持ち、就職市場において有利な武器となります。受験に挑む際には、真剣に取り組むことで長期的なキャリアビジョンを実現する一歩を踏み出せるでしょう。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ae3b58c6c2c9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "afc094e945c7",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "3. 経験から得る教訓"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "803e3e72e22b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ba36ef7355c1",
+          "_type": "span",
+          "marks": [],
+          "text": "個人的に過去の経験を振り返ると、一度は簿記の試験で失敗したことがあります。しかし、その経験があったからこそ学び直しの重要性を痛感し、今度こそ試験に合格することを真剣に目指しました。このように、一度の失敗を糧に、次のチャレンジへとつなげていくことが大切です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "42f92747ea0a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6de19067a990",
+          "_type": "span",
+          "marks": [],
+          "text": "訓練校で購入した簿記関連の教材"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "dfdcd16a0bac",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8b1a65d414f0",
+          "_type": "span",
+          "marks": [],
+          "text": "TAC出版の「みんなが欲しかった！」シリーズが指定教材でした。私の通っていた訓練校は事前説明会で購入予定のテキスト一覧をいただけましたので（個別で購入するために）質問したところ、"
+        },
+        {
+          "_key": "aa0fcfd8a121",
+          "_type": "span",
+          "marks": [
+            "hl3-0"
+          ],
+          "text": "すでに同じものを持っていれば新たに購入する必要はありません"
+        },
+        {
+          "_key": "8ccfe89a3279",
+          "_type": "span",
+          "marks": [],
+          "text": "とのことでしたので"
+        },
+        {
+          "_key": "9acd8ab77733",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "事前にネットで購入"
+        },
+        {
+          "_key": "b7a24e071496",
+          "_type": "span",
+          "marks": [],
+          "text": "しちゃいました。（ポイントつくしね！）"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl3-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "bb63c7e212fb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "44faaa6fb96c",
+          "_type": "span",
+          "marks": [],
+          "text": "毎年、法改正が行われますので、学習する際は"
+        },
+        {
+          "_key": "1f9f1aacda95",
+          "_type": "span",
+          "marks": [
+            "hl4-0",
+            "strong"
+          ],
+          "text": "最新版"
+        },
+        {
+          "_key": "172fb9de80e0",
+          "_type": "span",
+          "marks": [],
+          "text": "を購入されることをお勧めします。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl4-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "f8e175f0e7e4",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/IMG_69AD0D2F343E-1-2.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "最新版をのせておきますね⭐︎"
+      ]
+    },
+    {
+      "_key": "a328e39313d4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6514f4f7610d",
+          "_type": "span",
+          "marks": [],
+          "text": "日商簿記３級"
+        },
+        {
+          "_key": "8c6cf64a5fd6",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "d7e9a07d861a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "4af411a9991d",
+          "_type": "span",
+          "marks": [],
+          "text": "\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"みんなが欲しかった! 簿記の教科書 日商3級 商業簿記 第13版 [日商簿記 ネット試験 統一試験 完全対応](TAC出版) (みんなが欲しかったシリーズ)\",\"b\":\"TAC出版\",\"t\":\"\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\\/images\\/I\",\"p\":[\"\\/51L2PF6KgmL._SL500_.jpg\",\"\\/51v827a0fhL._SL500_.jpg\",\"\\/71Gw1zmPRuL._SL500_.jpg\",\"\\/616e+ug3y4L._SL500_.jpg\",\"\\/61Q3h1BScbL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300115761\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":4,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300115761\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":1},{\"id\":11,\"u_tx\":\"楽天市場で見る\",\"u_bc\":\"#f76956\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20%E7%B0%BF%E8%A8%98%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8%20%E6%97%A5%E5%95%863%E7%B4%9A%20%E5%95%86%E6%A5%AD%E7%B0%BF%E8%A8%98%20%E7%AC%AC13%E7%89%88%20%5B%E6%97%A5%E5%95%86%E7%B0%BF%E8%A8%98%20%E3%83%8D%E3%83%83%E3%83%88%E8%A9%A6%E9%A8%93%20%E7%B5%B1%E4%B8%80%E8%A9%A6%E9%A8%93%20%E5%AE%8C%E5%85%A8%E5%AF%BE%E5%BF%9C%5D(TAC%E5%87%BA%E7%89%88)%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)\\/\",\"a_id\":4046502,\"p_id\":54,\"pl_id\":27059,\"pc_id\":54,\"s_n\":\"rakuten\",\"u_so\":2},{\"id\":12,\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_bc\":\"#66a7ff\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20%E7%B0%BF%E8%A8%98%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8%20%E6%97%A5%E5%95%863%E7%B4%9A%20%E5%95%86%E6%A5%AD%E7%B0%BF%E8%A8%98%20%E7%AC%AC13%E7%89%88%20%5B%E6%97%A5%E5%95%86%E7%B0%BF%E8%A8%98%20%E3%83%8D%E3%83%83%E3%83%88%E8%A9%A6%E9%A8%93%20%E7%B5%B1%E4%B8%80%E8%A9%A6%E9%A8%93%20%E5%AE%8C%E5%85%A8%E5%AF%BE%E5%BF%9C%5D(TAC%E5%87%BA%E7%89%88)%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)\",\"a_id\":4046520,\"p_id\":1225,\"pl_id\":27061,\"pc_id\":1925,\"s_n\":\"yahoo\",\"u_so\":3}],\"eid\":\"fq6a3\",\"s\":\"xs\"});\n"
+        },
+        {
+          "_key": "eaba7daf6d42",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "8d38526339b5",
+          "_type": "span",
+          "marks": [],
+          "text": "リンク"
+        },
+        {
+          "_key": "f7fc1a50e755",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "d9b2818bf4d2",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "8c2d816dd51b",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "bc6ba0196b89",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "1096d189e3fb",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "179580e8ae07",
+          "_type": "span",
+          "marks": [],
+          "text": "\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"みんなが欲しかった! 簿記の問題集 日商3級 商業簿記 第13版[日商簿記 ネット試験 統一試験 完全対応](TAC出版) (みんなが欲しかったシリーズ)\",\"b\":\"TAC出版\",\"t\":\"\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\\/images\\/I\",\"p\":[\"\\/51QxiMUrNzL._SL500_.jpg\",\"\\/51kmL7rXOHL._SL500_.jpg\",\"\\/71WsHH8l6tL._SL500_.jpg\",\"\\/61s556TBTsL._SL500_.jpg\",\"\\/61RJKfdPxxL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300115796\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":4,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300115796\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":1},{\"id\":11,\"u_tx\":\"楽天市場で見る\",\"u_bc\":\"#f76956\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20%E7%B0%BF%E8%A8%98%E3%81%AE%E5%95%8F%E9%A1%8C%E9%9B%86%20%E6%97%A5%E5%95%863%E7%B4%9A%20%E5%95%86%E6%A5%AD%E7%B0%BF%E8%A8%98%20%E7%AC%AC13%E7%89%88%5B%E6%97%A5%E5%95%86%E7%B0%BF%E8%A8%98%20%E3%83%8D%E3%83%83%E3%83%88%E8%A9%A6%E9%A8%93%20%E7%B5%B1%E4%B8%80%E8%A9%A6%E9%A8%93%20%E5%AE%8C%E5%85%A8%E5%AF%BE%E5%BF%9C%5D(TAC%E5%87%BA%E7%89%88)%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)\\/\",\"a_id\":4046502,\"p_id\":54,\"pl_id\":27059,\"pc_id\":54,\"s_n\":\"rakuten\",\"u_so\":2},{\"id\":12,\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_bc\":\"#66a7ff\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F!%20%E7%B0%BF%E8%A8%98%E3%81%AE%E5%95%8F%E9%A1%8C%E9%9B%86%20%E6%97%A5%E5%95%863%E7%B4%9A%20%E5%95%86%E6%A5%AD%E7%B0%BF%E8%A8%98%20%E7%AC%AC13%E7%89%88%5B%E6%97%A5%E5%95%86%E7%B0%BF%E8%A8%98%20%E3%83%8D%E3%83%83%E3%83%88%E8%A9%A6%E9%A8%93%20%E7%B5%B1%E4%B8%80%E8%A9%A6%E9%A8%93%20%E5%AE%8C%E5%85%A8%E5%AF%BE%E5%BF%9C%5D(TAC%E5%87%BA%E7%89%88)%20(%E3%81%BF%E3%82%93%E3%81%AA%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%8B%E3%81%A3%E3%81%9F%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)\",\"a_id\":4046520,\"p_id\":1225,\"pl_id\":27061,\"pc_id\":1925,\"s_n\":\"yahoo\",\"u_so\":3}],\"eid\":\"bpCQ1\",\"s\":\"xs\"});\n"
+        },
+        {
+          "_key": "c3ffb43149d9",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "ffd6bd8061c0",
+          "_type": "span",
+          "marks": [],
+          "text": "リンク"
+        },
+        {
+          "_key": "d1d6b4ad3b13",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "5ed93d41fda8",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "fbadf7b94cbd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7c0718122610",
+          "_type": "span",
+          "marks": [],
+          "text": "訓練校が終了して資格取得後はメルカリへ。カバーをつけてきれいに使っていたのでほとんど値崩れせずに販売できました💚はじめから新品じゃなくても大丈夫な方ならメルカリで出品がないかチェックしてみよう。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d0966a8695d0",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "052cfb79d4b0",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://jp.mercari.com/item/m93457701732?afid=0565616550",
+          "provider": "other",
+          "src": "https://ambassador-system.mercari.com/v1/i?id=m93457701732&svc=m"
+        }
+      ]
+    },
+    {
+      "_key": "03135d9e9926",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8623fd5b9a89",
+          "_type": "span",
+          "marks": [],
+          "text": "まだメルカリ始めてない方はこちらからダウンロードできます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "97faa7c885b5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a45c06c097a8",
+          "_type": "span",
+          "marks": [],
+          "text": "紹介コードを貼っておくのでよかったら使ってくださいね。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "70ac02a8c50f",
+      "_type": "tableBlock",
+      "hasHeader": false,
+      "rows": [
+        {
+          "cells": [
+            "メルカリの紹介コードで500円分ポイントゲット"
+          ]
+        },
+        {
+          "cells": [
+            "YFDASQ"
+          ]
+        }
+      ]
+    },
+    {
+      "_key": "3db0cc6ed46d",
+      "_type": "image",
+      "alt": "フリマアプリはメルカリ - メルペイのスマホ決済でもっとお得",
+      "asset": {
+        "_ref": "image-c8559d58122d09a8c5edaa03cb52e7addcad787d-512x512-jpg",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "020e20d12b53",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "240138377bf1",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://apps.apple.com/jp/app/%25E3%2583%2595%25E3%2583%25AA%25E3%2583%259E%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25AF%25E3%2583%25A1%25E3%2583%25AB%25E3%2582%25AB%25E3%2583%25AA-%25E3%2583%25A1%25E3%2583%25AB%25E3%2583%259A%25E3%2582%25A4%25E3%2581%25AE%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E6%25B1%25BA%25E6%25B8%2588%25E3%2581%25A7%25E3%2582%2582%25E3%2581%25A3%25E3%2581%25A8%25E3%2581%258A%25E5%25BE%2597/id667861049?uo=4",
+          "src": "https://nabettu.github.io/appreach/img/itune_ja.svg"
+        },
+        {
+          "_key": "4fc55c71e458",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://play.google.com/store/apps/details?id=com.kouzoh.mercari",
+          "src": "https://nabettu.github.io/appreach/img/gplay_ja.png"
+        }
+      ]
+    },
+    {
+      "_key": "966bbcbe1fb5",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1aa571657d5a",
+          "_type": "span",
+          "marks": [],
+          "text": "フリマアプリはメルカリ - メルペイのスマホ決済でもっとお得"
+        },
+        {
+          "_key": "d249e9c51d6c",
+          "_type": "span",
+          "marks": [],
+          "text": "開発元:"
+        },
+        {
+          "_key": "366579c8900d",
+          "_type": "span",
+          "marks": [],
+          "text": "Mercari, Inc."
+        },
+        {
+          "_key": "87c953fd7fa8",
+          "_type": "span",
+          "marks": [],
+          "text": "無料"
+        },
+        {
+          "_key": "994c55cfae9c",
+          "_type": "span",
+          "marks": [],
+          "text": "posted with"
+        },
+        {
+          "_key": "b4f74f59b3a0",
+          "_type": "span",
+          "marks": [
+            "m5-0"
+          ],
+          "text": "アプリーチ"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m5-0",
+          "_type": "link",
+          "href": "/work/app-reach"
+        },
+        {
+          "_key": "m6-1",
+          "_type": "link",
+          "href": "/work/id667861049"
+        },
+        {
+          "_key": "m7-2",
+          "_type": "link",
+          "href": "/work/details"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "0e87f17f4485",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dc22ac0d19e6",
+          "_type": "span",
+          "marks": [],
+          "text": "自主的に購入した教材"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "904946b8ec29",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "976b919717e6",
+          "_type": "span",
+          "marks": [],
+          "text": "試験対策で使用しました。最新版はこちらになります↓"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b57dfc5188df",
+      "_type": "htmlEmbed",
+      "html": "<script type=\"text/javascript\">\n(function(b,c,f,g,a,d,e){b.MoshimoAffiliateObject=a;\nb[a]=b[a]||function(){arguments.currentScript=c.currentScript\n||c.scripts[c.scripts.length-2];(b[a].q=b[a].q||[]).push(arguments)};\nc.getElementById(a)||(d=c.createElement(f),d.src=g,\nd.id=a,e=c.getElementsByTagName(\"body\")[0],e.appendChild(d))})\n(window,document,\"script\",\"//dn.msmstatic.com/site/cardlink/bundle.js?20220329\",\"msmaflink\");\nmsmaflink({\"n\":\"日商簿記 3級 まるっと完全予想問題集 2025年度版[ネット試験・統一試験 完全対応](TAC出版)\",\"b\":\"TAC出版\",\"t\":\"\",\"d\":\"https:\\/\\/m.media-amazon.com\",\"c_p\":\"\",\"p\":[\"\\/images\\/I\\/51zrqD7PRWL._SL500_.jpg\"],\"u\":{\"u\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300115842\",\"t\":\"amazon\",\"r_v\":\"\"},\"v\":\"2.1\",\"b_l\":[{\"id\":4,\"u_tx\":\"Amazonで見る\",\"u_bc\":\"#f79256\",\"u_url\":\"https:\\/\\/www.amazon.co.jp\\/dp\\/4300115842\",\"a_id\":4046523,\"p_id\":170,\"pl_id\":27060,\"pc_id\":185,\"s_n\":\"amazon\",\"u_so\":1},{\"id\":11,\"u_tx\":\"楽天市場で見る\",\"u_bc\":\"#f76956\",\"u_url\":\"https:\\/\\/search.rakuten.co.jp\\/search\\/mall\\/%E6%97%A5%E5%95%86%E7%B0%BF%E8%A8%98%203%E7%B4%9A%20%E3%81%BE%E3%82%8B%E3%81%A3%E3%81%A8%E5%AE%8C%E5%85%A8%E4%BA%88%E6%83%B3%E5%95%8F%E9%A1%8C%E9%9B%86%202025%E5%B9%B4%E5%BA%A6%E7%89%88%5B%E3%83%8D%E3%83%83%E3%83%88%E8%A9%A6%E9%A8%93%E3%83%BB%E7%B5%B1%E4%B8%80%E8%A9%A6%E9%A8%93%20%E5%AE%8C%E5%85%A8%E5%AF%BE%E5%BF%9C%5D(TAC%E5%87%BA%E7%89%88)\\/\",\"a_id\":4046502,\"p_id\":54,\"pl_id\":27059,\"pc_id\":54,\"s_n\":\"rakuten\",\"u_so\":2},{\"id\":12,\"u_tx\":\"Yahoo!ショッピングで見る\",\"u_bc\":\"#66a7ff\",\"u_url\":\"https:\\/\\/shopping.yahoo.co.jp\\/search?first=1\\u0026p=%E6%97%A5%E5%95%86%E7%B0%BF%E8%A8%98%203%E7%B4%9A%20%E3%81%BE%E3%82%8B%E3%81%A3%E3%81%A8%E5%AE%8C%E5%85%A8%E4%BA%88%E6%83%B3%E5%95%8F%E9%A1%8C%E9%9B%86%202025%E5%B9%B4%E5%BA%A6%E7%89%88%5B%E3%83%8D%E3%83%83%E3%83%88%E8%A9%A6%E9%A8%93%E3%83%BB%E7%B5%B1%E4%B8%80%E8%A9%A6%E9%A8%93%20%E5%AE%8C%E5%85%A8%E5%AF%BE%E5%BF%9C%5D(TAC%E5%87%BA%E7%89%88)\",\"a_id\":4046520,\"p_id\":1225,\"pl_id\":27061,\"pc_id\":1925,\"s_n\":\"yahoo\",\"u_so\":3}],\"eid\":\"IEVUs\",\"s\":\"xs\"});\n</script><div id=\"msmaflink-IEVUs\">リンク</div>"
+    },
+    {
+      "_key": "f7ad0152814a",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "102cc695c4ed",
+          "_type": "span",
+          "marks": [],
+          "text": "演習用テキストについては資格取得は強制ではないため自由購入でしたが教室ではこちらをお勧めしていました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ec08919293f4",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d8eefe0b9d03",
+          "_type": "span",
+          "marks": [],
+          "text": "こちらの問題集は統一試験はもちろんネット試験対策にも有効で"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5f83f2e57e5b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2c0c555de669",
+          "_type": "span",
+          "marks": [],
+          "text": "紙でもPCでも問題が解くことができます。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "28b9671ea262",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "95078c125a56",
+          "_type": "span",
+          "marks": [],
+          "text": "他に受験生の間で人気のもので「スッキリ」シリーズや「あてる」シリーズもありますが多くに手を出すより１つの問題集をじっくり２周３周したほうが定着します。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c68a79336585",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4c64100bccfe",
+          "_type": "span",
+          "marks": [],
+          "text": "職業訓練校での実際の学習した時間配分"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "1da99fe47ef7",
+      "_type": "tableBlock",
+      "hasHeader": false,
+      "rows": [
+        {
+          "cells": [
+            "時　間",
+            "教科書",
+            "問題集",
+            "演　習",
+            "合　計",
+            "期間の目安"
+          ]
+        },
+        {
+          "cells": [
+            "＜３級＞",
+            "約６０時間",
+            "約２０時間",
+            "約４時間",
+            "約８４時間",
+            "訓練校で1日６時間×１４日"
+          ]
+        }
+      ]
+    },
+    {
+      "_key": "9c8e3f66be51",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "68cfa29f343d",
+          "_type": "span",
+          "marks": [],
+          "text": "自主学習を含めた実際の時間"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "8e4548ec3ebd",
+      "_type": "tableBlock",
+      "hasHeader": false,
+      "rows": [
+        {
+          "cells": [
+            "時　間",
+            "教科書",
+            "問題集",
+            "演　習",
+            "合　計",
+            "期間の目安"
+          ]
+        },
+        {
+          "cells": [
+            "＜３級＞",
+            "約６０時間",
+            "約２０時間",
+            "約２０時間",
+            "約１００時間",
+            "訓練校で1日６時間×１４日訓練期間中自宅で1日１時間×１６日半月程度"
+          ]
+        }
+      ]
+    },
+    {
+      "_key": "038b24349821",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "70885b8b8313",
+          "_type": "span",
+          "marks": [],
+          "text": "ストイックに毎日やっての目安になります。実際の訓練期間中は他の科目や実習、就職指導等が入ったりするのでそんな短期間とはいきません。私の時は、"
+        },
+        {
+          "_key": "2c20d7969e97",
+          "_type": "span",
+          "marks": [
+            "hl8-0"
+          ],
+          "text": "３級学習が始まって1ヶ月後受験"
+        },
+        {
+          "_key": "7af1b3c735ac",
+          "_type": "span",
+          "marks": [],
+          "text": "しました。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl8-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "abbfc2e3393f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "48b2cc1ed7f0",
+          "_type": "span",
+          "marks": [],
+          "text": "試験に向けてやったこと"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "391608e2595e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "99d9c468c2c2",
+          "_type": "span",
+          "marks": [],
+          "text": "簿記３級"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "d8777e38c577",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "71904a7a6a87",
+          "_type": "span",
+          "marks": [],
+          "text": "試験は自宅PCで実際の試験時間（60分）で予想問題集を"
+        },
+        {
+          "_key": "224df059da32",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "90点以上目標"
+        },
+        {
+          "_key": "59dcd3978fa8",
+          "_type": "span",
+          "marks": [],
+          "text": "に全10回３周やりました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "60206466c78d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2385e525d520",
+          "_type": "span",
+          "marks": [],
+          "text": "３級学習終了後、１週間期間をあけてからネット受験して合格です。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3baf54744d80",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "60fd5bee7871",
+          "_type": "span",
+          "marks": [],
+          "text": "裏ワザ"
+        },
+        {
+          "_key": "17ed3fb5318c",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "aa5fb3758488",
+          "_type": "span",
+          "marks": [],
+          "text": "ネット試験を予約しておいて試験近くになって仕上がりが不安な場合は日時変更ができますので試験代が無駄になりません。ただしキャンセルの場合はキャンセル料が発生するので注意が必要です。"
+        },
+        {
+          "_key": "b7f60e366568",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "89e9c74f7ff2",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "605a7285fd8b",
+          "_type": "span",
+          "marks": [],
+          "text": "職業訓練期間（座学）終了時の簿記資格取得者の割合"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "9f546119d007",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "96b1cdfefba7",
+          "_type": "span",
+          "marks": [],
+          "text": "座学は簿記と簿記以外の科目合わせて"
+        },
+        {
+          "_key": "479800b98f05",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "4ヶ月"
+        },
+        {
+          "_key": "38ed39fa9828",
+          "_type": "span",
+          "marks": [],
+          "text": "ほどありました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "d447d421ff83",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0dc1e3040fd",
+          "_type": "span",
+          "marks": [],
+          "text": "座学期間終了時点で受講者１５人に対して受験者は８人いました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b09a4d1a4404",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "31d7eee91b82",
+          "_type": "span",
+          "marks": [],
+          "text": "うち"
+        },
+        {
+          "_key": "a645f06a5928",
+          "_type": "span",
+          "marks": [],
+          "text": "＜3級＞"
+        },
+        {
+          "_key": "18eb94cf6726",
+          "_type": "span",
+          "marks": [],
+          "text": "受験者８人中・合格者8人（最大3回受験で合格できた受験者も）"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "16836b21a5cd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1ecaf2dcf129",
+          "_type": "span",
+          "marks": [],
+          "text": "個人差はありますが"
+        },
+        {
+          "_key": "5d33d06c874a",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "1ヶ月半"
+        },
+        {
+          "_key": "e42bd6a151c5",
+          "_type": "span",
+          "marks": [],
+          "text": "ほどで合格者が続々でできました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b0a1af9d2c0d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1498b316ee04",
+          "_type": "span",
+          "marks": [],
+          "text": "年3回の統一試験（紙試験）ではなく、いつでも受験可能なネットでの受験が目立ちました。合否判定も試験終了後即時にPC画面に表示されるので"
+        },
+        {
+          "_key": "823fa478be0a",
+          "_type": "span",
+          "marks": [
+            "hl9-0"
+          ],
+          "text": "モヤモヤした期間がなく"
+        },
+        {
+          "_key": "d0b4eb25cfaa",
+          "_type": "span",
+          "marks": [],
+          "text": "次の予定が立てやすくよかったです。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl9-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "cf3652b71720",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8c4aac55119d",
+          "_type": "span",
+          "marks": [],
+          "text": "ネット試験では基本いつでも予約が空いていれば受験できますが統一試験の２週間前から試験が終わるまでは"
+        },
+        {
+          "_key": "67661e30d5ee",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "予約できない期間"
+        },
+        {
+          "_key": "ef63a952359c",
+          "_type": "span",
+          "marks": [],
+          "text": "があるのでスケジュールを立てる際には気をつけましょう。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "398590cb3659",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2e1deaf5a049",
+          "_type": "span",
+          "marks": [],
+          "text": "まとめ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "e42bf6ea7f9d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a3792ef97a8b",
+          "_type": "span",
+          "marks": [],
+          "text": "簿記試験は"
+        },
+        {
+          "_key": "b43370f19542",
+          "_type": "span",
+          "marks": [
+            "strong"
+          ],
+          "text": "難化傾向"
+        },
+        {
+          "_key": "c5f492094a99",
+          "_type": "span",
+          "marks": [],
+          "text": "にあります。会計事務所で勤務している方が副業で簿記の授業を教えているってケースも珍しくありません。面接等で簿記試験の内容が昔と今では大分内容が難しくなっていることをご存知の方がいる場合、面接でどの時期に取得したかもプラス要因に働くそうです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "27533e9cca8f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3d7e40750a6f",
+          "_type": "span",
+          "marks": [],
+          "text": "Q .職業訓練校だけで簿記３級合格できる？"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1b30fd3c80e1",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "0616218e37f8",
+          "_type": "span",
+          "marks": [],
+          "text": "A.学習時間は十分足りました。私の場合は訓練時間+訓練期間の宿題+自宅で模擬試験した上で受験し合格いたしました。他の科目や実習、就職指導等が入ったりするので実際は"
+        },
+        {
+          "_key": "ed6b4d1263a9",
+          "_type": "span",
+          "marks": [
+            "hl10-0"
+          ],
+          "text": "３級学習を始めてから１ヶ月後の受験"
+        },
+        {
+          "_key": "b3d5e6d80e93",
+          "_type": "span",
+          "marks": [],
+          "text": "でした。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl10-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "547eb431d932",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "726c95cc8d8b",
+          "_type": "span",
+          "marks": [],
+          "text": "職業訓練校で学ぶことが出来る貴重な機会にぜひ頑張ってみてくださいね。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "861ccb82b76e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e670476ce2b1",
+          "_type": "span",
+          "marks": [],
+          "text": "\nhttps://mamasanmoney-bu.com/qualification-nissho-bookkeeping2-test/\n"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "17d3c47cf00c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3bb469471455",
+          "_type": "span",
+          "marks": [],
+          "text": "このブログは「にほんブログ村」と「ブログリーダー」に参加しています。下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "11487b94149a",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "2f2f72cf4f53",
+          "_type": "linkImageBlock",
+          "alt": "ママさんマネー部 - にほんブログ村",
+          "href": "https://blogmura.com/profiles/11159291/?p_cid=11159291&reader=11159291",
+          "provider": "blogmura",
+          "src": "https://b.blogmura.com/banner-blogmura-reader-pink.svg"
+        },
+        {
+          "_key": "71a49ea11400",
+          "_type": "linkImageBlock",
+          "alt": "人気ブログランキングでフォロー",
+          "href": "https://blog.with2.net/link/?id=2097059&follow",
+          "provider": "with2",
+          "src": "https://blog.with2.net/banner/follow/2097059?t=b"
+        }
+      ]
+    }
+  ],
+  "category": "work",
+  "heroImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-6b6c8ffa2c6795ff145d8402610e50f4700072e1-1024x1024-jpg",
+      "_type": "reference"
+    }
+  },
+  "publishedAt": "2022-12-12T03:37:56Z",
+  "slug": {
+    "_type": "slug",
+    "current": "qualification-nissho-bookkeeping3-test"
+  },
+  "tags": [
+    "スキルアップ"
+  ],
+  "title": "職業訓練校だけで簿記３級合格できる？ー実際に合格した私が答えます",
+  "updatedAt": "2025-10-20T07:18:36.856Z",
+  "views": 3
+}

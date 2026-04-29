@@ -2,19 +2,19 @@ import Link from 'next/link'
 import { sanityClient } from '@/lib/sanity.client'
 import { allPostSlugsQuery, categories as CATS } from '@/lib/queries'
 
-export const revalidate = 300
+export const revalidate = 3600
 
-export default async function SiteMapPage({ searchParams }: { searchParams: Promise<{ ym?: string }> }){
+export default async function SiteMapPage({ searchParams }: { searchParams: Promise<{ ym?: string }> }) {
   const sp = await searchParams
   const ym = (sp?.ym || '').match(/^\d{4}-\d{2}$/) ? sp.ym : ''
-  let posts = await sanityClient.fetch(allPostSlugsQuery).catch(()=>[] as any[])
+  let posts = await sanityClient.fetch(allPostSlugsQuery).catch(() => [] as any[])
   // タイトルキーワードでの一時的な非表示フィルタ（将来的には Sanity 側の hidden フラグ運用が望ましい）
   const BLOCKED = ['貼付用']
-  posts = (posts || []).filter((p:any)=> !BLOCKED.some(k => (p?.title||'').includes(k)))
+  posts = (posts || []).filter((p: any) => !BLOCKED.some(k => (p?.title || '').includes(k)))
   // グローバル重複除去（category/slug 単位）
   const seenGlobal = new Set<string>()
   const postsUniq: any[] = []
-  for (const p of posts||[]) {
+  for (const p of posts || []) {
     const key = `${p?.category || ''}/${p?.slug}`
     if (!p?.slug) continue
     if (seenGlobal.has(key)) continue
@@ -25,8 +25,8 @@ export default async function SiteMapPage({ searchParams }: { searchParams: Prom
 
   // さらにタイトル単位での重複除去（本文ブロック数の多い方を優先）
   const byTitle = new Map<string, any[]>()
-  for (const p of posts||[]) {
-    const t = String(p?.title||'').trim()
+  for (const p of posts || []) {
+    const t = String(p?.title || '').trim()
     if (!t) continue
     const arr = byTitle.get(t) || []
     arr.push(p)
@@ -35,14 +35,14 @@ export default async function SiteMapPage({ searchParams }: { searchParams: Prom
   const postsTitleUniq: any[] = []
   for (const [t, arr] of byTitle) {
     if (arr.length === 1) { postsTitleUniq.push(arr[0]); continue }
-    const sorted = [...arr].sort((a:any,b:any)=> (b?.blocks||0)-(a?.blocks||0) || new Date(b?.updatedAt||b?._updatedAt||0).getTime() - new Date(a?.updatedAt||a?._updatedAt||0).getTime())
+    const sorted = [...arr].sort((a: any, b: any) => (b?.blocks || 0) - (a?.blocks || 0) || new Date(b?.updatedAt || b?._updatedAt || 0).getTime() - new Date(a?.updatedAt || a?._updatedAt || 0).getTime())
     postsTitleUniq.push(sorted[0])
   }
   posts = postsTitleUniq
 
   // ツリー用: 年→月→記事
   const byYear = new Map<string, any[]>()
-  for (const p of posts||[]) {
+  for (const p of posts || []) {
     const d = p?.publishedAt ? new Date(p.publishedAt) : null
     const y = d ? String(d.getFullYear()) : '不明'
     if (!byYear.has(y)) byYear.set(y, [])
@@ -52,16 +52,16 @@ export default async function SiteMapPage({ searchParams }: { searchParams: Prom
 
   // 総件数（ユニーク：category/slug）
   const seenAll = new Set<string>()
-  for (const p of posts||[]) {
+  for (const p of posts || []) {
     const key = `${p?.category || ''}/${p?.slug}`
     seenAll.add(key)
   }
   const totalUnique = seenAll.size
 
   // カテゴリ名の補助
-  const catTitle = (slug:string) => (CATS.find(c=>c.slug===slug)?.title) || 'その他'
-  const catOrder = (slug:string) => {
-    const i = CATS.findIndex(c=>c.slug===slug)
+  const catTitle = (slug: string) => (CATS.find(c => c.slug === slug)?.title) || 'その他'
+  const catOrder = (slug: string) => {
+    const i = CATS.findIndex(c => c.slug === slug)
     return i === -1 ? 999 : i
   }
 
@@ -96,10 +96,10 @@ export default async function SiteMapPage({ searchParams }: { searchParams: Prom
             const byMonth: Record<string, any[]> = {}
             for (const p of psYear) {
               const d = p?.publishedAt ? new Date(p.publishedAt) : null
-              const m = d ? String(d.getMonth()+1).padStart(2,'0') : '不明'
-              ;(byMonth[m] = byMonth[m] || []).push(p)
+              const m = d ? String(d.getMonth() + 1).padStart(2, '0') : '不明'
+                ; (byMonth[m] = byMonth[m] || []).push(p)
             }
-            const months = Object.keys(byMonth).filter(m=>m!=='不明').sort((a,b)=> Number(b)-Number(a))
+            const months = Object.keys(byMonth).filter(m => m !== '不明').sort((a, b) => Number(b) - Number(a))
             return (
               <details key={y} className="bg-white border rounded-md p-3">
                 <summary className="cursor-pointer font-semibold text-emphasis">{y}年（{psYear.length}件）</summary>
@@ -115,7 +115,7 @@ export default async function SiteMapPage({ searchParams }: { searchParams: Prom
                       seen.add(key); psMonth.push(p)
                     }
                     // 新着順に並び替え（publishedAt 降順）
-                    psMonth.sort((a:any,b:any)=>{
+                    psMonth.sort((a: any, b: any) => {
                       const da = a?.publishedAt ? new Date(a.publishedAt).getTime() : 0
                       const db = b?.publishedAt ? new Date(b.publishedAt).getTime() : 0
                       return db - da
@@ -124,15 +124,16 @@ export default async function SiteMapPage({ searchParams }: { searchParams: Prom
                       <details key={`${y}-${m}`} className="bg-white border rounded-md p-3">
                         <summary className="cursor-pointer">{m}月（{psMonth.length}件）</summary>
                         <ul className="list-disc pl-6 mt-2 space-y-1">
-                          {psMonth.map((p:any)=> {
+                          {psMonth.map((p: any) => {
                             const href = p?.category ? `/${p.category}/${p.slug}` : `/${p.slug}`
                             const d = p?.publishedAt ? new Date(p.publishedAt) : null
-                            const prefix = d ? `${d.getMonth()+1}/${d.getDate()} ＞ ` : ''
+                            const prefix = d ? `${d.getMonth() + 1}/${d.getDate()} ＞ ` : ''
                             return (
-                            <li key={`${y}-${m}-${p?.category || 'other'}-${p.slug}`}>
-                  <Link href={href} className="link-brand">{prefix}{p.title}</Link>
-                            </li>
-                          )})}
+                              <li key={`${y}-${m}-${p?.category || 'other'}-${p.slug}`}>
+                                <Link href={href} className="link-brand">{prefix}{p.title}</Link>
+                              </li>
+                            )
+                          })}
                         </ul>
                       </details>
                     )

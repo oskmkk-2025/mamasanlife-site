@@ -4,6 +4,7 @@ import { ImgWithPlaceholder } from '@/components/ImgWithPlaceholder'
 import { HtmlEmbed } from '@/components/HtmlEmbed'
 import { notFound } from 'next/navigation'
 import { sanityClient } from '@/lib/sanity.client'
+import groq from 'groq'
 import { postByCategorySlugQuery, postBySlugAnyCategoryQuery, postsBySlugsQuery, relatedByTagsQuery } from '@/lib/queries'
 import { PortableText } from '@portabletext/react'
 import { TableOfContents } from '@/components/TableOfContents'
@@ -16,21 +17,59 @@ import { SpeechBlockView } from '@/components/SpeechBlockView'
 import { FloatingToc } from '@/components/FloatingToc'
 import { BlogCard } from '@/components/BlogCard'
 import { redirect } from 'next/navigation'
+import { FaqBlock } from '@/components/FaqBlock'
+import { SummaryBlock } from '@/components/SummaryBlock'
+import { MangaBlock } from '@/components/MangaBlock'
+import { AudioBlock } from '@/components/AudioBlock'
 // import { TocMobileBar } from '@/components/TocMobileBar'
 const ViewTracker = (await import('@/components/ViewTracker')).ViewTracker
 import { PAYWALLED_ARTICLES } from '@/lib/paywalled-articles'
 import { PaywallNotice } from '@/components/PaywallNotice'
 
-const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_URL || 'https://mamasanmoney-bu.com'
+const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://mamasanmoney-bu.com'
 const FOLLOWER_SENTENCE = 'このブログは「にほんブログ村」と「ブログリーダー」に参加しています。'
 const FOLLOW_PROMPT_SENTENCE = '下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪'
+
+// キャンディ風ボタン用アイコン・カラー設定
+const CANDY_CONFIG: Record<string, { icon: string; label: string }> = {
+  amazon:         { icon: 'a',  label: 'Amazonで見る' },
+  rakuten:        { icon: 'R',  label: '楽天市場で見る' },
+  yahoo:          { icon: '🛒', label: 'Yahoo!ショッピングで見る' },
+  curama:         { icon: '🏠', label: 'くらしのマーケットで見る' },
+  moshimo:        { icon: '🛍', label: 'こちらで見る' },
+  valuecommerce:  { icon: '🛍', label: 'こちらで見る' },
+  a8:             { icon: '🛍', label: 'こちらで見る' },
+  afb:            { icon: '🛍', label: 'こちらで見る' },
+  study:          { icon: '📖', label: 'スタディサプリで見る' },
+  audiobook:      { icon: '🎧', label: 'audiobookで聴く' },
+  others:         { icon: '🛍', label: 'こちらで見る' },
+}
+
+function candyBtnInner(variant: string, labelOverride?: string) {
+  const cfg = CANDY_CONFIG[variant] || CANDY_CONFIG['others']
+  const label = labelOverride || cfg.label
+  return `<span class="cta-candy-btn__highlight"></span><span class="cta-candy-btn__icon-wrap"><span class="cta-candy-btn__icon">${cfg.icon}</span></span><span class="cta-candy-btn__sep"></span><span class="cta-candy-btn__label">${label}</span><span class="cta-candy-btn__arrow">›</span>`
+}
+
 const AFFILIATE_HOSTS = [
   { match: 'hb.afl.rakuten.co.jp', variant: 'rakuten' },
+  { match: 'item.rakuten.co.jp', variant: 'rakuten' },
+  { match: 'books.rakuten.co.jp', variant: 'rakuten' },
+  { match: 'search.rakuten.co.jp', variant: 'rakuten' },
+  { match: 'rakuten.co.jp', variant: 'rakuten' },
   { match: 'ck.jp.ap.valuecommerce.com', variant: 'valuecommerce' },
   { match: 'px.a8.net', variant: 'a8' },
   { match: 'moshimo.com', variant: 'moshimo' },
   { match: 'amazon.co.jp', variant: 'amazon' },
+  { match: 'amzn.to', variant: 'amazon' },
+  { match: 'amzn.asia', variant: 'amazon' },
   { match: 'shopping.yahoo.co.jp', variant: 'yahoo' },
+  { match: 'store.shopping.yahoo.co.jp', variant: 'yahoo' },
+  { match: 'curama.jp', variant: 'curama' },
+  { match: 'studysapuri.jp', variant: 'study' },
+  { match: 'audiobook.jp', variant: 'audiobook' },
+  { match: 'audible.co.jp', variant: 'audiobook' },
+  { match: 'amazon.co.jp/audible', variant: 'audiobook' },
   { match: 'afb', variant: 'afb' },
   { match: 'curama.jp', variant: 'curama' }
 ]
@@ -44,8 +83,17 @@ type BlogCardResolved = {
   categoryTitle?: string
 }
 
-export const revalidate = 300
-export const dynamic = 'force-dynamic'
+// build: 1777381277
+export const revalidate = 3600
+// export const dynamic = 'force-dynamic'
+
+export async function generateStaticParams() {
+  const posts = await sanityClient.fetch(groq`*[_type == "post" && defined(slug.current) && defined(category)]{ "slug": slug.current, "category": category }`)
+  return posts.map((p: any) => ({
+    category: p.category,
+    slug: p.slug,
+  }))
+}
 
 // Next.js 15: generateMetadata の params は Promise になるケースがあるため型を合わせる
 export async function generateMetadata(
@@ -57,8 +105,8 @@ export async function generateMetadata(
   const url = `${process.env.NEXT_PUBLIC_SITE_URL || ''}/${post.category}/${post.slug}`
   const og = post.imageUrl || `${process.env.NEXT_PUBLIC_SITE_URL || ''}/og-default`
   return {
-    title: post.title,
-    description: post.excerpt || undefined,
+    title: (post as any).seoTitle || post.title,
+    description: (post as any).seoDescription || post.excerpt || undefined,
     openGraph: { images: [og], url },
     alternates: { canonical: url }
   }
@@ -158,8 +206,10 @@ export default async function PostPage(
   const bodyRest: any[] = []
   for (const b of bodyRestInitial) {
     if (b?._type === 'block') {
-      const textCombined = ((b as any).children || []).map((c: any) => String(c?.text || '')).join('')
-      if (textCombined.includes(FOLLOWER_SENTENCE) || textCombined.includes(FOLLOW_PROMPT_SENTENCE)) {
+      const textCombined = ((b as any).children || []).map((c: any) => String(c?.text || '')).join('').replace(/\s+/g, '')
+      const f1 = FOLLOWER_SENTENCE.replace(/\s+/g, '')
+      const f2 = FOLLOW_PROMPT_SENTENCE.replace(/\s+/g, '')
+      if (textCombined.includes(f1) || textCombined.includes(f2)) {
         continue
       }
     }
@@ -313,12 +363,51 @@ export default async function PostPage(
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
             headline: post.title,
+            description: post.excerpt || post.title,
             datePublished: post.publishedAt,
             dateModified: post.updatedAt || post.publishedAt,
-            image: post.imageUrl ? [post.imageUrl] : undefined,
-            mainEntityOfPage: `${process.env.NEXT_PUBLIC_SITE_URL || ''}/${post.category}/${post.slug}`
+            author: {
+              '@type': 'Person',
+              name: (post as any).eeat?.author?.name || 'ひーち',
+              url: `${SITE_ORIGIN}/profile`
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Mamasan Life',
+              logo: {
+                '@type': 'ImageObject',
+                url: `${SITE_ORIGIN}/icons/favicon.png`
+              }
+            },
+            image: post.imageUrl ? [post.imageUrl] : (heroSrc ? [heroSrc] : undefined),
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': `${SITE_ORIGIN}/${post.category}/${post.slug}`
+            }
           })}
         </Script>
+        {(() => {
+          const faqs = displayBlocks.filter(b => b._type === 'faqBlock')
+          if (faqs.length === 0) return null
+          const faqItems = faqs.flatMap(f => f.items || [])
+          if (faqItems.length === 0) return null
+          return (
+            <Script id="faq-jsonld" type="application/ld+json" strategy="afterInteractive">
+              {JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: faqItems.map((it: any) => ({
+                  '@type': 'Question',
+                  name: it.question,
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: it.answer
+                  }
+                }))
+              })}
+            </Script>
+          )
+        })()}
         <Script id="post-bc-ld" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify({
             '@context': 'https://schema.org',
@@ -405,27 +494,12 @@ export default async function PostPage(
             {/* (Removed) generic footer banner row */}
 
             {/* (Removed) follow buttons for blogmura/with2 */}
-            <AdSlot slot="ARTICLE_BOTTOM_SLOT" className="my-4 clear-both" />
           </div>
           <aside className="hidden md:block md:sticky md:top-20 h-max space-y-6">
             {hasBody && <TableOfContents headings={headings} />}
             <AdSlot slot="SIDEBAR_SLOT" />
           </aside>
         </div>
-
-        {/* LINEフォロー（記事末/関連記事の直前） */}
-        {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (post as any)?.showLineCta !== false && (
-          <div className="mt-10">
-            <div className="text-center text-sm text-gray-700 whitespace-pre-line leading-relaxed">
-              {`下のボタンから公式LINEの友達追加をしていただくと新しく記事が投稿された時に通知を受け取ることができます。
-
-「いいな」と思ったら気軽に追加してね♪`}
-            </div>
-            <div className="mt-3 flex justify-center">
-              <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="LINEで友だちになる" size="lg" variant="outlineGreen" />
-            </div>
-          </div>
-        )}
 
         {related?.length > 0 && (
           <section className="mt-12">
@@ -453,6 +527,23 @@ export default async function PostPage(
             </div>
           </section>
         )}
+
+        {/* LINEフォロー（関連記事の直後） */}
+        {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (post as any)?.showLineCta !== false && (
+          <div className="mt-10">
+            <div className="text-center text-sm text-gray-700 whitespace-pre-line leading-relaxed">
+              {`下のボタンから公式LINEの友達追加をしていただくと新しく記事が投稿された時に通知を受け取ることができます。
+
+「いいな」と思ったら気軽に追加してね♪`}
+            </div>
+            <div className="mt-3 flex justify-center">
+              <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL.trim()} label="LINEで友だちになる" size="lg" variant="outlineGreen" />
+            </div>
+          </div>
+        )}
+
+        {/* 記事下広告（全体の最後） */}
+        <AdSlot slot="ARTICLE_BOTTOM_SLOT" className="mt-12 mb-6" />
       </article>
     </div>
   )
@@ -551,16 +642,22 @@ const ptComponents = {
           </p>
         )
       }
+      const candyCfg = CANDY_CONFIG[variant] || CANDY_CONFIG['others']
       return (
         <div className="my-5 affiliate-inline">
           <a
             href={normalizedHref}
             target="_blank"
             rel="noopener noreferrer nofollow sponsored"
-            className={`affiliate-btn affiliate-btn--${variant}`}
-            style={variant === 'curama' ? { backgroundColor: '#00bcd4', boxShadow: '0 12px 24px rgba(0, 188, 212, 0.28)' } : {}}
+            className={`affiliate-btn affiliate-btn--${variant} cta-candy-link`}
           >
-            {label}
+            <span className="cta-candy-btn__highlight" aria-hidden="true" />
+            <span className="cta-candy-btn__icon-wrap" aria-hidden="true">
+              <span className="cta-candy-btn__icon">{candyCfg.icon}</span>
+            </span>
+            <span className="cta-candy-btn__sep" aria-hidden="true" />
+            <span className="cta-candy-btn__label">{label || candyCfg.label}</span>
+            <span className="cta-candy-btn__arrow" aria-hidden="true">&#8250;</span>
           </a>
         </div>
       )
@@ -590,8 +687,14 @@ const ptComponents = {
                 const variant = detectAffiliateVariant(btn.url) || 'others'
                 const style = btn.color ? { background: btn.color } : undefined
                 return (
-                  <a key={idx} href={btn.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className={`affiliate-btn affiliate-btn--${variant}`} style={style}>
-                    {btn.label || 'リンクを見る'}
+                  <a key={idx} href={btn.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className={`affiliate-btn affiliate-btn--${variant}`}>
+                    <span className="cta-candy-btn__highlight" aria-hidden="true" />
+                    <span className="cta-candy-btn__icon-wrap" aria-hidden="true">
+                      <span className="cta-candy-btn__icon">{(CANDY_CONFIG[variant] || CANDY_CONFIG['others']).icon}</span>
+                    </span>
+                    <span className="cta-candy-btn__sep" aria-hidden="true" />
+                    <span className="cta-candy-btn__label">{btn.label || (CANDY_CONFIG[variant] || CANDY_CONFIG['others']).label}</span>
+                    <span className="cta-candy-btn__arrow" aria-hidden="true">&#8250;</span>
                   </a>
                 )
               })}
@@ -704,6 +807,10 @@ const ptComponents = {
     }
     ,
     htmlEmbed: ({ value }: any) => <HtmlEmbed html={String(value?.html || '')} />,
+    faqBlock: ({ value }: any) => <FaqBlock items={value.items} />,
+    summaryBlock: ({ value }: any) => <SummaryBlock title={value.title} items={value.items} />,
+    mangaBlock: ({ value }: any) => <MangaBlock images={value.images} />,
+    audioBlock: ({ value }: any) => <AudioBlock audioFile={value.audioFile} title={value.title} transcription={value.transcription} />,
     appreachCard: ({ value }: any) => {
       const src = sanityImageRefToUrl(value.icon?.asset?._ref, { q: 80, fit: 'clip' })
       return (
@@ -828,6 +935,9 @@ function extractSlugFromUrl(raw?: string | null) {
   }
 }
 
+// 楽天アフィリエイトID
+const RAKUTEN_AFFILIATE_ID = '438c0560.216ca664.3336e6ef.05b42e24'
+
 function normalizeHref(raw?: string | null) {
   if (!raw) return '#'
   try {
@@ -836,6 +946,19 @@ function normalizeHref(raw?: string | null) {
     if (url.host === siteHost) {
       const cleanPath = url.pathname.endsWith('/') && url.pathname !== '/' ? url.pathname.slice(0, -1) : url.pathname
       return `${cleanPath || '/'}${url.search || ''}${url.hash || ''}`
+    }
+    // 楽天直URLを楽天アフィリエイトID経由に自動変換
+    const host = url.hostname.replace(/^www\./, '')
+    const isRakutenDirect = (
+      host === 'item.rakuten.co.jp' ||
+      host === 'books.rakuten.co.jp' ||
+      host === 'search.rakuten.co.jp' ||
+      host === 'rakuten.co.jp' ||
+      host.endsWith('.rakuten.co.jp')
+    ) && host !== 'hb.afl.rakuten.co.jp' && host !== 'hbb.afl.rakuten.co.jp'
+    if (isRakutenDirect) {
+      const target = encodeURIComponent(url.toString())
+      return `https://hb.afl.rakuten.co.jp/hgc/${RAKUTEN_AFFILIATE_ID}/?pc=${target}&m=${target}`
     }
     return url.toString()
   } catch {

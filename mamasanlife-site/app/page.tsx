@@ -8,7 +8,7 @@ import { uniquePostsBySlug, filterBlocked } from '@/lib/post-utils'
 import Script from 'next/script'
 import { LineStampPromo } from '@/components/LineStampPromo'
 
-export const revalidate = 60
+export const revalidate = 3600
 
 export default async function HomePage() {
   // 取得失敗時に空配列へフォールバック（Internal Server Error を避ける）

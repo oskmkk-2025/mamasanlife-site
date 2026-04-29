@@ -1,0 +1,1137 @@
+{
+  "_createdAt": "2025-08-26T10:23:19Z",
+  "_id": "Nn6Sc6MF3u71woMpYvaGwj",
+  "_rev": "SquZ2ThjoVQLTGw2qjo2Hw",
+  "_type": "post",
+  "_updatedAt": "2026-01-05T06:36:27Z",
+  "affiliateBlocks": [
+    {
+      "html": "<a class=\"affiliate-btn affiliate-btn--afb\" href=\"https://t.afi-b.com/visit.php?a=G142682-w468243f&amp;p=x929565W\" target=\"_blank\" rel=\"noopener noreferrer nofollow sponsored\">くらしのマーケットをみる</a>",
+      "note": "",
+      "title": ""
+    }
+  ],
+  "body": [
+    {
+      "_key": "c71041dfb937",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "2ba90ce33956",
+          "_type": "linkImageBlock",
+          "alt": "にほんブログ村 その他生活ブログへ",
+          "href": "https://life.blogmura.com/ranking/in?p_cid=11159291",
+          "src": "https://b.blogmura.com/life/88_31.gif"
+        },
+        {
+          "_key": "45467e692088",
+          "_type": "linkImageBlock",
+          "alt": "",
+          "href": "https://blog.with2.net/link/?id=2097059&cid=4004",
+          "src": "https://blog.with2.net/img/banner/c/banner_1/br_c_4004_1.gif"
+        }
+      ]
+    },
+    {
+      "_key": "1cda26f7d83f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8b7edd9742ee",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "7cf68c9b12c9",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "e5ff06686983",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "a78160487a7a",
+          "_type": "span",
+          "marks": [],
+          "text": "\n\n"
+        },
+        {
+          "_key": "08c37e8c9212",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "f92a4abc9dbd",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        },
+        {
+          "_key": "9f1d703191f0",
+          "_type": "span",
+          "marks": [],
+          "text": "\n"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m0-0",
+          "_type": "link",
+          "href": "/life/in"
+        },
+        {
+          "_key": "m1-1",
+          "_type": "link",
+          "href": "/life/link"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "ae253ba64154",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "311c06ab0785",
+          "_type": "span",
+          "marks": [],
+          "text": "我が家の洗濯機。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "0508791fa1d9",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "048ec129ee38",
+          "_type": "span",
+          "marks": [],
+          "text": "正直、この子は買い替えしかないと思っておりました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "814e028d9137",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "353d6c5687c0",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯機の平均寿命は10年みたいなのですが"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b5c92964be1e",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4d51010b3b29",
+          "_type": "span",
+          "marks": [],
+          "text": "洗えば洗うほどカビが洗濯物につく。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "dc228e136197",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d11924d9f93c",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯しながらこれはキレイにする行為ではないと日々矛盾を感じながら。。。。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "962fc19c9b36",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "2f9241b62e02",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯槽洗浄剤使って何回もワカメ（ういてきたカビ）取りをしても"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "02d0a96d094b",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fd40b05a1d45",
+          "_type": "span",
+          "marks": [],
+          "text": "カビのつき方がよけいにひどくなってる😂"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "53a71dd20f0d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a4a9acecfa66",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯機の洗濯槽を取り外す方法をYouTube動画で勉強するも難しくて途中から先に進めなくて断念。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "8001e1c6f857",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c7bb41c41def",
+          "_type": "span",
+          "marks": [],
+          "text": "カビとの戦いに明け暮れていたところに、とある先輩ママさんからの一言"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "a023c15b6e42",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/themes/cocoon-master/images/woman.png",
+      "name": "先輩ママさん",
+      "paras": [
+        "一度お掃除業者に頼んでみたら？"
+      ]
+    },
+    {
+      "_key": "507811bcb695",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2024/01/cropped-IMG_69AD0D2F343E-1-2-300x300.jpeg",
+      "name": "ひーち部長",
+      "paras": [
+        "え？洗濯機の掃除を業者に頼めるの？"
+      ]
+    },
+    {
+      "_key": "7058c09b63e6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d4c520b0ec1c",
+          "_type": "span",
+          "marks": [],
+          "text": "なんというか、洗濯槽の掃除は自分でするものとの固定概念があったので"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "08aaae68515c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "efcd634c391a",
+          "_type": "span",
+          "marks": [],
+          "text": "いい意味で裏切られました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "174c41fda8ca",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c50f809efc75",
+          "_type": "span",
+          "marks": [],
+          "text": "この記事では洗濯機の分解洗浄を依頼した時の体験レポートと他社との料金比較がわかります。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "c897f7ffead3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ed5663ef5958",
+          "_type": "span",
+          "marks": [],
+          "text": "ラクぴか✨で新たな年を迎えましょう！"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1907841b4855",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5e9ad4d200df",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯機分解洗浄"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "ba16b15a022f",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f874998bcdb9",
+          "_type": "span",
+          "marks": [],
+          "text": "調べて見たら洗濯機も分解洗浄やってもらえるのですね！"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "42a1a0c9371d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "16542845d24c",
+          "_type": "span",
+          "marks": [],
+          "text": "早速エアコン分解洗浄でも依頼した"
+        },
+        {
+          "_key": "69b909a8f1cf",
+          "_type": "span",
+          "marks": [
+            "hl2-0"
+          ],
+          "text": "くらしのマーケット"
+        },
+        {
+          "_key": "ec2f0cd4ab88",
+          "_type": "span",
+          "marks": [],
+          "text": "さんにお願いしてみました。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl2-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "7bbe17a826e0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a6804b34851d",
+          "_type": "span",
+          "marks": [
+            "m3-0"
+          ],
+          "text": "くらしのマーケットをみる"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m3-0",
+          "_type": "link",
+          "href": "/life/visit-php"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "51df2022076b",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d8600b0b65375126b74348378e0d9b3c8eda2538-1x1-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "7afaf0a86378",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cc695cbe1a98",
+          "_type": "span",
+          "marks": [],
+          "text": "掃除の様子"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "4d0114c4d421",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "fae7211eb170",
+          "_type": "span",
+          "marks": [],
+          "text": "事前に洗濯機のメーカーと型番を聞かれました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "aac17721deaf",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b4162c535168",
+          "_type": "span",
+          "marks": [],
+          "text": "型番によって受付できないものもあるようです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6337ddc76677",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f63d8973b251",
+          "_type": "span",
+          "marks": [],
+          "text": "依頼の洗濯機は"
+        },
+        {
+          "_key": "9b176969ac8c",
+          "_type": "span",
+          "marks": [
+            "hl4-0"
+          ],
+          "text": "サンヨーASW700"
+        },
+        {
+          "_key": "742cad3d120a",
+          "_type": "span",
+          "marks": [],
+          "text": "になります。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl4-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "2a8a11242d44",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "c108c09d6abf",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯槽を外したところの本体"
+        }
+      ],
+      "markDefs": [],
+      "style": "h4"
+    },
+    {
+      "_key": "f503c060ba24",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "ピッカピカ！本体全体の汚れが取れて新品のようだね💖"
+      ]
+    },
+    {
+      "_key": "7874002a4119",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "95c86e01ef8c",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯槽の洗浄"
+        }
+      ],
+      "markDefs": [],
+      "style": "h4"
+    },
+    {
+      "_key": "6ac3e9a9ac55",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "69e15be01252",
+          "_type": "span",
+          "marks": [],
+          "text": "浴室で洗浄していただきました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "74060c71bf89",
+      "_type": "speechBlock",
+      "align": "left",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/BB011F9F-4F89-4229-944D-C474C0FAD557-e1668692285329.png",
+      "name": "はてにゃん部員",
+      "paras": [
+        "いつも見えている内側は割とキレイに見えるけど・・・"
+      ]
+    },
+    {
+      "_key": "bba3eb6370f9",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "側面ヤバっ！！石鹸カスとカビがびっしり固まっている！！"
+      ]
+    },
+    {
+      "_key": "cd299bc652aa",
+      "_type": "speechBlock",
+      "align": "right",
+      "iconUrl": "https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png",
+      "name": "まるお部員",
+      "paras": [
+        "業務用洗剤を使ってつけ置き＋ブラシでこすって落としたよ",
+        "床に落ちているカビの塊が汚れの頑固さを表しているね"
+      ]
+    },
+    {
+      "_key": "41fbb93532a6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "ce5cd07dd92c",
+          "_type": "span",
+          "marks": [
+            "m5-0"
+          ],
+          "text": "くらしのマーケットをみる"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m5-0",
+          "_type": "link",
+          "href": "/life/visit-php"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "d9bc87d469b7",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d8600b0b65375126b74348378e0d9b3c8eda2538-1x1-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "3becd42ab413",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b996513e3294",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯パン（洗濯機の下）"
+        }
+      ],
+      "markDefs": [],
+      "style": "h4"
+    },
+    {
+      "_key": "c2d6933ea5cb",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dd5f6354a9cd",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯機の下の洗濯パンも清掃していただけました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "bf181b4f5381",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "03326f604fe5",
+          "_type": "span",
+          "marks": [],
+          "text": "こちらは<before>写真しか撮っていませんでしたがこちらも埃がいっぱいでした。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "48816ac497c8",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "5b88f3d46e5f",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯機本体だけでなく周辺もきれいにして貰えて嬉しかったです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "63a46e73fbdc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4c50ef0e8306",
+          "_type": "span",
+          "marks": [],
+          "text": "費用"
+        }
+      ],
+      "markDefs": [],
+      "style": "h3"
+    },
+    {
+      "_key": "21e09face489",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "7f414a421e15",
+          "_type": "span",
+          "marks": [],
+          "text": "費用：￥14,000　（税込）"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f17f477b1da7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "6cf7714ba2c2",
+          "_type": "span",
+          "marks": [],
+          "text": "追加費用なし・駐車場代込み"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "3e0cc7458769",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "810ce45efc65",
+          "_type": "span",
+          "marks": [],
+          "text": "金額は依頼する内容や業者さんによって異なります。"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f1de040485cc",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3f524b0fdf33",
+          "_type": "span",
+          "marks": [],
+          "text": "依頼先：くらしのマーケット内の業者さん１名"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "df9f699d9bba",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9d3f5aaa3092",
+          "_type": "span",
+          "marks": [],
+          "text": "お願いしたもの：縦型洗濯機　分解洗浄１台"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ef2ac4aa7681",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8f747d739c31",
+          "_type": "span",
+          "marks": [],
+          "text": "かかった時間：約２時間"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "76e95721a508",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "9ba4d1ef9d4e",
+          "_type": "span",
+          "marks": [],
+          "text": "他社との比較"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "6aa275e199e7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "1dcef9da7f44",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯機分解洗浄について"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "b7de2b111aa3",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "dfa1abf0ebe7",
+          "_type": "span",
+          "marks": [],
+          "text": "大手ハウスクリーニング業者の「D社」「O社」と価格を比較しました。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4e675df90f90",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "d3d410a2bcd8",
+          "_type": "span",
+          "marks": [],
+          "text": "＜条件＞"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "1509053712cd",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "8aafd1588015",
+          "_type": "span",
+          "marks": [],
+          "text": "縦型"
+        },
+        {
+          "_key": "8c1d083085c1",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯機の"
+        },
+        {
+          "_key": "e6c64323e20e",
+          "_type": "span",
+          "marks": [],
+          "text": "分解洗浄"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cccda521336c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "4ad8503a08fb",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯機本体の外側・内側、脱水槽、パルセーター、洗濯槽、洗濯パン　洗浄"
+        }
+      ],
+      "listItem": "bullet",
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "5b150f318b7d",
+      "_type": "tableBlock",
+      "hasHeader": true,
+      "rows": [
+        {
+          "cells": [
+            "依頼先",
+            "価格",
+            "比較"
+          ]
+        },
+        {
+          "cells": [
+            "くらしのマーケット",
+            "¥14,000",
+            "±0"
+          ]
+        },
+        {
+          "cells": [
+            "D社",
+            "該当なし",
+            "ー"
+          ]
+        },
+        {
+          "cells": [
+            "O社",
+            "¥23,100",
+            "＋￥9,100"
+          ]
+        }
+      ]
+    },
+    {
+      "_key": "18b5fee1b2f6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "69dcce0a0b08",
+          "_type": "span",
+          "marks": [],
+          "text": "D社は分解洗浄ではなく洗濯槽は取り外さず洗浄水に"
+        },
+        {
+          "_key": "6f5a94792259",
+          "_type": "span",
+          "marks": [
+            "hl6-0"
+          ],
+          "text": "浸け置き"
+        },
+        {
+          "_key": "70cccf041bba",
+          "_type": "span",
+          "marks": [],
+          "text": "する方法となります。"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "hl6-0",
+          "_type": "highlight",
+          "variant": "accent"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "fc2916840326",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "b0f2c0462810",
+          "_type": "span",
+          "marks": [],
+          "text": "ちなみに、執筆時点でD社の浸け置き洗浄の価格を調べたところ¥14,300（税込）でした。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "cf1f005ad57c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f348173c741f",
+          "_type": "span",
+          "marks": [],
+          "text": "まとめ"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_key": "912e3191f746",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "a7107231a23c",
+          "_type": "span",
+          "marks": [],
+          "text": "くらしのマーケットの登録業者さんは個人事業主でやってる方が多いそうです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "6b8df1582a70",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "572a5977294a",
+          "_type": "span",
+          "marks": [],
+          "text": "大手クリーニング業者さんよりお安くできるのは中間マージンの発生がないからです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "f762b00b4237",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "3d400131402f",
+          "_type": "span",
+          "marks": [],
+          "text": "ただ業者さんによって料金や仕上がりが異なってきますので実際お願いしてみて満足できれば同じ方にお願いする、という風に使いたいですね。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ca45c86a33b0",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "375eb390953d",
+          "_type": "span",
+          "marks": [],
+          "text": "ということは、口コミの評価が売上に直結いたしますので頑張っている方は大体判別がつきそうです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "def4adcf9875",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "e47155de98a4",
+          "_type": "span",
+          "marks": [],
+          "text": "洗濯機の分解洗浄を依頼してみてからは毎日のお洗濯が「"
+        },
+        {
+          "_key": "da384aed994c",
+          "_type": "span",
+          "marks": [],
+          "text": "きれいにしてる"
+        },
+        {
+          "_key": "9d21ea224ef4",
+          "_type": "span",
+          "marks": [],
+          "text": "✨」感ハンパないです♫"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "ecf088f881e7",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "f280761a872e",
+          "_type": "span",
+          "marks": [],
+          "text": "かなり満足度高いので洗濯機のカビに悩む全ての方におすすめです。"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "e45a0783747c",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "92ffd2a9670e",
+          "_type": "span",
+          "marks": [
+            "m7-0"
+          ],
+          "text": "くらしのマーケットをみる"
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "m7-0",
+          "_type": "link",
+          "href": "/life/visit-php"
+        }
+      ],
+      "style": "normal"
+    },
+    {
+      "_key": "3ae0c67750e0",
+      "_type": "image",
+      "alt": "",
+      "asset": {
+        "_ref": "image-d8600b0b65375126b74348378e0d9b3c8eda2538-1x1-png",
+        "_type": "reference"
+      }
+    },
+    {
+      "_key": "9695d31669de",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "cb19837fb734",
+          "_type": "span",
+          "marks": [],
+          "text": "https://mamasanmoney-bu.com/house-cleaning-air-conditioner/"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "4e068366ae13",
+      "_type": "blogCard",
+      "url": "https://mamasanmoney-bu.com/install-a-built-in-stove/"
+    },
+    {
+      "_key": "571d120e0af6",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "55f9d2325cca",
+          "_type": "span",
+          "marks": [],
+          "text": "このブログは「にほんブログ村」と「ブログリーダー」に参加しています。下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪"
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    },
+    {
+      "_key": "9438430879a4",
+      "_type": "linkImageRow",
+      "items": [
+        {
+          "_key": "588bc77b19c8",
+          "_type": "linkImageBlock",
+          "alt": "ママさんマネー部 - にほんブログ村",
+          "href": "https://blogmura.com/profiles/11159291/?p_cid=11159291&reader=11159291",
+          "provider": "blogmura",
+          "src": "https://b.blogmura.com/banner-blogmura-reader-pink.svg"
+        },
+        {
+          "_key": "3adc27118c56",
+          "_type": "linkImageBlock",
+          "alt": "人気ブログランキングでフォロー",
+          "href": "https://blog.with2.net/link/?id=2097059&follow",
+          "provider": "with2",
+          "src": "https://blog.with2.net/banner/follow/2097059?t=b"
+        }
+      ]
+    }
+  ],
+  "category": "life",
+  "heroImage": {
+    "_type": "image",
+    "asset": {
+      "_ref": "image-770f940fe6c14d9e4693b926a594f73502b0a51a-1024x1024-jpg",
+      "_type": "reference"
+    }
+  },
+  "publishedAt": "2022-11-23T06:58:06Z",
+  "slug": {
+    "_type": "slug",
+    "current": "house-cleaning-washing-machine"
+  },
+  "tags": [
+    "くらしのマーケット"
+  ],
+  "title": "プロが解決！くらしのマーケットで洗濯機分解洗浄を依頼して汚れをごっそり落とそう",
+  "updatedAt": "2025-10-19T13:37:47.157Z"
+}

@@ -1,6 +1,6 @@
-import {NextRequest, NextResponse} from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 // Avoid non-Edge-safe deps in middleware. Minimal noop romanizer.
-function toRomaji(input: string){ return input }
+function toRomaji(input: string) { return input }
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || process.env.SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || process.env.SANITY_DATASET || 'production'
@@ -56,7 +56,7 @@ function isBypassedPath(pathname: string) {
 }
 
 export async function middleware(req: NextRequest) {
-  const {pathname, search} = req.nextUrl
+  const { pathname, search } = req.nextUrl
 
   if (isBypassedPath(pathname)) return NextResponse.next()
 
@@ -65,14 +65,14 @@ export async function middleware(req: NextRequest) {
   if (!m) return NextResponse.next()
 
   let seg = m[1]
-  try { seg = decodeURIComponent(seg) } catch {}
+  try { seg = decodeURIComponent(seg) } catch { }
 
   // まず固定ページマップ（同一先ならリダイレクトしない）
   const romajiKey = slugify(toRomaji(seg))
   const fixed = PAGE_MAP[romajiKey]
   if (fixed) {
-    const current = pathname.replace(/\/+$/,'') || '/'
-    const target = (fixed as string).replace(/\/+$/,'') || '/'
+    const current = pathname.replace(/\/+$/, '') || '/'
+    const target = (fixed as string).replace(/\/+$/, '') || '/'
     if (current === target) return NextResponse.next()
     return NextResponse.redirect(new URL(fixed + (search || ''), req.url), 308)
   }
@@ -85,25 +85,33 @@ export async function middleware(req: NextRequest) {
   try {
     const q = encodeURIComponent("*[_type=='post' && slug.current==$s][0]{'slug':slug.current,'category':category}")
     const url = `https://${projectId}.apicdn.sanity.io/v${apiVersion}/data/query/${dataset}?query=${q}&$s=%22${encodeURIComponent(slug)}%22`
-    const res = await fetch(url, { next: { revalidate: 60 } })
+    const res = await fetch(url, { next: { revalidate: 3600 } })
     if (res.ok) {
       const data = await res.json() as any
       const hit = data?.result
       if (hit?.slug && hit?.category) {
         const dest = `/${hit.category}/${hit.slug}${search || ''}`
-        const current = pathname.replace(/\/+$/,'')
-        const target = dest.replace(/\/+$/,'')
+        const current = pathname.replace(/\/+$/, '')
+        const target = dest.replace(/\/+$/, '')
         if (current !== target) {
           return NextResponse.redirect(new URL(dest, req.url), 308)
         }
       }
     }
-  } catch {}
+  } catch { }
 
   return NextResponse.next()
 }
 
 // 可能な限り広く受け取りつつ、静的系は middleware 内で判定
 export const config = {
-  matcher: ['/((?!_next|favicon.ico).*)']
+  /*
+   * Match all request paths except for the ones starting with:
+   * - api (API routes)
+   * - _next/static (static files)
+   * - _next/image (image optimization files)
+   * - favicon.ico, sitemap.xml, robots.txt, ads.txt (metadata files)
+   * - images, icons, static (public assets)
+   */
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|ads.txt|images|icons|static).*)']
 }
