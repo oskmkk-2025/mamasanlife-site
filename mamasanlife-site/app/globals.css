@@ -703,3 +703,34 @@ input::placeholder { color: #9CA3AF; }
 .affiliate-btn--audiobook:active {
   box-shadow: 0 2px 0 #6E3FA8, 0 4px 12px rgba(179,136,232,0.3), inset 0 -1px 3px rgba(0,0,0,0.1);
 }
+
+
+/* ============================================
+   画像版CTAボタン（AI生成PNGを表示）
+   public/cta/{type}.png を next/image で表示する用
+   ============================================ */
+.cta-image-btn {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 100px;
+  overflow: hidden;
+  transition: transform 0.18s cubic-bezier(.34,1.56,.64,1), filter 0.18s ease;
+  filter: drop-shadow(0 6px 0 rgba(0,0,0,0.12)) drop-shadow(0 10px 20px rgba(0,0,0,0.10));
+}
+
+.cta-image-btn img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cta-candy-link:hover .cta-image-btn {
+  transform: translateY(-4px) scale(1.015);
+  filter: drop-shadow(0 10px 0 rgba(0,0,0,0.12)) drop-shadow(0 14px 24px rgba(0,0,0,0.12)) brightness(1.04);
+}
+
+.cta-candy-link:active .cta-image-btn {
+  transform: translateY(2px) scale(0.99);
+  filter: drop-shadow(0 3px 0 rgba(0,0,0,0.12)) drop-shadow(0 5px 12px rgba(0,0,0,0.08));
+}
