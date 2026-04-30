@@ -1,16 +1,19 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
-// ===== 型定義 =====
-export type CTAButtonType = 'amazon' | 'rakuten' | 'yahoo' | 'kurashi' | 'study'
+// ===== サービス種別 =====
+export type CTAButtonType = 'amazon' | 'rakuten' | 'yahoo' | 'kurashi' | 'study' | 'audiobook'
 
 export interface CTAButtonProps {
   type: CTAButtonType
   label?: string
   url: string
   className?: string
+  /** PNG画像版（public/cta/{type}.png）を優先使用する場合 true */
+  useImage?: boolean
 }
 
-// ===== サービス設定 =====
+// ===== サービス毎のスタイル定義（CSSフォールバック用） =====
 const SERVICE_CONFIG: Record<CTAButtonType, {
   label: string
   icon: string
@@ -71,36 +74,64 @@ const SERVICE_CONFIG: Record<CTAButtonType, {
     borderColor: '#1A4CC0',
     glowColor: 'rgba(45,102,232,0.55)',
   },
+  audiobook: {
+    label: 'audiobookで聴く',
+    icon: '🎧',
+    lightColor: '#C9A6F5',
+    baseColor: '#A87CE2',
+    darkColor: '#8A55C9',
+    shadowColor: '#5E2FA0',
+    borderColor: '#8A55C9',
+    glowColor: 'rgba(168,124,226,0.55)',
+  },
 }
 
-// ===== コンポーネント本体 =====
-export default function CTAButton({ type, label, url, className = '' }: CTAButtonProps) {
+// ===== ボタン本体 =====
+export default function CTAButton({ type, label, url, className = '', useImage = false }: CTAButtonProps) {
   const cfg = SERVICE_CONFIG[type]
   const displayLabel = label ?? cfg.label
   const isExternal = url.startsWith('http')
 
+  // 画像モード：public/cta/{type}.png を表示（生成画像で完全な見た目を再現）
+  const imageMode = (
+    <span className={`cta-image-btn${className ? ' ' + className : ''}`}>
+      <Image
+        src={`/cta/${type}.png`}
+        alt={displayLabel}
+        width={1080}
+        height={126}
+        priority={false}
+        sizes="(max-width: 480px) 92vw, 360px"
+        style={{ width: '100%', height: 'auto', display: 'block' }}
+      />
+    </span>
+  )
+
+  // CSSモード（フォールバック）
   const btnStyle: React.CSSProperties = {
     background: `linear-gradient(175deg, ${cfg.lightColor} 0%, ${cfg.baseColor} 40%, ${cfg.darkColor} 100%)`,
     border: `2.5px solid ${cfg.borderColor}`,
     boxShadow: `0 6px 0 ${cfg.shadowColor}, 0 10px 28px ${cfg.glowColor}, inset 0 -3px 8px rgba(0,0,0,0.12)`,
   }
 
-  const inner = (
+  const cssMode = (
     <span className={`cta-candy-btn${className ? ' ' + className : ''}`} style={btnStyle}>
       {/* 艶ハイライト */}
       <span className="cta-candy-btn__highlight" aria-hidden="true" />
-      {/* 左アイコンエリア */}
+      {/* 左アイコン */}
       <span className="cta-candy-btn__icon-wrap" aria-hidden="true">
         <span className="cta-candy-btn__icon">{cfg.icon}</span>
       </span>
       {/* 点線セパレーター */}
       <span className="cta-candy-btn__sep" aria-hidden="true" />
-      {/* テキスト */}
+      {/* ラベル */}
       <span className="cta-candy-btn__label">{displayLabel}</span>
       {/* 右矢印 */}
       <span className="cta-candy-btn__arrow" aria-hidden="true">&#8250;</span>
     </span>
   )
+
+  const inner = useImage ? imageMode : cssMode
 
   if (isExternal) {
     return (
@@ -109,7 +140,7 @@ export default function CTAButton({ type, label, url, className = '' }: CTAButto
         target="_blank"
         rel="noopener noreferrer sponsored"
         className="cta-candy-link"
-        aria-label={`${displayLabel}（外部サイトへ）`}
+        aria-label={`${displayLabel}（外部リンク）`}
       >
         {inner}
       </a>
@@ -123,7 +154,7 @@ export default function CTAButton({ type, label, url, className = '' }: CTAButto
   )
 }
 
-// ===== 複数ボタンをまとめるラッパー =====
+// ===== 複数ボタンを横並びでまとめるラッパー =====
 export function CTAButtonGroup({ children }: { children: React.ReactNode }) {
   return (
     <div className="cta-candy-group" role="group" aria-label="購入リンク">
