@@ -308,12 +308,12 @@ input::placeholder { color: #9CA3AF; }
 /* キャンディ内部パーツ（JSX から生成） */
 .cta-candy-btn__highlight {
   position: absolute;
-  top: 5px;
-  left: 12px;
-  right: 12px;
-  height: 36%;
+  top: 4px;
+  left: 14px;
+  right: 14px;
+  height: 45%;
   border-radius: 100px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.68) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0) 100%);
   pointer-events: none;
   z-index: 2;
 }
@@ -321,22 +321,29 @@ input::placeholder { color: #9CA3AF; }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 100%;
+  width: 32px;
+  height: 32px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1), inset 0 -1px 2px rgba(0,0,0,0.06);
   flex-shrink: 0;
   z-index: 1;
 }
 .cta-candy-btn__icon {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 900;
-  color: #fff;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  color: var(--candy-icon-color, #DFA060);
   line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cta-candy-btn__sep {
   width: 0;
-  height: 60%;
-  border-left: 2px dashed rgba(255,255,255,0.6);
+  height: 55%;
+  margin: 0 8px 0 4px;
+  border-left: 2px dotted rgba(255,255,255,0.85);
   flex-shrink: 0;
   z-index: 1;
 }
@@ -356,25 +363,26 @@ input::placeholder { color: #9CA3AF; }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.32);
-  font-size: 20px;
+  background: #fff;
+  font-size: 15px;
   font-weight: 700;
-  color: #fff;
-  margin-right: 7px;
+  color: var(--candy-icon-color, #DFA060);
+  margin-right: 6px;
   flex-shrink: 0;
   z-index: 1;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(255,255,255,0.35);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1), inset 0 -1px 2px rgba(0,0,0,0.06);
   line-height: 1;
 }
 
 /* Amazon（くすみオレンジ） */
 .affiliate-btn--amazon {
-  background: linear-gradient(175deg, #FFE0B8 0%, #F5C896 40%, #DFA060 100%);
-  border-color: #D4905A;
-  box-shadow: 0 6px 0 #B8712F, 0 10px 28px rgba(245,200,150,0.5), inset 0 -3px 8px rgba(0,0,0,0.12);
+  background: linear-gradient(180deg, #F5B770 0%, #EFA050 100%);
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 6px 0 #C77A2A, 0 10px 28px rgba(239,160,80,0.45), inset 0 -3px 8px rgba(0,0,0,0.10);
+  --candy-icon-color: #E08A30;
 }
 .affiliate-btn--amazon:hover {
   box-shadow: 0 10px 0 #B8712F, 0 16px 36px rgba(245,200,150,0.55), inset 0 -3px 8px rgba(0,0,0,0.12);
@@ -385,9 +393,10 @@ input::placeholder { color: #9CA3AF; }
 
 /* 楽天（くすみローズ） */
 .affiliate-btn--rakuten {
-  background: linear-gradient(175deg, #EFC0BC 0%, #D4908A 40%, #BA6860 100%);
-  border-color: #B05A55;
-  box-shadow: 0 6px 0 #8C3E3A, 0 10px 28px rgba(212,144,138,0.5), inset 0 -3px 8px rgba(0,0,0,0.12);
+  background: linear-gradient(180deg, #E78088 0%, #D85A66 100%);
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 6px 0 #A03540, 0 10px 28px rgba(216,90,102,0.45), inset 0 -3px 8px rgba(0,0,0,0.10);
+  --candy-icon-color: #D04050;
 }
 .affiliate-btn--rakuten:hover {
   box-shadow: 0 10px 0 #8C3E3A, 0 16px 36px rgba(212,144,138,0.55), inset 0 -3px 8px rgba(0,0,0,0.12);
@@ -398,9 +407,10 @@ input::placeholder { color: #9CA3AF; }
 
 /* Yahoo!（くすみスカイブルー） */
 .affiliate-btn--yahoo {
-  background: linear-gradient(175deg, #C8DCEE 0%, #90AECE 40%, #6688AE 100%);
-  border-color: #5578A0;
-  box-shadow: 0 6px 0 #3A5E82, 0 10px 28px rgba(144,174,206,0.5), inset 0 -3px 8px rgba(0,0,0,0.12);
+  background: linear-gradient(180deg, #7FA8D8 0%, #5A88BE 100%);
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 6px 0 #2E5684, 0 10px 28px rgba(90,136,190,0.45), inset 0 -3px 8px rgba(0,0,0,0.10);
+  --candy-icon-color: #3A6FA8;
 }
 .affiliate-btn--yahoo:hover {
   box-shadow: 0 10px 0 #3A5E82, 0 16px 36px rgba(144,174,206,0.55), inset 0 -3px 8px rgba(0,0,0,0.12);
@@ -411,9 +421,10 @@ input::placeholder { color: #9CA3AF; }
 
 /* くらしのマーケット（オレンジ） */
 .affiliate-btn--curama {
-  background: linear-gradient(175deg, #FFAA55 0%, #FF8B1A 40%, #D96A00 100%);
-  border-color: #CC6E00;
-  box-shadow: 0 6px 0 #A84E00, 0 10px 28px rgba(255,139,26,0.5), inset 0 -3px 8px rgba(0,0,0,0.12);
+  background: linear-gradient(180deg, #FF9A40 0%, #F47A10 100%);
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 6px 0 #A84E00, 0 10px 28px rgba(244,122,16,0.45), inset 0 -3px 8px rgba(0,0,0,0.10);
+  --candy-icon-color: #E66800;
 }
 .affiliate-btn--curama:hover {
   box-shadow: 0 10px 0 #A84E00, 0 16px 36px rgba(255,139,26,0.55), inset 0 -3px 8px rgba(0,0,0,0.12);
@@ -427,10 +438,12 @@ input::placeholder { color: #9CA3AF; }
 .affiliate-btn--accesstrade,
 .affiliate-btn--valuecommerce,
 .affiliate-btn--a8,
-.affiliate-btn--others {
-  background: linear-gradient(175deg, #4E8285 0%, #3D6B6E 40%, #2D5558 100%);
-  border-color: #2D5558;
-  box-shadow: 0 6px 0 #1E3C3E, 0 10px 28px rgba(61,107,110,0.5), inset 0 -3px 8px rgba(0,0,0,0.12);
+.affiliate-btn--others,
+.affiliate-btn--study {
+  background: linear-gradient(180deg, #5B82E2 0%, #3A60C8 100%);
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 6px 0 #2540A0, 0 10px 28px rgba(58,96,200,0.45), inset 0 -3px 8px rgba(0,0,0,0.10);
+  --candy-icon-color: #2A4FB0;
 }
 .affiliate-btn--moshimo:hover,
 .affiliate-btn--accesstrade:hover,
