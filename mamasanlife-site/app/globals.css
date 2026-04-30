@@ -279,8 +279,8 @@ input::placeholder { color: #9CA3AF; }
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 520px;
-  height: 62px;
+  max-width: 360px;
+  height: 42px;
   border-radius: 100px;
   position: relative;
   overflow: hidden;
@@ -461,7 +461,7 @@ input::placeholder { color: #9CA3AF; }
 .affiliate-inline .affiliate-btn,
 .affiliate-inline a.affiliate-btn {
   width: 100%;
-  max-width: 520px;
+  max-width: 360px;
 }
 
 /* moshimoカードのボタン群 */
@@ -474,16 +474,16 @@ input::placeholder { color: #9CA3AF; }
 }
 .moshimo-card__buttons .affiliate-btn {
   width: 100%;
-  max-width: 520px;
-  height: 62px;
-  font-size: 17px;
+  max-width: 360px;
+  height: 42px;
+  font-size: 13px;
   flex: none;
 }
 
 /* モバイル対応 */
 @media (max-width: 480px) {
   .affiliate-btn {
-    height: 56px;
+    height: 38px;
     max-width: 100%;
   }
   .cta-candy-btn__icon-wrap {
