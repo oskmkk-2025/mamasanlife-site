@@ -1,5 +1,37 @@
 # CTAボタン画像生成プロンプト集
 
+---
+
+## 🖼️ 必読：参考画像（このリポジトリに保存済み）
+
+画像生成AIに送る前に、必ず以下のいずれかの画像をアップロードしてください。
+
+### 5種ボタンの参考画像（amazon / rakuten / yahoo / kurashi / study）
+- **本番URL（推奨）**: https://mamasanmoney-bu.com/cta/5buttons-reference.png
+- **GitHub raw URL**: https://raw.githubusercontent.com/oskmkk-2025/mamasanlife-site/main/mamasanlife-site/public/cta/5buttons-reference.png
+- **GitHub プレビュー**: ./5buttons-reference.png
+
+### audiobookボタンの参考画像
+- **本番URL（推奨）**: https://mamasanmoney-bu.com/cta/audiobook-reference.png
+- **GitHub raw URL**: https://raw.githubusercontent.com/oskmkk-2025/mamasanlife-site/main/mamasanlife-site/public/cta/audiobook-reference.png
+- **GitHub プレビュー**: ./audiobook-reference.png
+
+### AIへの渡し方
+
+**Nano Banana（Google AI Studio）の場合:**
+1. https://aistudio.google.com/ を開き、モデルを「Gemini 2.5 Flash Image」に設定
+2. プロンプト入力欄の下にある「画像を追加」アイコンをクリック
+3. 上記URLをコピーして貼り付け、または画像を一度ダウンロードしてから添付
+4. 続けて下記のプロンプト（amazon / rakuten / yahoo / kurashi / study / audiobook）を貼り付けて送信
+
+**ChatGPT GPT-4o image の場合:**
+1. ChatGPT を開き、画像生成モードに切り替え
+2. メッセージ欄のクリップマークから上記URLの画像を添付
+3. 「この参考画像と完全に同じスタイル・形状・サイズで、色とラベルだけ次のように変えて作って」と書く
+4. 6種を1セッションで連続生成すると一貫性が保てる
+
+
+
 このファイルは、Mamasan Life ブログのCTAボタンを **Nano Banana（Google AI Studio / Gemini）** または **ChatGPT GPT-4o image** で生成するための統一プロンプトです。
 
 すべてのボタンが**完全に同一のスタイル・同一の画角・同一のサイズ・透明背景**になるよう設計されています。
