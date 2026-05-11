@@ -1,4 +1,6 @@
 import post from './post'
+import product from './product'
+import productEmbed from './productEmbed'
 import settings from './settings'
 import assistantBlock from './assistantBlock'
 import {
@@ -19,6 +21,8 @@ import {
 
 export const schemaTypes = [
   post,
+  product,
+  productEmbed,
   settings,
   assistantBlock,
   speechBlock,

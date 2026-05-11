@@ -168,6 +168,7 @@ export default defineType({
         { type: 'buttonLink' },
         { type: 'affiliateButton' },
         { type: 'moshimoEasyLink' },
+        { type: 'productEmbed' },
         { type: 'htmlEmbed' },
         { type: 'faqBlock' },
         { type: 'summaryBlock' },
