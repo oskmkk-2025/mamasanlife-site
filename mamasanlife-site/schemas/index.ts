@@ -3,6 +3,7 @@ import product from './product'
 import productEmbed from './productEmbed'
 import settings from './settings'
 import assistantBlock from './assistantBlock'
+import imageBlock from './imageBlock'
 import {
   speechBlock,
   tableBlock,
@@ -25,6 +26,7 @@ export const schemaTypes = [
   productEmbed,
   settings,
   assistantBlock,
+  imageBlock,
   speechBlock,
   tableBlock,
   linkImageBlock,

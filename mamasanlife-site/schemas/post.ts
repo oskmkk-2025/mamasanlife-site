@@ -104,6 +104,13 @@ export default defineType({
       group: 'content'
     }),
     defineField({
+      name: 'heroImageUrl',
+      title: 'メイン画像URL（外部・移行用）',
+      type: 'url',
+      description: 'WordPress旧サイトから移行した画像URL。手動でメイン画像をアップロードしない場合のフォールバックとして使われます。',
+      group: 'content'
+    }),
+    defineField({
       name: 'excerpt',
       title: 'リード文（導入）',
       type: 'text',
@@ -160,6 +167,7 @@ export default defineType({
             }
           ]
         },
+        { type: 'imageBlock' },
         { type: 'speechBlock' },
         { type: 'tableBlock' },
         { type: 'linkImageBlock' },
