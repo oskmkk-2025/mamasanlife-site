@@ -8,6 +8,11 @@ const apiVersion = process.env.SANITY_API_VERSION || '2024-03-14'
 
 // 手動の固定ページマップ（必要に応じて追加）
 const PAGE_MAP: Record<string, string> = {
+  // 旧WordPressのカテゴリslug → 新カテゴリ（vercel.jsonが /category/xxx → /xxx に転送してくるため）
+  'household-management': '/money',
+  'health-learning': '/health',
+  'entertainment': '/articles',
+  'book-introduction': '/articles',
   'profile': '/about',
   'about': '/about',
   'privacy-policy': '/policy',
