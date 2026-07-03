@@ -60,8 +60,17 @@ function isBypassedPath(pathname: string) {
   return false
 }
 
+// 運営者の意思で完全削除した記事（バックアップからの復元も禁止）。
+// 410 Gone を返して「意図的な削除」をGoogleに伝え、検索結果から早く消す。
+const GONE_SLUGS = ['silver-tutor', 'silver-tutors-experience1']
+
 export async function middleware(req: NextRequest) {
   const { pathname, search } = req.nextUrl
+
+  const cleanPath = pathname.replace(/\/+$/, '')
+  if (GONE_SLUGS.some(s => cleanPath === `/${s}` || cleanPath.endsWith(`/${s}`))) {
+    return new NextResponse('Gone', { status: 410 })
+  }
 
   // 旧WordPressのアーカイブ系URL（カテゴリ・タグ・ページ送り・日付）は404にせず一覧へ恒久リダイレクト
   if (
