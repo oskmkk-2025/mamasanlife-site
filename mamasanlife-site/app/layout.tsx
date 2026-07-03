@@ -30,10 +30,10 @@ export const metadata = {
   robots: process.env.NEXT_PUBLIC_NOINDEX === 'true' ? { index: false, follow: false } : { index: true, follow: true },
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION
-  },
-  alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://mamasanmoney-bu.com'
   }
+  // 注意: ここ（全ページ共通のlayout）に alternates.canonical を書くと、
+  // 個別にcanonicalを持たない全ページが「トップページの複製」と宣言してしまい
+  // Googleのインデックスから除外される。canonicalは各ページ側で設定すること。
 }
 
 const displayJP = Zen_Kaku_Gothic_New({

@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'お問い合わせ',
+  description: 'Mamasan Lifeへのご意見・ご要望・お仕事のご相談はこちらから。',
+  alternates: { canonical: '/contact' },
+}
+
 export default function ContactPage(){
   return (
     <main className="container-responsive py-10 max-w-3xl">

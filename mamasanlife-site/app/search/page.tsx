@@ -7,6 +7,12 @@ import { SectionHeader } from '@/components/SectionHeader'
 
 export const revalidate = 3600
 
+// 検索結果ページはURLの組み合わせが無限に生まれるため、インデックス対象にしない
+export const metadata = {
+  title: '検索結果',
+  robots: { index: false, follow: true },
+}
+
 export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q?: string, tag?: string, sort?: string, days?: string }> }) {
   const sp = await searchParams
   const q = (sp?.q || '').trim()

@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Privacy Policy',
-  description: 'プライバシーポリシー'
+  description: 'プライバシーポリシー',
+  alternates: { canonical: '/policy' }
 }
 
 const sections = [

@@ -10,6 +10,10 @@ import { LineStampPromo } from '@/components/LineStampPromo'
 
 export const revalidate = 3600
 
+export const metadata = {
+  alternates: { canonical: '/' }
+}
+
 export default async function HomePage() {
   // 取得失敗時に空配列へフォールバック（Internal Server Error を避ける）
   let perCat: { slug: string; title: string; posts: any[] }[] = []

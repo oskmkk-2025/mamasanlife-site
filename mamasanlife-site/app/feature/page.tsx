@@ -4,7 +4,7 @@ import { PostList } from '@/components/PostList'
 
 export const revalidate = 3600
 
-export const metadata = { title: '特集', description: '特集記事の一覧' }
+export const metadata = { title: '特集', description: '特集記事の一覧', alternates: { canonical: '/feature' } }
 
 export default async function FeaturePage() {
   const posts = await sanityClient.fetch(latestByCategoryQuery, { category: 'feature', limit: 12 })

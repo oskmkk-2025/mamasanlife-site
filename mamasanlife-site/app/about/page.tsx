@@ -1,5 +1,11 @@
 import Image from 'next/image'
 
+export const metadata = {
+  title: '運営者情報・プロフィール',
+  description: 'FP2級を持つ2児のワーママ「ひーちママ」のプロフィール。家計管理・固定費削減・子育てと仕事の両立について発信しています。',
+  alternates: { canonical: '/about' },
+}
+
 const missionItems = [
   '家計管理や保険の見直しなど「お金の整え方」を等身大の目線で共有すること',
   '子育て・家事・働き方の両立で得た体験を、同じ境遇のママに還元すること',

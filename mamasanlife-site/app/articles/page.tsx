@@ -9,6 +9,7 @@ export const revalidate = 3600
 export const metadata = {
   title: '記事一覧',
   description: 'カテゴリ別にボタンで絞り込める記事一覧ページ',
+  alternates: { canonical: '/articles' },
 }
 
 export default async function ArticlesPage() {
