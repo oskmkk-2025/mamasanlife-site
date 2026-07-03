@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ImgWithPlaceholder } from '@/components/ImgWithPlaceholder'
 import { HtmlEmbed } from '@/components/HtmlEmbed'
+import AffiliateCtaButton, { parseAffiliateCta } from '@/components/AffiliateCtaButton'
 import { notFound } from 'next/navigation'
 import { sanityClient } from '@/lib/sanity.client'
 import groq from 'groq'
@@ -665,6 +666,9 @@ const ptComponents = {
     },
     affiliateButton: ({ value }: any) => {
       if (!value?.html) return null
+      // アフィリエイトボタン形式ならキャンディ型デザインに統一して表示
+      const cta = parseAffiliateCta(String(value.html))
+      if (cta) return <AffiliateCtaButton {...cta} />
       return (
         <div className="my-5 affiliate-inline" dangerouslySetInnerHTML={{ __html: value.html }} />
       )
@@ -808,7 +812,13 @@ const ptComponents = {
       )
     }
     ,
-    htmlEmbed: ({ value }: any) => <HtmlEmbed html={String(value?.html || '')} />,
+    htmlEmbed: ({ value }: any) => {
+      const html = String(value?.html || '')
+      // アフィリエイトボタン形式ならキャンディ型デザインに統一して表示
+      const cta = parseAffiliateCta(html)
+      if (cta) return <AffiliateCtaButton {...cta} />
+      return <HtmlEmbed html={html} />
+    },
     faqBlock: ({ value }: any) => <FaqBlock items={value.items} />,
     summaryBlock: ({ value }: any) => <SummaryBlock title={value.title} items={value.items} />,
     mangaBlock: ({ value }: any) => <MangaBlock images={value.images} />,

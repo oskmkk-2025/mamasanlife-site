@@ -362,7 +362,9 @@ input::placeholder { color: #9CA3AF; }
   text-shadow: 0 1px 3px rgba(0,0,0,0.2);
   z-index: 1;
   padding: 0 8px;
-  white-space: nowrap;
+  /* 長いラベルは折り返して全文表示（nowrapだとはみ出して読めない） */
+  white-space: normal;
+  line-height: 1.4;
 }
 .cta-candy-btn__arrow {
   display: flex;
@@ -555,12 +557,14 @@ input::placeholder { color: #9CA3AF; }
   filter: brightness(0.97);
 }
 
-/* ボタン本体 */
+/* ボタン本体（長いラベルは2行に折り返して全文表示する） */
 .cta-candy-btn {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 46px;
+  height: auto;
+  min-height: 46px;
+  padding: 7px 0;
   border-radius: 100px;
   position: relative;
   overflow: hidden;
@@ -657,7 +661,8 @@ input::placeholder { color: #9CA3AF; }
 /* スマホ対応 */
 @media (max-width: 480px) {
   .cta-candy-btn {
-    height: 40px;
+    height: auto;
+    min-height: 42px;
   }
   .cta-candy-btn__icon-wrap {
     width: 38px;
@@ -666,7 +671,7 @@ input::placeholder { color: #9CA3AF; }
     font-size: 14px;
   }
   .cta-candy-btn__label {
-    font-size: 11px;
+    font-size: 12px;
   }
   .cta-candy-btn__arrow {
     width: 22px;
