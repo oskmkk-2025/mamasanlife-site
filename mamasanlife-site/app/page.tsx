@@ -98,7 +98,7 @@ export default async function HomePage() {
     <li className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
       <span className="text-xs text-[var(--c-accent)] font-bold">No.2 ／ お金・家計管理</span>
       <a href="/money/start-nisa-from-2025" className="block mt-2 font-bold text-gray-900 hover:opacity-70">
-        2025年NISA｜FP2級ママが教える10分で始める確実な方法
+        NISAの始め方｜FP2級ママが教える10分3ステップ【2026年版】
       </a>
       <p className="text-sm text-gray-600 mt-2">迷っている主婦のための最短スタート手順。</p>
     </li>
