@@ -416,7 +416,8 @@ export default async function PostPage(
           })}
         </Script>
         <header className="mb-6">
-          <h1 className="text-3xl font-bold title-display truncate">{post.title}</h1>
+          {/* truncateはスマホでタイトルが読み切れなくなるため使わない（折り返し表示） */}
+          <h1 className="text-2xl sm:text-3xl font-bold title-display break-words leading-snug">{post.title}</h1>
           <div className="mt-2 text-sm text-gray-500 flex flex-wrap gap-3">
             {post.publishedAt && <time dateTime={post.publishedAt}>公開: {new Date(post.publishedAt).toLocaleDateString('ja-JP')}</time>}
             {post.updatedAt && <time dateTime={post.updatedAt}>更新: {new Date(post.updatedAt).toLocaleDateString('ja-JP')}</time>}
@@ -461,7 +462,7 @@ export default async function PostPage(
 
         <div className="grid md:grid-cols-[1fr_320px] gap-10">
           <div
-            className="prose-content text-[17px] md:text-[18px] leading-[1.9] tracking-[.005em]
+            className="prose-content min-w-0 text-[17px] md:text-[18px] leading-[1.9] tracking-[.005em]
                        [word-break:break-word] [overflow-wrap:anywhere]
                        [&>p]:my-4 [&>ul]:pl-6 [&>ul]:list-disc [&>ol]:pl-6 [&>ol]:list-decimal [&>li]:my-1
                        [&>blockquote]:border-l-4 [&>blockquote]:pl-4 [&>blockquote]:italic
@@ -792,7 +793,8 @@ const ptComponents = {
                     style={{
                       height: (hasAppreach ? '44px' : (provider === 'blogmura' || provider === 'with2') ? '31px' : 'auto'),
                       width: 'auto',
-                      maxWidth: 'none',
+                      // 大型バナー（provider: other）はスマホで画面からはみ出すため画面幅に収める
+                      maxWidth: provider === 'other' ? '100%' : 'none',
                       display: 'block'
                     }}
                   />
