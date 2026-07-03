@@ -58,6 +58,19 @@ function isBypassedPath(pathname: string) {
 export async function middleware(req: NextRequest) {
   const { pathname, search } = req.nextUrl
 
+  // 旧WordPressのアーカイブ系URL（カテゴリ・タグ・ページ送り・日付）は404にせず一覧へ恒久リダイレクト
+  if (
+    pathname.startsWith('/category/') ||
+    pathname.startsWith('/tag/') ||
+    pathname.startsWith('/tags/') ||
+    pathname.startsWith('/topics/')
+  ) {
+    return NextResponse.redirect(new URL('/articles', req.url), 308)
+  }
+  if (/^\/page\/\d+/.test(pathname) || /^\/\d{4}\/\d{2}(\/|$)/.test(pathname)) {
+    return NextResponse.redirect(new URL('/', req.url), 308)
+  }
+
   if (isBypassedPath(pathname)) return NextResponse.next()
 
   // 単一セグメントのみ対象: "/xxxx" or "/xxxx/"
