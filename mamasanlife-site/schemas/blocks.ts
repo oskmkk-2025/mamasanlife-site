@@ -290,6 +290,13 @@ export const mangaBlock = defineType({
               title: '画像の説明（alt）',
               type: 'string',
               validation: R => R.required()
+            }),
+            defineField({
+              name: 'caption',
+              title: 'セリフ・ナレーション（コマの下に表示）',
+              type: 'text',
+              rows: 2,
+              description: '画像内に文字を入れずここに書く（AI生成画像の文字崩れ回避＆検索エンジンにも読める）'
             })
           ]
         })
