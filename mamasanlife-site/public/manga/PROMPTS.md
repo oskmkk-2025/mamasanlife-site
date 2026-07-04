@@ -1,90 +1,45 @@
-# 導入マンガ 画像生成プロンプト集
+# 導入マンガ 画像生成プロンプト集（Gemini運用版）
 
-キャラ設定は CHARACTERS.md を正とする。生成手順はCTAボタン（/public/cta/PROMPTS.md）と同じ:
-**Nano Banana（Google AI Studio / Gemini画像）** または **ChatGPT画像生成** を使用。
+キャラ設定は CHARACTERS.md を正とする。
+**第1話でこの方式が確立済み**（2026-07-04、Gemini/Nano Bananaで生成成功）。
 
-## 🖼️ 手順（毎回共通）
+## 🎬 毎回の流れ（あなたの作業は2ステップだけ）
 
-1. 参考画像としてLINEスタンプを添付する（画風の統一のため必ず）:
-   - https://mamasanmoney-bu.com/images/stamps/line-stamp-daily-arigatou.png
-   - https://mamasanmoney-bu.com/images/stamps/line-stamp-daily-ganbari.png
-   - https://mamasanmoney-bu.com/images/stamps/line-stamp-daily-gomen.png
-2. まず下の【キャラクター基準シート】を1枚生成し、以後のコマ生成では
-   その基準シートも一緒に添付する（家族の顔・服のブレ防止）
-3. 各コマのプロンプトを貼って**1セッション内で連続生成**（一貫性維持）
-4. できたPNGを `mamasanlife-site/public/manga/ep1/panel-1.png` ～ `panel-4.png` として保存
-5. あとはAIに「第1話を記事に挿入して」と頼めば `scripts/blog/add-manga.mjs` で挿入される
+1. AIに「第◯話のプロンプトちょうだい」と言う → 下のテンプレにシーンを埋めた完成プロンプトが出てくる
+2. それをGeminiにコピペ（**前話の画像を添付すると絵柄がさらに安定**）→ できた画像を右クリック保存でダウンロードフォルダへ → AIに「差し替えて」
 
-## 【キャラクター基準シート】（最初に1回だけ生成）
+分割・セリフつけ・記事への挿入・公開はすべてAIがやります。
+
+## 📋 プロンプトテンプレート（コピペ用）
 
 ```
-Character reference sheet, same art style as the attached LINE sticker images
-(kawaii Japanese sticker style, thick clean outlines, soft pastel colors, flat
-shading, plain white background). A Japanese family of four and two cats,
-standing in a row, full body, front view, evenly spaced:
-1) DAD: gentle salaryman in his 40s, short dark hair, relaxed weekend clothes
-   (polo shirt), slightly sleepy but kind face
-2) MOM "Hiichi-mama": cheerful woman in her 40s, shoulder-length dark bob hair,
-   outdoor-casual clothes (light hiking vest), bright smile, energetic
-3) DAUGHTER "Hiichi": high-school girl, long dark hair with a small ribbon,
-   school cardigan, sweet and stylish
-4) SON "Maruo": junior-high boy, short spiky hair, sporty T-shirt, holding a
-   table tennis paddle, playful grin
-5) CAT 1: brown tabby (kijitora) female cat, grumpy unimpressed face
-6) CAT 2: orange tabby (chatora) male cat, clever confident face
-No text, no letters, no watermark. Square 1:1, 1080x1080.
+かわいい日本の漫画風の縦読み4コマを、縦長の1枚画像で描いて。
+画風: ネイビー（紺色）単色の線画＋淡い青グレーの陰影、白背景、太めのきれいな輪郭線。各コマは細い黒枠で囲み、コマとコマの間に白い余白を入れる。
+セリフ・文字・擬音は一切入れない。
+登場人物（全員に小さなねこ耳がある）:
+・40代の優しいメガネのパパ（ポロシャツ）
+・ショートボブで明るい40代のママ（アウトドアベスト）
+・ロングヘアでセーラー服の女子高生の姉
+・短髪でスポーティな中学生の弟（卓球ラケットを持っていることが多い）
+・キジトラの不機嫌そうな猫
+・チャトラの賢そうな猫
+1コマ目: 〔シーン1をここに〕
+2コマ目: 〔シーン2をここに〕
+3コマ目: 〔シーン3をここに〕
+4コマ目: 〔シーン4をここに〕
 ```
 
----
+※絵柄を第1話と揃えたいときは、`public/manga/ep1-gemini/strip.png`（またはブログの第1話）を添付して「この画像と同じ画風・同じキャラで」と一言添える。
 
-## 第1話「7月の電気代、どうする？」（掲載先: /money/electricity-gas-subsidy-2026 の導入）
+## ✅ 第1話「7月の電気代、どうする？」（公開済み）
 
-セリフは画像に入れない。挿入時に下記キャプションが各コマの下に表示される。
+- 生成画像: ep1-gemini/strip.png（768×1376）→ panel-1〜4.pngに自動分割して掲載
+- シーン: ①パパが検針票にショック（猫2匹がのびてる・扇風機） ②ママがスマホ片手に解説ポーズ ③姉と弟が目を輝かせる ④ママが表を見せて家族が覗き込む（チャトラうなずき・キジトラそっぽ）
+- セリフ（コマ下キャプション）: ep1-gemini/meta.json 参照
 
-### コマ1
-```
-Same art style and same characters as the attached reference sheet.
-Panel 1 of a family comic: summer living room, DAD frozen in shock holding an
-electricity bill paper, sweating, fan blowing nearby. The two cats are
-sprawled lazily on the floor from the heat. Kawaii LINE sticker style, thick
-outlines, pastel colors, simple room background. Speech bubbles EMPTY or none.
-No text anywhere. Square 1:1, 1080x1080.
-```
-キャプション: パパ「でっ、電気代が…！エアコン、我慢する…？」
+## 🛠 AI向け作業メモ（差し替え・新規挿入の手順）
 
-### コマ2
-```
-Same art style and same characters as the attached reference sheet.
-Panel 2: MOM smiling confidently, holding a smartphone, one finger raised as
-if explaining a smart tip. Bright and reassuring mood, sparkle effects.
-No text anywhere. Square 1:1, 1080x1080.
-```
-キャプション: ひーちママ「大丈夫。7月の使用分から、国の値引きが“自動で”始まってるよ」
-
-### コマ3
-```
-Same art style and same characters as the attached reference sheet.
-Panel 3: DAUGHTER (high-school girl) and SON (junior-high boy with table
-tennis paddle) leaning forward with curious sparkling eyes, excited.
-No text anywhere. Square 1:1, 1080x1080.
-```
-キャプション: ひーち「うちはいくら安くなるの？」／まるお「卓球のあとの扇風機は死守で！」
-
-### コマ4
-```
-Same art style and same characters as the attached reference sheet.
-Panel 4: MOM proudly showing a simple chart/table on paper, family gathering
-around to look. The orange tabby cat nods wisely like it understands, the
-brown tabby cat looks away unimpressed. Warm happy mood.
-No text anywhere (the chart can be abstract lines, no letters). Square 1:1.
-```
-キャプション: ひーちママ「使用量別の早見表にまとめたよ。答えはこのすぐ下♪」
-
----
-
-## 次話のつくり方（AI向けメモ）
-
-1. CHARACTERS.md を読む → 対象記事のテーマを家族の日常会話に変換（あるある→気づき→引き）
-2. 4コマの台本（構図＋キャプション）をこのファイルに追記
-3. 各コマの生成プロンプトは上の形式を踏襲（基準シート添付・No text・1:1）
-4. 画像が public/manga/epN/ に置かれたら add-manga.mjs で挿入
+1. ダウンロードフォルダの `Gemini_Generated_Image_*.png` を `public/manga/epN-gemini/strip.png` にコピー
+2. ガター（白帯）検出でPIL分割 → panel-1〜4.png（scratchpadの分割スクリプト方式）
+3. meta.json（alts/captions）を用意 → 既存mangaBlockをunset → `node scripts/blog/add-manga.mjs <slug> --dir public/manga/epN-gemini`
+4. 空コミットpushでISR即時反映 → 本番確認
