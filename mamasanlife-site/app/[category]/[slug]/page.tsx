@@ -356,7 +356,9 @@ export default async function PostPage(
     <div>
       <ViewTracker slug={post.slug} />
       <Breadcrumbs items={crumbs} />
-      <article className="container-responsive py-8 max-w-3xl">
+      {/* container-responsive(max-w-7xl)はmax-w-*ユーティリティと競合して幅指定が効かないため直書き。
+          本文カラム約720px＝日本語1行38文字前後で読みやすい幅にする */}
+      <article className="mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-6xl">
         {/* Compact floating TOC (mobile, H2まで) */}
         <FloatingToc headings={headings} />
         <Script id="post-jsonld" type="application/ld+json" strategy="afterInteractive">
@@ -463,7 +465,7 @@ export default async function PostPage(
 
         <div className="grid md:grid-cols-[1fr_320px] gap-10">
           <div
-            className="prose-content min-w-0 text-[17px] md:text-[18px] leading-[1.9] tracking-[.005em]
+            className="prose-content min-w-0 text-[17px] md:text-[18px] lg:text-[19px] leading-[1.9] tracking-[.005em]
                        [word-break:break-word] [overflow-wrap:anywhere]
                        [&>p]:my-4 [&>ul]:pl-6 [&>ul]:list-disc [&>ol]:pl-6 [&>ol]:list-decimal [&>li]:my-1
                        [&>blockquote]:border-l-4 [&>blockquote]:pl-4 [&>blockquote]:italic
