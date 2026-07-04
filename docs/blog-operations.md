@@ -68,6 +68,29 @@ speechBlock（まるお部員吹き出し）、tableBlock。詳しくは lib.mjs
 **トークンが切れたら**: `npx sanity login`（ブラウザが開くので本人にログインしてもらう）。
 スクリプトは `~/.config/sanity/config.json` のCLIトークンを自動で使う。
 
+
+## 4.5 画像の自動生成（Gemini Nano Banana連携・2026-07-05整備）
+
+前提: `~/.gemini/.env` に `GEMINI_API_KEY=キー` がある（無い場合は本人に
+https://aistudio.google.com/apikey でキー作成を依頼。無料・1回だけ）。
+
+```bash
+# アイキャッチ（ペーパークラフト調のハウススタイル）を生成して記事に設定
+node scripts/blog/gen-image.mjs --preset hero --topic "ふるさと納税" --out /tmp/hero.png
+node scripts/blog/set-hero.mjs furusato-nozei-2026 --image /tmp/hero.png
+
+# マンガを台本から全自動生成（生成→4コマ分割→meta.json）
+node scripts/blog/gen-manga.mjs --dir public/manga/ep3-gemini --scenes ep3-scenes.json
+node scripts/blog/add-manga.mjs <記事slug> --dir public/manga/ep3-gemini
+
+# 任意の画像生成（参考画像つき）
+node scripts/blog/gen-image.mjs --prompt "..." --ref 参考.png --out out.png
+```
+
+- マンガの画風統一は ep1-gemini/strip.png を参照画像として自動添付（gen-manga内蔵）
+- scenes jsonの形式は gen-manga.mjs 冒頭のコメント参照
+- 新記事の推奨フロー: new-post.mjs → gen-image(hero) → set-hero → gen-manga → add-manga → 空コミットpush
+
 ## 5. 文体ガイド（ひーちママの書き癖）
 
 - です・ます調。冒頭は読者への問いかけ（「〜ではないでしょうか？」）
