@@ -465,7 +465,7 @@ export default async function PostPage(
 
         <div className="grid md:grid-cols-[1fr_320px] gap-10">
           <div
-            className="prose-content min-w-0 text-[17px] md:text-[18px] lg:text-[19px] leading-[1.9] tracking-[.005em]
+            className="prose-content min-w-0 text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-[1.9] tracking-[.005em]
                        [word-break:break-word] [overflow-wrap:anywhere]
                        [&>p]:my-4 [&>ul]:pl-6 [&>ul]:list-disc [&>ol]:pl-6 [&>ol]:list-decimal [&>li]:my-1
                        [&>blockquote]:border-l-4 [&>blockquote]:pl-4 [&>blockquote]:italic

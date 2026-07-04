@@ -39,6 +39,15 @@ body {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
+/* 大画面のPCでは全体をひとまわり大きく表示する
+   （remベースの文字・余白・コンテナ幅が連動して拡大し「小さくて読みづらい」を防ぐ） */
+@media (min-width: 1440px) {
+  html { font-size: 17px; }
+}
+@media (min-width: 1920px) {
+  html { font-size: 18px; }
+}
+
 /* ── Typography ── */
 .hero-title {
   font-family: var(--font-display), 'Noto Sans JP', sans-serif;
