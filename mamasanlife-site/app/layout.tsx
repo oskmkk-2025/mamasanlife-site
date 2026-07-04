@@ -5,6 +5,7 @@ import Script from 'next/script'
 import { HeaderBar } from '@/components/HeaderBar'
 import { GlobalNav } from '@/components/GlobalNav'
 import { Footer } from '@/components/Footer'
+import { BackToTop } from '@/components/BackToTop'
 import { MigrationNotice } from '@/components/MigrationNotice'
 
 export const metadata = {
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <GlobalNav />
         <main id="main" className="min-h-[60vh]" role="main">{children}</main>
         <Footer />
+        <BackToTop />
         <script type="application/ld+json" suppressHydrationWarning>{JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Organization',
