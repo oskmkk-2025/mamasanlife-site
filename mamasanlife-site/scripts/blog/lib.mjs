@@ -35,6 +35,9 @@ export function client({ write = false } = {}) {
     apiVersion: API_VERSION,
     useCdn: false,
     token: write ? resolveToken() : undefined,
+    // 重要: 認証つきクエリはこれが無いと下書き(drafts.*)が混ざり、
+    // [0]が下書きを掴んで「公開版に反映されない」事故になる（2026-07-05のMNPマンガ事件）
+    perspective: 'published',
   })
 }
 
