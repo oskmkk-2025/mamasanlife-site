@@ -49,6 +49,15 @@
    スタイル指定はgen-image.mjsのheroプリセット。既存アイキャッチの原本はSanityのメディアにある。
    注意: Sanity更新→ISR再生成はSanity CDNの古いキャッシュを掴むことがある→空コミットpushをもう一度）
 
+0-2. **新記事2本公開（7/6・Obsidianボイスメモから記事化）**:
+   - 献血救済制度体験談 /health/blood-donation-relief-system（音声配信メモ「献血事件簿と救済制度」が原典。
+     35,910円受給の実録・表・まるお吹き出し・保険/KKR記事への内部カード）
+   - 住宅費2階建て /money/home-loan-two-tier-budget（「10年完済を狙った家計の組み方」が原典。
+     2,200万完済・返す6.2万+財形6.5万の表・NISA記事/光熱費/保険への内部カード）
+   - アイキャッチ未設定（切り紙風プロンプトは本人に渡し済み）。GSC登録リクエストは本人作業
+     （search.google.comはブラウザ拡張の許可外）。Obsidian vault = Google Drive
+     「マイドライブ/test_vault/音声配信メモ」。残りネタ候補: リジュセア点眼（近視治療費用メモあり・
+     体験談かどうか本人確認が必要）、AIでブログ作り直した話（サーバー系ASP未提携のため保留）
 1. **スタディング承認待ち**（A8申請済み 7/3）→ 承認されたら本人から広告コードをもらい
    `node scripts/blog/add-studying-cta.mjs --html <コード.html>` を実行（簿記2記事に自動設置）
 2. **⚠️ 中学生スマホ記事の下書き**（drafts.Nn6Sc6MF3u71woMpYvaSQk、7/4更新）:
