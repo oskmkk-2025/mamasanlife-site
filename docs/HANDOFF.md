@@ -92,7 +92,8 @@
    第4話「エアコンの風、なんかクサい？」= house-cleaning-air-conditioner（ep4-gemini）
    第5話「捨てる前に、売ってみよ？」= rakuten-mercari（ep5-gemini）
    第6話「洗っても洗っても、黒いワカメ」= house-cleaning-washing-machine（ep6-gemini、7/6公開）。
-   次は第7話＝簿記記事（スタディング承認後にCTAとセットで）や新記事（給湯器・退職手続き）が候補。
+   第7話「住宅費は2階建てにする」= home-loan-two-tier-budget（ep7-gemini、7/6公開）。
+   次は第8話＝簿記記事（スタディング承認後にCTAとセットで）や給湯器・退職手続き記事が候補。
    ついでにエアコン記事のWP名残の空白を除去（費用ブロックの連続改行29箇所＋裸URL1個、7/5夜）
 4. **GSC答え合わせ**（7月中旬以降）: docs/blog-operations.md §7の手順で効果測定
    → 数字を見て次のリライト対象を決める
