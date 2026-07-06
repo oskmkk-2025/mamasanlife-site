@@ -6,7 +6,6 @@ import { HeaderBar } from '@/components/HeaderBar'
 import { GlobalNav } from '@/components/GlobalNav'
 import { Footer } from '@/components/Footer'
 import { BackToTop } from '@/components/BackToTop'
-import { MigrationNotice } from '@/components/MigrationNotice'
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://mamasanmoney-bu.com'),
@@ -91,7 +90,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="apple-touch-icon" href="/icons/favicon.png" />
         <meta name="theme-color" content="#8CB9BD" />
         <a href="#main" className="sr-only focus:not-sr-only fixed top-2 left-2 z-50 bg-white text-black border px-3 py-2 rounded">メインコンテンツへスキップ</a>
-        <MigrationNotice />
         <HeaderBar />
         <GlobalNav />
         <main id="main" className="min-h-[60vh]" role="main">{children}</main>
