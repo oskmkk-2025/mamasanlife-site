@@ -13,7 +13,7 @@ export function TocMobileBar({ headings }: { headings: Heading[] }){
   const items = (headings || []).filter(h => h.level<=3)
   if (!items.length) return null
   return (
-    <div className="md:hidden sticky top-[104px] z-30">
+    <div className="md:hidden sticky top-[64px] z-30">
       <div className="bg-white/95 backdrop-blur border-b border-primary px-3 py-2 flex items-center justify-between">
         <div className="text-sm font-semibold">目次</div>
         <button className="text-sm px-3 py-1 rounded-md border focus-ring" onClick={()=>setOpen(true)}>開く</button>

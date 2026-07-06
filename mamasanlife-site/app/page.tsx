@@ -55,16 +55,16 @@ export default async function HomePage() {
   return (
     <div>
      <section className="bg-white">
-  <div className="container-responsive py-24 sm:py-32 text-center max-w-5xl mx-auto">
+  <div className="container-responsive py-10 sm:py-32 text-center max-w-5xl mx-auto">
     <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--c-accent)] mb-4 block">FP2級ママの家計改善ブログ</span>
-    <h1 className="hero-title text-4xl sm:text-6xl footer:tracking-tight mb-6">
+    <h1 className="hero-title text-3xl sm:text-6xl footer:tracking-tight mb-5 sm:mb-6">
       FP2級ママが、<br className="sm:hidden" />固定費を年20万円減らした記録。
     </h1>
     <p className="hero-sub text-gray-500 max-w-2xl mx-auto">
       電気・ガス・通信・保険・ふるさと納税。<br />
       東海エリアに暮らす2児の母が、本当にやってよかった家計改善だけを書いています。
     </p>
-    <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+    <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
       <a
         href="/money/review-of-utility-costs"
         className="inline-block bg-[var(--c-accent)] text-white px-6 py-3 rounded-md font-medium hover:opacity-90 transition"

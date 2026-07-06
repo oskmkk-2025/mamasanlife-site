@@ -17,23 +17,24 @@ export function HeaderBar() {
   const [open, setOpen] = useState(false)
   return (
     <header className="border-b border-[var(--border-glass)] bg-white/40 backdrop-blur-md sticky top-0 z-50 transition-colors duration-300">
-      <div className="container-responsive h-24 md:h-32 flex items-center justify-between gap-4">
+      <div className="container-responsive h-14 md:h-24 flex items-center justify-between gap-4">
         <div className="flex items-center">
           <Link href="/" className="focus-ring flex items-center gap-2" aria-label="Mamasan Life トップへ" title="Mamasan Life">
+            {/* ロゴPNGは余白トリミング済み版（site-logo.pngは上下87%が透明でボックス指定が巨大化するため） */}
             <Image
-              src="/icons/site-logo.png"
+              src="/icons/site-logo-cropped.png"
               alt="Mamasan Life"
-              width={320}
-              height={128}
-              className="hidden md:block h-32 w-auto"
+              width={955}
+              height={162}
+              className="hidden md:block h-7 w-auto"
               priority
             />
             <Image
-              src="/icons/site-logo.png"
+              src="/icons/site-logo-cropped.png"
               alt="Mamasan Life"
-              width={220}
-              height={100}
-              className="md:hidden h-28 w-auto"
+              width={955}
+              height={162}
+              className="md:hidden h-6 w-auto"
               priority
             />
           </Link>
@@ -55,14 +56,13 @@ export function HeaderBar() {
           </div>
         )}
         {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
-          <div className="md:hidden flex flex-col items-center gap-0.5 leading-none">
-            <span className="text-[10px] text-gray-600 font-semibold tracking-tight whitespace-nowrap">更新お知らせをLINEで</span>
+          <div className="md:hidden flex items-center">
             <LineFollowButton
               href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL}
-              label="追加"
+              label="更新をLINEで"
               size="sm"
               variant="outlineGreen"
-              className="px-3 py-1 text-xs leading-none"
+              className="px-2.5 py-1 text-xs leading-none whitespace-nowrap"
             />
           </div>
         )}
