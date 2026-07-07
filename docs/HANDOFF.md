@@ -78,6 +78,11 @@
    Felmat/レントラックスにも給湯器案件あるが未登録ASPのため見送り。
    ※7/6 記事に本人の追加体験を反映済み（相見積もりで正直屋が最安→決定、
    ウルトラファインバブルで浴室の赤いぬめりが減った実感）
+0-6. **SEO/AI引用対策の増強＋リンク総点検（7/7）**: /llms.txt（全記事カテゴリ別一覧＋実体験ポリシー明記）と
+   /feed.xml（RSS 2.0・最新20件・head自動発見リンク）を新設。既存=JSON-LD（BlogPosting/FAQ/パンくず/組織/
+   WebSite+SearchAction）・canonical・sitemap lastmod・robots（AIクローラー拒否なし）。
+   リンク総点検の完全版（blogCard含む451ユニークURL）を実施し、blogCard 44枚を正規URLに正規化
+   （apple-id_gmail旧URLの404も解消）。以後の点検はscratchpadのcheck-links.mjs方式で。
 0-5. **全記事の名乗りを「ひーち部長」→「ひーちママ」に統一（7/6・本人指示）**: 48記事116箇所を一括置換
    （本文・タイトル・SEO・吹き出し名・alt含む）。文体ガイド（blog-operations.md §5）も更新済み。
    あわせて退職記事の職業訓練の記述を修正（今回の訓練=WEBデザイン・WEBマーケのオンライン訓練、
