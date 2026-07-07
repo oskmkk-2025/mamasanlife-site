@@ -88,6 +88,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <link rel="icon" href="/icons/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/icons/favicon.png" />
+        <link rel="alternate" type="application/rss+xml" title="Mamasan Life RSS" href="/feed.xml" />
         <meta name="theme-color" content="#8CB9BD" />
         <a href="#main" className="sr-only focus:not-sr-only fixed top-2 left-2 z-50 bg-white text-black border px-3 py-2 rounded">メインコンテンツへスキップ</a>
         <HeaderBar />
