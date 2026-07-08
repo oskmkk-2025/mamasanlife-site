@@ -128,7 +128,9 @@
    第5話「捨てる前に、売ってみよ？」= rakuten-mercari（ep5-gemini）
    第6話「洗っても洗っても、黒いワカメ」= house-cleaning-washing-machine（ep6-gemini、7/6公開）。
    第7話「住宅費は2階建てにする」= home-loan-two-tier-budget（ep7-gemini、7/6公開）。
-   次は第8話＝簿記記事（スタディング承認後にCTAとセットで）や給湯器・退職手続き記事が候補。
+   第8話「お湯の機嫌が悪い」= gas-water-heater-replacement／第9話「黒カビ、プロに白旗」= bathroom-cleaning／
+   第10話「退職の手続き、順番が9割」= procedures-after-resignation（いずれもep8/9/10-gemini、7/7公開）。
+   マンガ10話体制。次=簿記記事（スタディング承認後にCTAとセット）、換気扇クリーニング、献血なども候補。
    ついでにエアコン記事のWP名残の空白を除去（費用ブロックの連続改行29箇所＋裸URL1個、7/5夜）
 4. **GSC答え合わせ**（7月中旬以降）: docs/blog-operations.md §7の手順で効果測定
    → 数字を見て次のリライト対象を決める
