@@ -8,7 +8,7 @@
 import json, sys, os, re
 from PIL import Image, ImageDraw, ImageFont
 
-W, H = 1080, 1350            # 4:5 縦長（フィードで最大表示）
+W, H = 1080, 1080            # 1:1 正方形（切り抜き事故が起きない）
 CREAM = (250, 245, 234)      # クリーム背景（ブログのハウスカラー）
 NAVY = (43, 58, 92)          # マンガのネイビー
 WHITE = (255, 255, 255)
@@ -53,26 +53,26 @@ def cover(ep, hook, panel1, out):
     img = Image.new('RGB', (W, H), CREAM)
     d = ImageDraw.Draw(img)
     series_badge(d, ep)
-    fnt_hook = font(58)
+    fnt_hook = font(54)
     n_lines = len(wrap(hook, fnt_hook, W-140, d))
     hook_h = n_lines * (fnt_hook.size + 22)
     p = Image.open(panel1).convert('RGB')
     pw = W - 140
     ph = int(p.height * pw / p.width)
-    if ph > 620:
-        ph = 620; pw = int(p.width * ph / p.height)
-    total = hook_h + 60 + ph
-    top, bottom = 190, H - 170
+    if ph > 470:
+        ph = 470; pw = int(p.width * ph / p.height)
+    total = hook_h + 48 + ph
+    top, bottom = 185, H - 145
     y0 = top + max(0, (bottom - top - total) // 2)
     y = draw_center(d, y0, hook, fnt_hook, NAVY, max_w=W-140, line_pad=22)
     p = p.resize((pw, ph), Image.LANCZOS)
-    px, py = (W-pw)//2, y + 60
+    px, py = (W-pw)//2, y + 48
     d.rounded_rectangle([px-6, py-6, px+pw+6, py+ph+6], radius=18, outline=NAVY, width=4)
     img.paste(p, (px, py))
     fnt = font(40)
     tail = 'スワイプして4コマへ →'
     tw = d.textlength(tail, font=fnt)
-    d.text(((W-tw)/2, H-140), tail, font=fnt, fill=NAVY)
+    d.text(((W-tw)/2, H-108), tail, font=fnt, fill=NAVY)
     img.save(out, quality=92)
 
 def panel_slide(ep, idx, panel_path, caption, out):
@@ -87,14 +87,14 @@ def panel_slide(ep, idx, panel_path, caption, out):
     p = Image.open(panel_path).convert('RGB')
     pw = W - 90
     ph = int(p.height * pw / p.width)
-    if ph > 760:
-        ph = 760; pw = int(p.width * ph / p.height)
+    if ph > 560:
+        ph = 560; pw = int(p.width * ph / p.height)
     fnt_pre = font(44)
     m_pre = re.match(r'^(.+?)「(.+)」$', caption)
     pre_line = m_pre.group(2) if m_pre else caption
     pre_box_h = 70 + len(wrap(pre_line, fnt_pre, W-260, d)) * (fnt_pre.size + 16)
     total = ph + 56 + pre_box_h
-    top, bottom = 150, H - 90
+    top, bottom = 140, H - 60
     py = top + max(0, (bottom - top - total) // 2)
     px = (W-pw)//2
     d.rounded_rectangle([px-6, py-6, px+pw+6, py+ph+6], radius=14, outline=NAVY, width=4)
@@ -124,9 +124,9 @@ def end_slide(ep, title, out):
     img = Image.new('RGB', (W, H), CREAM)
     d = ImageDraw.Draw(img)
     series_badge(d, ep)
-    y = draw_center(d, 380, 'つづきはブログで', font(64), NAVY)
+    y = draw_center(d, 300, 'つづきはブログで', font(64), NAVY)
     y = draw_center(d, y+30, '実際の金額・手順の全文はブログで', font(40, light=True), NAVY)
-    y = draw_center(d, y+6, '『ママさんライフ 家計』で検索 🔍', font(40, light=True), NAVY)
+    y = draw_center(d, y+6, '『ママさんライフ 家計』で検索', font(40, light=True), NAVY)
     # 記事タイトルカード
     fnt_t = font(42)
     lines = wrap(title, fnt_t, W-300, d)
@@ -137,7 +137,7 @@ def end_slide(ep, title, out):
         tw = d.textlength(ln, font=fnt_t)
         d.text(((W-tw)/2, ty), ln, font=fnt_t, fill=NAVY)
         ty += fnt_t.size + 16
-    draw_center(d, H-190, 'Mamasan Life（ママさんライフ）', font(36), NAVY)
+    draw_center(d, H-150, 'Mamasan Life（ママさんライフ）', font(36), NAVY)
     img.save(out, quality=92)
 
 if __name__ == '__main__':
