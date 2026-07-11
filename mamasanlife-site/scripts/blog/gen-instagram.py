@@ -126,7 +126,7 @@ def end_slide(ep, title, out):
     series_badge(d, ep)
     y = draw_center(d, 380, 'つづきはブログで', font(64), NAVY)
     y = draw_center(d, y+30, '実際の金額・手順の全文はブログで', font(40, light=True), NAVY)
-    y = draw_center(d, y+6, '「ママさんマネー部」で検索 🔍', font(40, light=True), NAVY)
+    y = draw_center(d, y+6, '『ママさんライフ 家計』で検索 🔍', font(40, light=True), NAVY)
     # 記事タイトルカード
     fnt_t = font(42)
     lines = wrap(title, fnt_t, W-300, d)
@@ -137,7 +137,7 @@ def end_slide(ep, title, out):
         tw = d.textlength(ln, font=fnt_t)
         d.text(((W-tw)/2, ty), ln, font=fnt_t, fill=NAVY)
         ty += fnt_t.size + 16
-    draw_center(d, H-190, 'ママさんマネー部  Mamasan Life', font(36), NAVY)
+    draw_center(d, H-190, 'Mamasan Life（ママさんライフ）', font(36), NAVY)
     img.save(out, quality=92)
 
 if __name__ == '__main__':
