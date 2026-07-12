@@ -6,6 +6,7 @@
 
 - **docs/blog-operations.md** ← 運用のすべて（戦略・コマンド・ルール・文体）。作業前に必ず読む
 - **docs/HANDOFF.md** ← 直近の作業状況と残タスク（作業再開時はここから）
+- **docs/podcast-pipeline.md** ← ポッドキャスト→記事→SNSの自動化パイプライン（スキル /podcast-interview・/podcast-release の実体）
 - AGENTS.md ← 日本語コミュニケーション方針
 
 ## 構成の要点
