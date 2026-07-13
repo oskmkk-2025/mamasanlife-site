@@ -6,6 +6,7 @@ import { HeaderBar } from '@/components/HeaderBar'
 import { GlobalNav } from '@/components/GlobalNav'
 import { Footer } from '@/components/Footer'
 import { BackToTop } from '@/components/BackToTop'
+import ClickTracker from '@/components/ClickTracker'
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://mamasanmoney-bu.com'),
@@ -93,6 +94,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <a href="#main" className="sr-only focus:not-sr-only fixed top-2 left-2 z-50 bg-white text-black border px-3 py-2 rounded">メインコンテンツへスキップ</a>
         <HeaderBar />
         <GlobalNav />
+        <ClickTracker />
         <main id="main" className="min-h-[60vh]" role="main">{children}</main>
         <Footer />
         <BackToTop />
