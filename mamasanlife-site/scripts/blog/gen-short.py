@@ -25,7 +25,8 @@ OUT_DIR = os.path.expanduser(args.get('--out', f'~/claude/shorts/ep{EP}'))
 os.makedirs(OUT_DIR, exist_ok=True)
 
 W, H = 1080, 1920
-CREAM, NAVY, CORAL = (251, 247, 238), (27, 42, 74), (214, 122, 90)
+# ブランドカラー統一（2026-07-13）: ライトティール下地×ダークティール×アプリコット
+CREAM, NAVY, CORAL = (234, 242, 242), (61, 107, 110), (217, 123, 75)
 FONT = '/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc'
 FONT_L = '/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc'
 
