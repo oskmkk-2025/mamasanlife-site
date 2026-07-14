@@ -425,6 +425,10 @@ export default async function PostPage(
             {post.publishedAt && <time dateTime={post.publishedAt}>公開: {new Date(post.publishedAt).toLocaleDateString('ja-JP')}</time>}
             {post.updatedAt && <time dateTime={post.updatedAt}>更新: {new Date(post.updatedAt).toLocaleDateString('ja-JP')}</time>}
           </div>
+          {/* PR disclosure (景品表示法ステマ規制対応): ファーストビュー内=タイトル直下に表示（ASP提携条件対応） */}
+          <div className="mt-3 text-[12px] md:text-[13px] text-gray-600 border border-dashed rounded-md px-3 py-2 bg-white/70 text-center" role="note" aria-label="広告表記">
+            記事内に広告が含まれています
+          </div>
           {/* banner row moved to body top */}
           {heroSrc && (
             <figure className="mt-4 mb-2">
@@ -455,11 +459,6 @@ export default async function PostPage(
             )
           })()}
         </header>
-
-        {/* PR disclosure (景品表示法ステマ規制対応): 記事本文の直前に表示 */}
-        <div className="my-4 text-[12px] md:text-[13px] text-gray-600 border border-dashed rounded-md px-3 py-2 bg-white/70 text-center" role="note" aria-label="広告表記">
-          記事内に広告が含まれています
-        </div>
 
         <AdSlot slot="ARTICLE_TOP_SLOT" className="my-6" />
 
