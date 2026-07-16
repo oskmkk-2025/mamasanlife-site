@@ -724,18 +724,20 @@ const ptComponents = {
         const compact = s.length <= 20
         return (compact && (isMoney || isDateTime || isNumeric)) ? <span className="whitespace-nowrap">{s}</span> : s
       }
+      // 5列以上の比較表は各列に最低幅を確保し、横スクロールで読ませる
+      const wide = (rows[0] || []).length >= 5
       return (
         <div className="my-6 overflow-auto table-sticky">
           <table className="min-w-full border-collapse text-[14px]">
             {hasHeader && (
               <thead>
-                <tr>{head!.map((c, i) => (<th key={i} className="border px-3 py-2 bg-[var(--c-bg)] text-gray-700 text-left">{formatCell(c)}</th>))}</tr>
+                <tr>{head!.map((c, i) => (<th key={i} className={`border px-3 py-2 bg-[var(--c-bg)] text-gray-700 text-left${wide ? ' whitespace-nowrap' : ''}`}>{formatCell(c)}</th>))}</tr>
               </thead>
             )}
             <tbody>
               {body.map((r, ri) => (
                 <tr key={ri} className={ri % 2 ? 'bg-white' : 'bg-gray-50'}>
-                  {r.map((c, ci) => (<td key={ci} className="border px-3 py-2 align-top">{formatCell(c)}</td>))}
+                  {r.map((c, ci) => (<td key={ci} className="border px-3 py-2 align-top" style={wide ? { minWidth: ci === 0 ? '7em' : '8em' } : undefined}>{formatCell(c)}</td>))}
                 </tr>
               ))}
             </tbody>
