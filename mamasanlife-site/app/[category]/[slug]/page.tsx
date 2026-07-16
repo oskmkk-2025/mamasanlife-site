@@ -717,8 +717,12 @@ const ptComponents = {
       const body = hasHeader ? rows.slice(1) : rows
       const formatCell = (c: string) => {
         const s = String(c || '')
-        const isMoney = /[¥￥]|^\s*\d{1,3}(,\d{3})*(\.\d+)?\s*$/.test(s)
-        return isMoney ? <span className="whitespace-nowrap">{s}</span> : s
+        // 日時・金額・数値だけの短いセルは折り返さない（説明列に幅を譲る）
+        const isMoney = /[¥￥]/.test(s) || /\d(,\d{3})*円/.test(s)
+        const isDateTime = /\d{1,2}:\d{2}|\d{4}[/年]\s?\d{1,2}|\d{1,2}月\d{1,2}日|\d{1,2}\/\d{1,2}/.test(s)
+        const isNumeric = /^\s*\d{1,3}(,\d{3})*(\.\d+)?\s*$/.test(s)
+        const compact = s.length <= 20
+        return (compact && (isMoney || isDateTime || isNumeric)) ? <span className="whitespace-nowrap">{s}</span> : s
       }
       return (
         <div className="my-6 overflow-auto table-sticky">
