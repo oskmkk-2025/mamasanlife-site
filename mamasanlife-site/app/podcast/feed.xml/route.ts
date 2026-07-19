@@ -58,6 +58,8 @@ export async function GET() {
     <description>${esc(P.description)}</description>
     <language>${P.language}</language>
     <copyright>© ${new Date().getFullYear()} ${esc(P.author)}</copyright>
+    <managingEditor>${esc(P.ownerEmail)} (${esc(P.author)})</managingEditor>
+    <webMaster>${esc(P.ownerEmail)} (${esc(P.author)})</webMaster>
     <itunes:author>${esc(P.author)}</itunes:author>
     <itunes:owner>
       <itunes:name>${esc(P.author)}</itunes:name>
