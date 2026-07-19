@@ -5,9 +5,8 @@ export const PODCAST = {
   description:
     'FP2級ワーママ「ひーちママ」が、家計・固定費削減・子育て・40代の働き方を実体験ベースでゆるっと話すラジオ。ブログ「ママさんライフ」の音声版です。',
   author: 'ひーちママ',
-  // Apple Podcasts登録時に所有者確認メールが届くアドレス。RSSに公開されるので
-  // スパムが気になる場合は専用アドレスに変えてOK（Spotifyはメール不要）。
-  ownerEmail: 'oskmkk@gmail.com',
+  // 所有者確認メールが届くアドレス。RSSに公開されるため匿名運用ルールに合わせて専用アドレスを使用（2026-07-19変更）
+  ownerEmail: 'oskmkk2@gmail.com',
   language: 'ja',
   explicit: false,
   category: 'Business',
