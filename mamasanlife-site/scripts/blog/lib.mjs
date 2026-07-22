@@ -63,10 +63,11 @@ export function blogCard(url) {
   return { _type: 'blogCard', _key: key(), url }
 }
 
+// まるお＝弟キャラ（猫耳の男の子）。普通の男の子口調で書く。猫語尾（〜にゃん等）や旧名「まるお部員」は使わない（2026-07-22更新）
 export function speechMaruo(text) {
   return {
-    _type: 'speechBlock', _key: key(), align: 'right', name: 'まるお部員',
-    iconUrl: 'https://mamasanmoney-bu.com/wp-content/uploads/2022/11/C204902D-B54F-43B3-B6DF-88B08C9AEBF6-e1668691519166.png',
+    _type: 'speechBlock', _key: key(), align: 'right', name: 'まるお',
+    iconUrl: '/images/speech-icons/maruo.png',
     paras: [text],
   }
 }
