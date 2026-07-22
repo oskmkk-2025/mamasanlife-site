@@ -1,6 +1,6 @@
 "use client"
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 
 const SPEECH_ICON_MAP: Record<string, string> = {
   'img_69ad0d2f343e-1-2.jpeg': '/images/speech-icons/IMG_69AD0D2F343E-1-2.jpeg',
@@ -28,17 +28,8 @@ function resolveSpeechIcon(url?: string) {
 
 export function SpeechBlockView({ value }: { value: any }){
   const alignRight = value?.align === 'right'
-  const bubbleRef = useRef<HTMLDivElement|null>(null)
-  const [iconSize, setIconSize] = useState(80)
-
-  useEffect(()=>{
-    const el = bubbleRef.current
-    if (!el) return
-    const h = el.getBoundingClientRect().height
-    // 自動調整: 吹き出しの高さに応じて 64〜96px の範囲で調整（既定80）
-    const size = Math.max(64, Math.min(96, Math.round(h)))
-    setIconSize(size)
-  },[value?.paras])
+  // アイコンは吹き出しの高さに関わらず全キャラ同サイズで固定（2026-07-22）
+  const iconSize = 80
 
   const iconSrc = resolveSpeechIcon(value?.iconUrl)
   return (
@@ -53,7 +44,7 @@ export function SpeechBlockView({ value }: { value: any }){
           )}
           {value?.name && <div className="text-[11px] text-gray-600 mt-0 text-center leading-none max-w-[120px]">{value.name}</div>}
         </div>
-        <div ref={bubbleRef} className="min-w-0">
+        <div className="min-w-0">
           <div className={`relative px-4 py-3 rounded-2xl text-[15px] leading-relaxed`} style={{ background:'#fff', border:'1px solid var(--c-primary)' }}>
             {(value?.paras||[]).map((t:string, i:number)=> (<p key={i} className="mb-2 last:mb-0">{t}</p>))}
             <span className={`absolute top-3 ${alignRight ? 'right-[-8px]' : 'left-[-8px]'} w-0 h-0 border-y-8 border-y-transparent ${alignRight ? 'border-l-8 border-l-[var(--c-primary)]' : 'border-r-8 border-r-[var(--c-primary)]'}`}></span>
