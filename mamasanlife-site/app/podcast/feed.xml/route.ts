@@ -3,7 +3,8 @@
 import { sanityClient } from '@/lib/sanity.client'
 import { PODCAST as P } from '@/lib/podcast.config'
 
-export const revalidate = 3600
+// 予約公開に対応: publishedAtが未来のエピソードは時刻が来るまでフィードに載せない
+export const revalidate = 900
 
 const esc = (s: string) =>
   String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
@@ -21,7 +22,7 @@ type Ep = {
 
 export async function GET() {
   const eps: Ep[] = await sanityClient.fetch(
-    `*[_type == "podcastEpisode" && defined(audio.asset)] | order(coalesce(publishedAt, _createdAt) desc){
+    `*[_type == "podcastEpisode" && defined(audio.asset) && coalesce(publishedAt, _createdAt) <= now()] | order(coalesce(publishedAt, _createdAt) desc){
       title, description, episodeNumber, publishedAt, duration,
       "audioUrl": audio.asset->url, "size": audio.asset->size, "mime": audio.asset->mimeType
     }`
