@@ -4,7 +4,7 @@ import { sanityClient } from '@/lib/sanity.client'
 import { PODCAST as P } from '@/lib/podcast.config'
 
 // 予約公開に対応: publishedAtが未来のエピソードは時刻が来るまでフィードに載せない
-export const revalidate = 900
+export const revalidate = 3600
 
 const esc = (s: string) =>
   String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')

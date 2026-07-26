@@ -2,7 +2,7 @@ import { sanityClient } from '@/lib/sanity.client'
 import { PODCAST as P } from '@/lib/podcast.config'
 
 // 予約公開に対応: publishedAtが未来のエピソードは時刻が来るまで表示しない
-export const revalidate = 900
+export const revalidate = 3600
 
 export const metadata = {
   title: 'ママさんライフラジオ｜ポッドキャスト',
