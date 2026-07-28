@@ -8,10 +8,12 @@ const esc = (s: string) =>
   String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
 export async function GET() {
-  const posts: { title: string; slug: string; category: string; excerpt?: string; publishedAt?: string; updatedAt?: string }[] =
+  // 予約公開対応: publishedAtが未来の記事は時刻が来るまでフィードに載せない
+  const posts: { title: string; slug: string; category: string; excerpt?: string; publishedAt?: string; updatedAt?: string; heroUrl?: string }[] =
     await sanityClient.fetch(
-      `*[_type == "post" && defined(slug.current)] | order(coalesce(publishedAt, _createdAt) desc)[0..19]{
-        title, "slug": slug.current, category, excerpt, publishedAt, updatedAt
+      `*[_type == "post" && defined(slug.current) && coalesce(publishedAt, _createdAt) <= now()] | order(coalesce(publishedAt, _createdAt) desc)[0..19]{
+        title, "slug": slug.current, category, excerpt, publishedAt, updatedAt,
+        "heroUrl": heroImage.asset->url
       }`
     )
 
@@ -19,20 +21,27 @@ export async function GET() {
     .map((p) => {
       const url = `${BASE}/${p.category}/${p.slug}`
       const date = new Date(p.publishedAt || Date.now()).toUTCString()
-      return [
+      // アイキャッチ: ブログ村等がサムネイルとして拾えるよう enclosure と content:encoded の両方に入れる
+      const img = p.heroUrl ? `${p.heroUrl}?w=800&fm=jpg&q=80` : ''
+      const lines = [
         '    <item>',
         `      <title>${esc(p.title)}</title>`,
         `      <link>${url}</link>`,
         `      <guid isPermaLink="true">${url}</guid>`,
         `      <pubDate>${date}</pubDate>`,
         `      <description>${esc(p.excerpt || '')}</description>`,
-        '    </item>',
-      ].join('\n')
+      ]
+      if (img) {
+        lines.push(`      <enclosure url="${esc(img)}" type="image/jpeg" length="0"/>`)
+        lines.push(`      <content:encoded><![CDATA[<p><img src="${img}" alt="${esc(p.title)}"/></p><p>${esc(p.excerpt || '')}</p>]]></content:encoded>`)
+      }
+      lines.push('    </item>')
+      return lines.join('\n')
     })
     .join('\n')
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Mamasan Life（ママさんライフ）</title>
     <link>${BASE}</link>
