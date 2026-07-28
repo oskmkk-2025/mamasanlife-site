@@ -26,6 +26,7 @@ import { AudioBlock } from '@/components/AudioBlock'
 const ViewTracker = (await import('@/components/ViewTracker')).ViewTracker
 import { PAYWALLED_ARTICLES } from '@/lib/paywalled-articles'
 import { PaywallNotice } from '@/components/PaywallNotice'
+import { RankingSupport } from '@/components/RankingSupport'
 
 const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://mamasanmoney-bu.com'
 const FOLLOWER_SENTENCE = 'このブログは「にほんブログ村」と「ブログリーダー」に参加しています。'
@@ -494,9 +495,8 @@ export default async function PostPage(
                 {post.excerpt && <p className="mt-3">{post.excerpt}</p>}
               </div>
             )}
-            {/* (Removed) generic footer banner row */}
-
-            {/* (Removed) follow buttons for blogmura/with2 */}
+            {/* 応援クリック（ブログ村/with2・控えめデザインで再設置 2026-07-28） */}
+            {hasBody && <RankingSupport />}
           </div>
           <aside className="hidden md:block md:sticky md:top-20 h-max space-y-6">
             {hasBody && <TableOfContents headings={headings} />}
