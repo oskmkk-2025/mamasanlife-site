@@ -8,8 +8,12 @@ const KEY = 'msl-owner'
 export function OwnerClient() {
   const [on, setOn] = useState<boolean | null>(null)
   useEffect(() => {
-    localStorage.setItem(KEY, '1')
-    setOn(true)
+    // マウント直後にフラグを立てる（同期setStateを避けるためタイマー経由）
+    const t = setTimeout(() => {
+      localStorage.setItem(KEY, '1')
+      setOn(true)
+    }, 0)
+    return () => clearTimeout(t)
   }, [])
   const toggle = () => {
     if (localStorage.getItem(KEY) === '1') {
