@@ -75,6 +75,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
             <Script id="ga-setup" strategy="afterInteractive">{`
+              try { if (localStorage.getItem('msl-owner') === '1') { window['ga-disable-${gaId}'] = true; } } catch (e) {}
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
