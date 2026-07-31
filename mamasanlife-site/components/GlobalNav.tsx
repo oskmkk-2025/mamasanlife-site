@@ -9,6 +9,7 @@ const items = [
   { href: '/work', label: '働き方・キャリア' },
   { href: '/health', label: '心と健康' },
   { href: '/feature', label: '特集' },
+  { href: '/games', label: 'ゲーム' },
 ]
 
 export function GlobalNav() {
