@@ -535,7 +535,7 @@ export default async function PostPage(
         {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (post as any)?.showLineCta !== false && (
           <div className="mt-10">
             <div className="text-center text-sm text-gray-700 whitespace-pre-line leading-relaxed">
-              {`下のボタンから公式LINEを友だち追加していただくと、新着記事やポッドキャストのまとめを月2回ほどお届けします。メニューから人気記事やゲームにもすぐ飛べます。
+              {`下のボタンから公式LINEを友だち追加していただくと、新着記事やポッドキャストのまとめを月1回お届けします。メニューから人気記事やゲームにもすぐ飛べます。
 
 「いいな」と思ったら気軽に追加してね♪`}
             </div>
