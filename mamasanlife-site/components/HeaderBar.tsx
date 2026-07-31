@@ -51,7 +51,7 @@ export function HeaderBar() {
         </div>
         {process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL && (
           <div className="hidden md:flex flex-col items-center gap-1">
-            <span className="w-full text-center text-[11px] text-gray-600 font-bold leading-none">ブログの更新をお知らせ(無料)</span>
+            <span className="w-full text-center text-[11px] text-gray-600 font-bold leading-none">記事・ポッドキャスト・ゲーム(無料)</span>
             <LineFollowButton href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL} label="LINEで友だちになる" size="sm" variant="outlineGreen" />
           </div>
         )}
@@ -59,7 +59,7 @@ export function HeaderBar() {
           <div className="md:hidden flex items-center">
             <LineFollowButton
               href={process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL}
-              label="更新をLINEで"
+              label="LINEで見る"
               size="sm"
               variant="outlineGreen"
               className="px-2.5 py-1 text-xs leading-none whitespace-nowrap"
