@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: 'お金が学べる無料ゲーム｜ひーちfamilyのゲームひろば',
     description: 'インストール不要・無料。遊ぶだけでお金の計算が身につく知育ゲームで遊べます。',
-    images: ['/images/games/coin-morimori.jpg'],
+    images: ['/images/games/games-ogp.jpg'],
   },
 }
 
