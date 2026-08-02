@@ -4,7 +4,7 @@ import { PODCAST as P } from '@/lib/podcast.config'
 // 予約公開に対応: publishedAtが未来のエピソードは時刻が来るまで表示しない
 export const revalidate = 3600
 
-const PODCAST_OG = 'https://mamasanmoney-bu.com/og-default'
+const PODCAST_OG = 'https://mamasanmoney-bu.com/images/podcast-ogp.jpg'
 
 export const metadata = {
   title: 'ママさんライフラジオ｜ポッドキャスト',

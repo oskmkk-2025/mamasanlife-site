@@ -15,6 +15,8 @@ export const PODCAST = {
   subcategory2: 'Parenting',
   base: 'https://mamasanmoney-bu.com',
   link: 'https://mamasanmoney-bu.com/podcast',
-  artwork: 'https://mamasanmoney-bu.com/podcast/artwork.png',
+  // 2026-08-02: 元のartwork.png(5.8MB)は配信プラットフォームが取り込めず古い画像のままだったため、
+  // 2000×2000/399KBのJPEGに差し替え。URLも変えて再クロールを促している。
+  artwork: 'https://mamasanmoney-bu.com/podcast/artwork-v2.jpg',
   feed: 'https://mamasanmoney-bu.com/podcast/feed.xml',
 }
