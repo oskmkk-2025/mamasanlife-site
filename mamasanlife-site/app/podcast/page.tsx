@@ -4,11 +4,27 @@ import { PODCAST as P } from '@/lib/podcast.config'
 // 予約公開に対応: publishedAtが未来のエピソードは時刻が来るまで表示しない
 export const revalidate = 3600
 
+const PODCAST_OG = 'https://mamasanmoney-bu.com/og-default'
+
 export const metadata = {
   title: 'ママさんライフラジオ｜ポッドキャスト',
   description:
     'FP2級ワーママ「ひーちママ」の音声配信。家計・固定費削減・子育て・働き方を実体験ベースで話しています。',
   alternates: { canonical: '/podcast' },
+  openGraph: {
+    title: 'ママさんライフラジオ｜ポッドキャスト',
+    description:
+      'FP2級ワーママ「ひーちママ」の音声配信。家計・固定費削減・子育て・働き方を実体験ベースで話しています。',
+    url: 'https://mamasanmoney-bu.com/podcast',
+    type: 'website',
+    images: [{ url: PODCAST_OG, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ママさんライフラジオ｜ポッドキャスト',
+    description: 'FP2級ワーママ「ひーちママ」の音声配信。家計・固定費削減・子育て・働き方を実体験ベースで。',
+    images: [PODCAST_OG],
+  },
 }
 
 type Ep = {
