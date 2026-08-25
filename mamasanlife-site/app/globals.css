@@ -372,6 +372,13 @@ input::placeholder { color: #9CA3AF; }
   filter: brightness(0.97);
 }
 
+/* 本文の段落内に置かれるアフィリエイトボタンの器（<p>の中でも成立するようspan） */
+.affiliate-inline-button {
+  display: block;
+  margin: 1.4em 0;
+}
+.affiliate-inline-button .affiliate-btn { margin-inline: auto; }
+
 /* キャンディ内部パーツ（JSX から生成） */
 .cta-candy-btn__highlight {
   position: absolute;

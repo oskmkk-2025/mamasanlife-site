@@ -675,7 +675,7 @@ const ptComponents = {
             href={normalizedHref}
             target="_blank"
             rel="noopener noreferrer nofollow sponsored"
-            className={`affiliate-btn affiliate-btn--${variant} cta-candy-link`}
+            className={`affiliate-btn affiliate-btn--${variant}`}
           >
             <span className="cta-candy-btn__highlight" aria-hidden="true" />
             <span className="cta-candy-btn__icon-wrap" aria-hidden="true">
@@ -916,6 +916,16 @@ const ptComponents = {
       const isInternal = out.startsWith('/')
       const affiliateVariant = detectAffiliateVariant(href)
       if (affiliateVariant) {
+        // 本文中のアフィリエイトリンクも、affiliateButtonブロックと同じキャンディ型で描く。
+        // 中身の部品(highlight/icon/label/arrow)が無いと余白も白文字も付かず、
+        // ラベルが左端に貼り付いた「壊れたボタン」になる（2026-08-25修正）
+        const inlineCfg = CANDY_CONFIG[affiliateVariant] || CANDY_CONFIG['others']
+        // 矢印はボタンの部品として付くので、ラベル末尾の「＞」などは落とす
+        const inlineLabel = typeof children === 'string'
+          ? children.replace(/[＞>»›\s]+$/g, '')
+          : (Array.isArray(children) && children.length === 1 && typeof children[0] === 'string'
+            ? children[0].replace(/[＞>»›\s]+$/g, '')
+            : children)
         return (
           <span className="affiliate-inline-button">
             <a
@@ -923,9 +933,14 @@ const ptComponents = {
               target="_blank"
               rel="noopener noreferrer nofollow sponsored"
               className={`affiliate-btn affiliate-btn--${affiliateVariant}`}
-              style={affiliateVariant === 'curama' ? { backgroundColor: '#00bcd4', boxShadow: '0 12px 24px rgba(0, 188, 212, 0.28)' } : {}}
             >
-              {children}
+              <span className="cta-candy-btn__highlight" aria-hidden="true" />
+              <span className="cta-candy-btn__icon-wrap" aria-hidden="true">
+                <span className="cta-candy-btn__icon">{inlineCfg.icon}</span>
+              </span>
+              <span className="cta-candy-btn__sep" aria-hidden="true" />
+              <span className="cta-candy-btn__label">{inlineLabel}</span>
+              <span className="cta-candy-btn__arrow" aria-hidden="true">&#8250;</span>
             </a>
           </span>
         )
