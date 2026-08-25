@@ -112,10 +112,14 @@ export async function generateMetadata(
   if (!post) return { title: '記事が見つかりません' }
   const url = `${process.env.NEXT_PUBLIC_SITE_URL || ''}/${post.category}/${post.slug}`
   const og = post.imageUrl || `${process.env.NEXT_PUBLIC_SITE_URL || ''}/og-default`
+  const cardTitle = (post as any).seoTitle || post.title
+  const cardDesc = (post as any).seoDescription || post.excerpt || undefined
   return {
-    title: (post as any).seoTitle || post.title,
-    description: (post as any).seoDescription || post.excerpt || undefined,
-    openGraph: { images: [og], url },
+    title: cardTitle,
+    description: cardDesc,
+    openGraph: { title: cardTitle, description: cardDesc, images: [og], url, type: 'article' },
+    // twitter を書かないと layout の共通値（サイト名・サイト説明）がそのままXのカード見出しになる
+    twitter: { card: 'summary_large_image', title: cardTitle, description: cardDesc, images: [og] },
     alternates: { canonical: url }
   }
 }
