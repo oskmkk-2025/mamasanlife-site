@@ -194,15 +194,68 @@ body {
 }
 .prose-content strong { color: var(--c-emphasis); font-weight: 700; }
 
-.prose-content table { @apply w-full text-sm border-collapse mb-4; }
+/* ── 記事内の表（2026-08-25 読みやすさ改修）──
+   ・行間と余白を広げて詰まりを解消
+   ・横にはみ出す表は、端のグラデーション影で「スクロールできる」ことを示す
+     （background-attachment:local のため、実際にスクロール可能なときだけ影が出る）
+   ・4列以上は1列目を固定して、横スクロール中も項目名を見失わない */
+.table-scroll {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  background-image:
+    linear-gradient(to right, var(--c-bg) 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(255, 255, 255, 0), var(--c-bg) 70%),
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0));
+  background-position: 0 0, 100% 0, 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+/* border-collapse:collapse は position:sticky と併用すると背景・罫線が正しく描かれない
+   （1列目の下を他の列の文字がすり抜ける）。separate にして罫線を自前で組み立てる。
+   各セル=上+右、行頭セル=左、最終行=下 → 二重線なしで格子が完成する */
+/* 日本語は1文字ごとに改行できてしまうため、項目名の列が「浴/室/暖/房」のように
+   1文字ずつ折れて行が異常に縦長になる。1列目に最低幅を持たせて防ぐ */
+.prose-content .table-scroll th:first-child,
+.prose-content .table-scroll td:first-child { min-width: 6em; }
+
+.prose-content .table-scroll--wide table { border-collapse: separate; border-spacing: 0; }
+.prose-content .table-scroll--wide th,
+.prose-content .table-scroll--wide td { border-width: 1px 1px 0 0; }
+.prose-content .table-scroll--wide tr > *:first-child { border-left-width: 1px; }
+.prose-content .table-scroll--wide tbody tr:last-child > * { border-bottom-width: 1px; }
+/* 比較表の列幅: スマホは1列ずつしっかり見せ、PCは詰めて1画面に収まりやすくする */
+.prose-content .table-scroll--wide th,
+.prose-content .table-scroll--wide td { min-width: 9em; }
+.prose-content .table-scroll--wide tr > *:first-child { min-width: 8em; }
+@media (min-width: 768px) {
+  .prose-content .table-scroll--wide th,
+  .prose-content .table-scroll--wide td { min-width: 7em; }
+  .prose-content .table-scroll--wide tr > *:first-child { min-width: 7em; }
+}
+
+.prose-content .table-scroll--wide th:first-child,
+.prose-content .table-scroll--wide td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: inherit;
+}
+.prose-content .table-scroll--wide tbody tr:nth-child(even) td:first-child { background-color: #f0f6f6; }
+.prose-content .table-scroll--wide thead th:first-child { background-color: var(--c-bg); }
+
+.prose-content table { @apply w-full border-collapse mb-4; font-size: 15px; line-height: 1.75; }
+@media (min-width: 768px) { .prose-content table { font-size: 16px; } }
 .prose-content th {
   background: var(--c-primary);
   color: #fff;
-  @apply px-3 py-2 text-left;
+  @apply px-3.5 py-3 text-left;
 }
 .prose-content td {
   border: 1px solid var(--c-border);
-  @apply px-3 py-2;
+  @apply px-3.5 py-3;
 }
 .prose-content tr:nth-child(even) td { background: #f0f6f6; }
 

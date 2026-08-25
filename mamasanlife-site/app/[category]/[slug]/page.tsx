@@ -747,24 +747,43 @@ const ptComponents = {
         const compact = s.length <= 20
         return (compact && (isMoney || isDateTime || isNumeric)) ? <span className="whitespace-nowrap">{s}</span> : s
       }
-      // 5列以上の比較表は各列に最低幅を確保し、横スクロールで読ませる
-      const wide = (rows[0] || []).length >= 5
+      // WordPressからの移行で結合セル(colspan)が失われ、行によってセル数が違う表がある。
+      // 実際の列数は「全行の最大セル数」で判断し、足りない行は結合セルとして描く（2026-08-25）
+      const cols = Math.max(...rows.map((r) => r.length))
+      const wide = cols >= 4
+      // ヘッダー直後の行が足りない = 見出しが横に結合されていた行の続き（先頭が空欄）
+      const subHeaderShort = hasHeader && !!head && head.length < cols && (body[0] || []).length < cols
       return (
-        <div className="my-6 overflow-auto table-sticky">
-          <table className="min-w-full border-collapse text-[14px]">
-            {hasHeader && (
-              <thead>
-                <tr>{head!.map((c, i) => (<th key={i} className={`border px-3 py-2 bg-[var(--c-bg)] text-gray-700 text-left${wide ? ' whitespace-nowrap' : ''}`}>{formatCell(c)}</th>))}</tr>
-              </thead>
-            )}
-            <tbody>
-              {body.map((r, ri) => (
-                <tr key={ri} className={ri % 2 ? 'bg-white' : 'bg-gray-50'}>
-                  {r.map((c, ci) => (<td key={ci} className="border px-3 py-2 align-top" style={wide ? { minWidth: ci === 0 ? '7em' : '8em' } : undefined}>{formatCell(c)}</td>))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="my-7">
+          {wide && (
+            <p className="md:hidden text-[13px] text-gray-500 mb-1.5" aria-hidden="true">
+              → 表は横にスクロールできます
+            </p>
+          )}
+          <div className={`table-scroll${wide ? ' table-scroll--wide' : ''}`}>
+            <table className={`min-w-full ${wide ? 'border-separate border-spacing-0' : 'border-collapse'} text-[15px] md:text-[16px] leading-[1.75]`}>
+              {hasHeader && (
+                <thead>
+                  <tr>{head!.map((c, i) => (<th key={i} colSpan={i === head!.length - 1 && head!.length < cols ? cols - head!.length + 1 : undefined} className={`border px-3.5 py-3 bg-[var(--c-bg)] text-gray-700 text-left align-bottom${wide ? ' whitespace-nowrap' : ''}`}>{formatCell(c)}</th>))}</tr>
+                </thead>
+              )}
+              <tbody>
+                {body.map((r, ri) => {
+                  // 足りない行の補い方: 見出し直後のサブ見出し行は先頭に空欄を足し、
+                  // それ以外（合計行など）は先頭セルを横に結合する
+                  const lack = cols - r.length
+                  const pad = lack > 0 && subHeaderShort && ri === 0 ? lack : 0
+                  const spanFirst = lack > 0 && !pad ? lack + 1 : undefined
+                  return (
+                    <tr key={ri} className={ri % 2 ? 'bg-white' : 'bg-gray-50'}>
+                      {Array.from({ length: pad }).map((_, i) => (<td key={`pad${i}`} className="border px-3.5 py-3" />))}
+                      {r.map((c, ci) => (<td key={ci} colSpan={ci === 0 ? spanFirst : undefined} className="border px-3.5 py-3 align-top">{formatCell(c)}</td>))}
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       )
     },
