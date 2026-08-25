@@ -8,7 +8,7 @@ import { uniquePostsBySlug, filterBlocked } from '@/lib/post-utils'
 import Script from 'next/script'
 import { LineStampPromo } from '@/components/LineStampPromo'
 
-export const revalidate = 3600
+export const revalidate = 21600 // 6時間（Vercelの関数実行=CPU無料枠の節約・2026-08-25。記事公開時は空コミットpushで即反映）
 
 export const metadata = {
   alternates: { canonical: '/' }

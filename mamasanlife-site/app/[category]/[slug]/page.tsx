@@ -86,7 +86,7 @@ type BlogCardResolved = {
 }
 
 // build: 1777381277
-export const revalidate = 3600
+export const revalidate = 21600 // 6時間（Vercelの関数実行=CPU無料枠の節約・2026-08-25。記事公開時は空コミットpushで即反映）
 // export const dynamic = 'force-dynamic'
 
 export async function generateStaticParams() {
@@ -122,7 +122,11 @@ function mainArticlePath(description?: string) {
 }
 
 async function findPodcastEpisodeForArticle(category: string, slug: string) {
-  const eps = await sanityClient.fetch(groq`*[_type == "podcastEpisode" && defined(audio.asset) && coalesce(publishedAt, _createdAt) <= now()]{ episodeNumber, description }`).catch(() => [])
+  const eps = await sanityClient.fetch(
+    groq`*[_type == "podcastEpisode" && defined(audio.asset) && coalesce(publishedAt, _createdAt) <= now()]{ episodeNumber, description }`,
+    {},
+    { cache: 'force-cache', next: { revalidate: 21600 } }
+  ).catch(() => [])
   const path = `/${category}/${slug}`
   return (eps as any[]).find((e) => mainArticlePath(e?.description) === path) || null
 }

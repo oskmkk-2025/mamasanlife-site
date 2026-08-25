@@ -132,13 +132,16 @@ export async function middleware(req: NextRequest) {
 
 // 可能な限り広く受け取りつつ、静的系は middleware 内で判定
 export const config = {
-  /*
-   * Match all request paths except for the ones starting with:
-   * - api (API routes)
-   * - _next/static (static files)
-   * - _next/image (image optimization files)
-   * - favicon.ico, sitemap.xml, robots.txt, ads.txt (metadata files)
-   * - images, icons, static (public assets)
-   */
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|ads.txt|images|icons|static).*)']
+  // 実行対象を絞る＝Vercelの関数実行(CPU)を節約（2026-08-25）。
+  // 記事URL(/カテゴリ/スラッグ)は対象外。旧WordPress由来の1セグメントURLと
+  // アーカイブ系だけをここで受ける（/category /tag /page /amp 等の大半は
+  // vercel.json のredirectsがエッジで処理するのでそもそも到達しない）。
+  matcher: [
+    '/:seg',
+    '/category/:path*',
+    '/tag/:path*',
+    '/tags/:path*',
+    '/topics/:path*',
+    '/page/:path*',
+  ]
 }

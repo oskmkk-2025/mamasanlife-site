@@ -12,7 +12,7 @@ import Script from 'next/script'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 // 一時的に強制動的化して、画像フォールバック反映を即時確認
-export const revalidate = 3600
+export const revalidate = 21600 // 6時間（Vercelの関数実行=CPU無料枠の節約・2026-08-25。記事公開時は空コミットpushで即反映）
 // export const dynamic = 'force-dynamic'
 
 export async function generateStaticParams() {
