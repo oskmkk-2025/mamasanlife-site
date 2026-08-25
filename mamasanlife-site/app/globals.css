@@ -230,10 +230,16 @@ body {
 .prose-content .table-scroll--wide th,
 .prose-content .table-scroll--wide td { min-width: 9em; }
 .prose-content .table-scroll--wide tr > *:first-child { min-width: 8em; }
+/* 説明文が長い表は列幅を広げる（1行あたりの文字数を確保して行の高さを抑える） */
+.prose-content .table-scroll--roomy th,
+.prose-content .table-scroll--roomy td { min-width: 13em; }
+.prose-content .table-scroll--roomy tr > *:first-child { min-width: 7em; }
 @media (min-width: 768px) {
   .prose-content .table-scroll--wide th,
   .prose-content .table-scroll--wide td { min-width: 7em; }
   .prose-content .table-scroll--wide tr > *:first-child { min-width: 7em; }
+  .prose-content .table-scroll--roomy th,
+  .prose-content .table-scroll--roomy td { min-width: 10em; }
 }
 
 .prose-content .table-scroll--wide th:first-child,

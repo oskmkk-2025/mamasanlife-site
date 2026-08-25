@@ -73,7 +73,13 @@ const AFFILIATE_HOSTS = [
   { match: 'audible.co.jp', variant: 'audiobook' },
   { match: 'amazon.co.jp/audible', variant: 'audiobook' },
   { match: 'afb', variant: 'afb' },
-  { match: 'curama.jp', variant: 'curama' }
+  { match: 'curama.jp', variant: 'curama' },
+  // 楽天でも別ドメインの金融サービスは 'rakuten.co.jp' に一致せずボタンにならなかった（2026-08-25追加）
+  { match: 'rakuten-sec.co.jp', variant: 'rakuten' },
+  { match: 'rakuten-bank.co.jp', variant: 'rakuten' },
+  { match: 'rakuten-card.co.jp', variant: 'rakuten' },
+  // TGアフィリエイト（楽天証券などの計測リンク）
+  { match: 'trafficgate.net', variant: 'a8' }
 ]
 
 type BlogCardResolved = {
@@ -750,7 +756,11 @@ const ptComponents = {
       // WordPressからの移行で結合セル(colspan)が失われ、行によってセル数が違う表がある。
       // 実際の列数は「全行の最大セル数」で判断し、足りない行は結合セルとして描く（2026-08-25）
       const cols = Math.max(...rows.map((r) => r.length))
-      const wide = cols >= 4
+      // 3列でも説明文が長い表は、列が潰れて1行数文字になり異常に縦長になるので横スクロール型にする
+      const longestCell = Math.max(...rows.flatMap((r) => r.map((c) => String(c || '').length)), 0)
+      const wide = cols >= 4 || (cols === 3 && longestCell >= 24)
+      // 文章が長い表は列を広めに取る（狭いと1行7文字ほどになり読みづらいうえ行が異常に高くなる）
+      const roomy = wide && longestCell >= 36
       // ヘッダー直後の行が足りない = 見出しが横に結合されていた行の続き（先頭が空欄）
       const subHeaderShort = hasHeader && !!head && head.length < cols && (body[0] || []).length < cols
       return (
@@ -760,7 +770,7 @@ const ptComponents = {
               → 表は横にスクロールできます
             </p>
           )}
-          <div className={`table-scroll${wide ? ' table-scroll--wide' : ''}`}>
+          <div className={`table-scroll${wide ? ' table-scroll--wide' : ''}${roomy ? ' table-scroll--roomy' : ''}`}>
             <table className={`min-w-full ${wide ? 'border-separate border-spacing-0' : 'border-collapse'} text-[15px] md:text-[16px] leading-[1.75]`}>
               {hasHeader && (
                 <thead>
@@ -920,12 +930,10 @@ const ptComponents = {
         // 中身の部品(highlight/icon/label/arrow)が無いと余白も白文字も付かず、
         // ラベルが左端に貼り付いた「壊れたボタン」になる（2026-08-25修正）
         const inlineCfg = CANDY_CONFIG[affiliateVariant] || CANDY_CONFIG['others']
-        // 矢印はボタンの部品として付くので、ラベル末尾の「＞」などは落とす
-        const inlineLabel = typeof children === 'string'
-          ? children.replace(/[＞>»›\s]+$/g, '')
-          : (Array.isArray(children) && children.length === 1 && typeof children[0] === 'string'
-            ? children[0].replace(/[＞>»›\s]+$/g, '')
-            : children)
+        // ラベルは<br>や複数スパンに分かれていることがあるので、文字だけ取り出して整える。
+        // 末尾の「＞」は矢印の部品と二重になるので落とす
+        const inlineLabelText = nodeText(children).replace(/[＞>»›\s]+$/g, '').trim()
+        const inlineLabel = inlineLabelText || children
         return (
           <span className="affiliate-inline-button">
             <a
@@ -1040,6 +1048,14 @@ function normalizeHref(raw?: string | null) {
   } catch {
     return raw
   }
+}
+
+// Reactの子ノードから文字だけを取り出す（<br>や入れ子のspanが混ざっていても拾える）
+function nodeText(node: any): string {
+  if (node === null || node === undefined || typeof node === 'boolean') return ''
+  if (typeof node === 'string' || typeof node === 'number') return String(node)
+  if (Array.isArray(node)) return node.map(nodeText).join('')
+  return nodeText(node?.props?.children)
 }
 
 function detectAffiliateVariant(href?: string | null) {
