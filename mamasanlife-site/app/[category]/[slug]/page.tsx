@@ -114,6 +114,19 @@ export async function generateMetadata(
   }
 }
 
+// 記事に対応する「公開済み」ポッドキャスト回を探す（概要欄の「▼この回の詳しい記事」のURLで判定）
+function mainArticlePath(description?: string) {
+  const after = String(description || '').split('▼この回の詳しい記事')[1] || ''
+  const url = (after.split('▼')[0].match(/https?:\/\/\S+/) || [''])[0]
+  try { return new URL(url).pathname.replace(/\/$/, '') } catch { return '' }
+}
+
+async function findPodcastEpisodeForArticle(category: string, slug: string) {
+  const eps = await sanityClient.fetch(groq`*[_type == "podcastEpisode" && defined(audio.asset) && coalesce(publishedAt, _createdAt) <= now()]{ episodeNumber, description }`).catch(() => [])
+  const path = `/${category}/${slug}`
+  return (eps as any[]).find((e) => mainArticlePath(e?.description) === path) || null
+}
+
 export default async function PostPage(
   { params }: { params: Promise<{ category: string; slug: string }> }
 ) {
@@ -131,6 +144,7 @@ export default async function PostPage(
   const post = primary || alt
   if (!post) notFound()
   const related = await sanityClient.fetch(relatedByTagsQuery, { slug: post.slug, tags: Array.isArray(post.tags) ? post.tags : [] })
+  const podcastEpisode = await findPodcastEpisodeForArticle(post.category, post.slug)
   const hasBody = Array.isArray(post.body) && post.body.length > 0
   const bodyBlocks: any[] = hasBody ? (post.body as any[]) : []
   // Hoist top-of-article banners into one row: scan first 10 blocks and extract all image-link banners
@@ -477,6 +491,11 @@ export default async function PostPage(
             {displayBlocks.length ? (
               <>
                 {/* Intro banner row は非表示（ブログ村/人気ブログを含むバナーを記事冒頭に出さない） */}
+                {podcastEpisode && (
+                  <p className="text-center my-5">
+                    <Link href="/podcast" className="font-bold">🎧 この話は音声でも聴けます → ポッドキャスト「ママさんライフラジオ」第{podcastEpisode.episodeNumber}回</Link>
+                  </p>
+                )}
                 <PortableText value={displayBlocks} components={ptComponents as any} />
                 {paywall && (
                   <PaywallNotice
