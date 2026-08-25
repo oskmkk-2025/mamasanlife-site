@@ -23,6 +23,9 @@ const PAGE_MAP: Record<string, string> = {
   'contact': '/contact',
   'site-map': '/site-map',
   'sitemap': '/site-map',
+  // WordPress時代の実URL（2026-08-25にGSCの404から発見）
+  'otoiawase': '/contact',
+  'privacy-policy-2': '/policy',
 }
 
 function slugify(input: string) {
@@ -110,8 +113,11 @@ export async function middleware(req: NextRequest) {
   if (!slug) return NextResponse.next()
 
   try {
-    const q = encodeURIComponent("*[_type=='post' && slug.current==$s][0]{'slug':slug.current,'category':category}")
-    const url = `https://${projectId}.apicdn.sanity.io/v${apiVersion}/data/query/${dataset}?query=${q}&$s=%22${encodeURIComponent(slug)}%22`
+    // slugify は "_" を "-" に変換するため、元のセグメントでも照合する
+    // （/apple-id_gmail が404になっていた・2026-08-25修正）
+    const raw = seg.toLowerCase()
+    const q = encodeURIComponent("*[_type=='post' && (slug.current==$s || slug.current==$r)][0]{'slug':slug.current,'category':category}")
+    const url = `https://${projectId}.apicdn.sanity.io/v${apiVersion}/data/query/${dataset}?query=${q}&$s=%22${encodeURIComponent(slug)}%22&$r=%22${encodeURIComponent(raw)}%22`
     const res = await fetch(url, { next: { revalidate: 3600 } })
     if (res.ok) {
       const data = await res.json() as any
