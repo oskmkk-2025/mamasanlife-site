@@ -57,7 +57,8 @@ export function parseAffiliateCta(html: string): ParsedAffiliateCta | null {
     .trim()
   if (!href || !label) return null
 
-  const pixelMatch = src.match(/<img[^>]*src="([^"]*(?:0\.gif|impression|itp\.gif)[^"]*)"[^>]*>/i)
+  // gifbanner = バリューコマースの表示回数計測（拾わないとインプレッションが記録されない）
+  const pixelMatch = src.match(/<img[^>]*src="([^"]*(?:0\.gif|impression|itp\.gif|gifbanner)[^"]*)"[^>]*>/i)
   return { variant, href, label, pixel: pixelMatch?.[1] }
 }
 
