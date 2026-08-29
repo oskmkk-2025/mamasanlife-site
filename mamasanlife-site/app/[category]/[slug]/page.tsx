@@ -76,7 +76,8 @@ const AFFILIATE_HOSTS = [
   { match: 'curama.jp', variant: 'curama' },
   // 楽天でも別ドメインの金融サービスは 'rakuten.co.jp' に一致せずボタンにならなかった（2026-08-25追加）
   { match: 'rakuten-sec.co.jp', variant: 'rakuten' },
-  { match: 'rakuten-bank.co.jp', variant: 'rakuten' },
+  // 楽天銀行は提携先が見つからなかった（TG却下・A8/もしも/ATにも案件なし・2026-08-25）。
+  // 報酬にならないものをCTAボタンに見せると広告と誤解されるため、素のリンクのままにする
   { match: 'rakuten-card.co.jp', variant: 'rakuten' },
   // TGアフィリエイト（楽天証券などの計測リンク）
   { match: 'trafficgate.net', variant: 'a8' }
