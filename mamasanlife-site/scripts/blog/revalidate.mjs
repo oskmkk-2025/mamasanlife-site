@@ -16,7 +16,8 @@ for (const line of fs.readFileSync(path.join(ROOT, '.env.local'), 'utf8').split(
   if (m) env[m[1]] = m[2].replace(/^["']|["']$/g, '')
 }
 const SECRET = process.env.REVALIDATE_SECRET || env.REVALIDATE_SECRET
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || env.NEXT_PUBLIC_SITE_URL || 'https://mamasanmoney-bu.com'
+// .env.local の NEXT_PUBLIC_SITE_URL はローカル用(localhost)なので使わない。更新したいのは本番
+const SITE = process.env.REVALIDATE_SITE || 'https://mamasanmoney-bu.com'
 if (!SECRET) { console.error('❌ REVALIDATE_SECRET が .env.local にありません'); process.exit(1) }
 
 const args = process.argv.slice(2)
