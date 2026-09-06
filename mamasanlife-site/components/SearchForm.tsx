@@ -2,7 +2,8 @@
 import { useRef } from 'react'
 import { useRouter, useSearchParams, usePathname } from 'next/navigation'
 
-export function SearchForm({ className }: { className?: string }) {
+// onSubmitted: 検索したあとに呼ばれる。スマホのメニューを閉じるのに使う
+export function SearchForm({ className, onSubmitted }: { className?: string, onSubmitted?: () => void }) {
   const router = useRouter()
   const params = useSearchParams()
   const pathname = usePathname()
@@ -14,6 +15,8 @@ export function SearchForm({ className }: { className?: string }) {
     const target = input.startsWith('#')
       ? '/search?tag=' + encodeURIComponent(input.replace(/^#+/, ''))
       : '/search?q=' + encodeURIComponent(input)
+    inputRef.current?.blur()   // スマホのキーボードもしまう
+    onSubmitted?.()
     router.push(target)
   }
   return (

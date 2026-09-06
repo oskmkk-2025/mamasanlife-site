@@ -1,7 +1,9 @@
 "use client"
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, Suspense } from 'react'
+import { useState, useEffect, Suspense } from 'react'
+import type { Dispatch, SetStateAction } from 'react'
+import { usePathname, useSearchParams } from 'next/navigation'
 import { SearchForm } from './SearchForm'
 import { LineFollowButton } from './LineFollowButton'
 const cats = [
@@ -15,6 +17,20 @@ const cats = [
 
 export function HeaderBar() {
   const [open, setOpen] = useState(false)
+  return (
+    <Suspense fallback={null}>
+      <HeaderBarInner open={open} setOpen={setOpen} />
+    </Suspense>
+  )
+}
+
+function HeaderBarInner({ open, setOpen }: { open: boolean, setOpen: Dispatch<SetStateAction<boolean>> }) {
+  // ページが変わったらメニューを閉じる。
+  // 以前は各リンクのonClickでしか閉じておらず、検索して/searchへ移動したときに
+  // メニューが開いたまま残って記事が読めなかった（2026-09-06修正）
+  const pathname = usePathname()
+  const params = useSearchParams()
+  useEffect(() => { setOpen(false) }, [pathname, params, setOpen])
   return (
     <header className="border-b border-[var(--border-glass)] bg-white/40 backdrop-blur-md sticky top-0 z-50 transition-colors duration-300">
       <div className="container-responsive h-14 md:h-24 flex items-center justify-between gap-4">
@@ -80,7 +96,7 @@ export function HeaderBar() {
         <div id="mobileMenu" className="md:hidden border-t bg-primary border-primary">
           <div className="container-responsive py-3 text-white/90 text-sm flex flex-col gap-3" role="navigation" aria-label="モバイルメニュー">
             <Suspense fallback={null}>
-              <SearchForm />
+              <SearchForm onSubmitted={() => setOpen(false)} />
             </Suspense>
             <ul className="flex flex-col gap-2">
               <li><Link href="/about" onClick={() => setOpen(false)} className="rounded-md px-2 py-1 focus-ring">自己紹介</Link></li>
