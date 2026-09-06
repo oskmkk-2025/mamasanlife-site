@@ -6,6 +6,9 @@ import { sanityImageRefToUrl } from '@/lib/image-util'
 import { AdSlot } from '@/components/AdSlot'
 import Link from 'next/link'
 import { HtmlEmbed } from '@/components/HtmlEmbed'
+import { SummaryBlock } from '@/components/SummaryBlock'
+import { FaqBlock } from '@/components/FaqBlock'
+import { MangaBlock } from '@/components/MangaBlock'
 
 export const revalidate = 0
 
@@ -50,9 +53,41 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
           </figure>
         )
       },
-      htmlEmbed: ({ value }: any) => <HtmlEmbed html={String(value?.html || '')} />
+      htmlEmbed: ({ value }: any) => <HtmlEmbed html={String(value?.html || '')} />,
+      // 本番の記事ページと同じものが見えないと確認にならないので、表・まとめ枠なども出す（2026-09-06追加）
+      summaryBlock: ({ value }: any) => <SummaryBlock title={value?.title} items={value?.items} />,
+      faqBlock: ({ value }: any) => <FaqBlock items={value?.items} />,
+      mangaBlock: ({ value }: any) => <MangaBlock images={value?.images} />,
+      speechBlock: ({ value }: any) => (
+        <div className="my-5 rounded-2xl border border-gray-200 bg-gray-50 p-4">
+          {(value?.paras || []).map((t: string, i: number) => <p key={i} className="my-1 text-[15px]">{t}</p>)}
+        </div>
+      ),
+      blogCard: ({ value }: any) => (
+        <a href={String(value?.url || '')} className="blog-card block border border-gray-200 rounded-xl p-4 my-5 bg-white">
+          <div className="text-sm text-gray-500">関連記事</div>
+          <div className="font-bold underline">{value?.title || value?.url}</div>
+        </a>
+      ),
+      tableBlock: ({ value }: any) => {
+        const rows: string[][] = (value?.rows || []).map((r: any) => r?.cells || [])
+        if (!rows.length) return null
+        const head = value?.hasHeader !== false ? rows[0] : null
+        const bodyRows = head ? rows.slice(1) : rows
+        return (
+          <div className="table-scroll my-5">
+            <table className="w-full text-[15px]">
+              {head && <thead><tr>{head.map((c, i) => <th key={i} className="border p-2 bg-gray-100 text-left">{c}</th>)}</tr></thead>}
+              <tbody>{bodyRows.map((r, i) => <tr key={i}>{r.map((c, j) => <td key={j} className="border p-2">{c}</td>)}</tr>)}</tbody>
+            </table>
+          </div>
+        )
+      }
     },
     marks: {
+      strong: ({ children }: any) => <strong className="font-semibold">{children}</strong>,
+      em: ({ children }: any) => <em className="italic">{children}</em>,
+      highlight: ({ children }: any) => <span className="marker-pen">{children}</span>,
       link: ({children, value}: any) => {
         const href = String(value?.href||'')
         let out = href
