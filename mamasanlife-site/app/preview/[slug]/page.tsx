@@ -9,6 +9,7 @@ import { HtmlEmbed } from '@/components/HtmlEmbed'
 import { SummaryBlock } from '@/components/SummaryBlock'
 import { FaqBlock } from '@/components/FaqBlock'
 import { MangaBlock } from '@/components/MangaBlock'
+import { SpeechBlockView } from '@/components/SpeechBlockView'
 
 export const revalidate = 0
 
@@ -58,11 +59,7 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
       summaryBlock: ({ value }: any) => <SummaryBlock title={value?.title} items={value?.items} />,
       faqBlock: ({ value }: any) => <FaqBlock items={value?.items} />,
       mangaBlock: ({ value }: any) => <MangaBlock images={value?.images} />,
-      speechBlock: ({ value }: any) => (
-        <div className="my-5 rounded-2xl border border-gray-200 bg-gray-50 p-4">
-          {(value?.paras || []).map((t: string, i: number) => <p key={i} className="my-1 text-[15px]">{t}</p>)}
-        </div>
-      ),
+      speechBlock: ({ value }: any) => <SpeechBlockView value={value} />,
       blogCard: ({ value }: any) => (
         <a href={String(value?.url || '')} className="blog-card block border border-gray-200 rounded-xl p-4 my-5 bg-white">
           <div className="text-sm text-gray-500">関連記事</div>
@@ -108,10 +105,16 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
     },
     block: {
       h2: ({ children }: any) => (
-        <h2 className="mt-8 mb-3 text-[1.5rem] md:text-[1.875rem] font-bold">{children}</h2>
+        <h2 className="mt-10 mb-4 text-[1.5rem] md:text-[1.875rem] leading-snug pr-6 relative">
+          <span className="h2-paw" aria-hidden />
+          <span className="marker-pen">{children}</span>
+        </h2>
       ),
       h3: ({ children }: any) => (
-        <h3 className="mt-6 mb-2 text-[1.25rem] md:text-[1.5rem] font-semibold">{children}</h3>
+        <h3 className="mt-8 mb-3 text-[1.25rem] md:text-[1.5rem] leading-snug">{children}</h3>
+      ),
+      h4: ({ children }: any) => (
+        <h4 className="mt-6 mb-2 text-[1.125rem] md:text-[1.25rem] leading-snug">{children}</h4>
       ),
       normal: ({ children }: any) => {
         const raw = (Array.isArray(children) ? children.join(' ') : String(children||'')).trim()
@@ -141,7 +144,7 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
         {/* AdSense（プレビュー用スロット） */}
         <AdSlot slot="ARTICLE_TOP_SLOT" className="my-4" />
         {Array.isArray(post.body) ? (
-          <div className="prose max-w-none">
+          <div className="prose-content min-w-0 text-[17px] md:text-[18px] lg:text-[19px] leading-[1.9] tracking-[.005em] [word-break:break-word] [overflow-wrap:anywhere]">
             <PortableText value={bodySlimAdjusted as any} components={ptComponents as any} />
           </div>
         ) : (
