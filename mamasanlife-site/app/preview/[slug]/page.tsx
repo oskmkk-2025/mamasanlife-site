@@ -123,8 +123,8 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
       }
     },
     list: {
-      bullet: ({children}: any) => <ul className="list-disc pl-6 my-4">{children}</ul>,
-      number: ({children}: any) => <ol className="list-decimal pl-6 my-4">{children}</ol>
+      bullet: ({children}: any) => <ul className="pt-list pt-list--bullet">{children}</ul>,
+      number: ({children}: any) => <ol className="pt-list pt-list--number">{children}</ol>
     }
   }
 
