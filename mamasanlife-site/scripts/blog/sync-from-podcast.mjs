@@ -123,6 +123,40 @@ jobs.push(async () => {
   return `${slug}: 準備のコツを追記`
 })
 
+// --- ⑤ ep12: 製菓4校の学費比較 — 見学の時期を台本の修正に合わせる（2026-08-28） ---
+jobs.push(async () => {
+  const slug = 'patissier-school-tuition-comparison'
+  const post = await getPostBySlug(slug, '{_id, body}')
+  const OLD = 'この夏、東海地方の製菓の学校を4つ回りました。短期大学がひとつと、専門学校が3つ。'
+  const NEW = '高校1年の夏から、東海地方の製菓の学校を4つ回ってきました。短期大学がひとつと、専門学校が3つ。初回は親子で行きましたが、2回目からは本人が「好きなお菓子を作る回」を選んで、ひとりで出かけています。'
+  let hits = 0
+  const body = post.body.map((b) => b._type !== 'block' || !b.children ? b : { ...b, children: b.children.map((ch) => {
+    if (typeof ch.text !== 'string' || !ch.text.includes(OLD)) return ch
+    hits++
+    return { ...ch, text: ch.text.replace(OLD, NEW) }
+  }) })
+  if (!hits) return `${slug}: 適用済み（スキップ）`
+  await client({ write: true }).patch(post._id).set({ body }).commit()
+  return `${slug}: 見学時期を「高1の夏から」に更新`
+})
+
+// --- ⑥ ep12: 全員合格の情報源をオープンキャンパスに直す（2026-08-28） ---
+jobs.push(async () => {
+  const slug = 'patissier-school-tuition-comparison'
+  const post = await getPostBySlug(slug, '{_id, body}')
+  const MARK = 'これはオープンキャンパスで教えてもらった数字'
+  const flat = post.body.filter((b) => b._type === 'block').map((b) => (b.children || []).map((c) => c.text || '').join('')).join(' ')
+  if (flat.includes(MARK)) return `${slug}(合格率): 適用済み（スキップ）`
+  const OLD = '専門Dで製菓衛生師まで取ろうとすると'
+  const idx = post.body.findIndex((b) => b._type === 'block' && (b.children || []).some((c) => (c.text || '').includes(OLD)))
+  if (idx < 0) return `${slug}(合格率): 挿入位置が見つからず`
+  const add = [textBlock('短大Aの「今年の2年生は全員合格」は、これはオープンキャンパスで教えてもらった数字です。パンフレットには書かれていませんでした。専門Cも同じで、合格率のグラフはパンフの中にありました。聞いてみないと出てこない情報は、思っているより多いです。')]
+  const body = [...post.body]
+  body.splice(idx, 0, ...add)
+  await client({ write: true }).patch(post._id).set({ body }).commit()
+  return `${slug}(合格率): 情報源の補足を追記`
+})
+
 for (const job of jobs) {
   try { console.log('✅', await job()) }
   catch (e) { console.log('🛑', String(e.message).slice(0, 160)) }
