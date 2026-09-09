@@ -1,4 +1,5 @@
 import { sanityClient } from '@/lib/sanity.client'
+import { MoshimoCard } from '@/components/MoshimoCard'
 import { postBySlugAnyStatusQuery } from '@/lib/queries'
 import { PortableText } from '@portabletext/react'
 import { ImgWithPlaceholder } from '@/components/ImgWithPlaceholder'
@@ -60,33 +61,8 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
       faqBlock: ({ value }: any) => <FaqBlock items={value?.items} />,
       mangaBlock: ({ value }: any) => <MangaBlock images={value?.images} />,
       speechBlock: ({ value }: any) => <SpeechBlockView value={value} />,
-      // もしもアフィリエイトのかんたんリンク。プレビューで見えないと配置の確認ができない（2026-09-09追加）
-      moshimoEasyLink: ({ value }: any) => {
-        const data = value?.data
-        if (!data) return null
-        return (
-          <div className="moshimo-card my-5">
-            {data.image && (
-              <div className="moshimo-card__image">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={data.image} alt={data.title || ''} />
-              </div>
-            )}
-            <div className="moshimo-card__body">
-              {data.brand && <p className="text-xs text-gray-500 mb-1">{data.brand}</p>}
-              {data.title && <p className="font-semibold text-base text-gray-900">{data.title}</p>}
-              <div className="moshimo-card__buttons mt-3">
-                {(data.buttons || []).map((btn: any, idx: number) => (
-                  <a key={idx} href={btn.url} target="_blank" rel="noopener noreferrer nofollow sponsored"
-                     className="affiliate-btn affiliate-btn--others" style={btn.color ? { background: btn.color } : undefined}>
-                    <span className="cta-candy-btn__label">{btn.label}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        )
-      },
+      // もしもアフィリエイトのかんたんリンク（本番と同じコンポーネント）
+      moshimoEasyLink: ({ value }: any) => <MoshimoCard data={value?.data} />,
       blogCard: ({ value }: any) => (
         <a href={String(value?.url || '')} className="blog-card block border border-gray-200 rounded-xl p-4 my-5 bg-white">
           <div className="text-sm text-gray-500">関連記事</div>

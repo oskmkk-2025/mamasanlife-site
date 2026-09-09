@@ -29,23 +29,10 @@ import { PaywallNotice } from '@/components/PaywallNotice'
 import { RankingSupport } from '@/components/RankingSupport'
 
 const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://mamasanmoney-bu.com'
+import { CANDY_CONFIG, detectAffiliateVariant } from '@/lib/affiliate'
+import { MoshimoCard } from '@/components/MoshimoCard'
 const FOLLOWER_SENTENCE = 'このブログは「にほんブログ村」と「ブログリーダー」に参加しています。'
 const FOLLOW_PROMPT_SENTENCE = '下のボタンからフォローしていただくと新しく記事が投稿された時に通知を受け取ることができます。「いいな」と思ったら気軽にフォローしてね♪'
-
-// キャンディ風ボタン用アイコン・カラー設定
-const CANDY_CONFIG: Record<string, { icon: string; label: string }> = {
-  amazon:         { icon: 'a',  label: 'Amazonで見る' },
-  rakuten:        { icon: 'R',  label: '楽天市場で見る' },
-  yahoo:          { icon: '🛒', label: 'Yahoo!ショッピングで見る' },
-  curama:         { icon: '🏠', label: 'くらしのマーケットで見る' },
-  moshimo:        { icon: '🛍', label: 'こちらで見る' },
-  valuecommerce:  { icon: '🛍', label: 'こちらで見る' },
-  a8:             { icon: '🛍', label: 'こちらで見る' },
-  afb:            { icon: '🛍', label: 'こちらで見る' },
-  study:          { icon: '📖', label: 'スタディサプリで見る' },
-  audiobook:      { icon: '🎧', label: 'audiobookで聴く' },
-  others:         { icon: '🛍', label: 'こちらで見る' },
-}
 
 function candyBtnInner(variant: string, labelOverride?: string) {
   const cfg = CANDY_CONFIG[variant] || CANDY_CONFIG['others']
@@ -53,35 +40,6 @@ function candyBtnInner(variant: string, labelOverride?: string) {
   return `<span class="cta-candy-btn__highlight"></span><span class="cta-candy-btn__icon-wrap"><span class="cta-candy-btn__icon">${cfg.icon}</span></span><span class="cta-candy-btn__sep"></span><span class="cta-candy-btn__label">${label}</span><span class="cta-candy-btn__arrow">›</span>`
 }
 
-const AFFILIATE_HOSTS = [
-  { match: 'hb.afl.rakuten.co.jp', variant: 'rakuten' },
-  { match: 'item.rakuten.co.jp', variant: 'rakuten' },
-  { match: 'books.rakuten.co.jp', variant: 'rakuten' },
-  { match: 'search.rakuten.co.jp', variant: 'rakuten' },
-  { match: 'rakuten.co.jp', variant: 'rakuten' },
-  { match: 'ck.jp.ap.valuecommerce.com', variant: 'valuecommerce' },
-  { match: 'px.a8.net', variant: 'a8' },
-  { match: 'moshimo.com', variant: 'moshimo' },
-  { match: 'amazon.co.jp', variant: 'amazon' },
-  { match: 'amzn.to', variant: 'amazon' },
-  { match: 'amzn.asia', variant: 'amazon' },
-  { match: 'shopping.yahoo.co.jp', variant: 'yahoo' },
-  { match: 'store.shopping.yahoo.co.jp', variant: 'yahoo' },
-  { match: 'curama.jp', variant: 'curama' },
-  { match: 'studysapuri.jp', variant: 'study' },
-  { match: 'audiobook.jp', variant: 'audiobook' },
-  { match: 'audible.co.jp', variant: 'audiobook' },
-  { match: 'amazon.co.jp/audible', variant: 'audiobook' },
-  { match: 'afb', variant: 'afb' },
-  { match: 'curama.jp', variant: 'curama' },
-  // 楽天でも別ドメインの金融サービスは 'rakuten.co.jp' に一致せずボタンにならなかった（2026-08-25追加）
-  { match: 'rakuten-sec.co.jp', variant: 'rakuten' },
-  // 楽天銀行は提携先が見つからなかった（TG却下・A8/もしも/ATにも案件なし・2026-08-25）。
-  // 報酬にならないものをCTAボタンに見せると広告と誤解されるため、素のリンクのままにする
-  { match: 'rakuten-card.co.jp', variant: 'rakuten' },
-  // TGアフィリエイト（楽天証券などの計測リンク）
-  { match: 'trafficgate.net', variant: 'a8' }
-]
 
 type BlogCardResolved = {
   slug: string
@@ -708,41 +666,7 @@ const ptComponents = {
         <div className="my-5 affiliate-inline" dangerouslySetInnerHTML={{ __html: value.html }} />
       )
     },
-    moshimoEasyLink: ({ value }: any) => {
-      const data = value?.data
-      if (!data) return null
-      return (
-        <div className="moshimo-card my-5">
-          {data.image && (
-            <div className="moshimo-card__image">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={data.image} alt={data.title || ''} />
-            </div>
-          )}
-          <div className="moshimo-card__body">
-            {data.brand && <p className="text-xs text-gray-500 mb-1">{data.brand}</p>}
-            {data.title && <p className="font-semibold text-base text-gray-900">{data.title}</p>}
-            <div className="moshimo-card__buttons mt-3">
-              {(data.buttons || []).map((btn: any, idx: number) => {
-                const variant = detectAffiliateVariant(btn.url) || 'others'
-                const style = btn.color ? { background: btn.color } : undefined
-                return (
-                  <a key={idx} href={btn.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className={`affiliate-btn affiliate-btn--${variant}`}>
-                    <span className="cta-candy-btn__highlight" aria-hidden="true" />
-                    <span className="cta-candy-btn__icon-wrap" aria-hidden="true">
-                      <span className="cta-candy-btn__icon">{(CANDY_CONFIG[variant] || CANDY_CONFIG['others']).icon}</span>
-                    </span>
-                    <span className="cta-candy-btn__sep" aria-hidden="true" />
-                    <span className="cta-candy-btn__label">{btn.label || (CANDY_CONFIG[variant] || CANDY_CONFIG['others']).label}</span>
-                    <span className="cta-candy-btn__arrow" aria-hidden="true">&#8250;</span>
-                  </a>
-                )
-              })}
-            </div>
-          </div>
-        </div>
-      )
-    },
+    moshimoEasyLink: ({ value }: any) => <MoshimoCard data={value?.data} />,
     tableBlock: ({ value }: any) => {
       const rows: string[][] = (value?.rows || []).map((r: any) => Array.isArray(r?.cells) ? r.cells : [])
       if (!rows?.length) return null
@@ -1063,17 +987,6 @@ function nodeText(node: any): string {
   return nodeText(node?.props?.children)
 }
 
-function detectAffiliateVariant(href?: string | null) {
-  if (!href) return null
-  try {
-    const host = new URL(href, SITE_ORIGIN).hostname.replace(/^www\./, '')
-    if (/appreach|nabettu\.github\.io/.test(host)) return null
-    const match = AFFILIATE_HOSTS.find(entry => host.includes(entry.match))
-    return match?.variant || null
-  } catch {
-    return null
-  }
-}
 
 function groupAppreachBlocks(blocks: any[]) {
   const result: any[] = []
