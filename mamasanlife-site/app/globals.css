@@ -180,7 +180,7 @@ body {
 .prose-content p { @apply mb-4 leading-8; }
 /* ── 記事本文の箇条書き（2026-09-09） ──
    表ばかりが並ぶと単調なので、リストはテーマ色の薄いカードに載せてアクセントにする。
-   ・地は #3D6B6E（ブランドのティール）をごく薄く敷き、左に明るいティールの帯
+   ・地は #3D6B6E（ブランドのティール）をごく薄く敷き、左に明るいティールの帯（無地）
    ・印は丸ではなく #E8956D（テラコッタ）の小さなひし形＝サイトのアクセント色
    ・番号つきはティールの丸に白抜き数字
    summaryBlockなど独自の<ul>には当てないよう .pt-list に限定している */
@@ -193,11 +193,6 @@ body {
   border-left: 4px solid var(--c-primary-light);
   border-radius: 10px;
   background-color: #F5F9F9;
-  background-image: repeating-linear-gradient(
-    135deg,
-    rgba(61, 107, 110, 0.028) 0 6px,
-    rgba(61, 107, 110, 0) 6px 14px
-  );
   counter-reset: pt-li;
 }
 .prose-content .pt-list > li {
