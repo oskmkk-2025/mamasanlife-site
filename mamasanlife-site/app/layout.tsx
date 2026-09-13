@@ -75,7 +75,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
             <Script id="ga-setup" strategy="afterInteractive">{`
-              try { if (localStorage.getItem('msl-owner') === '1') { window['ga-disable-${gaId}'] = true; } } catch (e) {}
+              // ?owner=1 で来たら運営者として覚える（ゲームの運営者モードからのリンクに付く・2026-09-13）
+              try { if (new URLSearchParams(location.search).get('owner') === '1') { localStorage.setItem('msl-owner', '1'); } if (localStorage.getItem('msl-owner') === '1') { window['ga-disable-${gaId}'] = true; } } catch (e) {}
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
