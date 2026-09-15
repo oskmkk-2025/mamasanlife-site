@@ -143,7 +143,7 @@ export const config = {
   // アーカイブ系だけをここで受ける（/category /tag /page /amp 等の大半は
   // vercel.json のredirectsがエッジで処理するのでそもそも到達しない）。
   matcher: [
-    '/:seg',
+    '/:seg{/}?',
     '/category/:path*',
     '/tag/:path*',
     '/tags/:path*',
