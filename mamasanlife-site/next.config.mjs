@@ -7,6 +7,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const nextConfig = {
   // 明示的にプロジェクトルートを指定し、上位ディレクトリの lockfile を無視させる
   outputFileTracingRoot: path.join(__dirname),
+  // 末尾スラッシュの除去はmiddlewareで行う。Next標準に任せると middleware より先に
+  // 「/xxx/ → /xxx」を返し、旧URLが記事に届くまで2段リダイレクトになるため（2026-09-15）
+  skipTrailingSlashRedirect: true,
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'cdn.sanity.io' },

@@ -88,11 +88,22 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL('/', req.url), 308)
   }
 
-  if (isBypassedPath(pathname)) return NextResponse.next()
+  // 末尾スラッシュ（next.config の skipTrailingSlashRedirect によりここで処理）。
+  // 1セグメントの旧URLだけは下の転送で記事へ直行させ、2段リダイレクトにしない
+  const hasTrailing = pathname.length > 1 && pathname.endsWith('/')
+  const stripped = pathname.replace(/\/+$/, '') || '/'
+  if (hasTrailing && !/^\/[^\/]+\/$/.test(pathname)) {
+    return NextResponse.redirect(new URL(stripped + (search || ''), req.url), 308)
+  }
+  const pass = () => hasTrailing
+    ? NextResponse.redirect(new URL(stripped + (search || ''), req.url), 308)
+    : NextResponse.next()
+
+  if (isBypassedPath(pathname)) return pass()
 
   // 単一セグメントのみ対象: "/xxxx" or "/xxxx/"
   const m = pathname.match(/^\/([^\/]+)\/?$/)
-  if (!m) return NextResponse.next()
+  if (!m) return pass()
 
   let seg = m[1]
   try { seg = decodeURIComponent(seg) } catch { }
@@ -103,14 +114,14 @@ export async function middleware(req: NextRequest) {
   if (fixed) {
     const current = pathname.replace(/\/+$/, '') || '/'
     const target = (fixed as string).replace(/\/+$/, '') || '/'
-    if (current === target) return NextResponse.next()
+    if (current === target) return pass()
     return NextResponse.redirect(new URL(fixed + (search || ''), req.url), 308)
   }
 
   // Sanity で slug 一致を検索（dataset Public 想定）
-  if (!projectId) return NextResponse.next()
+  if (!projectId) return pass()
   const slug = slugify(toRomaji(seg))
-  if (!slug) return NextResponse.next()
+  if (!slug) return pass()
 
   try {
     // slugify は "_" を "-" に変換するため、元のセグメントでも照合する
@@ -133,7 +144,7 @@ export async function middleware(req: NextRequest) {
     }
   } catch { }
 
-  return NextResponse.next()
+  return pass()
 }
 
 // 可能な限り広く受け取りつつ、静的系は middleware 内で判定
@@ -144,6 +155,8 @@ export const config = {
   // vercel.json のredirectsがエッジで処理するのでそもそも到達しない）。
   matcher: [
     '/:seg{/}?',
+    // 末尾スラッシュ付きの複数セグメント（/life/xxx/ 等）。スラッシュを外すためだけに受ける
+    '/:path+/',
     '/category/:path*',
     '/tag/:path*',
     '/tags/:path*',
