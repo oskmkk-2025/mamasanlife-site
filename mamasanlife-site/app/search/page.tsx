@@ -120,7 +120,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
               <div className="grid md:grid-cols-2 gap-8">
                 {catRecs.slice(0, 3).map(g => (
                   <div key={g.slug} className="min-w-0">
-                    <h3 className="text-lg font-semibold mb-3" style={{ color: '#B67352' }}>{g.title} <span className="text-xs text-gray-500">({g.count})</span></h3>
+                    <h3 className="text-lg font-semibold mb-3" style={{ color: 'var(--c-primary)' }}>{g.title} <span className="text-xs text-gray-500">({g.count})</span></h3>
                     <PostList posts={g.posts.slice(0, 2).map((p: any) => ({ id: p._id, slug: p.slug, category: p.category, categoryTitle: p.categoryTitle, title: p.title, excerpt: p.excerpt, date: p.publishedAt, imageUrl: p.imageUrl }))} />
                   </div>
                 ))}

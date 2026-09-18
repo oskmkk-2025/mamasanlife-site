@@ -21,7 +21,7 @@ export function ProfileCard() {
           />
         </div>
         <div>
-          <div className="font-semibold" style={{ color:'#B67352' }}>ひーちママ</div>
+          <div className="font-semibold" style={{ color:'var(--c-primary)' }}>ひーちママ</div>
           <div className="text-xs text-gray-600">暮らし・家計・子育ての実践ノート。</div>
         </div>
       </div>

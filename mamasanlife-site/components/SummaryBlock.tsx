@@ -7,7 +7,7 @@ export function SummaryBlock({ title = 'この記事のポイント', items }: S
     if (!items || items.length === 0) return null
 
     return (
-        <div className="my-10 bg-[var(--c-bg)] border-2 border-[var(--c-primary)] rounded-2xl p-6 md:p-8 relative overflow-hidden">
+        <div className="my-10 bg-[var(--c-aqua-soft)] border-2 border-[var(--c-mint)] rounded-2xl p-6 md:p-8 relative overflow-hidden">
             {/* Decorative paw icons */}
             <div className="absolute -top-4 -right-4 text-[var(--c-primary)] opacity-10 text-6xl rotate-12" aria-hidden="true">
                 <i className="fas fa-paw"></i>
@@ -24,8 +24,8 @@ export function SummaryBlock({ title = 'この記事のポイント', items }: S
             </h2>
             <ul className="space-y-4">
                 {items.map((item, idx) => (
-                    <li key={idx} className="flex gap-3 text-[17px] md:text-[18px] leading-relaxed text-gray-800">
-                        <span className="text-[var(--c-primary)] font-bold shrink-0 mt-1">・</span>
+                    <li key={idx} className="flex gap-3 text-[17px] md:text-[18px] leading-relaxed text-[var(--c-emphasis)]">
+                        <span className="shrink-0 mt-[0.55em] w-2 h-2 rotate-45 rounded-[2px] bg-[var(--c-amber)]" aria-hidden="true"></span>
                         <span>{item}</span>
                     </li>
                 ))}

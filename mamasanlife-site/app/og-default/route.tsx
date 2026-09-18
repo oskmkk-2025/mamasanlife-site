@@ -20,10 +20,10 @@ export function GET() {
         }}
       >
         {/* Top bar */}
-        <div style={{ position:'absolute', top:0, left:0, right:0, height: 18, background:'#8CB9BD' }} />
+        <div style={{ position:'absolute', top:0, left:0, right:0, height: 18, background:'#80CBC4' }} />
         {/* Bottom bar */}
         <div style={{ position:'absolute', bottom:0, left:0, right:0, height: 18, background:'#ECB159' }} />
-        <div style={{ fontSize: 64, fontWeight: 800, color: '#B67352', letterSpacing: -1 }}>Mamasan Life</div>
+        <div style={{ fontSize: 64, fontWeight: 800, color: '#317771', letterSpacing: -1 }}>Mamasan Life</div>
         <div style={{ marginTop: 16, fontSize: 28, color: '#2b2b2b' }}>ママの毎日をちょっとラクに、ちょっとハッピーに</div>
       </div>
     ),

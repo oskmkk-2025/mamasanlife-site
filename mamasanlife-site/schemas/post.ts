@@ -180,6 +180,7 @@ export default defineType({
         { type: 'htmlEmbed' },
         { type: 'faqBlock' },
         { type: 'summaryBlock' },
+        { type: 'timelineBlock' },
         { type: 'mangaBlock' },
         { type: 'audioBlock' },
         { type: 'assistantBlock', components: { input: AssistantBlock } }

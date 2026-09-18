@@ -270,6 +270,42 @@ export const summaryBlock = defineType({
   }
 })
 
+export const timelineBlock = defineType({
+  name: 'timelineBlock',
+  type: 'object',
+  title: 'タイムライン（時系列）',
+  description: '「9:00 受付 → 10:30 完了」のように、当日の流れや手順を時間の順に並べるブロックです。',
+  fields: [
+    defineField({ name: 'title', title: '見出し（任意）', type: 'string', description: '例: 当日の流れ' }),
+    defineField({
+      name: 'items',
+      title: 'できごと',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          type: 'object',
+          name: 'timelineItem',
+          fields: [
+            defineField({ name: 'time', title: '時刻・目印', type: 'string', description: '例: 9:00 / 1日目 / 30分後', validation: R => R.required() }),
+            defineField({ name: 'label', title: 'できごと', type: 'string', description: '例: 受付', validation: R => R.required() }),
+            defineField({ name: 'text', title: '補足（任意）', type: 'text', rows: 2 })
+          ],
+          preview: { select: { title: 'label', subtitle: 'time' } }
+        })
+      ],
+      validation: R => R.required().min(2)
+    }),
+    defineField({ name: 'summary', title: 'まとめの一行（任意）', type: 'string', description: '例: 受付から完了まで約1時間30分' })
+  ],
+  preview: {
+    select: { title: 'title', items: 'items' },
+    prepare: ({ title, items }) => ({
+      title: title || 'タイムライン',
+      subtitle: `${(items || []).length}件`
+    })
+  }
+})
+
 export const mangaBlock = defineType({
   name: 'mangaBlock',
   type: 'object',

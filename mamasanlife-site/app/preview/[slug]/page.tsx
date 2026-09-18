@@ -8,6 +8,7 @@ import { AdSlot } from '@/components/AdSlot'
 import Link from 'next/link'
 import { HtmlEmbed } from '@/components/HtmlEmbed'
 import { SummaryBlock } from '@/components/SummaryBlock'
+import { TimelineBlock } from '@/components/TimelineBlock'
 import { FaqBlock } from '@/components/FaqBlock'
 import { MangaBlock } from '@/components/MangaBlock'
 import { SpeechBlockView } from '@/components/SpeechBlockView'
@@ -58,6 +59,7 @@ export default async function PreviewPage({ params }: { params: Promise<{ slug: 
       htmlEmbed: ({ value }: any) => <HtmlEmbed html={String(value?.html || '')} />,
       // 本番の記事ページと同じものが見えないと確認にならないので、表・まとめ枠なども出す（2026-09-06追加）
       summaryBlock: ({ value }: any) => <SummaryBlock title={value?.title} items={value?.items} />,
+      timelineBlock: ({ value }: any) => <TimelineBlock title={value?.title} items={value?.items} summary={value?.summary} />,
       faqBlock: ({ value }: any) => <FaqBlock items={value?.items} />,
       mangaBlock: ({ value }: any) => <MangaBlock images={value?.images} />,
       speechBlock: ({ value }: any) => <SpeechBlockView value={value} />,

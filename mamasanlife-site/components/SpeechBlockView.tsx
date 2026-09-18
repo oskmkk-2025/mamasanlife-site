@@ -39,15 +39,15 @@ export function SpeechBlockView({ value }: { value: any }){
           {iconSrc && (
             <img src={String(iconSrc)} alt={value?.name||''}
                  width={iconSize} height={iconSize}
-                 className="rounded-full overflow-hidden object-cover border shadow-sm"
+                 className="rounded-full overflow-hidden object-cover border-2 border-[var(--c-mint)] bg-white"
                  style={{ width: iconSize, height: iconSize }} />
           )}
           {value?.name && <div className="text-[11px] text-gray-600 mt-0 text-center leading-none max-w-[120px]">{value.name}</div>}
         </div>
         <div className="min-w-0">
-          <div className={`relative px-4 py-3 rounded-2xl text-[15px] leading-relaxed`} style={{ background:'#fff', border:'1px solid var(--c-primary)' }}>
+          <div className={`relative px-4 py-3 rounded-2xl text-[15px] leading-relaxed text-[var(--c-emphasis)]`} style={{ background: alignRight ? 'var(--c-amber-soft)' : 'var(--c-aqua-soft)' }}>
             {(value?.paras||[]).map((t:string, i:number)=> (<p key={i} className="mb-2 last:mb-0">{t}</p>))}
-            <span className={`absolute top-3 ${alignRight ? 'right-[-8px]' : 'left-[-8px]'} w-0 h-0 border-y-8 border-y-transparent ${alignRight ? 'border-l-8 border-l-[var(--c-primary)]' : 'border-r-8 border-r-[var(--c-primary)]'}`}></span>
+            <span className={`absolute top-3 ${alignRight ? 'right-[-8px]' : 'left-[-8px]'} w-0 h-0 border-y-8 border-y-transparent ${alignRight ? 'border-l-8 border-l-[var(--c-amber-soft)]' : 'border-r-8 border-r-[var(--c-aqua-soft)]'}`}></span>
           </div>
         </div>
       </div>

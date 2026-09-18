@@ -16,7 +16,7 @@ export function CategoryCarousel() {
   const next = () => setIndex(i => (i + 1) % items.length)
   const prev = () => setIndex(i => (i - 1 + items.length) % items.length)
   return (
-    <div className="w-full border-b" style={{ borderColor:'#8CB9BD', background:'#fff' }}>
+    <div className="w-full border-b" style={{ borderColor:'#80CBC4', background:'#fff' }}>
       <div className="container-responsive py-3 flex items-center justify-between gap-4">
         <button aria-label="prev" onClick={prev} className="text-gray-500 hover:text-gray-700">‹</button>
         <Link href={curr.href} className="flex-1">
@@ -24,7 +24,7 @@ export function CategoryCarousel() {
             <CategoryIllustration slug={curr.href.replace('/','')} size={56} />
             <div>
               <span className="text-xs font-black text-gray-900">カテゴリー</span>
-              <div className="text-lg font-semibold" style={{ color:'#B67352' }}>{curr.label}</div>
+              <div className="text-lg font-semibold" style={{ color:'var(--c-primary)' }}>{curr.label}</div>
             </div>
           </div>
         </Link>

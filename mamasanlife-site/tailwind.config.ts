@@ -7,17 +7,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // 配色（2026-09-18）: ミント #80CBC4／水色 #B4EBE6／クリーム #FBF8EF／オレンジ #FFB433。
+      // 明るい4色は文字に使えないので、文字用に濃くした primary と accent-ink を持つ（globals.css の :root と同じ値）
       colors: {
-        primary:  '#3D6B6E',
-        'primary-light': '#8CB9BD',
-        accent:   '#E8956D',
-        emphasis: '#374151',
-        muted:    '#9CA3AF',
+        primary:  '#317771',
+        'primary-light': '#80CBC4',
+        accent:   '#FFB433',
+        'accent-ink': '#A36700',
+        emphasis: '#3E3A35',
+        muted:    '#8A847C',
         surface:  '#FFFFFF',
+        mint:  '#80CBC4',
+        aqua:  '#B4EBE6',
+        cream: '#FBF8EF',
+        amber: '#FFB433',
         brand: {
-          main:   '#8CB9BD',
-          accent: '#E8956D',
-          dark:   '#3D6B6E',
+          main:   '#80CBC4',
+          accent: '#FFB433',
+          dark:   '#317771',
         }
       },
       borderRadius: {
@@ -25,8 +32,8 @@ const config: Config = {
         '3xl': '1.5rem',
       },
       boxShadow: {
-        'card': '0 4px 16px rgba(61,107,110,0.08)',
-        'card-hover': '0 8px 24px rgba(61,107,110,0.14)',
+        'card': '0 4px 16px rgba(49,119,113,0.08)',
+        'card-hover': '0 8px 24px rgba(49,119,113,0.14)',
       }
     }
   },

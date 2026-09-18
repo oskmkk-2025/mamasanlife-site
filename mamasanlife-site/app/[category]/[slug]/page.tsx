@@ -20,6 +20,7 @@ import { BlogCard } from '@/components/BlogCard'
 import { redirect } from 'next/navigation'
 import { FaqBlock } from '@/components/FaqBlock'
 import { SummaryBlock } from '@/components/SummaryBlock'
+import { TimelineBlock } from '@/components/TimelineBlock'
 import { MangaBlock } from '@/components/MangaBlock'
 import { AudioBlock } from '@/components/AudioBlock'
 // import { TocMobileBar } from '@/components/TocMobileBar'
@@ -346,7 +347,7 @@ export default async function PostPage(
       <Breadcrumbs items={crumbs} />
       {/* container-responsive(max-w-7xl)はmax-w-*ユーティリティと競合して幅指定が効かないため直書き。
           本文カラム約720px＝日本語1行38文字前後で読みやすい幅にする */}
-      <article className="mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-6xl">
+      <article className="mx-auto px-2 sm:px-6 lg:px-8 py-6 md:py-8 max-w-6xl">
         {/* Compact floating TOC (mobile, H2まで) */}
         <FloatingToc headings={headings} />
         <Script id="post-jsonld" type="application/ld+json" strategy="afterInteractive">
@@ -406,6 +407,8 @@ export default async function PostPage(
             itemListElement: crumbs.map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.label, item: b.href ? `${process.env.NEXT_PUBLIC_SITE_URL || ''}${b.href}` : `${process.env.NEXT_PUBLIC_SITE_URL || ''}/${post.category}/${post.slug}` }))
           })}
         </Script>
+        <div className="grid md:grid-cols-[1fr_320px] gap-6 md:gap-10">
+        <div className="note-card min-w-0">
         <header className="mb-6">
           {/* truncateはスマホでタイトルが読み切れなくなるため使わない（折り返し表示） */}
           <h1 className="text-2xl sm:text-3xl font-bold title-display break-words leading-snug">{post.title}</h1>
@@ -414,8 +417,9 @@ export default async function PostPage(
             {post.updatedAt && <time dateTime={post.updatedAt}>更新: {new Date(post.updatedAt).toLocaleDateString('ja-JP')}</time>}
           </div>
           {/* PR disclosure (景品表示法ステマ規制対応): ファーストビュー内=タイトル直下に表示（ASP提携条件対応） */}
-          <div className="mt-3 text-[12px] md:text-[13px] text-gray-600 border border-dashed rounded-md px-3 py-2 bg-white/70 text-center" role="note" aria-label="広告表記">
-            記事内に広告が含まれています
+          {/* 楽天証券のガイドライン: FVに「広告」「PR」等のいずれか。小さい文字・見えにくい色はNG（docs/affiliate-rewards.md） */}
+          <div className="pr-tag" role="note" aria-label="この記事には広告が含まれています">
+            広告あり
           </div>
           {/* banner row moved to body top */}
           {heroSrc && (
@@ -450,7 +454,6 @@ export default async function PostPage(
 
         <AdSlot slot="ARTICLE_TOP_SLOT" className="my-6" />
 
-        <div className="grid md:grid-cols-[1fr_320px] gap-10">
           <div
             className="prose-content min-w-0 text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-[1.9] tracking-[.005em]
                        [word-break:break-word] [overflow-wrap:anywhere]
@@ -490,6 +493,7 @@ export default async function PostPage(
             {/* 応援クリック（ブログ村/with2・控えめデザインで再設置 2026-07-28） */}
             {hasBody && <RankingSupport />}
           </div>
+        </div>
           <aside className="hidden md:block md:sticky md:top-20 h-max space-y-6">
             {hasBody && <TableOfContents headings={headings} />}
             <AdSlot slot="SIDEBAR_SLOT" />
@@ -809,6 +813,7 @@ const ptComponents = {
     },
     faqBlock: ({ value }: any) => <FaqBlock items={value.items} />,
     summaryBlock: ({ value }: any) => <SummaryBlock title={value.title} items={value.items} />,
+    timelineBlock: ({ value }: any) => <TimelineBlock title={value?.title} items={value?.items} summary={value?.summary} />,
     mangaBlock: ({ value }: any) => <MangaBlock images={value.images} />,
     audioBlock: ({ value }: any) => <AudioBlock audioFile={value.audioFile} title={value.title} transcription={value.transcription} />,
     appreachCard: ({ value }: any) => {
@@ -889,13 +894,13 @@ const ptComponents = {
   },
   block: {
     h2: ({ children }: any) => (
-      <h2 id={slugify(String(children))} className="mt-10 mb-4 text-[1.5rem] md:text-[1.875rem] leading-snug scroll-mt-24 pr-6 relative">
+      <h2 id={slugify(String(children))} className="pt-h2 mt-10 mb-4 text-[1.5rem] md:text-[1.875rem] leading-snug scroll-mt-24 relative">
         <span className="h2-paw" aria-hidden />
         <span className="marker-pen">{children}</span>
       </h2>
     ),
-    h3: ({ children }: any) => <h3 id={slugify(String(children))} className="mt-8 mb-3 text-[1.25rem] md:text-[1.5rem] leading-snug scroll-mt-24">{children}</h3>,
-    h4: ({ children }: any) => <h4 id={slugify(String(children))} className="mt-6 mb-2 text-[1.125rem] md:text-[1.25rem] leading-snug scroll-mt-24">{children}</h4>,
+    h3: ({ children }: any) => <h3 id={slugify(String(children))} className="pt-h3 mt-8 mb-3 text-[1.25rem] md:text-[1.5rem] leading-snug scroll-mt-24">{children}</h3>,
+    h4: ({ children }: any) => <h4 id={slugify(String(children))} className="pt-h4 mt-6 mb-2 text-[1.125rem] md:text-[1.25rem] leading-snug scroll-mt-24">{children}</h4>,
     normal: ({ children }: any) => {
       const raw = (Array.isArray(children) ? children.join(' ') : String(children || '')).trim()
       if (raw === '[ad]') return <AdSlot slot="IN_ARTICLE_SLOT" className="my-6 clear-both" />

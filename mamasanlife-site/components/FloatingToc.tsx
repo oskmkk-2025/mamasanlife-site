@@ -14,7 +14,7 @@ export function FloatingToc({ headings }: { headings: Heading[] }){
           aria-label="目次を開く"
           onClick={()=>setOpen(true)}
           className="fixed bottom-4 right-4 z-40 bg-[var(--c-primary)] text-white text-sm px-3 py-2 rounded-full shadow"
-        >目次</button>
+        >もくじ</button>
       )}
       {open && (
         <div className="fixed inset-0 z-40" onClick={()=>setOpen(false)}>
@@ -22,7 +22,7 @@ export function FloatingToc({ headings }: { headings: Heading[] }){
           <div className="absolute left-1/2 -translate-x-1/2 bottom-16 w-[92%] max-w-md bg-white rounded-xl shadow-lg p-4"
                onClick={(e)=>e.stopPropagation()}>
             <div className="flex items-center justify-between mb-2">
-              <div className="text-sm font-semibold">目次</div>
+              <div className="text-sm font-semibold">もくじ</div>
               <button className="text-sm px-2 py-1 rounded-md border" onClick={()=>setOpen(false)}>閉じる</button>
             </div>
             <nav aria-label="目次">

@@ -16,6 +16,7 @@ import {
   moshimoEasyLink,
   faqBlock,
   summaryBlock,
+  timelineBlock,
   mangaBlock,
   audioBlock
 } from './blocks'
@@ -38,6 +39,7 @@ export const schemaTypes = [
   moshimoEasyLink,
   faqBlock,
   summaryBlock,
+  timelineBlock,
   mangaBlock,
   audioBlock
 ]
