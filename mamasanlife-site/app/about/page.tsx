@@ -151,7 +151,7 @@ export default function AboutPage() {
         <div className="grid gap-4 md:grid-cols-2">
           {timeline.map((item) => (
             <article key={item.year} className="border rounded-lg bg-white p-5 space-y-2">
-              <div className="text-sm font-semibold text-[var(--c-accent)]">{item.year}</div>
+              <div className="text-sm font-semibold text-[var(--c-accent-ink)]">{item.year}</div>
               <h3 className="text-lg font-semibold text-emphasis">{item.title}</h3>
               <p className="text-gray-700 leading-7">{item.body}</p>
             </article>

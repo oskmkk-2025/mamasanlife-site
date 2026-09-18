@@ -11,7 +11,7 @@ export function LineFollowButton({ href, label = '友だち追加', size = 'md',
       ? 'bg-transparent border-2 border-white text-white'
       : variant === 'outlineGreen'
         ? 'btn-line-outline'
-        : 'bg-transparent border-2 border-[var(--c-accent)] text-[var(--c-accent)]'
+        : 'bg-transparent border-2 border-[var(--c-accent)] text-[var(--c-accent-ink)]'
 
   // Inline style fallback for critical visibility (Solid Green design)
   const inlineStyle: React.CSSProperties = variant === 'outlineGreen' ? {

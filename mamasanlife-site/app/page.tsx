@@ -56,7 +56,7 @@ export default async function HomePage() {
     <div>
      <section className="bg-white">
   <div className="container-responsive py-10 sm:py-32 text-center max-w-5xl mx-auto">
-    <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--c-accent)] mb-4 block">FP2級ママの家計改善ブログ</span>
+    <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--c-accent-ink)] mb-4 block">FP2級ママの家計改善ブログ</span>
     <h1 className="hero-title text-3xl sm:text-6xl footer:tracking-tight mb-5 sm:mb-6">
       FP2級ママが、<br className="sm:hidden" />固定費を年20万円減らした記録。
     </h1>
@@ -67,13 +67,13 @@ export default async function HomePage() {
     <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
       <a
         href="/money/review-of-utility-costs"
-        className="inline-block bg-[var(--c-accent)] text-white px-6 py-3 rounded-md font-medium hover:opacity-90 transition"
+        className="inline-block bg-[var(--c-accent)] text-[var(--c-emphasis)] px-6 py-3 rounded-md font-medium hover:opacity-90 transition"
       >
         家計改善の実例を読む
       </a>
       <a
         href="#popular"
-        className="inline-block border border-[var(--c-accent)] text-[var(--c-accent)] px-6 py-3 rounded-md font-medium hover:bg-black/5 transition"
+        className="inline-block border border-[var(--c-accent)] text-[var(--c-accent-ink)] px-6 py-3 rounded-md font-medium hover:bg-black/5 transition"
       >
         人気記事から読む
       </a>
@@ -84,40 +84,40 @@ export default async function HomePage() {
 {/* 人気記事 TOP5（POPULAR） */}
 <section id="popular" className="container-responsive py-16">
   <div className="text-center mb-10">
-    <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--c-accent)] mb-2 block">Popular</span>
+    <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--c-accent-ink)] mb-2 block">Popular</span>
     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">よく読まれている記事 TOP5</h2>
   </div>
   <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
     <li className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
-      <span className="text-xs text-[var(--c-accent)] font-bold">No.1 ／ お金・家計管理</span>
+      <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.1 ／ お金・家計管理</span>
       <a href="/money/review-of-utility-costs" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
         【実例検証】東邦ガス・中部電力のセット契約は損？
       </a>
       <p className="text-sm text-gray-600 mt-2">東海エリアの光熱費を実例で徹底比較。</p>
     </li>
     <li className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
-      <span className="text-xs text-[var(--c-accent)] font-bold">No.2 ／ お金・家計管理</span>
+      <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.2 ／ お金・家計管理</span>
       <a href="/money/start-nisa-from-2025" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
         NISAの始め方｜FP2級ママが教える10分3ステップ【2026年版】
       </a>
       <p className="text-sm text-gray-600 mt-2">迷っている主婦のための最短スタート手順。</p>
     </li>
     <li className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
-      <span className="text-xs text-[var(--c-accent)] font-bold">No.3 ／ お金・家計管理</span>
+      <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.3 ／ お金・家計管理</span>
       <a href="/money/rakuten-economic-zone" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
         楽天経済圏で賢く資産を増やす方法
       </a>
       <p className="text-sm text-gray-600 mt-2">家計と投資をまるごと最適化する考え方。</p>
     </li>
     <li className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
-      <span className="text-xs text-[var(--c-accent)] font-bold">No.4 ／ 暮らし・家事</span>
+      <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.4 ／ 暮らし・家事</span>
       <a href="/life/rakuten-hometown-tax-2024" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
         【楽天ふるさと納税】今年大当たりの返礼品5選
       </a>
       <p className="text-sm text-gray-600 mt-2">5と0のつく日を最大限に活かした実例。</p>
     </li>
     <li className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
-      <span className="text-xs text-[var(--c-accent)] font-bold">No.5 ／ 子育て・教育</span>
+      <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.5 ／ 子育て・教育</span>
       <a href="/parenting/smartphone-for-junior-high-school-students" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
         【子どものiPhone設定】失敗しない中学生スマホの持たせ方
       </a>

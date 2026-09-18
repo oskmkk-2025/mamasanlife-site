@@ -34,10 +34,10 @@ export function PostCard({ slug, category, categoryTitle, title, excerpt, date, 
         </div>
         <div className="p-6">
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-[10px] font-bold tracking-widest uppercase text-[var(--c-accent)]">{categoryTitle || category}</span>
+            <span className="text-[10px] font-bold tracking-widest uppercase text-[var(--c-accent-ink)]">{categoryTitle || category}</span>
             <span className="w-4 h-[1px] bg-[var(--c-accent)] opacity-30" />
           </div>
-          <h3 className="text-lg font-bold text-[var(--c-primary)] leading-snug card-title sm:line-clamp-2 transition-colors duration-300 group-hover:text-[var(--c-accent)]">{title}</h3>
+          <h3 className="text-lg font-bold text-[var(--c-primary)] leading-snug card-title sm:line-clamp-2 transition-colors duration-300 group-hover:text-[var(--c-accent-ink)]">{title}</h3>
           {excerpt && <p className="mt-3 text-sm text-[var(--c-emphasis)] leading-relaxed sm:line-clamp-2 opacity-80">{excerpt}</p>}
           <div className="mt-3 text-xs text-gray-500">
             {date && <time dateTime={date}>{new Date(date).toLocaleDateString('ja-JP')}</time>}

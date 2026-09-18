@@ -31,10 +31,10 @@ export function HeroCard({ post }: { post: HeroPost }) {
       </div>
       <div className="p-8 sm:p-12">
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-[var(--c-accent)]">{post.category}</span>
+          <span className="text-[11px] font-bold tracking-[0.2em] uppercase text-[var(--c-accent-ink)]">{post.category}</span>
           <span className="w-8 h-[1px] bg-[var(--c-accent)] opacity-40" />
         </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--c-primary)] leading-tight group-hover:text-[var(--c-accent)] transition-colors duration-500">{post.title}</h2>
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--c-primary)] leading-tight group-hover:text-[var(--c-accent-ink)] transition-colors duration-500">{post.title}</h2>
         {post.excerpt && <p className="mt-4 text-lg text-[var(--c-emphasis)] line-clamp-2 opacity-90 leading-relaxed max-w-2xl">{post.excerpt}</p>}
         {post.date && (
           <div className="mt-6 flex items-center gap-2 text-[10px] font-bold tracking-widest uppercase text-gray-400">

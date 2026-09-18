@@ -35,7 +35,7 @@ export function PaywallNotice({ codocUrl, priceLabel, message, entryCode, userCo
             data-css={codocCss || 'rainbow-square'}
             data-usercode={userCode}
           />
-          <div id={embedId} className="codoc-entries text-sm font-semibold text-[var(--c-accent)]">
+          <div id={embedId} className="codoc-entries text-sm font-semibold text-[var(--c-accent-ink)]">
             この続きは codoc で購読できます
           </div>
         </>
@@ -45,10 +45,10 @@ export function PaywallNotice({ codocUrl, priceLabel, message, entryCode, userCo
             href={codocUrl}
             target="_blank"
             rel="noreferrer"
-            className="focus-ring inline-flex items-center gap-2 rounded-full border-2 border-[var(--c-accent)] px-5 py-2 text-sm font-bold text-[var(--c-accent)] transition-colors hover:bg-[var(--c-accent)] hover:text-white"
+            className="focus-ring inline-flex items-center gap-2 rounded-full border-2 border-[var(--c-accent)] px-5 py-2 text-sm font-bold text-[var(--c-accent-ink)] transition-colors hover:bg-[var(--c-accent)] hover:text-[var(--c-emphasis)]"
           >
             <span>codocで続きを読む</span>
-            <span className="rounded-full bg-[var(--c-accent-light)] px-2 py-0.5 text-xs font-medium text-[var(--c-accent)]/80">
+            <span className="rounded-full bg-[var(--c-accent-light)] px-2 py-0.5 text-xs font-medium text-[var(--c-accent-ink)]/80">
               {priceText}
             </span>
           </Link>
