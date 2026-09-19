@@ -2,6 +2,9 @@ import type { MetadataRoute } from 'next'
 import { sanityClient } from '@/lib/sanity.client'
 import { allPostSlugsQuery } from '@/lib/queries'
 
+// 1時間ごとに作り直す。これが無いとデプロイした時点で固定され、予約公開した記事がデプロイするまで載らなかった
+export const revalidate = 3600
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3002'
   const posts: { slug: string; category: string; updatedAt?: string; _updatedAt?: string; publishedAt?: string }[] = await sanityClient.fetch(allPostSlugsQuery).catch(() => [])
