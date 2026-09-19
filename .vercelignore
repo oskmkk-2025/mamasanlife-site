@@ -7,3 +7,7 @@ mamasanlife-site/backups/
 mamasanlife-site/archive/
 **/*.tar.gz
 **/node_modules/
+# マンガの元データ（約200MB＝1回のデプロイの8割）。記事のマンガはSanityから配信しており、サイトは参照していない。
+# ママスタ・Instagram画像づくり・X投稿は手元のファイルを直接読むので影響しない（2026-09-19 デプロイの保存容量10GB超過のため）
+public/manga/
+mamasanlife-site/public/manga/
