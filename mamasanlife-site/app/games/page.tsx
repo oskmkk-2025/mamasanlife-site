@@ -4,12 +4,12 @@ import Link from 'next/link'
 export const revalidate = 3600
 
 export const metadata = {
-  title: 'お金が学べる無料ゲーム｜ひーちfamilyのゲームひろば',
+  title: 'お金が学べる無料ゲーム｜ママさんライフ ひーちfamilyのゲームひろば',
   description:
     'ひーちママが作った、親子で遊びながらお金の計算が学べる無料ゲーム。コインを合体させる「コインもりもり」、ぴったり払いに挑戦する「レジぴったん」。インストール不要、スマホでそのまま遊べます。',
   alternates: { canonical: '/games' },
   openGraph: {
-    title: 'お金が学べる無料ゲーム｜ひーちfamilyのゲームひろば',
+    title: 'お金が学べる無料ゲーム｜ママさんライフ ひーちfamilyのゲームひろば',
     description: 'インストール不要・無料。遊ぶだけでお金の計算が身につく知育ゲームで遊べます。',
     images: ['/images/games/games-ogp.jpg'],
   },
