@@ -707,8 +707,9 @@ const ptComponents = {
           <div className={`table-scroll${wide ? ' table-scroll--wide' : ''}${roomy ? ' table-scroll--roomy' : ''}`}>
             <table className={`min-w-full ${wide ? 'border-separate border-spacing-0' : 'border-collapse'} text-[15px] md:text-[16px] leading-[1.75]`}>
               {hasHeader && (
+                // 見出しは短いものだけ1行固定。13文字以上は折り返す（列の幅から見出しがはみ出すため・2026-10-01）
                 <thead>
-                  <tr>{head!.map((c, i) => (<th key={i} colSpan={i === head!.length - 1 && head!.length < cols ? cols - head!.length + 1 : undefined} className={`border px-3.5 py-3 bg-[var(--c-bg)] text-gray-700 text-left align-bottom${wide ? ' whitespace-nowrap' : ''}`}>{formatCell(c)}</th>))}</tr>
+                  <tr>{head!.map((c, i) => (<th key={i} colSpan={i === head!.length - 1 && head!.length < cols ? cols - head!.length + 1 : undefined} className={`border px-3.5 py-3 bg-[var(--c-bg)] text-gray-700 text-left align-bottom${wide && String(c ?? '').length <= 12 ? ' whitespace-nowrap' : ''}`}>{formatCell(c)}</th>))}</tr>
                 </thead>
               )}
               <tbody>
