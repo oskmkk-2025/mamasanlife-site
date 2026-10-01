@@ -691,7 +691,8 @@ const ptComponents = {
       const cols = Math.max(...rows.map((r) => r.length))
       // 3列でも説明文が長い表は、列が潰れて1行数文字になり異常に縦長になるので横スクロール型にする
       const longestCell = Math.max(...rows.flatMap((r) => r.map((c) => String(c || '').length)), 0)
-      const wide = cols >= 4 || (cols === 3 && longestCell >= 24)
+      // stickyFirst=true の表は、列が少なくても横スクロール型にして1列目（項目名）を固定する（2026-10-01）
+      const wide = !!value?.stickyFirst || cols >= 4 || (cols === 3 && longestCell >= 24)
       // 文章が長い表は列を広めに取る（狭いと1行7文字ほどになり読みづらいうえ行が異常に高くなる）
       const roomy = wide && longestCell >= 36
       // ヘッダー直後の行が足りない = 見出しが横に結合されていた行の続き（先頭が空欄）
