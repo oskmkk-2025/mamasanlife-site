@@ -65,7 +65,7 @@ function isBypassedPath(pathname: string) {
 
 // 運営者の意思で完全削除した記事（バックアップからの復元も禁止）。
 // 410 Gone を返して「意図的な削除」をGoogleに伝え、検索結果から早く消す。
-const GONE_SLUGS = ['silver-tutor', 'silver-tutors-experience1']
+const GONE_SLUGS = ['silver-tutor', 'silver-tutors-experience1', 'blog-1st-year-2nd-year-pv-and-profit']
 
 export async function middleware(req: NextRequest) {
   const { pathname, search } = req.nextUrl

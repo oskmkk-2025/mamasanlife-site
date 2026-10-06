@@ -13,7 +13,7 @@ export const API_VERSION = '2024-03-14'
 
 // 運営者の意思で完全削除した記事。いかなる操作でも作成・復元してはならない。
 // （シルバー家庭教師はおすすめできないと本人が判断して削除済み。2026-07-03確定）
-export const GONE_SLUGS = ['silver-tutor', 'silver-tutors-experience1']
+export const GONE_SLUGS = ['silver-tutor', 'silver-tutors-experience1', 'blog-1st-year-2nd-year-pv-and-profit']
 
 // トークン解決の優先順位:
 // 1) 環境変数 SANITY_WRITE_TOKEN（有効なものが設定されていれば）
