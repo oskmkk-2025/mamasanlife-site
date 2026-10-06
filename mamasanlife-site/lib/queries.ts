@@ -82,12 +82,12 @@ export const tagsByCategoryFlatQuery = groq`
 export function buildTagQuery({withSince, orderPopular}:{withSince:boolean; orderPopular:boolean}){
   const since = withSince ? ' && defined(publishedAt) && publishedAt >= $since' : ''
   const order = orderPopular ? 'coalesce(views,0) desc, publishedAt desc' : 'publishedAt desc'
-  return `*[_type == "post" && defined(slug.current) && $tag in tags${since}] | order(${order})[0...$limit] ${postFields}`
+  return `*[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && (!defined(workflowStatus) || workflowStatus == "Published") && $tag in tags${since}] | order(${order})[0...$limit] ${postFields}`
 }
 
 export function buildTagCountQuery({withSince}:{withSince:boolean}){
   const since = withSince ? ' && defined(publishedAt) && publishedAt >= $since' : ''
-  return `count(*[_type == "post" && defined(slug.current) && $tag in tags${since}])`
+  return `count(*[_type == "post" && defined(slug.current) && defined(publishedAt) && publishedAt <= now() && (!defined(workflowStatus) || workflowStatus == "Published") && $tag in tags${since}])`
 }
 
 export const postByCategorySlugQuery = groq`
