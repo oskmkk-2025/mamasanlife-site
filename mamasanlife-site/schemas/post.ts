@@ -83,7 +83,7 @@ export default defineType({
       type: 'array',
       of: [{ type: 'string' }],
       options: { layout: 'tags' },
-      description: '関連キーワードやシリーズ名をタグに。3〜5個が目安です。',
+      description: '決まった19個から1〜3個だけ（固定費の見直し／電気・ガス代／スマホ・通信費／楽天経済圏／ふるさと納税／NISA・投資／家計管理／車／住まい・リフォーム／家事・時短／子育て・教育／受験・進路／仕事・学び直し／AI活用／メルカリ／ウォーキング・健康／低山・おでかけ／耳活／猫）。新しいタグは作らない（2026-10-06）',
       group: 'content'
     }),
     defineField({
