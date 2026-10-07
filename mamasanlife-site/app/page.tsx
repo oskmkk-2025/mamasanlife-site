@@ -55,16 +55,25 @@ export default async function HomePage() {
   return (
     <div>
      <section className="bg-white">
-  <div className="container-responsive py-10 sm:py-32 text-center max-w-5xl mx-auto">
+  <div className="container-responsive py-8 sm:py-20 max-w-6xl mx-auto grid gap-6 sm:gap-10 sm:grid-cols-[1.1fr_1fr] items-center">
+    <img
+      src="/images/home/hero-hiichimama.webp"
+      alt="電卓を手に、電気・ガス・スマホの請求書を見直すひーちママ"
+      width={1200}
+      height={896}
+      fetchPriority="high"
+      className="order-first sm:order-last w-full max-w-[320px] sm:max-w-full h-auto mx-auto"
+    />
+    <div className="text-center sm:text-left min-w-0">
     <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--c-accent-ink)] mb-4 block">FP2級ママの家計改善ブログ</span>
-    <h1 className="hero-title text-3xl sm:text-6xl footer:tracking-tight mb-5 sm:mb-6">
-      FP2級ママが、<br className="sm:hidden" />わが家の固定費を見直した記録。
+    <h1 className="hero-title text-3xl sm:text-5xl footer:tracking-tight mb-5 sm:mb-6">
+      FP2級ママが、<br />わが家の固定費を見直した記録。
     </h1>
-    <p className="hero-sub text-gray-500 max-w-2xl mx-auto">
+    <p className="hero-sub text-gray-500 max-w-2xl mx-auto sm:mx-0">
       電気・ガス・通信・保険・ふるさと納税。<br />
       東海エリアに暮らす2児の母が、本当にやってよかった家計改善だけを書いています。
     </p>
-    <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+    <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-center sm:justify-start justify-center gap-3">
       <a
         href="/money/review-of-utility-costs"
         className="inline-block bg-[var(--c-accent)] text-[var(--c-emphasis)] px-6 py-3 rounded-md font-medium hover:opacity-90 transition"
@@ -77,6 +86,7 @@ export default async function HomePage() {
       >
         人気記事から読む
       </a>
+    </div>
     </div>
   </div>
 </section>
