@@ -21,21 +21,18 @@ export async function Sidebar({ onlyCategory }: { onlyCategory?: string }) {
   recent = recent.slice(0,5)
   // タグ: カテゴリページでは当該カテゴリのタグ頻出順、その他は全体のタグ
   let tagList: string[] = []
-  if (onlyCategory) {
-    const flat = await sanityClient.fetch(tagsByCategoryFlatQuery, { category: onlyCategory }).catch(()=>[] as any[])
+  {
+    // 記事ごとのタグ配列が入れ子で返るので、1つずつにばらして数える（1ボタン1タグ）
+    const raw = onlyCategory
+      ? await sanityClient.fetch(tagsByCategoryFlatQuery, { category: onlyCategory }).catch(()=>[] as any[])
+      : await sanityClient.fetch(tagCloudQuery).catch(()=>[] as any[])
     const freq = new Map<string, number>()
-    for (const raw of flat||[]){
-      const t = String(raw||'').trim()
+    for (const v of (Array.isArray(raw) ? raw : []).flat(2)){
+      const t = String(v||'').trim()
       if (!t || t === '#') continue
       freq.set(t, (freq.get(t)||0)+1)
     }
-    tagList = Array.from(freq.entries()).sort((a,b)=> (b[1]||0)-(a[1]||0)).map(([t])=>t).slice(0,30)
-  } else {
-    const tagsAll = await sanityClient.fetch(tagCloudQuery).catch(()=>[] as any[])
-    tagList = (Array.isArray(tagsAll) ? tagsAll : [])
-      .map((t:any)=> String(t||'').trim())
-      .filter((t)=> t && t !== '#')
-      .slice(0,50)
+    tagList = Array.from(freq.entries()).sort((a,b)=> (b[1]||0)-(a[1]||0)).map(([t])=>t).slice(0, onlyCategory ? 30 : 50)
   }
 
   const catsSorted = [...CATS].sort((a,b)=> toHiragana(a.title).localeCompare(toHiragana(b.title), 'ja'))
