@@ -58,7 +58,7 @@ export default async function HomePage() {
   <div className="container-responsive py-10 sm:py-32 text-center max-w-5xl mx-auto">
     <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--c-accent-ink)] mb-4 block">FP2級ママの家計改善ブログ</span>
     <h1 className="hero-title text-3xl sm:text-6xl footer:tracking-tight mb-5 sm:mb-6">
-      FP2級ママが、<br className="sm:hidden" />固定費を年20万円減らした記録。
+      FP2級ママが、<br className="sm:hidden" />わが家の固定費を見直した記録。
     </h1>
     <p className="hero-sub text-gray-500 max-w-2xl mx-auto">
       電気・ガス・通信・保険・ふるさと納税。<br />
@@ -81,7 +81,7 @@ export default async function HomePage() {
   </div>
 </section>
 
-{/* 人気記事 TOP5（POPULAR） */}
+{/* 人気記事 TOP5（POPULAR）：GA4 直近90日の閲覧数順（2026-10-07 更新） */}
 <section id="popular" className="container-responsive py-16">
   <div className="text-center mb-10">
     <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--c-accent-ink)] mb-2 block">Popular</span>
@@ -90,38 +90,38 @@ export default async function HomePage() {
   <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
     <li className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
       <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.1 ／ お金・家計管理</span>
-      <a href="/money/review-of-utility-costs" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
-        【実例検証】東邦ガス・中部電力のセット契約は損？
+      <a href="/money/chubu-electric-powers-fuel-cost-adjustment-upper-limit" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
+        中部電力の燃料費調整額の上限は損？
       </a>
-      <p className="text-sm text-gray-600 mt-2">東海エリアの光熱費を実例で徹底比較。</p>
+      <p className="text-sm text-gray-600 mt-2">わが家の請求データで、従量電灯Bを検証。</p>
     </li>
     <li className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
       <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.2 ／ お金・家計管理</span>
-      <a href="/money/start-nisa-from-2025" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
-        NISAの始め方｜FP2級ママが教える10分3ステップ【2026年版】
+      <a href="/money/rakuten-mercari" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
+        メルカリで楽天ポイントは使える？
       </a>
-      <p className="text-sm text-gray-600 mt-2">迷っている主婦のための最短スタート手順。</p>
+      <p className="text-sm text-gray-600 mt-2">直接は×。でも損しない2つの方法。</p>
     </li>
     <li className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
       <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.3 ／ お金・家計管理</span>
-      <a href="/money/rakuten-economic-zone" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
-        楽天経済圏で賢く資産を増やす方法
+      <a href="/money/mobile-number-portability" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
+        IIJmioから日本通信SIMへ乗り換え
       </a>
-      <p className="text-sm text-gray-600 mt-2">家計と投資をまるごと最適化する考え方。</p>
+      <p className="text-sm text-gray-600 mt-2">月末に移るとお得な理由と手順を画像つきで。</p>
     </li>
     <li className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
-      <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.4 ／ 暮らし・家事</span>
-      <a href="/life/rakuten-hometown-tax-2024" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
-        【楽天ふるさと納税】今年大当たりの返礼品5選
+      <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.4 ／ 心と健康</span>
+      <a href="/health/kkr-kenko-points" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
+        KKR健幸ポイントの使い方
       </a>
-      <p className="text-sm text-gray-600 mt-2">5と0のつく日を最大限に活かした実例。</p>
+      <p className="text-sm text-gray-600 mt-2">タニタ連携で貯めて、クーポンで使う方法【公務員向け】。</p>
     </li>
     <li className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
-      <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.5 ／ 子育て・教育</span>
-      <a href="/parenting/smartphone-for-junior-high-school-students" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
-        【子どものiPhone設定】失敗しない中学生スマホの持たせ方
+      <span className="text-xs text-[var(--c-accent-ink)] font-bold">No.5 ／ 働き方・キャリア</span>
+      <a href="/work/qualification-nissho-bookkeeping3-test" className="block mt-2 text-lg font-bold text-gray-900 hover:opacity-70">
+        職業訓練だけで簿記3級に合格できる？
       </a>
-      <p className="text-sm text-gray-600 mt-2">親子で安心して使える初期設定の決定版。</p>
+      <p className="text-sm text-gray-600 mt-2">実際に合格した私の勉強時間と教材。</p>
     </li>
   </ol>
 </section>
