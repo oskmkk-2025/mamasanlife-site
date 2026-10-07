@@ -31,6 +31,7 @@ export type ParsedAffiliateCta = {
   href: string
   label: string
   pixel?: string
+  big?: boolean
 }
 
 // アフィリエイトボタンHTMLを解析する。
@@ -59,10 +60,12 @@ export function parseAffiliateCta(html: string): ParsedAffiliateCta | null {
 
   // gifbanner = バリューコマースの表示回数計測（拾わないとインプレッションが記録されない）
   const pixelMatch = src.match(/<img[^>]*src="([^"]*(?:0\.gif|impression|itp\.gif|gifbanner)[^"]*)"[^>]*>/i)
-  return { variant, href, label, pixel: pixelMatch?.[1] }
+  // affiliate-btn--big：短い文言を本文と同じ大きさで見せる（2026-10-07 本人「一目でわかる大きさに」）
+  const big = /affiliate-btn--big\b/.test(m[0])
+  return { variant, href, label, pixel: pixelMatch?.[1], big }
 }
 
-export default function AffiliateCtaButton({ variant, href, label, pixel }: ParsedAffiliateCta) {
+export default function AffiliateCtaButton({ variant, href, label, pixel, big }: ParsedAffiliateCta) {
   const cfg = configFor(variant)
   const btnStyle: React.CSSProperties = {
     background: `linear-gradient(175deg, ${cfg.lightColor} 0%, ${cfg.baseColor} 40%, ${cfg.darkColor} 100%)`,
@@ -78,7 +81,7 @@ export default function AffiliateCtaButton({ variant, href, label, pixel }: Pars
         className="cta-candy-link"
         aria-label={`${label}（外部リンク）`}
       >
-        <span className="cta-candy-btn" style={btnStyle}>
+        <span className={big ? 'cta-candy-btn cta-candy-btn--big' : 'cta-candy-btn'} style={btnStyle}>
           <span className="cta-candy-btn__highlight" aria-hidden="true" />
           <span className="cta-candy-btn__icon-wrap" aria-hidden="true">
             <span className="cta-candy-btn__icon" style={{ color: cfg.darkColor }}>{cfg.icon}</span>

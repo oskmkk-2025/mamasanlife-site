@@ -1116,3 +1116,7 @@ input::placeholder { color: #9CA3AF; }
   transform: translateY(2px) scale(0.99);
   filter: drop-shadow(0 3px 0 rgba(0,0,0,0.12)) drop-shadow(0 5px 12px rgba(0,0,0,0.08));
 }
+
+/* 大きいボタン（短い文言・本文と同じ文字の大きさ） 2026-10-07 */
+.cta-candy-btn.cta-candy-btn--big { min-height: 56px; padding: 10px 0; }
+.cta-candy-btn.cta-candy-btn--big .cta-candy-btn__label { font-size: 1rem; letter-spacing: 0.02em; }
