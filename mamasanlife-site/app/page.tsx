@@ -67,7 +67,7 @@ export default async function HomePage() {
     <div className="text-center sm:text-left min-w-0">
     <span className="text-[11px] font-bold tracking-[0.3em] uppercase text-[var(--c-accent-ink)] mb-4 block">FP2級ママの家計改善ブログ</span>
     <h1 className="hero-title text-3xl sm:text-5xl footer:tracking-tight mb-5 sm:mb-6">
-      FP2級ママが、<br />わが家の固定費を見直した記録。
+      FP2級ママが、<br /><span className="inline-block">わが家の固定費を</span><span className="inline-block">見直した記録。</span>
     </h1>
     <p className="hero-sub text-gray-500 max-w-2xl mx-auto sm:mx-0">
       電気・ガス・通信・保険・ふるさと納税。<br />
