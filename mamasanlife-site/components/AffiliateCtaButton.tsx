@@ -63,7 +63,7 @@ export function parseAffiliateCta(html: string): ParsedAffiliateCta | null {
   const pixelMatch = src.match(/<img[^>]*src="([^"]*(?:0\.gif|impression|itp\.gif|gifbanner)[^"]*)"[^>]*>/i)
   // affiliate-btn--big：短い文言を本文と同じ大きさで見せる（2026-10-07 本人「一目でわかる大きさに」）
   const big = /affiliate-btn--big\b/.test(m[0])
-  // data-dest="エネチェンジ（電気料金の比較サイト）"：ボタンの上に行き先を小さく表示（2026-10-07 本人「どのサイトにつながるか不安」）
+  // data-dest="電気料金の比較サイトが開きます"：ボタンのすぐ上に「＼ 押したらどうなるか ／」を小さく表示（2026-10-07 本人「どのサイトにつながるか不安」）
   const dest = (m[0].match(/data-dest="([^"]+)"/)?.[1] || '').trim() || undefined
   return { variant, href, label, pixel: pixelMatch?.[1], big, dest }
 }
@@ -77,7 +77,7 @@ export default function AffiliateCtaButton({ variant, href, label, pixel, big, d
   }
   return (
     <div className="cta-candy-group my-6">
-      {dest ? <span className="cta-candy-dest">{dest}が開きます</span> : null}
+      {dest ? <span className="cta-candy-dest">＼ {dest} ／</span> : null}
       <a
         href={href}
         target="_blank"
