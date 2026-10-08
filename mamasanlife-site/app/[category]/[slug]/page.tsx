@@ -312,6 +312,7 @@ export default async function PostPage(
   }
   displayBlocks = await enrichBlogCardBlocks(displayBlocks)
   displayBlocks = groupAppreachBlocks(displayBlocks)
+  if (!paywall) displayBlocks = insertMidArticleAd(displayBlocks)
   const headingsAll = extractHeadingsFromPortableText(displayBlocks)
   const headings = headingsAll.filter(h => h.level <= 2)
   const codocUrl = paywall?.codocUrl
@@ -452,7 +453,7 @@ export default async function PostPage(
           })()}
         </header>
 
-        <AdSlot slot="ARTICLE_TOP_SLOT" className="my-6" />
+        {/* 記事上の広告はやめた（リード文と1つめの売るボタンを最初の画面に出すため・2026-10-08 本人OK）。代わりに本文の真ん中に1つ（insertMidArticleAd） */}
 
           <div
             className="prose-content min-w-0 text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-[1.9] tracking-[.005em]
@@ -585,6 +586,7 @@ function truncatePortableBlock(block: any, charLimit: number) {
 
 const ptComponents = {
   types: {
+    midArticleAd: () => <AdSlot slot="ARTICLE_TOP_SLOT" className="my-8 clear-both" />,
     image: ({ value }: any) => {
       const src = sanityImageRefToUrl(value?.asset?._ref, { q: 80, fit: 'clip' })
       if (!src) return null
@@ -1045,4 +1047,19 @@ function groupAppreachBlocks(blocks: any[]) {
     i++
   }
   return result
+}
+
+// 本文の真ん中に広告を1つだけ入れる（2026-10-08）。3つめのH2の直前に置く。
+// H2が4つ未満の短い記事には入れない。売るボタン（affiliate-btn）の前後2ブロック以内なら、次のH2までずらす（ボタンと広告をまぎらわしくしない）。
+function insertMidArticleAd(blocks: any[]): any[] {
+  const isH2 = (b: any) => b?._type === 'block' && b.style === 'h2'
+  const isCta = (b: any) => b?._type === 'htmlEmbed' && String(b.html || '').includes('affiliate-btn')
+  const h2s = blocks.map((b, i) => (isH2(b) ? i : -1)).filter((i) => i >= 0)
+  if (h2s.length < 4) return blocks
+  for (const at of h2s.slice(2, h2s.length - 1)) {
+    const near = blocks.slice(Math.max(0, at - 2), at + 3).some(isCta)
+    if (near) continue
+    return [...blocks.slice(0, at), { _type: 'midArticleAd', _key: 'mid-article-ad' }, ...blocks.slice(at)]
+  }
+  return blocks
 }
