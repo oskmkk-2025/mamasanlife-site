@@ -33,6 +33,8 @@ function HeaderBarInner({ open, setOpen }: { open: boolean, setOpen: Dispatch<Se
   useEffect(() => { setOpen(false) }, [pathname, params, setOpen])
   return (
     <header className="border-b border-[var(--border-glass)] bg-white/40 backdrop-blur-md sticky top-0 z-50 transition-colors duration-300">
+      {/* スキップリンクはヘッダーの中に置く（body直下で header の前にあると、Safariで自動広告がその間＝ヘッダーの上に入ったため・2026-10-08） */}
+      <a href="#main" className="sr-only focus:not-sr-only fixed top-2 left-2 z-50 bg-white text-black border px-3 py-2 rounded">メインコンテンツへスキップ</a>
       <div className="container-responsive h-14 md:h-24 flex items-center justify-between gap-4">
         <div className="flex items-center">
           <Link href="/" className="focus-ring flex items-center gap-2" aria-label="Mamasan Life トップへ" title="Mamasan Life">
