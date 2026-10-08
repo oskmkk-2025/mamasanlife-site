@@ -7,7 +7,7 @@ import AffiliateCtaButton from '@/components/AffiliateCtaButton'
 export const metadata = {
   title: 'ひーちママの愛用品｜実際に使ってよかった物だけ',
   description:
-    'FP2級ママのひーちママが、実際に使ってよかった物だけを集めました。猫のケージ、黒カビ取り、ドライヤー、簿記の教科書など。くわしい感想は楽天ROOMで紹介しています。',
+    'FP2級ママのひーちママが、実際に使ってよかった物だけを集めました。猫のケージ、黒カビ取り、ドライヤー、簿記・FPの教科書など。くわしい感想は楽天ROOMで紹介しています。',
   alternates: { canonical: '/favorites' },
 }
 
@@ -67,15 +67,104 @@ const groups: { title: string; lead: string; items: Item[] }[] = [
     ],
   },
   {
-    title: '資格の勉強',
-    lead: '日商簿記2級に合格したときの教科書',
+    title: '簿記3級',
+    lead: '職業訓練校で合格したときの教材',
+    items: [
+      {
+        id: '1700396158085752',
+        name: 'みんなが欲しかった！簿記の教科書 日商3級 商業簿記',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0668/9784300120668_1_42.jpg?_ex=400x400',
+        note: '職業訓練校の指定教材でした。数字が苦手な私でも、図が多くて読み進めやすかったです。私が使ったのは前の版です。',
+        article: { href: '/work/qualification-nissho-bookkeeping3-test', label: '簿記3級に合格した体験談' },
+      },
+      {
+        id: '1700396158161282',
+        name: 'みんなが欲しかった！簿記の問題集 日商3級 商業簿記',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0699/9784300120699_1_42.jpg?_ex=400x400',
+        note: '教科書とセットで使った問題集。教科書の章ごとに解けるので、習ったところをすぐ確かめられました。',
+        article: { href: '/work/qualification-nissho-bookkeeping3-test', label: '簿記3級に合格した体験談' },
+      },
+      {
+        id: '1700396158203272',
+        name: '日商簿記3級 まるっと完全予想問題集',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0774/9784300120774_1_46.jpg?_ex=400x400',
+        note: '本番と同じ60分で、全10回を90点以上めざして3周。そのあとネット試験を受けて合格しました。',
+        article: { href: '/work/qualification-nissho-bookkeeping3-test', label: '簿記3級に合格した体験談' },
+      },
+    ],
+  },
+  {
+    title: '簿記2級',
+    lead: '一発合格したときの教科書と問題集',
     items: [
       {
         id: '1700395731473420',
-        name: 'みんなが欲しかった！簿記の教科書 日商2級（商業簿記・工業簿記）',
+        name: 'みんなが欲しかった！簿記の教科書 日商2級 商業簿記',
         img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0675/9784300120675_1_49.jpg?_ex=400x400',
-        note: '図が多くて、独学でも読み進めやすかったシリーズ。私が使ったのは前の版です。商業と工業、問題集をセットで。',
+        note: '図が多くて、独学でも読み進めやすかったシリーズ。私が使ったのは前の版です。',
         article: { href: '/work/qualification-nissho-bookkeeping2-test', label: '簿記2級に合格した体験談' },
+      },
+      {
+        id: '1700395731173388',
+        name: 'みんなが欲しかった！簿記の教科書 日商2級 工業簿記',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0682/9784300120682_1_49.jpg?_ex=400x400',
+        note: '商業簿記とあわせて使いました。私が使ったのは前の版です。',
+        article: { href: '/work/qualification-nissho-bookkeeping2-test', label: '簿記2級に合格した体験談' },
+      },
+      {
+        id: '1700396158252421',
+        name: 'みんなが欲しかった！簿記の問題集 日商2級 商業簿記',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0705/9784300120705_1_49.jpg?_ex=400x400',
+        note: '訓練校では宿題に出された問題集。教科書とセットで使って、2級に一発合格できました。',
+        article: { href: '/work/qualification-nissho-bookkeeping2-test', label: '簿記2級に合格した体験談' },
+      },
+      {
+        id: '1700396158292426',
+        name: 'みんなが欲しかった！簿記の問題集 日商2級 工業簿記',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0712/9784300120712_1_49.jpg?_ex=400x400',
+        note: '訓練校の授業で教わった解き方のコツを、この問題集で練習しました。',
+        article: { href: '/work/qualification-nissho-bookkeeping2-test', label: '簿記2級に合格した体験談' },
+      },
+      {
+        id: '1700396158340384',
+        name: '日商簿記2級 まるっと完全予想問題集',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0781/9784300120781_1_44.jpg?_ex=400x400',
+        note: '統一試験にもネット試験にも使えて、紙でもPCでも解けます。あれこれ手を出すより、この1冊をくり返すのがおすすめ。',
+        article: { href: '/work/qualification-nissho-bookkeeping2-test', label: '簿記2級に合格した体験談' },
+      },
+    ],
+  },
+  {
+    title: 'FP（ファイナンシャルプランナー）',
+    lead: 'ゼロから独学したときのシリーズ',
+    items: [
+      {
+        id: '1700396158378672',
+        name: 'みんなが欲しかった！FPの教科書3級',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0811/9784300120811_1_15.jpg?_ex=400x400',
+        note: '税金・保険・年金など、暮らしのお金の話が図でわかりやすいです。私が使ったのは前の年度版です。',
+        article: { href: '/work/recommended-texts-for-self-study-for-financial-planners-and-study-methods-to-pass', label: 'FPを独学した記事' },
+      },
+      {
+        id: '1700396158420199',
+        name: 'みんなが欲しかった！FPの問題集3級',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0859/9784300120859_1_15.jpg?_ex=400x400',
+        note: '「1章読んだらすぐ問題を解く」をくり返して覚えました。',
+        article: { href: '/work/recommended-texts-for-self-study-for-financial-planners-and-study-methods-to-pass', label: 'FPを独学した記事' },
+      },
+      {
+        id: '1700396158457715',
+        name: 'みんなが欲しかった！FPの教科書2級・AFP',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0828/9784300120828_1_16.jpg?_ex=400x400',
+        note: '3級より内容が深くなりますが、3級と同じ作りなので続けて読みやすかったです。',
+        article: { href: '/work/recommended-texts-for-self-study-for-financial-planners-and-study-methods-to-pass', label: 'FPを独学した記事' },
+      },
+      {
+        id: '1700396158480263',
+        name: 'みんなが欲しかった！FPの問題集2級・AFP',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0866/9784300120866_1_16.jpg?_ex=400x400',
+        note: '「教科書を1章読む→問題集で確認→最後に過去問」の流れで使いました。',
+        article: { href: '/work/recommended-texts-for-self-study-for-financial-planners-and-study-methods-to-pass', label: 'FPを独学した記事' },
       },
     ],
   },
