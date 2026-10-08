@@ -84,6 +84,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             `}</Script>
           </>
         )}
+        {/* Microsoft Clarity（どこまで読まれ・どこが押されたかを見る・2026-10-08）。運営者（?owner=1で来た端末）は記録しない */}
+        <Script id="ms-clarity" strategy="afterInteractive">{`
+          try { if (localStorage.getItem('msl-owner') !== '1') {
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "yuc1ctpzvw");
+          } } catch (e) {}
+        `}</Script>
         {/* バリューコマース LinkSwitch（自動アフィリエイト化） */}
         <Script id="vc-linkswitch-pid" strategy="afterInteractive">{`var vc_pid = "888668321";`}</Script>
         <Script src="https://aml.valuecommerce.com/vcdal.js" strategy="afterInteractive" async />

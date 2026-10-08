@@ -31,7 +31,8 @@ const sections = [
     body: [
       'Google Analytics を利用してサイトの利用状況を把握しています。取得データは匿名化され、個人を特定することはありません。',
       '収集されたデータは Google のプライバシーポリシーに基づいて管理されます。詳細は https://policies.google.com/privacy をご確認ください。',
-      '解析を停止したい場合は、Google が提供するブラウザ用アドオンなどをご利用ください。'
+      '解析を停止したい場合は、Google が提供するブラウザ用アドオンなどをご利用ください。',
+      'また、Microsoft Clarity を利用して、ページのどこまで読まれたか・どこが押されたかなどの利用状況を把握し、サイトの改善に役立てています。Microsoft Clarity は Cookie などを使って利用状況を収集します。入力欄の内容は記録しない設定です。詳細は Microsoft のプライバシーに関する声明 https://privacy.microsoft.com/privacystatement をご確認ください。'
     ]
   },
   {
@@ -93,7 +94,7 @@ export default function PolicyPage() {
       </section>
 
       <footer className="text-xs text-gray-500">
-        <p>最終更新日: 2025年10月</p>
+        <p>最終更新日: 2026年10月8日</p>
         <p>本ポリシーは必要に応じて見直し・改定することがあります。改定後の内容は本ページに速やかに掲載します。</p>
       </footer>
     </div>
