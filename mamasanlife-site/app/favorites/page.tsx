@@ -29,7 +29,7 @@ const groups: { title: string; lead: string; items: Item[] }[] = [
       {
         id: '1700393179794339',
         name: 'かびとりいっぱつ（黒カビ取りジェル）',
-        img: 'https://room.r10s.jp/d/strg/ctrl/22/50a92ca0434cdb52b27b0fbb4a6601b71a550ddf.82.9.22.3.jpg',
+        img: 'https://room.r10s.jp/d/strg/ctrl/22/50a92ca0434cdb52b27b0fbb4a6601b71a550ddf.82.9.22.3.jpg?thum=133&fitin=400:400',
         note: 'お風呂のフタのゴムパッキンや窓枠のシリコンの黒カビに。塗って半日置いたら消えていました。塩素系なので換気と手袋を忘れずに。',
         article: { href: '/life/bathroom-cleaning', label: '浴室クリーニングの体験談' },
       },
@@ -42,13 +42,13 @@ const groups: { title: string; lead: string; items: Item[] }[] = [
       {
         id: '1700394260328186',
         name: 'Aglaia&（アグライア）ドライヤー',
-        img: 'https://room.r10s.jp/d/strg/ctrl/22/384e1141dd7124e2b926aa4a57410f7526c4236b.82.9.22.3.jpg',
+        img: 'https://room.r10s.jp/d/strg/ctrl/22/384e1141dd7124e2b926aa4a57410f7526c4236b.82.9.22.3.jpg?thum=133&fitin=400:400',
         note: '約310gと軽くて腕が疲れない。熱くないのにすぐ乾くので、お風呂上がりのドライヤー時間がラクになりました。',
       },
       {
         id: '1700393489878539',
         name: 'こするだけのナノガラス除毛',
-        img: 'https://shop.r10s.jp/kotakasi0217/cabinet/12165513/13512204/imgrc0106449101.jpg',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/kotakasi0217/cabinet/12165513/13512204/imgrc0106449101.jpg?_ex=400x400',
         note: 'カミソリを卒業。お手入れがラクで、子どもたちもお風呂で使っています。',
       },
     ],
@@ -60,7 +60,7 @@ const groups: { title: string; lead: string; items: Item[] }[] = [
       {
         id: '1700395727964131',
         name: 'アイリスオーヤマ キャットケージ（3段・2段）',
-        img: 'https://shop.r10s.jp/cat-land/cabinet/eigyou/i332157.jpg',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/cat-land/cabinet/eigyou/i332157.jpg?_ex=400x400',
         note: 'ねこを迎えたときに買いました。女性1人でも組み立てられて、広くて掃除しやすいのでおすすめです。',
         article: { href: '/feature/protection-cat', label: '保護猫譲渡会の記事' },
       },
@@ -73,7 +73,7 @@ const groups: { title: string; lead: string; items: Item[] }[] = [
       {
         id: '1700395731473420',
         name: 'みんなが欲しかった！簿記の教科書 日商2級（商業簿記・工業簿記）',
-        img: 'https://shop.r10s.jp/book/cabinet/0675/9784300120675_1_49.jpg',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0675/9784300120675_1_49.jpg?_ex=400x400',
         note: '図が多くて、独学でも読み進めやすかったシリーズ。私が使ったのは前の版です。商業と工業、問題集をセットで。',
         article: { href: '/work/qualification-nissho-bookkeeping2-test', label: '簿記2級に合格した体験談' },
       },
@@ -86,13 +86,13 @@ const groups: { title: string; lead: string; items: Item[] }[] = [
       {
         id: '1700395337085235',
         name: 'クロックス バヤバンド クロッグ',
-        img: 'https://shop.r10s.jp/crocs/cabinet/product/13158907/205089_261004.jpg',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/crocs/cabinet/product/13158907/205089_261004.jpg?_ex=400x400',
         note: '春に買って、ちょっとそこまで親子でほぼ毎日。濡れても拭くだけで、急な雨でも気になりません。',
       },
       {
         id: '1700395337243236',
         name: '【ふるさと納税】和歌山県広川町 完熟有田みかん',
-        img: 'https://shop.r10s.jp/f303623-hirogawa/cabinet/09781746/imgrc0092972135.jpg',
+        img: 'https://thumbnail.image.rakuten.co.jp/@0_mall/f303623-hirogawa/cabinet/09781746/imgrc0092972135.jpg?_ex=400x400',
         note: '2024年のふるさと納税で頼みました。冬のおやつに。先行予約で早めに決めておくとラクでした。',
         article: { href: '/money/furusato-nozei-2026', label: 'ふるさと納税2026の記事' },
       },
