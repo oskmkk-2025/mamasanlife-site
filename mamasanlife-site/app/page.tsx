@@ -86,6 +86,12 @@ export default async function HomePage() {
       >
         人気記事から読む
       </a>
+      <a
+        href="/favorites"
+        className="inline-block border border-[var(--c-accent)] text-[var(--c-accent-ink)] px-6 py-3 rounded-md font-medium hover:bg-black/5 transition"
+      >
+        ひーちママの愛用品を見る
+      </a>
     </div>
     </div>
   </div>
