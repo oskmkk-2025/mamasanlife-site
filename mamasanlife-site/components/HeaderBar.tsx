@@ -100,6 +100,7 @@ function HeaderBarInner({ open, setOpen }: { open: boolean, setOpen: Dispatch<Se
             </Suspense>
             <ul className="flex flex-col gap-2">
               <li><Link href="/about" onClick={() => setOpen(false)} className="rounded-md px-2 py-1 focus-ring">自己紹介</Link></li>
+              <li><Link href="/favorites" onClick={() => setOpen(false)} className="rounded-md px-2 py-1 focus-ring">愛用品</Link></li>
               <li><Link href="/site-map" onClick={() => setOpen(false)} className="rounded-md px-2 py-1 focus-ring">サイトマップ</Link></li>
               <li><Link href="/contact" onClick={() => setOpen(false)} className="rounded-md px-2 py-1 focus-ring">お問い合わせ</Link></li>
             </ul>
